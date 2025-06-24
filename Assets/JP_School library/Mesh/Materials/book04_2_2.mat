@@ -11,7 +11,9 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 0935e68f58de00d409425c4f5d2576ce, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _MAIN_LIGHT_SHADOWS_CASCADE
+  - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -92,6 +94,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 10a70d3aaf40483479d7924581f50125, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7351672de3a345179dfe688e4d88ac43_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: f651f80a287cdb94683d0baa48693c1c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Shade_Color:
         m_Texture: {fileID: 2800000, guid: b5d67aed31798f9419edd0efeb4ebbc6, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -138,7 +144,7 @@ Material:
     - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 0
-    - _MAIN_LIGHT_SHADOWS_CASCADE: 0
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Main_Light_Intensity: 1
     - _Main_Light_Shading_Steps: 1
     - _Metallic: 0
@@ -152,8 +158,8 @@ Material:
     - _RP_Strength: 1
     - _Radius: 3
     - _ReceiveShadows: 1
-    - _RpStrength: 0.5
-    - _SHADOWS_SOFT: 0
+    - _RpStrength: 0
+    - _SHADOWS_SOFT: 1
     - _Saturation: 1
     - _Shadow_Intensity: 0.4
     - _Shininess: 0
@@ -171,7 +177,12 @@ Material:
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
+    - _ad: 1
+    - _c: 1
+    - _dg: 1
+    - _h: 0
     - _hue: 0
+    - _s: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

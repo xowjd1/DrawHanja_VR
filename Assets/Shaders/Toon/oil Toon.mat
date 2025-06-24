@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseColor:
         m_Texture: {fileID: 2800000, guid: 107dd148840938343840d539a8528063, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +80,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Metallic_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: 8a42b79c07f601e49a5205394d69a3e8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -98,6 +106,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7351672de3a345179dfe688e4d88ac43_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: f651f80a287cdb94683d0baa48693c1c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_c391c9a6049c4f4da25d3290c5112328_Texture_1_Texture2D:
@@ -129,6 +141,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _AoStrength: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -146,14 +159,15 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _MtStrength: 1
-    - _NmStrength: 1
+    - _NmStrength: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Radius: 3
     - _ReceiveShadows: 1
-    - _RpStrength: 1
+    - _RpStrength: 0
+    - _SHADOWS_SOFT: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -162,9 +176,13 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _ad: 1
+    - _c: 1
+    - _h: 0
     - _max: 0
     - _min: 0.03
     - _noisesc: 333.42
+    - _s: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
