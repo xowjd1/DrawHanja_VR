@@ -479,6 +479,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "50a28ab01227499da71d3ef3019cfbbd"
+                },
+                "m_SlotId": 4
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "c435eaaa35e44cebaa92996d594ad987"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "51e5c150ece54b5384656342b50dc3cb"
                 },
                 "m_SlotId": 0
@@ -908,20 +922,6 @@
                     "m_Id": "389c30ace091480085bf2e52b0978293"
                 },
                 "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "c37f87fd5b0c420bb26179b549db4dba"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "c435eaaa35e44cebaa92996d594ad987"
-                },
-                "m_SlotId": 0
             }
         },
         {
@@ -3236,8 +3236,8 @@
     "m_ObjectId": "4952b6b6f33342089e2fb7a91603f0d6",
     "m_Title": "GET LIGHTMAP",
     "m_Position": {
-        "x": -3882.0,
-        "y": -6218.0
+        "x": -3882.39990234375,
+        "y": -6219.19970703125
     }
 }
 
@@ -4656,8 +4656,8 @@
     "m_ObjectId": "794386e8448342ff82169caf330f0f78",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -2917.0,
-        "y": -2425.0
+        "x": -2917.60009765625,
+        "y": -2425.599609375
     }
 }
 
@@ -6272,8 +6272,8 @@
     "m_ObjectId": "ad8c48d033534563a65b980a747d8378",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -412.0,
-        "y": -911.0
+        "x": -412.80029296875,
+        "y": -912.0
     }
 }
 
@@ -6684,8 +6684,8 @@
     "m_ObjectId": "bf67d13586014789aeac22c7b584a296",
     "m_Title": "shadow",
     "m_Position": {
-        "x": -2257.0,
-        "y": -608.0
+        "x": -2257.60009765625,
+        "y": -609.60009765625
     }
 }
 
@@ -7695,8 +7695,8 @@
     "m_ObjectId": "e66d733f3c05420fb28c21f8b381f233",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -3382.0,
-        "y": -1297.0
+        "x": -3382.39990234375,
+        "y": -1298.399658203125
     }
 }
 
