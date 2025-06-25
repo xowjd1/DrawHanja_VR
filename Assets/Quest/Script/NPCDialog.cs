@@ -2,21 +2,32 @@ using UnityEngine;
 
 public class NPCDialog : MonoBehaviour, IInteractable
 {
-    public string[] dialogLines;
+    public string[] dialogBeforeQuestComplete;
+    public string[] dialogAfterQuestComplete;
+    
     public bool triggerNextQuest = true;
+    public int questIndex = 0;
 
     public void Interact()
     {
-        if (triggerNextQuest)
+        if (QuestManager.Instance.questCompleted)
         {
-            DialogUI.Instance.StartDialog(dialogLines, () =>
+            DialogUI.Instance.StartDialog(dialogAfterQuestComplete);
+
+            if (QuestManager.Instance.questPanel == true)
             {
-                QuestManager.Instance.StartNextQuest(); 
-            });
+               QuestManager.Instance.HideQuestMessage(); 
+            }
         }
         else
         {
-            DialogUI.Instance.StartDialog(dialogLines);
+            DialogUI.Instance.StartDialog(dialogBeforeQuestComplete, () =>
+            {
+                if (triggerNextQuest)
+                {
+                    QuestManager.Instance.StartNextQuest();
+                }
+            });
         }
     }
 }

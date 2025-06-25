@@ -4,12 +4,15 @@ using TMPro;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
+    public int itemCount = 0;
 
     public int currentQuestIndex = 0;
+    public bool questCompleted = false;
     
     public GameObject questPanel;
     public TextMeshProUGUI questText;
     public string[] questMessages;
+    
 
     private void Awake()
     {
@@ -26,6 +29,7 @@ public class QuestManager : MonoBehaviour
             string message = questMessages[currentQuestIndex];
             ShowQuestMessage(message);
             currentQuestIndex++;
+            questCompleted = false;
         }
     }
 
@@ -40,8 +44,18 @@ public class QuestManager : MonoBehaviour
         questText.text = message;
     }
 
-    void HideQuestMessage()
+    public void HideQuestMessage()
     {
         questPanel.SetActive(false);
+    }
+    
+    public void CheckItemQuest()
+    {
+        itemCount++;
+        
+        if (itemCount >= 3 && !questCompleted)
+        {
+            questCompleted = true;
+        }
     }
 }
