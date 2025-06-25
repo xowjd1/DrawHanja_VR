@@ -2,109 +2,120 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-[RequireComponent(typeof(Rigidbody))]
 public class VRDraw : MonoBehaviour
 {
+   [Header("컨트롤러 설정")]
+    public XRNode    xrNode = XRNode.RightHand;      // 오른손 트리거 사용
+    public Transform controllerTransform;            // Ray 발사 기준 위치
+
     [Header("캔버스 설정")]
-    public Transform canvasTransform;    // 쓰기 평면(Quad)의 Transform
-    public Vector2 canvasSize = new(0.2f, 0.2f); // Quad 실제 크기(m)
+    public Transform canvasTransform;                // Quad 등의 그리기 영역
+    public Vector2   canvasSize = new(1,1);
 
-    [Header("렌더링")]
-    public GameObject linePrefab;         // 순수 LineRenderer 프리팹
-
-    [Header("트리거 입력")]
-    public XRNode xrNode = XRNode.RightHand; // 트리거 입력을 읽어올 컨트롤러
-
+    [Header("렌더링 & 스무딩")]
+    public GameObject linePrefab;                    // LineRenderer 전용 프리팹
+    [Range(0f,1f)] public float smoothingFactor = 0.8f;
+    public float      minDistance     = 0.02f;
+    
+    [Header("노이즈 필터")]
+    [Tooltip("최근 프레임 위치 몇 개로 평균낼지")]
+    public int         filterWindow    = 5;
     // 내부 상태
-    private bool isColliding;   // 붓 끝이 캔버스에 닿아 있는가
-    private bool  isDrawing;     // 현재 그리기 중인가
-    private LineRenderer currentLine;
-    private List<Vector2> currentStroke;
-    private List<List<Vector2>> strokes = new();
+    InputDevice            device;
+    bool                   isDrawing     = false;
+    LineRenderer           currentLine;
+    List<Vector2>          currentStroke;
+    List<List<Vector2>>    strokes       = new();
 
-    private InputDevice device;
-
+    Queue<Vector3>         posQueue   = new();
+    
     void Start()
     {
         device = InputDevices.GetDeviceAtXRNode(xrNode);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform == canvasTransform)
-            isColliding = true;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.transform == canvasTransform)
-            isColliding = false;
-    }
-
     void Update()
     {
-        // 디바이스가 유효하지 않으면 재획득
         if (!device.isValid)
             device = InputDevices.GetDeviceAtXRNode(xrNode);
 
-        // 트리거 버튼 입력 읽기
-        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerPressed))
+        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool trigger) && trigger)
         {
-            if (triggerPressed && isColliding)
-            {
-                if (!isDrawing)
-                    StartStroke();
-                else
-                    AddPoint();
-            }
-            else if (isDrawing) // 트리거 뗐을 때
-            {
-                EndStroke();
-            }
+            if (!isDrawing) StartStroke();
+            AddPoint();
+        }
+        else if (isDrawing)
+        {
+            EndStroke();
         }
     }
 
     void StartStroke()
     {
+        // 새 LineRenderer 생성
         var go = Instantiate(linePrefab);
         currentLine = go.GetComponent<LineRenderer>();
         currentLine.positionCount = 0;
+        currentLine.numCornerVertices = 5;
+        currentLine.numCapVertices    = 5;
 
         currentStroke = new List<Vector2>();
         strokes.Add(currentStroke);
 
+        posQueue.Clear();
         isDrawing = true;
     }
 
     void AddPoint()
     {
-        // 월드 → 캔버스 로컬 → 0~1 정규화
-        Vector3 worldPos = transform.position;
-        Vector3 localPos = canvasTransform.InverseTransformPoint(worldPos);
+        // 1) Raycast로 캔버스 hit
+        Ray ray = new(controllerTransform.position, controllerTransform.forward);
+        if (!Physics.Raycast(ray, out var hit) || hit.transform != canvasTransform)
+            return;
 
-        float xN = (localPos.x / canvasSize.x) + 0.5f;
-        float yN = (localPos.y / canvasSize.y) + 0.5f;
-        Vector2 uv = new(xN, yN);
+        // 2) hit.point 을 큐에 넣고 평균내기
+        posQueue.Enqueue(hit.point);
+        if (posQueue.Count > filterWindow) posQueue.Dequeue();
+        Vector3 avgPos = Vector3.zero;
+        foreach (var p in posQueue) avgPos += p;
+        avgPos /= posQueue.Count;
 
-        if (currentStroke.Count == 0 || Vector2.Distance(currentStroke[^1], uv) > 0.01f)
-        {
-            // LineRenderer에 점 추가
-            int idx = currentLine.positionCount;
-            currentLine.positionCount = idx + 1;
-            currentLine.SetPosition(idx, worldPos);
+        // 3) 부드럽게 보간
+        Vector3 prev = currentLine.positionCount > 0
+            ? currentLine.GetPosition(currentLine.positionCount - 1)
+            : avgPos;
+        Vector3 smoothed = Vector3.Lerp(prev, avgPos, 1 - smoothingFactor);
 
-            // 매칭용 벡터에도 저장
-            currentStroke.Add(uv);
-        }
+        // 4) 충분히 떨어졌는지 체크
+        Vector2 p2d = new(smoothed.x, smoothed.y);
+        if (currentStroke.Count > 0 &&
+            Vector2.Distance(currentStroke[^1], p2d) < minDistance)
+            return;
+
+        // 5) LineRenderer에 한 점 추가
+        int idx = currentLine.positionCount;
+        currentLine.positionCount = idx + 1;
+        currentLine.SetPosition(idx, smoothed);
+
+        // 6) 매칭용 벡터에도 저장
+        currentStroke.Add(p2d);
     }
 
     void EndStroke()
     {
-        isDrawing = false;
-        currentLine = null;
-        currentStroke = null;
+        // 디버그: 한 획의 벡터 찍어보기
+        Debug.Log($"── Stroke #{strokes.Count} ({currentStroke.Count} points) ──");
+        for (int i = 0; i < currentStroke.Count; i++)
+        {
+            var v = currentStroke[i];
+            Debug.Log($"{i}: {v.x:F3}, {v.y:F3}");
+        }
+
+        currentLine    = null;
+        currentStroke  = null;
+        isDrawing      = false;
     }
 
-    // 외부에서 궤적 데이터가 필요할 때 호출
+    /// <summary>나중에 궤적 데이터가 필요할 때 호출하세요.</summary>
     public List<List<Vector2>> GetStrokes() => strokes;
 }
