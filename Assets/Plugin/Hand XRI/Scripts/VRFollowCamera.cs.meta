@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e848584b0c5906e4d94a646bcee992fc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Scripts/VRFollowCamera.cs
+  uploadId: 749762

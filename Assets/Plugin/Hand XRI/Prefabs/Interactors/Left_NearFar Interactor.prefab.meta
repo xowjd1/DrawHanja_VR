@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 959b5164c6179ee418dc6cabc35aa66f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Prefabs/Interactors/Left_NearFar
+    Interactor.prefab
+  uploadId: 749762

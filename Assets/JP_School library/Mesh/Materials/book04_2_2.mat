@@ -166,7 +166,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RP_Strength: 1
-    - _Radius: 3
+    - _Radius: 2
     - _ReceiveShadows: 1
     - _RpStrength: 0.5
     - _SHADOWS_SOFT: 1

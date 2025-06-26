@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58c5f2ade401a76448ae3f5dfc10833d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Prefabs/Interactors/Gaze Interactor.prefab
+  uploadId: 749762

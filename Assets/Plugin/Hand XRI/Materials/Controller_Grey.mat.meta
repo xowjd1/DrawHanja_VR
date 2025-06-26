@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e73eb47358215734a88289b2fc805eb9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Materials/Controller_Grey.mat
+  uploadId: 749762

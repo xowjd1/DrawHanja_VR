@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e0d1a561f59e130408f8245883520e92
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/HandsVR/Scripts/VRHandAnimatorController.cs
+  uploadId: 749762
