@@ -27,6 +27,7 @@ Material:
   m_ValidKeywords:
   - _MAIN_LIGHT_SHADOWS_CASCADE
   - _MY_CUSTOM_MAIN_LIGHT_SHADOWS_CASCADE
+  - _MY_CUSTOM_SHADOWS_SOFT
   - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -45,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: db9d96a5a20b03c429fc9edb6b50a84a, type: 3}
+        m_Texture: {fileID: 2800000, guid: eccf7cf0bc7e27a488cc6568e0ae8881, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -143,7 +144,7 @@ Material:
     - _Hue: 0
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _MY_CUSTOM_MAIN_LIGHT_SHADOWS_CASCADE: 1
-    - _MY_CUSTOM_SHADOWS_SOFT: 0
+    - _MY_CUSTOM_SHADOWS_SOFT: 1
     - _Metallic: 0
     - _MtStrength: 0
     - _NmStrength: 1

@@ -2,32 +2,49 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 
-public class OilPaintBatchTool : EditorWindow
+public class OilPaintReplaceTool : EditorWindow
 {
-    Texture2D[] textures;
     int radius = 2;
 
-    [MenuItem("Tools/Oil Paint Batch Processor")]
-    static void ShowWindow() => GetWindow<OilPaintBatchTool>("Oil Paint Processor");
+    [MenuItem("Tools/Oil Paint/Save Processed To Folder")]
+    static void ShowWindow() => GetWindow<OilPaintReplaceTool>("Oil Paint Save To Folder");
 
     void OnGUI()
     {
-        SerializedObject so = new SerializedObject(this);
-        SerializedProperty texProp = so.FindProperty("textures");
-        EditorGUILayout.PropertyField(texProp, true);
         radius = EditorGUILayout.IntSlider("Radius", radius, 1, 10);
 
-        if (GUILayout.Button("Process and Save"))
+        if (GUILayout.Button("Process Selected Textures and Save To Folder"))
         {
-            foreach (var tex in textures)
+            string saveFolder = "Assets/OilPaintedTextures";
+            if (!AssetDatabase.IsValidFolder(saveFolder))
             {
-                if (tex == null) continue;
-                var result = ProcessOilPaint(tex, radius);
-                SaveTexture(result, tex.name + "_oilpaint.png");
+                AssetDatabase.CreateFolder("Assets", "OilPaintedTextures");
             }
-        }
 
-        so.ApplyModifiedProperties();
+            foreach (var obj in Selection.objects)
+            {
+                if (obj is Texture2D tex)
+                {
+                    string path = AssetDatabase.GetAssetPath(tex);
+
+                    // 텍스처 복사본 만들기
+                    Texture2D copy = new Texture2D(tex.width, tex.height, TextureFormat.RGBA32, false);
+                    EditorUtility.CopySerialized(tex, copy);
+                    copy.Apply();
+
+                    // 오일 페인트 효과 적용
+                    Texture2D result = ProcessOilPaint(copy, radius);
+
+                    // 저장 경로 (폴더 + 이름_oilpaint.png)
+                    string savePath = Path.Combine(saveFolder, tex.name + "_oilpaint.png");
+
+                    File.WriteAllBytes(savePath, result.EncodeToPNG());
+                    Debug.Log($"Saved: {savePath}");
+                }
+            }
+
+            AssetDatabase.Refresh();
+        }
     }
 
     Texture2D ProcessOilPaint(Texture2D source, int radius)
@@ -94,15 +111,5 @@ public class OilPaintBatchTool : EditorWindow
 
         result.Apply();
         return result;
-    }
-
-    void SaveTexture(Texture2D tex, string filename)
-    {
-        string path = EditorUtility.SaveFilePanel("Save Texture", "Assets", filename, "png");
-        if (!string.IsNullOrEmpty(path))
-        {
-            File.WriteAllBytes(path, tex.EncodeToPNG());
-            AssetDatabase.Refresh();
-        }
     }
 }
