@@ -2,44 +2,50 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 
-public class OilPaintReplaceTool : EditorWindow
+public class OilPaintGPUExportTool : EditorWindow
 {
     int radius = 2;
+    int samplingQuality = 1; // 0: Low (1 sample), 1: Medium (4 samples), 2: High (9 samples)
+    Material oilPaintMaterial;
 
-    [MenuItem("Tools/Oil Paint/Save Processed To Folder")]
-    static void ShowWindow() => GetWindow<OilPaintReplaceTool>("Oil Paint Save To Folder");
+    [MenuItem("Tools/Oil Paint/GPU Export with Filter Fix")]
+    static void ShowWindow() => GetWindow<OilPaintGPUExportTool>("Oil Paint GPU Export");
+
+    void OnEnable()
+    {
+        Shader shader = Shader.Find("Hidden/OilPaintEffect");
+        if (shader != null)
+            oilPaintMaterial = new Material(shader);
+    }
 
     void OnGUI()
     {
-        radius = EditorGUILayout.IntSlider("Radius", radius, 1, 10);
+        if (oilPaintMaterial == null)
+        {
+            EditorGUILayout.HelpBox("OilPaintEffect shader not found!", MessageType.Error);
+            return;
+        }
 
-        if (GUILayout.Button("Process Selected Textures and Save To Folder"))
+        radius = EditorGUILayout.IntSlider("Radius", radius, 1, 10);
+        samplingQuality = EditorGUILayout.IntPopup("Sampling Quality", samplingQuality, 
+            new[] { "Low", "Medium", "High" }, new[] { 0, 1, 2 });
+
+        if (GUILayout.Button("Process with GPU and Save"))
         {
             string saveFolder = "Assets/OilPaintedTextures";
             if (!AssetDatabase.IsValidFolder(saveFolder))
-            {
                 AssetDatabase.CreateFolder("Assets", "OilPaintedTextures");
-            }
 
             foreach (var obj in Selection.objects)
             {
                 if (obj is Texture2D tex)
                 {
                     string path = AssetDatabase.GetAssetPath(tex);
-
-                    // 텍스처 복사본 만들기
-                    Texture2D copy = new Texture2D(tex.width, tex.height, TextureFormat.RGBA32, false);
-                    EditorUtility.CopySerialized(tex, copy);
-                    copy.Apply();
-
-                    // 오일 페인트 효과 적용
-                    Texture2D result = ProcessOilPaint(copy, radius);
-
-                    // 저장 경로 (폴더 + 이름_oilpaint.png)
+                    Texture2D result = RunOilPaintShader(tex, radius, samplingQuality);
                     string savePath = Path.Combine(saveFolder, tex.name + "_oilpaint.png");
 
                     File.WriteAllBytes(savePath, result.EncodeToPNG());
-                    Debug.Log($"Saved: {savePath}");
+                    Debug.Log("Saved: " + savePath);
                 }
             }
 
@@ -47,69 +53,37 @@ public class OilPaintReplaceTool : EditorWindow
         }
     }
 
-    Texture2D ProcessOilPaint(Texture2D source, int radius)
+    Texture2D RunOilPaintShader(Texture2D source, int radius, int quality)
     {
-        int w = source.width;
-        int h = source.height;
-        Texture2D result = new Texture2D(w, h);
-        Color[] pixels = source.GetPixels();
+        int w = 4096;
+        int h = 4096;
 
-        for (int y = 0; y < h; y++)
-        {
-            for (int x = 0; x < w; x++)
-            {
-                Color[] quadMean = new Color[4];
-                float[] quadVariance = new float[4];
+        RenderTexture rtSource = new RenderTexture(source.width, source.height, 0, RenderTextureFormat.ARGB32);
+        rtSource.useMipMap = true;
+        rtSource.autoGenerateMips = true;
+        rtSource.filterMode = FilterMode.Bilinear;
+        rtSource.Create();
+        Graphics.Blit(source, rtSource);
 
-                for (int q = 0; q < 4; q++)
-                {
-                    Vector2Int start = q switch {
-                        0 => new Vector2Int(-radius, -radius),
-                        1 => new Vector2Int(-radius, 0),
-                        2 => new Vector2Int(0, -radius),
-                        _ => new Vector2Int(0, 0)
-                    };
+        oilPaintMaterial.SetFloat("_Radius", radius);
+        oilPaintMaterial.SetVector("_TexelSize", new Vector2(1.0f / w, 1.0f / h));
+        oilPaintMaterial.SetFloat("_SubSampleLevel", quality); // NEW
 
-                    int count = 0;
-                    Vector3 sum = Vector3.zero;
-                    Vector3 sqSum = Vector3.zero;
+        RenderTexture rt = new RenderTexture(w, h, 0, RenderTextureFormat.ARGB32);
+        rt.filterMode = FilterMode.Bilinear;
+        rt.Create();
 
-                    for (int dy = 0; dy <= radius; dy++)
-                    {
-                        for (int dx = 0; dx <= radius; dx++)
-                        {
-                            int sx = Mathf.Clamp(x + start.x + dx, 0, w - 1);
-                            int sy = Mathf.Clamp(y + start.y + dy, 0, h - 1);
-                            Color col = pixels[sx + sy * w];
-                            Vector3 c = new Vector3(col.r, col.g, col.b);
-                            sum += c;
-                            sqSum += Vector3.Scale(c, c);
-                            count++;
-                        }
-                    }
+        Graphics.Blit(rtSource, rt, oilPaintMaterial);
 
-                    Vector3 mean = sum / count;
-                    Vector3 variance = (sqSum / count) - Vector3.Scale(mean, mean);
-                    quadMean[q] = new Color(mean.x, mean.y, mean.z);
-                    quadVariance[q] = variance.x + variance.y + variance.z;
-                }
-
-                int minIdx = 0;
-                float minVar = quadVariance[0];
-                for (int i = 1; i < 4; i++)
-                {
-                    if (quadVariance[i] < minVar)
-                    {
-                        minVar = quadVariance[i];
-                        minIdx = i;
-                    }
-                }
-
-                result.SetPixel(x, y, quadMean[minIdx]);
-            }
-        }
-
+        RenderTexture.active = rt;
+        Texture2D result = new Texture2D(w, h, TextureFormat.RGBA32, false);
+        result.ReadPixels(new Rect(0, 0, w, h), 0, 0);
         result.Apply();
+
+        RenderTexture.active = null;
+        rt.Release();
+        rtSource.Release();
+
         return result;
     }
 }

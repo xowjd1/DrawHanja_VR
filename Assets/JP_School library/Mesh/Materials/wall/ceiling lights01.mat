@@ -138,7 +138,7 @@ Material:
     - _QueueOffset: 0
     - _Radius: 3
     - _ReceiveShadows: 1
-    - _RpStrength: 0.5
+    - _RpStrength: 0.6
     - _Saturation: 1
     - _ShadowStrength: 0.5
     - _Shininess: 0.7943347
