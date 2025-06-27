@@ -13,6 +13,8 @@ public class QuestManager : MonoBehaviour
     public TextMeshProUGUI questText;
     public string[] questMessages;
     
+    public GameObject wallBlocker;
+    
 
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class QuestManager : MonoBehaviour
         if (itemCount >= 3 && !questCompleted)
         {
             questCompleted = true;
+            wallBlocker.SetActive(false);
         }
     }
 }

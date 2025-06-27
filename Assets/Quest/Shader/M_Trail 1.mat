@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Trail
+  m_Name: M_Trail 1
   m_Shader: {fileID: -6465566751694194690, guid: bbd467c9679983d499e561fc03279601, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,8 +48,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color1: {r: 85.445015, g: 14.522941, b: 0, a: 1}
-    - _Color2: {r: 63.999996, g: 5.6834354, b: 0, a: 1}
+    - _Color1: {r: 20.023645, g: 0, b: 0, a: 1}
+    - _Color2: {r: 0.34677663, g: 0.037880264, b: 0.008178692, a: 1}
     - _DissolveSpeed: {r: 0.2, g: 0, b: 0, a: 0}
     - _MainTexSpeed: {r: -0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
