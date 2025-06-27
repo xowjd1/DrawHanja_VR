@@ -228,8 +228,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.3, y: -4.33, z: 7.7650003}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2.18, y: 1.15, z: 1.1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 609815013}
   - component: {fileID: 609815012}
   - component: {fileID: 609815011}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: DrawingCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4223e5f252541f459576e6e75cf3c72, type: 2}
+  - {fileID: 2100000, guid: aceca31abe59dd3428dd6389af806fa6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,7 +338,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.3, y: -4.33, z: 7.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -357,7 +357,6 @@ GameObject:
   - component: {fileID: 694340278}
   - component: {fileID: 694340284}
   - component: {fileID: 694340286}
-  - component: {fileID: 694340287}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Untagged
@@ -633,26 +632,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.17
   m_Center: {x: 0.00000005960466, y: 1.12, z: -0.00000008940697}
---- !u!114 &694340287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694340277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987ae57af96808049a09f0c1206e68c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xrNode: 4
-  controllerTransform: {fileID: 0}
-  canvasTransform: {fileID: 609815014}
-  canvasSize: {x: 1, y: 1}
-  linePrefab: {fileID: 8005347288649513148, guid: a7e3a7849fe73354aa3fe3db2cbe65a3, type: 3}
-  smoothingFactor: 0.5
-  minDistance: 0.01
-  filterWindow: 5
 --- !u!1 &1055905511
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1086,6 +1065,7 @@ GameObject:
   - component: {fileID: 1838380020}
   - component: {fileID: 1838380019}
   - component: {fileID: 1838380021}
+  - component: {fileID: 1838380022}
   m_Layer: 0
   m_Name: DrawManager
   m_TagString: Untagged
@@ -1100,7 +1080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838380018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4b1d97095017794e94c8da8bfba1aef, type: 3}
   m_Name: 
@@ -1132,7 +1112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838380018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 987ae57af96808049a09f0c1206e68c0, type: 3}
   m_Name: 
@@ -1145,6 +1125,21 @@ MonoBehaviour:
   smoothingFactor: 0.8
   minDistance: 0.02
   filterWindow: 5
+--- !u!114 &1838380022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838380018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b94eaa3e539874db8d4672f5cd105d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  captureCam: {fileID: 2017648433}
+  rt: {fileID: 0}
+  acceptableError: 0.1
 --- !u!1 &1859418721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2017648431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,7 +1358,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 536870912
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

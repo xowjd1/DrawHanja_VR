@@ -104,6 +104,11 @@ public class MouseStrokeDrawer : MonoBehaviour
         currentStroke = null;
     }
 
+    
+    
+    
+    
+    
 
     /// <summary>
     /// 외부에서 호출해 캡처된 모든 스트로크 벡터 데이터를 얻을 수 있습니다.
