@@ -243,14 +243,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBeforeQuestComplete:
-  - "\uB108\uBB34 \uCD94\uC6CC\uC11C \uBD88\uC744 \uC9C0\uD53C\uB824\uB294\uB370 "
-  - "\uB2E4\uB9AC\uB97C \uB2E4\uCCD0\uC11C \uBA40\uB9AC \uB098\uAC08 \uC218\uAC00
-    \uC5C6\uC5B4"
-  - "\uB098\uBB47\uAC00\uC9C0 \uC138 \uAC1C\uB9CC \uAD6C\uD574\uB2E4 \uC904 \uC218
-    \uC788\uC744\uAE4C?"
+  - "\uB108 \uB204\uAD6C\uC57C? \uC5EC\uAE30\uC11C \uBB50 \uD558\uB294 \uAC74\uB370?"
+  - "(\uAC70\uCE5C \uB9D0\uD22C\uC640\uB294 \uB2E4\uB974\uAC8C \uBAB8\uC744 \uB5A8\uACE0
+    \uC788\uB2E4.)"
+  - "P:\uB108 \uCD94\uC6CC\uBCF4\uC5EC."
+  - "\uB410\uACE0. \uAD1C\uD788 \uC544\uB294 \uCC99 \uD558\uC9C0 \uB9C8."
+  - "\uC544\uB2C8\uBA74 \uC232\uC5D0\uC11C \uB098\uBB47\uAC00\uC9C0 \uC138 \uAC1C\uB9CC
+    \uC8FC\uC6CC\uC624\uB4E0\uAC00."
   dialogAfterQuestComplete:
-  - "\uC640 \uC815\uB9D0 \uACE0\uB9C8\uC6CC \uC774\uC81C \uBD88\uC744 \uC9C0\uD544
-    \uC218 \uC788\uACA0\uB2E4"
+  - "\uC774\uC81C \uBD88\uC744 \uC9C0\uD544 \uC218 \uC788\uACA0\uC5B4."
+  - "(\uD55C\uC790\uB97C \uC785\uB825\uD574 \uBD88\uC744 \uC9C0\uD3B4\uC8FC\uC138\uC694.)"
+  - "\uADFC\uB370 \uB9D0\uC774\uC57C, \uB098 \uC880 \uBC30\uACE0\uD504\uAC70\uB4E0.
+    \uD639\uC2DC, \uBB50 \uBA39\uC744 \uAC70 \uC788\uC5B4?"
+  - "P:\uACBD\uB2E8\uC744 \uAC74\uB0B4\uC900\uB2E4."
+  - "\uBB50\uC57C \uC9C4\uC9DC\uB85C \uC8FC\uB294 \uAC70\uC57C?"
+  - "\uB108 \uC0DD\uAC01\uBCF4\uB2E4 \uAD1C\uCC2E\uC740 \uB140\uC11D\uC774\uB124."
+  - "P:\uD568\uAED8 \uC5EC\uD589\uD558\uB294 \uAC83\uC744 \uC81C\uC548\uD55C\uB2E4."
+  - "\uC88B\uC544 \uB098\uB3C4 \uB530\uB77C\uAC08\uAC8C"
   triggerNextQuest: 1
   questIndex: 0
 --- !u!1 &364913893
@@ -657,9 +666,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1464234523769064632, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 3809611305525964683, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 3809611305525964683, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 715117951559944696, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 3809611305525964683, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034245172555647606, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 4034245172555647606, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 715117951559944696, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 4034245172555647606, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,13 +734,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
-    - target: {fileID: 7396065570241893864, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: interactableLayer.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 9067918818354958976, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 8719126601425532895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 8719126601425532895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 715117951559944696, guid: a0c8bc193a83c3a4aa3b89ea52a18101, type: 2}
+    - target: {fileID: 8719126601425532895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -731,6 +764,7 @@ GameObject:
   - component: {fileID: 1377883668}
   - component: {fileID: 1377883667}
   - component: {fileID: 1377883671}
+  - component: {fileID: 1377883672}
   m_Layer: 10
   m_Name: Wood3
   m_TagString: Untagged
@@ -783,6 +817,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 01156aaa5e29e3b46b4048edad9f50d6, type: 2}
+  - {fileID: 2100000, guid: 256fb6ef82ba5264aa8b1674c8a1aea4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -839,6 +874,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f506b61c855348ad2f5b0a746ad67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1377883672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377883666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a475f6303a7985f469f1cf3d9fbf84c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 256fb6ef82ba5264aa8b1674c8a1aea4, type: 2}
 --- !u!114 &1512739888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4034245172555647606, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -972,6 +1020,7 @@ GameObject:
   - component: {fileID: 1701392195}
   - component: {fileID: 1701392194}
   - component: {fileID: 1701392198}
+  - component: {fileID: 1701392199}
   m_Layer: 10
   m_Name: Wood1
   m_TagString: Untagged
@@ -1024,6 +1073,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 01156aaa5e29e3b46b4048edad9f50d6, type: 2}
+  - {fileID: 2100000, guid: 74a647f4143714a419f815f07e34f536, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1080,6 +1130,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f506b61c855348ad2f5b0a746ad67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1701392199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701392193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a475f6303a7985f469f1cf3d9fbf84c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 74a647f4143714a419f815f07e34f536, type: 2}
 --- !u!1 &1702656256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 1702656256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.614, y: 2.375, z: -1.764}
+  m_LocalPosition: {x: 12.28, y: 2.65, z: -1.764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1377,6 +1440,7 @@ GameObject:
   - component: {fileID: 2025091779}
   - component: {fileID: 2025091778}
   - component: {fileID: 2025091782}
+  - component: {fileID: 2025091783}
   m_Layer: 10
   m_Name: Wood2
   m_TagString: Untagged
@@ -1429,6 +1493,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 01156aaa5e29e3b46b4048edad9f50d6, type: 2}
+  - {fileID: 2100000, guid: d055a6433b262654495a874d740f5884, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1485,6 +1550,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f506b61c855348ad2f5b0a746ad67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2025091783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025091777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a475f6303a7985f469f1cf3d9fbf84c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: d055a6433b262654495a874d740f5884, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

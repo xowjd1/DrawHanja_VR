@@ -9,6 +9,8 @@ public class DialogUI : MonoBehaviour
     public GameObject dialogPanel;
     public TextMeshProUGUI dialogText; 
     public Button nextButton;
+    public Button choiceButton;
+    public TextMeshProUGUI choiceText;
 
     private string[] lines;
     private int index = 0;
@@ -20,6 +22,7 @@ public class DialogUI : MonoBehaviour
         Instance = this;
         dialogPanel.SetActive(false);
         nextButton.onClick.AddListener(NextLine);
+        choiceButton.onClick.AddListener(NextLine);
     }
 
     public void StartDialog(string[] dialogLines, System.Action onComplete = null)
@@ -29,7 +32,7 @@ public class DialogUI : MonoBehaviour
         onDialogComplete = onComplete;
         
         dialogPanel.SetActive(true);
-        dialogText.text = lines[index];
+        ShowCurrentLine();
         
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -38,6 +41,12 @@ public class DialogUI : MonoBehaviour
     void NextLine()
     {
         index++;
+        
+        if (index < lines.Length && lines[index].StartsWith("P:"))
+        {
+            index++;
+        }
+        
         if (index >= lines.Length)
         {
             dialogPanel.SetActive(false);
@@ -50,7 +59,28 @@ public class DialogUI : MonoBehaviour
         }
         else
         {
-            dialogText.text = lines[index];
+            ShowCurrentLine(); 
+        }
+    }
+    
+    void ShowCurrentLine()
+    {
+        string line = lines[index];
+        string nextLine = (index + 1 < lines.Length) ? lines[index + 1] : null;
+
+        if (nextLine != null && nextLine.StartsWith("P:"))
+        {
+            dialogText.text = line;
+            choiceText.text = nextLine.Substring(2).Trim();
+
+            nextButton.gameObject.SetActive(false);
+            choiceButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            nextButton.gameObject.SetActive(true);
+            choiceButton.gameObject.SetActive(false);
+            dialogText.text = line;
         }
     }
 }
