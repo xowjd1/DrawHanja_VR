@@ -45,10 +45,11 @@ public class AudioParticle : MonoBehaviour
 
     public void PlayAudio()
     {
+        ControllPitch();
         source.PlayOneShot(clip, volum);
     }
 
-    public void ControllPitch()
+    private void ControllPitch()
     {
         if (randomizePitch)
         {
@@ -59,6 +60,5 @@ public class AudioParticle : MonoBehaviour
     public void PlayWaveParticle()
     {
         Demo1.Play();
-        Demo2.Play();
     }
 }
