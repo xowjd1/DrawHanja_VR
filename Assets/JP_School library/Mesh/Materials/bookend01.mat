@@ -146,7 +146,7 @@ Material:
     - _MY_CUSTOM_MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _MY_CUSTOM_SHADOWS_SOFT: 1
     - _Metallic: 0
-    - _MtStrength: 0.2
+    - _MtStrength: 0.5
     - _NmStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005

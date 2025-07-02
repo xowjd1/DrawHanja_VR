@@ -20755,7 +20755,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: e2e756bb9bcd7bb47a018bcfce9bb98b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9338ef2688d8c4a47b8cc2c49681c988, type: 2}
+      objectReference: {fileID: 2100000, guid: 325af817f478c054cac358a1080fd54f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45890,7 +45890,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: e2e756bb9bcd7bb47a018bcfce9bb98b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9338ef2688d8c4a47b8cc2c49681c988, type: 2}
+      objectReference: {fileID: 2100000, guid: 325af817f478c054cac358a1080fd54f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57703,7 +57703,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
