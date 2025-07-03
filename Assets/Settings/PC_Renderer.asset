@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88bd13fabf96a4cc1aaf221e40805c5c, type: 3}
   m_Name: RadiantRenderFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   renderPassEvent: 450
   renderingPath: 1
   ignorePostProcessingOption: 1
@@ -28,9 +28,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69a19d29ef66464ea0afc7cd84fd6c2, type: 3}
   m_Name: VolumetricFogRendererFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   downsampleDepthShader: {fileID: 4800000, guid: cffeaeec0396a2c4dad475266cc8dfeb, type: 3}
   volumetricFogShader: {fileID: 4800000, guid: 08f816187f9af0244a95556ee0cab83f, type: 3}
+--- !u!114 &-751900865805246501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPassRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  injectionPoint: 600
+  fetchColorBuffer: 1
+  requirements: 0
+  passMaterial: {fileID: 2100000, guid: 4753d58f4a861c248ae96b7fdfa806a2, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,8 +79,8 @@ MonoBehaviour:
   - {fileID: 7833122117494664109}
   - {fileID: -2380588367446763792}
   - {fileID: 7496320706063832629}
-  - {fileID: -8166594048169912882}
-  m_RendererFeatureMap: ad6b866f10d7b46cf096e8217e73f6de35165707f7470868ce55034efb6daa8e
+  - {fileID: -751900865805246501}
+  m_RendererFeatureMap: ad6b866f10d7b46cf096e8217e73f6de35165707f7470868db9f5e7325b690f5
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}

@@ -143,14 +143,14 @@ MonoBehaviour:
     m_Value: 1
   lutIntensity:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.5
   lutTexture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 8b34cfb7ecbd94cd69d18c8e70d2a662, type: 3}
     dimension: 1
   bloomIntensity:
     m_OverrideState: 0
-    m_Value: 0.25
+    m_Value: 0.1
   bloomThreshold:
     m_OverrideState: 0
     m_Value: 0.75
@@ -743,40 +743,6 @@ MonoBehaviour:
   blurSourceEdgeBlendStrength:
     m_OverrideState: 0
     m_Value: 20
---- !u!114 &-7453632155608944390
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
-  m_Name: ShadowsMidtonesHighlights
-  m_EditorClassIdentifier: 
-  active: 1
-  shadows:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.018691584}
-  midtones:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
-  highlights:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.31605586}
-  shadowsStart:
-    m_OverrideState: 0
-    m_Value: 0
-  shadowsEnd:
-    m_OverrideState: 0
-    m_Value: 0.3
-  highlightsStart:
-    m_OverrideState: 0
-    m_Value: 0.55
-  highlightsEnd:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!114 &-5758722823563355531
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -798,99 +764,7 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1, z: 1, w: 0.11328526}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.06278027}
---- !u!114 &-2012901506605513716
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: 
-  active: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 2
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.5
-  clamp:
-    m_OverrideState: 1
-    m_Value: 0.05
---- !u!114 &-1863841766894792715
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a074ec59f6e910b4e8c49f57e56cf95a, type: 3}
-  m_Name: VolumetricFogVolumeComponent
-  m_EditorClassIdentifier: 
-  active: 0
-  distance:
-    m_OverrideState: 1
-    m_Value: 8
-  baseHeight:
-    m_OverrideState: 1
-    m_Value: 0
-  maximumHeight:
-    m_OverrideState: 1
-    m_Value: 50
-  enableGround:
-    m_OverrideState: 1
-    m_Value: 1
-  groundHeight:
-    m_OverrideState: 1
-    m_Value: 0
-  density:
-    m_OverrideState: 1
-    m_Value: 1
-  attenuationDistance:
-    m_OverrideState: 0
-    m_Value: 128
-  enableAPVContribution:
-    m_OverrideState: 0
-    m_Value: 0
-  APVContributionWeight:
-    m_OverrideState: 0
-    m_Value: 1
-  enableMainLightContribution:
-    m_OverrideState: 1
-    m_Value: 1
-  anisotropy:
-    m_OverrideState: 1
-    m_Value: 0.4
-  scattering:
-    m_OverrideState: 1
-    m_Value: 0.15
-  tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  enableAdditionalLightsContribution:
-    m_OverrideState: 1
-    m_Value: 1
-  maxSteps:
-    m_OverrideState: 1
-    m_Value: 128
-  blurIterations:
-    m_OverrideState: 1
-    m_Value: 2
-  enabled:
-    m_OverrideState: 1
-    m_Value: 1
-  renderPassEvent:
-    m_OverrideState: 0
-    m_Value: 550
+    m_Value: {x: 1, y: 1, z: 1, w: -0.003960548}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,12 +778,9 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -1863841766894792715}
   - {fileID: 2617537938734289776}
   - {fileID: 1468594128381813242}
   - {fileID: 746816084697735866}
-  - {fileID: -2012901506605513716}
-  - {fileID: -7453632155608944390}
   - {fileID: -7621208284929000019}
   - {fileID: -5758722823563355531}
   - {fileID: 8831139331630828895}
@@ -925,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 1
