@@ -10,7 +10,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (QuestManager.Instance.questCompleted)
+        if (QuestManager.Instance.quests[questIndex].isCompleted)
         {
             DialogUI.Instance.StartDialog(dialogAfterQuestComplete);
 

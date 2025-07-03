@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 2bcbf05bd43012b46b75056dc361a2fe
+guid: 5af71a922f5f19d458aef5fc0b12c3d6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bark07_0Mat
-    second: {fileID: 2100000, guid: 21fbb4eb29fa4ce479a5afb184b6c839, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elm_leaf_1Mat
-    second: {fileID: 2100000, guid: d4a842c125cce814080c4c10192bfa52, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -2,40 +2,41 @@ using UnityEngine;
 
 public class TreeFalling : MonoBehaviour
 {
-    public float fallSpeed = 20f;          
-    public float fallThreshold = 60f;      
-    public Rigidbody rb;                   
-    public bool isHit = false;
-    
-    private float currentAngle = 0f;
-    
+    public Rigidbody rb;
+    public float tiltAngle = 90f;
+    public float tiltSpeed = 90f;
+
+    private float rotated = 0f;
+    private bool isFalling = false;
+
     void Start()
     {
         rb.isKinematic = true;
     }
-    
+
     void Update()
     {
-        if (isHit && currentAngle < fallThreshold)
-        {
-            float delta = fallSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.right, delta);
-            currentAngle += delta;
+        if (!isFalling) return;
 
-            if (currentAngle >= fallThreshold)
-            {
-                rb.isKinematic = false;
-            }
+        float step = tiltSpeed * Time.deltaTime;
+        float remaining = tiltAngle - rotated;
+        float actualStep = Mathf.Min(step, remaining);
+
+        transform.Rotate(Vector3.right, actualStep);
+        rotated += actualStep;
+
+        if (rotated >= tiltAngle && rb != null)
+        {
+            isFalling = false;
+            QuestManager.Instance.CompleteQuest();
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("무언가와 충돌: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Ax"))
+        if (!isFalling && collision.gameObject.CompareTag("Ax"))
         {
-            isHit = true;
-            Debug.Log("충돌 발생: " + collision.gameObject.name);
+            isFalling = true;
         }
     }
 }

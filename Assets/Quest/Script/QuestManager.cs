@@ -1,19 +1,24 @@
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public class Quest
+{
+    public string message;
+    public bool isCompleted;
+}
+
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
-    public int itemCount = 0;
 
+    public Quest[] quests;
     public int currentQuestIndex = 0;
-    public bool questCompleted = false;
     
     public GameObject questPanel;
     public TextMeshProUGUI questText;
-    public string[] questMessages;
     
-    public GameObject wallBlocker;
+    public GameObject wallBlocker1;
     
 
     private void Awake()
@@ -26,18 +31,15 @@ public class QuestManager : MonoBehaviour
 
     public void StartNextQuest()
     {
-        if (currentQuestIndex < questMessages.Length)
+        if (currentQuestIndex < quests.Length)
         {
-            string message = questMessages[currentQuestIndex];
-            ShowQuestMessage(message);
-            currentQuestIndex++;
-            questCompleted = false;
+            ShowQuestMessage(quests[currentQuestIndex].message);
         }
     }
 
     public bool IsQuestActive(int questNumber)
     {
-        return currentQuestIndex == questNumber;
+        return currentQuestIndex == questNumber && !quests[questNumber].isCompleted;
     }
     
     void ShowQuestMessage(string message)
@@ -51,14 +53,18 @@ public class QuestManager : MonoBehaviour
         questPanel.SetActive(false);
     }
     
-    public void CheckItemQuest()
+    public void CompleteQuest()
     {
-        itemCount++;
-        
-        if (itemCount >= 3 && !questCompleted)
+        if (currentQuestIndex < quests.Length)
         {
-            questCompleted = true;
-            wallBlocker.SetActive(false);
+            quests[currentQuestIndex].isCompleted = true;
+
+            // 퀘스트별 후처리
+            if (currentQuestIndex == 0) wallBlocker1.SetActive(false);
+            // if (currentQuestIndex == 1) wallBlocker2.SetActive(false);
+
+            currentQuestIndex++;
+            questPanel.SetActive(false);
         }
     }
 }
