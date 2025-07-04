@@ -5,7 +5,7 @@ using TMPro;
 public class DialogUI : MonoBehaviour
 {
     public static DialogUI Instance;
-
+    
     public GameObject dialogPanel;
     public TextMeshProUGUI dialogText; 
     public Button nextButton;
@@ -14,13 +14,13 @@ public class DialogUI : MonoBehaviour
 
     private string[] lines;
     private int index = 0;
-    
     private System.Action onDialogComplete;
+    
 
     void Awake()
     {
+            
         Instance = this;
-        dialogPanel.SetActive(false);
         nextButton.onClick.AddListener(NextLine);
         choiceButton.onClick.AddListener(NextLine);
     }
@@ -30,7 +30,7 @@ public class DialogUI : MonoBehaviour
         lines = dialogLines;
         index = 0;
         onDialogComplete = onComplete;
-        
+
         dialogPanel.SetActive(true);
         ShowCurrentLine();
         
