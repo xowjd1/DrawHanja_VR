@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class VisionCompareController : MonoBehaviour
     [Header("드로잉 스크립트")]
     public TransparentUIDrawing drawing; // 획만 담긴 투명 텍스처
 
+    [Header("한자 데이터베이스")]
+    public HanjaDataBase   database;
+    
     [Header("UI 컴포넌트")]
     public Button completeButton;
     public TMP_Text   resultText;
@@ -47,12 +51,7 @@ public class VisionCompareController : MonoBehaviour
     ocrTex.SetPixels(ocrPx);
     ocrTex.Apply();
     Debug.Log($"[Vision] OCR용 이미지 생성 완료 ({w}×{h})");
-
-    // (디버그) 로컬에 저장해 보고 싶다면
-    // var path = Application.persistentDataPath + "/ocr.png";
-    // System.IO.File.WriteAllBytes(path, ocrTex.EncodeToPNG());
-    // Debug.Log($"[Vision] OCR 이미지 저장: {path}");
-
+    
     // 3) PNG → Base64
     byte[] pngBytes = ocrTex.EncodeToPNG();
     Debug.Log($"[Vision] OCR PNG 크기: {pngBytes.Length}");
@@ -90,25 +89,30 @@ public class VisionCompareController : MonoBehaviour
 
     Debug.Log($"[Vision] 응답 본문:\n{uwr.downloadHandler.text}");
 
-    // 6) 응답 파싱 & 판정
+    // 6) 응답 파싱
     var response = JsonUtility.FromJson<VisionResponse>(uwr.downloadHandler.text);
     string detected = "";
     try {
         detected = response.responses[0].textAnnotations[0].description.Trim();
     } catch {}
-    Debug.Log($"[Vision] 인식된 문자열: '{detected}'");
+    
+    // 7) Database에서 허용 한자 문자열 배열로 변환
+    string[] allowed = database.allowedHanja
+        .Select(k => k.character)
+        .ToArray();
 
-    if (detected == "火") {
-        resultText.text = $"정답! (인식된: {detected})";
-        Debug.Log("[Vision] 판정: 정답");
-    }
-    else if (string.IsNullOrEmpty(detected)) {
+    // 8) 판정
+    if (string.IsNullOrEmpty(detected))
+    {
         resultText.text = "글자를 인식하지 못했어요.";
-        Debug.Log("[Vision] 판정: 인식실패");
     }
-    else {
-        resultText.text = $"틀렸어요 (인식된: {detected})";
-        Debug.Log("[Vision] 판정: 오답");
+    else if (allowed.Contains(detected))
+    {
+        resultText.text = $"정답! (인식된: {detected})";
+    }
+    else
+    {
+        resultText.text = $"틀렸어요 (허용되지 않은 문자: {detected})";
     }
 }
 

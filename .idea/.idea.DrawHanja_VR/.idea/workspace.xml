@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/CompareController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/CompareController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/MouseStrokeDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/MouseStrokeDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +37,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Writing/HanjaDataBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Writing/TEST/NPCInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@f23ad2c521e1/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -115,6 +122,7 @@
       <workItem from="1750750113923" duration="4379000" />
       <workItem from="1750817466126" duration="805000" />
       <workItem from="1750829095610" duration="6841000" />
+      <workItem from="1751612342796" duration="3014000" />
     </task>
     <servers />
   </component>

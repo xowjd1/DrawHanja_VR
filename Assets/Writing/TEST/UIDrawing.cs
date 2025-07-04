@@ -8,9 +8,10 @@ public class TransparentUIDrawing : MonoBehaviour
 {
     [Header("UI 컴포넌트")]
     public RawImage drawingImage;       // DrawingArea 할당
-    public int    textureWidth  = 512;
-    public int    textureHeight = 512;
-    public int    brushSize     = 4;
+    public Button   clearButton;        // 전체 지우기 버튼
+    public int      textureWidth  = 512;
+    public int      textureHeight = 512;
+    public int      brushSize     = 4;
 
     // 내부 상태
     private Texture2D       drawTex;
@@ -32,13 +33,17 @@ public class TransparentUIDrawing : MonoBehaviour
         drawTex = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false);
         Color[] cols = new Color[textureWidth * textureHeight];
         for (int i = 0; i < cols.Length; i++)
-            cols[i] = Color.clear;               // ← 완전 투명으로 초기화
+            cols[i] = Color.clear;
         drawTex.SetPixels(cols);
         drawTex.Apply();
 
         // 2) DrawingArea에 할당
         drawingImage.texture = drawTex;
-        drawingImage.color   = Color.white;      // 획 색 그대로 보이게
+        drawingImage.color   = Color.white;
+
+        // 3) 클리어 버튼에 리스너 추가
+        if (clearButton != null)
+            clearButton.onClick.AddListener(ClearAllStrokes);
     }
 
     void Update()
@@ -133,6 +138,22 @@ public class TransparentUIDrawing : MonoBehaviour
     {
         if (x < 0 || x >= textureWidth || y < 0 || y >= textureHeight) return;
         drawTex.SetPixel(x, y, c);
+    }
+
+    /// <summary>
+    /// 모든 획을 삭제하고 투명 캔버스로 초기화합니다.
+    /// </summary>
+    public void ClearAllStrokes()
+    {
+        // 텍스처 초기화
+        Color[] cols = new Color[textureWidth * textureHeight];
+        for (int i = 0; i < cols.Length; i++) cols[i] = Color.clear;
+        drawTex.SetPixels(cols);
+        drawTex.Apply();
+
+        // 벡터 데이터 초기화
+        strokes.Clear();
+        Debug.Log("All strokes cleared.");
     }
 
     // 획 벡터 데이터
