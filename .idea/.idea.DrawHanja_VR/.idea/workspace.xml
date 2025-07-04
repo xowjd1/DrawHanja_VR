@@ -6,15 +6,131 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/CompareController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/CompareController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/MouseStrokeDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/MouseStrokeDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Demo/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Demo/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Icons/Help_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Icons/Help_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Icons/Water Shader icon.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Icons/Water Shader icon.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Prefabs/WaterBlock_50m.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Prefabs/WaterBlock_50m.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Prefabs/WaterReflectionCamera.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Prefabs/WaterReflectionCamera.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterBlock_50m.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterBlock_50m.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterShader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterShader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_atlas.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_atlas.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_single.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_single.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_01.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_01.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_02.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_02.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_03.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_03.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sea/Sea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sea/Sea.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaDataBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaDataBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaDatabase.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/HanjaDatabase.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/49eb6e4c55248c1c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/49eb6e4c55248c1c.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/83b15fccbd943a7b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/83b15fccbd943a7b.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/DungGeunMo.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/49eb6e4c55248c1c.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/49eb6e4c55248c1c.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/83b15fccbd943a7b.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/83b15fccbd943a7b.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/Draw Canvas Render Texture.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/Draw Canvas Render Texture.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/RecTest_Back.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/RecTest_Back.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/c1d19fdf6a840df0 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/c1d19fdf6a840df0 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/c1d19fdf6a840df0.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/c1d19fdf6a840df0.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/ce35ef2fa2a5e9b3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/ce35ef2fa2a5e9b3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/unnamed.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/Materials/unnamed.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/NPCInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/NPCInteractable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawTestScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/UIDrawing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VRDraw.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VRDraw.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/VisionCompareController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/c1d19fdf6a840df0 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/c1d19fdf6a840df0 1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/c1d19fdf6a840df0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/c1d19fdf6a840df0.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/ce35ef2fa2a5e9b3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/TEST/ce35ef2fa2a5e9b3.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/光.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/光.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/刀.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/刀.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/力.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/力.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/斬.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/斬.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/木.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/木.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/水.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/水.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/火.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/火.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/炎.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/炎.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/犬.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/犬.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/猿.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/猿.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/石.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/石.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/船.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/船.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/風.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/風.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/鳥.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Writing/鳥.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
