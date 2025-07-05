@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 82
   m_IsActive: 1
 --- !u!4 &1861489375516156463
 Transform:
@@ -102,7 +102,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 82
   m_IsActive: 1
 --- !u!4 &7784564530024746503
 Transform:
@@ -187,7 +187,7 @@ GameObject:
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 82
   m_IsActive: 1
 --- !u!4 &7902868224669408519
 Transform:
@@ -296,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6565742827809963931, guid: 187724b07d12fcf4199df78dec0e87b6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
