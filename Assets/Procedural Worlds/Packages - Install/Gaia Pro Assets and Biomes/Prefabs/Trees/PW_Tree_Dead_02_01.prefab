@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 325772304591539163}
   - component: {fileID: 7124957718142351944}
   - component: {fileID: 3377048979809941993}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &325772304591539163
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 150842476281842811}
   - component: {fileID: 748856447749315263}
   - component: {fileID: 7248459244107750551}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_01
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &150842476281842811
 Transform:
@@ -188,12 +188,12 @@ GameObject:
   - component: {fileID: 647232557819688402}
   - component: {fileID: 482960729051081974}
   - component: {fileID: 2726783107751208637}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &647232557819688402
 Transform:
@@ -274,12 +274,12 @@ GameObject:
   - component: {fileID: 8636439347859567183}
   - component: {fileID: 4305467887707610390}
   - component: {fileID: 6803820067324525449}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8636439347859567183
 Transform:
@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2854260443513806521, guid: e541c9836f6c4144d82a46699a01e0d0, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6062484632300338460, guid: e541c9836f6c4144d82a46699a01e0d0, type: 3}
       propertyPath: m_RootOrder

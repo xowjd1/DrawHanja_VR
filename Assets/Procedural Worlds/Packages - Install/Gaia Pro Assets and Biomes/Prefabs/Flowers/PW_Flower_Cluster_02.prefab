@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6100650705122798891}
   - component: {fileID: 395815143109538733}
   - component: {fileID: 4099034929474303571}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Flower_Cluster_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6100650705122798891
 Transform:
@@ -96,12 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7494149980063599697}
   - component: {fileID: 6949915301873654421}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Flower_Cluster_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7494149980063599697
 Transform:
@@ -159,12 +159,12 @@ GameObject:
   - component: {fileID: 2915532107828868791}
   - component: {fileID: 3468961881639778018}
   - component: {fileID: 1309768694700975098}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Flower_Cluster_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2915532107828868791
 Transform:
@@ -248,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6540412623125047633, guid: 055ebc099efb9de4998bc2a98f4f5e90, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6540412623125047633, guid: 055ebc099efb9de4998bc2a98f4f5e90, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7139375998883988785, guid: 055ebc099efb9de4998bc2a98f4f5e90, type: 3}
       propertyPath: m_RootOrder

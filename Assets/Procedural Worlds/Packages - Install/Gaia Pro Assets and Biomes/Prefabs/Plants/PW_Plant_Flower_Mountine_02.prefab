@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4975316964686623117}
   - component: {fileID: 9166010245291503834}
   - component: {fileID: 1815769633796432518}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Flower_Mountine_02_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4975316964686623117
 Transform:
@@ -96,12 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1231302525276180314}
   - component: {fileID: 1830125598520564126}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Flower_Mountine_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1231302525276180314
 Transform:
@@ -159,12 +159,12 @@ GameObject:
   - component: {fileID: 98109922626455433}
   - component: {fileID: 3277333541935737372}
   - component: {fileID: 3843087164176302513}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Flower_Mountine_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &98109922626455433
 Transform:
@@ -245,12 +245,12 @@ GameObject:
   - component: {fileID: 1369481355829296224}
   - component: {fileID: 1015971608487690017}
   - component: {fileID: 8729088450230518077}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Flower_Mountine_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1369481355829296224
 Transform:

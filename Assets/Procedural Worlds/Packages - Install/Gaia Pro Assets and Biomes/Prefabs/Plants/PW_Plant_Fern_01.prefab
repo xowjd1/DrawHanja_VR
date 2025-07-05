@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3777053111333253334}
   - component: {fileID: 6047462786172431146}
   - component: {fileID: 6761467235768362280}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_01_01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3777053111333253334
 Transform:
@@ -96,12 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 185529652963214333}
   - component: {fileID: 783833777387771193}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_01
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &185529652963214333
 Transform:
@@ -164,12 +164,12 @@ GameObject:
   - component: {fileID: 6640601070248190834}
   - component: {fileID: 8089217146187133832}
   - component: {fileID: 1041327870354215627}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_01_01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6640601070248190834
 Transform:
@@ -250,12 +250,12 @@ GameObject:
   - component: {fileID: 100583928374604648}
   - component: {fileID: 6812050297676139101}
   - component: {fileID: 8527264113541069099}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_01_01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &100583928374604648
 Transform:
@@ -383,11 +383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574540628977837066, guid: e6fb351c881c5a74dafe37b19faf037b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6574540628977837066, guid: e6fb351c881c5a74dafe37b19faf037b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

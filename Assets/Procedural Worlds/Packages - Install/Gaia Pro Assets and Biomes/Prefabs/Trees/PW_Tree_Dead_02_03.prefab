@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6938570299372303368}
   - component: {fileID: 3238410319184069865}
   - component: {fileID: 1130722379926284393}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_03_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6938570299372303368
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 6095462219148239842}
   - component: {fileID: 3445996918407496466}
   - component: {fileID: 8783904057824918633}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_03_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6095462219148239842
 Transform:
@@ -183,12 +183,12 @@ GameObject:
   - component: {fileID: 5763097609602469584}
   - component: {fileID: 5154717406270593044}
   - component: {fileID: 1010888432641470136}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_02_03
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5763097609602469584
 Transform:
@@ -316,11 +316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566209117959849025, guid: eadb1c897b30aea479c749a06c2e0f58, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5566209117959849025, guid: eadb1c897b30aea479c749a06c2e0f58, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

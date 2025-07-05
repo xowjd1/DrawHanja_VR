@@ -62,7 +62,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   sharpenIntensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 10
   sharpenDepthThreshold:
     m_OverrideState: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
     m_Value: 1
   lutIntensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.4
   lutTexture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 8b34cfb7ecbd94cd69d18c8e70d2a662, type: 3}
@@ -697,7 +697,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 9
   ditherIntensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.005
   frame:
     m_OverrideState: 0
@@ -796,16 +796,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 50
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 40
+    m_Value: 100
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 1.5

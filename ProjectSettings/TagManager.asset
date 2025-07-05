@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PW - Nature
+  - PW - Prop
+  - PW - Building
+  - Synty Medium Farm
+  - Synty Tree
+  - Synty Small Farm
   layers:
   - Default
   - TransparentFX
@@ -33,9 +39,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - PW_Object_Small
+  - PW_Object_Medium
+  - PW_Object_Large
   - Brush
   m_SortingLayers:
   - name: Default

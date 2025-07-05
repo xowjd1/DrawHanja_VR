@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6649461073668962625}
   - component: {fileID: 5383930698752374155}
   - component: {fileID: 1711529398509374175}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Maple_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6649461073668962625
 Transform:
@@ -98,12 +98,12 @@ GameObject:
   - component: {fileID: 1835092357560449312}
   - component: {fileID: 852192955124871954}
   - component: {fileID: 2175056512497134313}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Maple_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1835092357560449312
 Transform:
@@ -185,12 +185,12 @@ GameObject:
   - component: {fileID: 8833865779012682208}
   - component: {fileID: 8280902044992001828}
   - component: {fileID: 3498603751825582454}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Maple_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8833865779012682208
 Transform:
@@ -274,11 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833328879917500662, guid: 2b60c5c6f3e9a7a4697aa66faa2b003b, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4833328879917500662, guid: 2b60c5c6f3e9a7a4697aa66faa2b003b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7295165102551161217, guid: 2b60c5c6f3e9a7a4697aa66faa2b003b, type: 3}
       propertyPath: m_RootOrder

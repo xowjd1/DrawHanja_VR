@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6911461463088170757}
   - component: {fileID: 1220467133349185121}
   - component: {fileID: 4996569284879000534}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Stump_04_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6911461463088170757
 Transform:
@@ -98,12 +98,12 @@ GameObject:
   - component: {fileID: 646879554258069495}
   - component: {fileID: 38758955526779187}
   - component: {fileID: 642550644904158686}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Stump_04_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &646879554258069495
 Transform:
@@ -184,12 +184,12 @@ GameObject:
   - component: {fileID: 3893810619287666601}
   - component: {fileID: 7426030412712087945}
   - component: {fileID: 8752980959542574909}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Stump_04_02_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3893810619287666601
 Transform:
@@ -271,12 +271,12 @@ GameObject:
   - component: {fileID: 967699443753357613}
   - component: {fileID: 8622386719903519103}
   - component: {fileID: 7984754716928585785}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Stump_04_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &967699443753357613
 Transform:

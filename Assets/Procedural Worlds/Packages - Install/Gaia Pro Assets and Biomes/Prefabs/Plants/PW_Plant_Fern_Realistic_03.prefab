@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3314409605302713200}
   - component: {fileID: 79645295606889353}
   - component: {fileID: 7837202019738457115}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plants_Fern_Realistic_03_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3314409605302713200
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 5023576340152898862}
   - component: {fileID: 7970758502335725903}
   - component: {fileID: 7659644533105228932}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_Realistic_03_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5023576340152898862
 Transform:
@@ -182,12 +182,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7114357682817016824}
   - component: {fileID: 7694637492593177916}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Fern_Realistic_03
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7114357682817016824
 Transform:
@@ -248,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2935517715038942815, guid: d6c8535dbea61984b988e883eb5c94d9, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 2935517715038942815, guid: d6c8535dbea61984b988e883eb5c94d9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7054535973840068730, guid: d6c8535dbea61984b988e883eb5c94d9, type: 3}
       propertyPath: m_RootOrder

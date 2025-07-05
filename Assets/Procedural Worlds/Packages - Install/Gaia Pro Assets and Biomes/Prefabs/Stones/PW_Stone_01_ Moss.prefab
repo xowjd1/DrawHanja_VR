@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 933329414257725944}
   - component: {fileID: 6214269526273404713}
   - component: {fileID: 1655678410994614512}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_01_01_LOD0
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &933329414257725944
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 2185892743267259456}
   - component: {fileID: 1596041493377090180}
   - component: {fileID: 803015916880304581}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_01_ Moss
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2185892743267259456
 Transform:
@@ -187,12 +187,12 @@ GameObject:
   - component: {fileID: 3462439679586326415}
   - component: {fileID: 3886656260990133800}
   - component: {fileID: 5231679977706803541}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_01_01_LOD3
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3462439679586326415
 Transform:
@@ -273,12 +273,12 @@ GameObject:
   - component: {fileID: 3917092530405585158}
   - component: {fileID: 3761437433286442333}
   - component: {fileID: 754880280135643254}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_01_01_LOD1
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3917092530405585158
 Transform:
@@ -359,12 +359,12 @@ GameObject:
   - component: {fileID: 536648762874772109}
   - component: {fileID: 4715351968583444789}
   - component: {fileID: 1766956633871393197}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_01_01_LOD2
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &536648762874772109
 Transform:

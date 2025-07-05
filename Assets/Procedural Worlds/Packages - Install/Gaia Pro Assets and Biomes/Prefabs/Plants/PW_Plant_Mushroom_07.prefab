@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3946728362699328825}
   - component: {fileID: 8401825380268335739}
   - component: {fileID: 3649570163283067089}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Mushroom_01_07_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3946728362699328825
 Transform:
@@ -96,12 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2359629384355785923}
   - component: {fileID: 2939875264963000839}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Mushroom_07
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2359629384355785923
 Transform:
@@ -159,12 +159,12 @@ GameObject:
   - component: {fileID: 214366013819349515}
   - component: {fileID: 4113558082140389398}
   - component: {fileID: 2086665482349063394}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Mushroom_01_07_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &214366013819349515
 Transform:
@@ -245,12 +245,12 @@ GameObject:
   - component: {fileID: 4981727202018238397}
   - component: {fileID: 7402791369452018238}
   - component: {fileID: 8175574756384030809}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plant_Mushroom_01_07_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4981727202018238397
 Transform:

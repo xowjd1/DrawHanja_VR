@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 237591157370686402}
   - component: {fileID: 2413458544489172787}
   - component: {fileID: 5191017636346360475}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Birch_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &237591157370686402
 Transform:
@@ -98,12 +98,12 @@ GameObject:
   - component: {fileID: 1027881740022684005}
   - component: {fileID: 315624148524603754}
   - component: {fileID: 7534617071146098635}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Birch_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1027881740022684005
 Transform:
@@ -185,12 +185,12 @@ GameObject:
   - component: {fileID: 5569741657108558856}
   - component: {fileID: 4987785040695698124}
   - component: {fileID: 8247535872852252354}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Birch_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5569741657108558856
 Transform:
@@ -274,11 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601236423849998216, guid: 1cc925edacf21dd4cb9fe349f855770c, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1601236423849998216, guid: 1cc925edacf21dd4cb9fe349f855770c, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3714363502200829142, guid: 1cc925edacf21dd4cb9fe349f855770c, type: 3}
       propertyPath: m_RootOrder

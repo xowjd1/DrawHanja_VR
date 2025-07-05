@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 1861489375516156463}
   - component: {fileID: 7308713538143616491}
   - component: {fileID: 2392496553216467077}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plants_Flower_Field_04_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1861489375516156463
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 7784564530024746503}
   - component: {fileID: 7978620166150717872}
   - component: {fileID: 3236581719870499973}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plants_Flower_Field_04_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7784564530024746503
 Transform:
@@ -182,12 +182,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7902868224669408519}
   - component: {fileID: 7340654435689712579}
-  m_Layer: 9
+  m_Layer: 28
   m_Name: PW_Plants_Flower_Field_04
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7902868224669408519
 Transform:
@@ -292,11 +292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6565742827809963931, guid: 187724b07d12fcf4199df78dec0e87b6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6565742827809963931, guid: 187724b07d12fcf4199df78dec0e87b6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

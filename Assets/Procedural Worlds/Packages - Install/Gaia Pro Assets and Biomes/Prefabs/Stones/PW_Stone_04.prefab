@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 7307161759360573538}
   - component: {fileID: 3854311153817956628}
   - component: {fileID: 4923541648918398419}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_04_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7307161759360573538
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 6220539861010400973}
   - component: {fileID: 8613699476581740865}
   - component: {fileID: 5429660379659004895}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_04_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6220539861010400973
 Transform:
@@ -183,12 +183,12 @@ GameObject:
   - component: {fileID: 5775899524437303567}
   - component: {fileID: 8344237530674535067}
   - component: {fileID: 1812902738348262578}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_04_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5775899524437303567
 Transform:
@@ -269,12 +269,12 @@ GameObject:
   - component: {fileID: 7318846419109926044}
   - component: {fileID: 7917990725170872920}
   - component: {fileID: 7033268937592620212}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_04
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7318846419109926044
 Transform:
@@ -359,12 +359,12 @@ GameObject:
   - component: {fileID: 2885138799755747636}
   - component: {fileID: 8928983303460781776}
   - component: {fileID: 7052239516937102231}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_04_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2885138799755747636
 Transform:

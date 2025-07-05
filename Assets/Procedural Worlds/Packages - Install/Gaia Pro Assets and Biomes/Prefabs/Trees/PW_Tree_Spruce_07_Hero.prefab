@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 7524779289036077819}
   - component: {fileID: 5386159933892935362}
   - component: {fileID: 8863323372989563843}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Spruce_01_07_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7524779289036077819
 Transform:
@@ -99,12 +99,12 @@ GameObject:
   - component: {fileID: 7035756769472662149}
   - component: {fileID: 6665910034990295879}
   - component: {fileID: 1763485465033664842}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Spruce_01_07_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7035756769472662149
 Transform:
@@ -186,12 +186,12 @@ GameObject:
   - component: {fileID: 7592746522912219291}
   - component: {fileID: 7002327944618702431}
   - component: {fileID: 5604136110461698854}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Spruce_07_Hero
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7592746522912219291
 Transform:
@@ -277,12 +277,12 @@ GameObject:
   - component: {fileID: 5795897888646689124}
   - component: {fileID: 1971114114210605004}
   - component: {fileID: 8740578961603069684}
-  m_Layer: 9
+  m_Layer: 29
   m_Name: PW_Tree_Spruce_01_07_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5795897888646689124
 Transform:
@@ -411,11 +411,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245439060135082151, guid: 662e15ca6860db249ae00bfa70d39ab7, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5245439060135082151, guid: 662e15ca6860db249ae00bfa70d39ab7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

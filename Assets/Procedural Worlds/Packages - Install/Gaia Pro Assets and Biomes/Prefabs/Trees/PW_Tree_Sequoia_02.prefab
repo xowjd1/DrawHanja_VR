@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8371558973817185867}
   - component: {fileID: 6938133505351906506}
   - component: {fileID: 7654409870117371389}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Sequoia_01_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8371558973817185867
 Transform:
@@ -99,12 +99,12 @@ GameObject:
   - component: {fileID: 27461919663020298}
   - component: {fileID: 581543717288497102}
   - component: {fileID: 1353567498285224250}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Sequoia_02
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &27461919663020298
 Transform:
@@ -185,12 +185,12 @@ GameObject:
   - component: {fileID: 985347205184352586}
   - component: {fileID: 6424344595281551004}
   - component: {fileID: 7006148547447873915}
-  m_Layer: 11
+  m_Layer: 30
   m_Name: PW_Tree_Sequoia_01_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &985347205184352586
 Transform:
@@ -275,11 +275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1005345586145556007, guid: 34b3b82588b67314981e8faf2fe97f33, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1005345586145556007, guid: 34b3b82588b67314981e8faf2fe97f33, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3868226415045725503, guid: 34b3b82588b67314981e8faf2fe97f33, type: 3}
       propertyPath: m_RootOrder

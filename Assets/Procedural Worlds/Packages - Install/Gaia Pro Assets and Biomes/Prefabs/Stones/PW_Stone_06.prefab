@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 2362637918619944734}
   - component: {fileID: 3658269145874906025}
   - component: {fileID: 4394336686914720443}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_06_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2362637918619944734
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 3242929402536223824}
   - component: {fileID: 8887248874667982349}
   - component: {fileID: 8627621154465100569}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_06_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3242929402536223824
 Transform:
@@ -183,12 +183,12 @@ GameObject:
   - component: {fileID: 4449175800544390670}
   - component: {fileID: 1088316218131319416}
   - component: {fileID: 7067367067965009469}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_06_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4449175800544390670
 Transform:
@@ -269,12 +269,12 @@ GameObject:
   - component: {fileID: 4687980117102663351}
   - component: {fileID: 5295269450414915699}
   - component: {fileID: 2569891317708823515}
-  m_Layer: 10
+  m_Layer: 29
   m_Name: PW_Stone_06
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4687980117102663351
 Transform:

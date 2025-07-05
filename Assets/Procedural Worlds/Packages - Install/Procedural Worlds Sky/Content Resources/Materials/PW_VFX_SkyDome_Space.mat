@@ -58,3 +58,4 @@ Material:
     - _StarsSmallTint: {r: 33.89676, g: 23.426033, b: 17.569523, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

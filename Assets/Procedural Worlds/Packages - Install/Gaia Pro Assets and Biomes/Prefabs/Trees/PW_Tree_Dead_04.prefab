@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4204911057658781063}
   - component: {fileID: 8962718425087115607}
   - component: {fileID: 5625011923100770844}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_01_04_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4204911057658781063
 Transform:
@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 5851112087888851960}
   - component: {fileID: 4000788876152772574}
   - component: {fileID: 2767703617506252066}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_01_04_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 82
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5851112087888851960
 Transform:
@@ -183,12 +183,12 @@ GameObject:
   - component: {fileID: 1040660065259883632}
   - component: {fileID: 8829682142171672993}
   - component: {fileID: 8855978349513289947}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_01_04_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 122
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1040660065259883632
 Transform:
@@ -269,12 +269,12 @@ GameObject:
   - component: {fileID: 8535262113451662355}
   - component: {fileID: 9079478116051110615}
   - component: {fileID: 1300780123130167930}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: PW_Tree_Dead_04
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 90
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8535262113451662355
 Transform:
@@ -363,11 +363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 40335087420933761, guid: c6509f71c969e80469c650306240c455, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 40335087420933761, guid: c6509f71c969e80469c650306240c455, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 82
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8822366705994817777, guid: c6509f71c969e80469c650306240c455, type: 3}
       propertyPath: m_RootOrder
