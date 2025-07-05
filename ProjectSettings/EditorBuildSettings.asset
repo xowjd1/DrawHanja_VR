@@ -6,14 +6,142 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level_2/Test.unity
-    guid: 1a03c40bca661bf48a477d6631981ec8
-  - enabled: 1
     path: Assets/Scenes/Level_2/Forest.unity
     guid: ba0ab2d854c8fe346a6e5e3f05d89401
   - enabled: 1
+    path: Assets/Scenes/Level_2/Test.unity
+    guid: 1a03c40bca661bf48a477d6631981ec8
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_0-20250705
+      - 222515.unity
+    guid: a1c3a86ed457fd045b7adec561a8ba36
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_1-20250705
+      - 222515.unity
+    guid: 682c2d42b1940e74797eb34398f80667
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_2-20250705
+      - 222515.unity
+    guid: 952202a8e0f24a74da19087060545351
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_3-20250705
+      - 222515.unity
+    guid: c3927aea3307c9a4db8939f7c4361246
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_0-20250705
+      - 222515.unity
+    guid: 2c4b8a53bd5b145459e1a9021cc7cdd5
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_1-20250705
+      - 222515.unity
+    guid: 9055effbece05df42ba5640086b624d7
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_2-20250705
+      - 222515.unity
+    guid: dc52c0bd13b613948814dff9c37eb71f
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_3-20250705
+      - 222515.unity
+    guid: a20eb98ba4e3531499dfba10320e073d
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_0-20250705
+      - 222515.unity
+    guid: 972d4a8cb44092f44a38f656014161d8
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_1-20250705
+      - 222515.unity
+    guid: defe08e1a1cb7864ea32c481e8951ce0
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_2-20250705
+      - 222515.unity
+    guid: f7df71d90e380c345852c0564e7e8b37
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_3-20250705
+      - 222515.unity
+    guid: e56d6045317699749ba781781abe5b9c
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_0-20250705
+      - 222515.unity
+    guid: 2ab5b08469d6e0b4a8b2c4eca5b4bc43
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_1-20250705
+      - 222515.unity
+    guid: 962a71e5142461a499c9627df623e170
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_2-20250705
+      - 222515.unity
+    guid: c8d7a93a9c727f54d82d8d990f3272d2
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_3-20250705
+      - 222515.unity
+    guid: 25f27bb0b799bbf4d9763ab5538f0f67
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_0-20250705
+      - 223316.unity
+    guid: ec0079ae05e8bc34c984ccfb2ffec5a7
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_1-20250705
+      - 223316.unity
+    guid: 07133181a37c36b4789ab1f391f4d5e7
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_2-20250705
+      - 223316.unity
+    guid: dead3380f31d96b4e81ee9fb54f084e0
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_0_3-20250705
+      - 223316.unity
+    guid: 3059f431d3a1e584388d0cf7c9ab4516
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_0-20250705
+      - 223316.unity
+    guid: 93789c23815e35744bc0945ffb99d484
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_1-20250705
+      - 223316.unity
+    guid: 30efcde0e3e7b7d40b4236c42b89d358
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_2-20250705
+      - 223316.unity
+    guid: 67d3c6590316dc044b480e98630cef18
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_1_3-20250705
+      - 223316.unity
+    guid: 22de3697498f06747bf82af4b329834d
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_0-20250705
+      - 223316.unity
+    guid: 021ea3edd692d58458003ffde70176fe
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_1-20250705
+      - 223316.unity
+    guid: da51048e697b90044bc63ed1932a32b9
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_2-20250705
+      - 223316.unity
+    guid: 6cafd4edb2de82443a9ae670ff567c68
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_2_3-20250705
+      - 223316.unity
+    guid: 7eeb3bc391f7ab34eaaba7f6ed649b2a
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_0-20250705
+      - 223316.unity
+    guid: 66a8f5ab21817ed409f56496c636cebf
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_1-20250705
+      - 223316.unity
+    guid: e2233ecbbfb957c4a9c924acaca9ce8a
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_2-20250705
+      - 223316.unity
+    guid: 15c4f0d96849d664b9d0d390d493c354
+  - enabled: 1
+    path: Assets/Gaia User Data/Sessions/GS-20250704 - 224713/Terrain Scenes/Terrain_3_3-20250705
+      - 223316.unity
+    guid: a654910eefc6b6043b908a96c0183f58
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8b14f387c3a8f19418281aabd85c9afd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

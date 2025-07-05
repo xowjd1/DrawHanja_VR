@@ -65,6 +65,12 @@
       "source": "builtin",
       "dependencies": {}
     },
+    "com.unity.hlod": {
+      "version": "file:C:/Users/larkl/바탕 화면/Git/HLODSystem/com.unity.hlod",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.ide.rider": {
       "version": "3.0.36",
       "depth": 0,
