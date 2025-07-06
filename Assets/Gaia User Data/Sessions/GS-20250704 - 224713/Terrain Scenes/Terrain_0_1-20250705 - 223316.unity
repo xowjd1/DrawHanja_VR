@@ -3606,10 +3606,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_detailQuality: 2
-  m_gaiaDetailDistance: 50
-  m_gaiaDetailFadeoutDistance: 15
-  m_unityDetailDistance: 70
-  m_unityDetailDensity: 0.15
+  m_gaiaDetailDistance: 20
+  m_gaiaDetailFadeoutDistance: 10
+  m_unityDetailDistance: 40
+  m_unityDetailDensity: 0.05
   m_terrain: {fileID: 1976800081}
 --- !u!154 &1976800080
 TerrainCollider:
@@ -3645,8 +3645,8 @@ Terrain:
   m_TreeBillboardDistance: 90
   m_TreeCrossFadeLength: 50
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 70
-  m_DetailObjectDensity: 0.15
+  m_DetailObjectDistance: 40
+  m_DetailObjectDensity: 0.05
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 256
   m_HeightmapMinimumLODSimplification: 0
