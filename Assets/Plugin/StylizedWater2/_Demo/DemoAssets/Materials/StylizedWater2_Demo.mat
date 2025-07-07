@@ -191,7 +191,7 @@ Material:
     - _IntersectionClipping: 0.605
     - _IntersectionDistortion: 0.2
     - _IntersectionFalloff: 0.816
-    - _IntersectionLength: 3.04
+    - _IntersectionLength: 2
     - _IntersectionRippleDist: 32
     - _IntersectionRippleStrength: 0.547
     - _IntersectionSize: 0.944
@@ -290,7 +290,7 @@ Material:
     - _ZClip: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.16451614, b: 0.34, a: 0.98039216}
+    - _BaseColor: {r: 0.05887327, g: 0.08210895, b: 0.254717, a: 0.98039216}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DepthMapBounds: {r: -402.3, g: -459.43, b: 0.0012693577, a: 0}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}
@@ -302,7 +302,7 @@ Material:
     - _IntersectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalTiling: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShallowColor: {r: 0, g: 1, b: 0.98136926, a: 0.3764706}
+    - _ShallowColor: {r: 0, g: 0.4811321, b: 0.47169816, a: 0.3764706}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}

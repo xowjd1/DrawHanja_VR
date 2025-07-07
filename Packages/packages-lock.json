@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.cqf.urpvolumetricfog": {
-      "version": "https://github.com/CristianQiu/Unity-URP-Volumetric-Light.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "88053c1a52ec57cf2ea0afa30d6e915a1f078686"
-    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
@@ -63,12 +56,6 @@
       "version": "2.0.5",
       "depth": 1,
       "source": "builtin",
-      "dependencies": {}
-    },
-    "com.unity.hlod": {
-      "version": "file:C:/Users/larkl/바탕 화면/Git/HLODSystem/com.unity.hlod",
-      "depth": 0,
-      "source": "local",
       "dependencies": {}
     },
     "com.unity.ide.rider": {

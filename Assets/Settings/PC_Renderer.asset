@@ -31,6 +31,8 @@ MonoBehaviour:
   m_Active: 0
   downsampleDepthShader: {fileID: 4800000, guid: cffeaeec0396a2c4dad475266cc8dfeb, type: 3}
   volumetricFogShader: {fileID: 4800000, guid: 08f816187f9af0244a95556ee0cab83f, type: 3}
+  downsampleDepthMaterial: {fileID: 0}
+  volumetricFogMaterial: {fileID: 0}
 --- !u!114 &-751900865805246501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   injectionPoint: 600
   fetchColorBuffer: 1
   requirements: 0
@@ -77,10 +79,9 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 7200000, guid: b9a23f869c4fd45f19c5ada54dd82176, type: 3}
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
-  - {fileID: -2380588367446763792}
   - {fileID: 7496320706063832629}
   - {fileID: -751900865805246501}
-  m_RendererFeatureMap: ad6b866f10d7b46cf096e8217e73f6de35165707f7470868db9f5e7325b690f5
+  m_RendererFeatureMap: ad6b866f10d7b46c35165707f7470868db9f5e7325b690f5
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
