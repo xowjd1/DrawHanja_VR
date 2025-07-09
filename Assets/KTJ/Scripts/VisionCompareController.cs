@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class VisionCompareController : MonoBehaviour
 {
     [Header("드로잉 스크립트")]
-    public TransparentUIDrawing drawing; // 획만 담긴 투명 텍스처
+    public UIDrawing drawing; // 획만 담긴 투명 텍스처
 
     [Header("한자 데이터베이스")]
     public HanjaDataBase   database;

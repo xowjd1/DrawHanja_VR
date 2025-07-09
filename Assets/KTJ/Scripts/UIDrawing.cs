@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(GraphicRaycaster))]
-public class TransparentUIDrawing : MonoBehaviour
+public class UIDrawing : MonoBehaviour
 {
     [Header("UI 컴포넌트")]
     public RawImage drawingImage;       // DrawingArea 할당
