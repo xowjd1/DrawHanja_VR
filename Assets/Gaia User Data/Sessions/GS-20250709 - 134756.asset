@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e251860fcd970734c9f14ebd98a146c3, type: 3}
+  m_Name: GS-20250709 - 134756
+  m_EditorClassIdentifier: 
+  m_name: Session 20250709-134756
+  m_description: 'Rocking out at Creativity Central!
+
+
+    If you like Gaia please
+    consider rating it :)'
+  m_previewImage: {fileID: 0}
+  m_dateCreated: "2025-07-09 \uC624\uD6C4 1:47:56"
+  m_terrainWidth: 1024
+  m_terrainDepth: 1024
+  m_terrainHeight: 1024
+  m_seaLevel: 25
+  m_spawnDensity: 0.8
+  m_isLocked: 0
+  m_previewImageBytes: 
+  m_previewImageWidth: 0
+  m_previewImageHeight: 0
+  m_operations:
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 1:48:03"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 134803
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 1:48:04"
+    scriptableObjectAssetGUID: d687951b5286a314abf1d776c1d301dc
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (8)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 134803
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 1:48:24"
+    scriptableObjectAssetGUID: 16803dd711f90ae4b8539e6f6c6c6f02
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  m_terrainMinMaxCache:
+  - guid: 428ba0c1ce8d3fe46911b2f5b9f177d6
+    isWorldmap: 0
+    recalculate: 0
+    min: 0
+    max: 133.47078
+  - guid: Worldmap
+    isWorldmap: 1
+    recalculate: 0
+    min: 0
+    max: 56.111115
+  m_bakedMaskCacheEntries:
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_2.5
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_2.5
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_1879048192_2.5
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_-0.5
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_-0.5
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_1879048192_-0.5
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_805306368_2
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_805306368_2
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_805306368_2
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_2
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_2
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_1879048192_2
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerTree_1879048192_-0.2
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerTree_1879048192_-0.2
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerTree_1879048192_-0.2
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerTree_1879048192_1
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerTree_1879048192_1
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerTree_1879048192_1
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_1.5
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_1.5
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_1879048192_1.5
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_0.5
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 134803/Terrain_0_0-20250709 - 134803_LayerGameObject_1879048192_0.5
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 134803/Terrain_0_0-20250709
+      - 134803_LayerGameObject_1879048192_0.5
+    texture: {fileID: 0}
+  m_worldBiomeMaskSettings: {fileID: 0}

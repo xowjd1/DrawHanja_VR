@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f579a6101496efe4593552bf20c15fad
+timeCreated: 1558353683
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/AlpineScene/Animation/Main Camera.controller
+  uploadId: 764478

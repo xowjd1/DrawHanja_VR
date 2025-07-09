@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1e03988f348fd20429db03baea163fd5
+timeCreated: 1531381825
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/DX11 Grass Shader Third-Party Notices.txt
+  uploadId: 764478

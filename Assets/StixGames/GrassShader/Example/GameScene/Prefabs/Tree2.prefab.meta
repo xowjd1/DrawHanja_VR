@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5bc387fee7552614cb9fa9d001b47913
+timeCreated: 1553763826
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/GameScene/Prefabs/Tree2.prefab
+  uploadId: 764478

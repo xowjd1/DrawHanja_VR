@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 04743f058c4be014daa522f72b6bd722
+timeCreated: 1490435144
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Scripts/Utility/GrassTextureUtility.cs
+  uploadId: 764478

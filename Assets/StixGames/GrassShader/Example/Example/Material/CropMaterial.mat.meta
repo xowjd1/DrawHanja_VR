@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d216467904ceb544ea0968446c880700
+labels:
+- Vegetation
+- Shader
+- Grass
+- DirectX11
+- GrassShader
+- StixGames
+timeCreated: 1429609190
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/Example/Material/CropMaterial.mat
+  uploadId: 764478

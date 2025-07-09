@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5c147727b6f590e438e831c912061bac
+timeCreated: 1556785362
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/GameScene/Models/Materials/No Name.mat
+  uploadId: 764478

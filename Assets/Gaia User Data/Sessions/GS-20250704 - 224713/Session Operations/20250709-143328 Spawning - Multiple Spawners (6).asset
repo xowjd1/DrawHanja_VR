@@ -1,0 +1,401 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6730861349699444808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b6d2ca1100d734aaa40e6410ad3214, type: 3}
+  m_Name: Coniferous Forest Biome
+  m_EditorClassIdentifier: 
+  m_x: 0
+  m_y: 0
+  m_z: 0
+  m_range: 1024
+  m_postProcessBlenddDistance: 0
+  m_visualisationColor: {r: 0, g: 0.9098299, b: 1, a: 1}
+  m_removeForeignGameObjects: 0
+  m_removeForeignGameObjectStrength: 0.2
+  m_removeForeignTrees: 0
+  m_removeForeignTreesStrength: 0.2
+  m_removeForeignTerrainDetails: 0
+  m_removeForeignTerrainDetailsStrength: 0.2
+  imageMasks: []
+  m_lastSavePath: 
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 0
+  m_clearSpawnsFrom: 0
+--- !u!114 &-5534235191812510679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 14eec9f1-9f60-406c-adf0-21f66654907e
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100
+--- !u!114 &-2089305436679288222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 4d0eda68-b55c-4e4b-9be3-95f1b896ad1c
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100
+--- !u!114 &-1137879048656535159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 205693cb-9961-4c54-bf50-caf464a90845
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5415a5032c6a32e4ca53206bb5d95f22, type: 3}
+  m_Name: 20250709-143328 Spawning - Multiple Spawners (6)
+  m_EditorClassIdentifier: 
+  m_spawnArea:
+    m_Center:
+      x: 0
+      y: 76.004638671875
+      z: 0
+    m_Extents:
+      x: 512
+      y: 512
+      z: 512
+  m_biomeControllerSettings: {fileID: -6730861349699444808}
+  m_isWorldMapSpawner: 0
+  m_spawnerSettingsList:
+  - {fileID: 781798659547235294}
+  - {fileID: -2089305436679288222}
+  - {fileID: 8767617116263444562}
+  - {fileID: -1137879048656535159}
+  - {fileID: -5534235191812510679}
+  - {fileID: 3604348036539464482}
+--- !u!114 &781798659547235294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 3a577da2-6bd5-46e6-aa29-bc9ec73e7878
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100
+--- !u!114 &3604348036539464482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 8719dc08-471b-46d4-9cc2-4690d37d410b
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100
+--- !u!114 &8767617116263444562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: 5a95cb3a-3fd0-459c-a9ab-93f85d1a362b
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes: []
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 0
+  m_spawnRange: 500
+  m_generateRandomSeed: 0
+  m_randomSeed: 0
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules: []
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 
+  m_stampDensity: 0
+  m_stampJitter: 0.25
+  m_stampWidth: 100
+  m_stampHeight: 100

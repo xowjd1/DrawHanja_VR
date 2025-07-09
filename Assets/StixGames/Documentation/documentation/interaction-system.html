@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+
+        
+                <meta charset="utf-8" />
+    <title>Interaction System | Stix Games</title>
+    <meta name="generator" content="GravCMS" />
+<meta name="description" content="StixGames is a developer of Unity Assets, like the DirectX 11 Grass Shader." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="interaction-system.html" />
+    
+        
+            <link href="../plugins/gantry5/assets/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../plugins/gantry5/engines/nucleus/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/helium_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/helium-grav_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/custom_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../plugins/form/assets/form-styles.css" type="text/css" rel="stylesheet">
+<link href="../plugins/mathjax/assets/css/mathjax.css" type="text/css" rel="stylesheet">
+<link href="../plugins/simplesearch/css/simplesearch.css" type="text/css" rel="stylesheet">
+<link href="../plugins/youtube/css/youtube.css" type="text/css" rel="stylesheet">
+<link href="../plugins/login/css/login.css" type="text/css" rel="stylesheet">
+
+        <script src="../assets/jquery/jquery-2.x.min.js"></script>
+<script src="../plugins/anchors/js/anchor.min.js"></script>
+<script src="../plugins/mathjax/assets/js/mathjax.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-62297327-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script>
+$(document).ready(function() {
+                                anchors.options = {
+                                    visible: 'hover',
+                                    placement: 'right',
+                                    
+                                    
+                                    truncate: 64
+                                };
+                                anchors.add('h1,h2,h3,h4');
+                             });
+</script>
+
+    
+
+    <!--[if (gte IE 8)&(lte IE 9)]>
+        <script type="text/javascript" src="/user/plugins/gantry5/assets/js/html5shiv-printshiv.min.js"></script>
+        <link rel="stylesheet" href="/user/plugins/gantry5/engines/nucleus/css/nucleus-ie9.css" type="text/css"/>
+        <script type="text/javascript" src="/user/plugins/gantry5/assets/js/matchmedia.polyfill.js"></script>
+        <![endif]-->
+                        
+</head>
+
+    <body class="gantry g-helium-style documentation-page site default dir-ltr outline-grass_documentation g-offcanvas-left g-default g-style-preset2">
+        
+                    
+
+        <div id="g-offcanvas"  data-g-offcanvas-swipe="1" data-g-offcanvas-css3="1">
+                        <div class="g-grid">                        
+
+        <div class="g-block size-100">
+             <div id="mobile-menu-8299-particle" class="g-content g-particle">            <div id="g-mobilemenu-container" data-g-menu-breakpoint="48rem"></div>
+            </div>
+        </div>
+            </div>
+    </div>
+        <div id="g-page-surround">
+            <div class="g-offcanvas-hide g-offcanvas-toggle" data-offcanvas-toggle aria-controls="g-offcanvas" aria-expanded="false"><i class="fa fa-fw fa-bars"></i></div>                        
+
+                                            
+                <section id="g-navigation">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-25">
+             <div id="logo-9608-particle" class="g-content g-particle">            <a href="https://stixgames.com/" target="_self" title="" aria-label="" rel="home" class="g-logo g-logo-helium">
+                        <svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.2 21.84"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Logo Test 2019</title><path class="cls-1" d="M41.2,10.8c0-3.86,2.33-6.22,5.5-6.22a4.65,4.65,0,0,1,3.45,1.48l-.83,1a3.42,3.42,0,0,0-2.58-1.13c-2.41,0-4,1.86-4,4.84s1.42,4.9,4,4.9a3.24,3.24,0,0,0,2.15-.7V11.84H46.38V10.57H50.3v5A5.11,5.11,0,0,1,46.61,17C43.45,17,41.2,14.69,41.2,10.8Z"/><path class="cls-1" d="M55.62,4.8h1.72l4,12H59.78l-2.09-6.69c-.43-1.34-.81-2.65-1.2-4h-.07c-.37,1.38-.76,2.69-1.19,4l-2.11,6.69H51.57ZM53.7,11.92h5.52v1.21H53.7Z"/><path class="cls-1" d="M63.08,4.8h1.84l2.29,6.4c.29.82.57,1.67.85,2.5h.08c.28-.83.54-1.68.82-2.5l2.27-6.4h1.84v12H71.65V10.19c0-1,.12-2.49.2-3.55h-.08l-1,2.74-2.25,6.19h-1L65.29,9.38l-1-2.74h-.07c.07,1.06.19,2.5.19,3.55v6.59H63.08Z"/><path class="cls-1" d="M76.35,4.8h6.9V6.09H77.87V9.85h4.54v1.29H77.87v4.35h5.56v1.29H76.35Z"/><path class="cls-1" d="M85.1,15.22l.91-1a4.69,4.69,0,0,0,3.3,1.48c1.57,0,2.51-.78,2.51-1.95s-.87-1.61-2-2.1l-1.72-.76a3.39,3.39,0,0,1-2.43-3.09c0-1.83,1.6-3.18,3.77-3.18A5,5,0,0,1,93,6.07l-.81,1a3.8,3.8,0,0,0-2.72-1.13c-1.34,0-2.23.68-2.23,1.75s1,1.59,2,2l1.71.74c1.39.6,2.47,1.42,2.47,3.21S91.8,17,89.29,17A5.73,5.73,0,0,1,85.1,15.22Z"/><path class="cls-1" d="M2,2V19.67H96.11V2ZM8.3,17a5.76,5.76,0,0,1-4.19-1.78l.91-1a4.69,4.69,0,0,0,3.3,1.48c1.58,0,2.51-.78,2.51-1.95s-.87-1.61-2-2.1l-1.72-.76A3.39,3.39,0,0,1,4.68,7.76c0-1.83,1.6-3.18,3.78-3.18A4.93,4.93,0,0,1,12,6.07l-.81,1A3.79,3.79,0,0,0,8.46,5.92c-1.35,0-2.24.68-2.24,1.75s1,1.59,2,2l1.7.74c1.39.6,2.47,1.42,2.47,3.21S10.82,17,8.3,17ZM22.36,6.09H18.74V16.78H17.21V6.09H13.59V4.8h8.77ZM26,16.78H24.5V4.8H26Zm9,0-1.76-3.22c-.31-.6-.64-1.2-1-1.93h-.07c-.35.73-.65,1.33-.95,1.93l-1.73,3.22H27.94l3.49-6.19L28.17,4.8h1.68l1.64,3.07c.3.55.55,1,.93,1.74h.07c.33-.7.56-1.19.85-1.74L34.93,4.8h1.6l-3.26,5.87,3.49,6.11Zm60,1.89H39.43V3H95.11Z"/></svg>
+            </a>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-75">
+             <div id="menu-6409-particle" class="g-content g-particle">            <nav class="g-main-nav" role="navigation" data-g-hover-expand="true">
+    <ul class="g-toplevel">
+                                                                                                    
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader g-parent active g-standard g-menu-item-link-parent ">
+            <a class="g-menu-item-container" href="https://stixgames.com/">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">DirectX 11 Grass Shader</span>
+            
+                    </span>
+                    <span class="g-menu-parent-indicator" data-g-menuparent=""></span>                            </a>
+                                                        <ul class="g-dropdown g-inactive g-fade g-dropdown-right">
+            <li class="g-dropdown-column">
+                        <div class="g-grid">
+                        <div class="g-block size-100">
+            <ul class="g-sublevel">
+                <li class="g-level-1 g-go-back">
+                    <a class="g-menu-item-container" href="interaction-system.html#" data-g-menuparent=""><span>Back</span></a>
+                </li>
+                                                                                                            
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation g-parent active g-menu-item-link-parent ">
+            <a class="g-menu-item-container" href="../documentation.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Documentation</span>
+            
+                    </span>
+                    <span class="g-menu-parent-indicator" data-g-menuparent=""></span>                            </a>
+                                                        <ul class="g-dropdown g-inactive g-fade g-dropdown-right">
+            <li class="g-dropdown-column">
+                        <div class="g-grid">
+                        <div class="g-block size-100">
+            <ul class="g-sublevel">
+                <li class="g-level-2 g-go-back">
+                    <a class="g-menu-item-container" href="interaction-system.html#" data-g-menuparent=""><span>Back</span></a>
+                </li>
+                                                                                                            
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-general  ">
+            <a class="g-menu-item-container" href="general.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">General Overview</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-grass-painter  ">
+            <a class="g-menu-item-container" href="grass-painter.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Grass Painter</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-interaction-system active  ">
+            <a class="g-menu-item-container" href="interaction-system.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Interaction System</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-cpu-fallback  ">
+            <a class="g-menu-item-container" href="cpu-fallback.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">CPU Fallback</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-grass-texture-atlas-templates  ">
+            <a class="g-menu-item-container" href="grass-texture-atlas-templates.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Grass Texture Atlas Templates</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-performance-optimization  ">
+            <a class="g-menu-item-container" href="performance-optimization.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Performance Optimization</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-improve-visuals  ">
+            <a class="g-menu-item-container" href="improve-visuals.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Improve Visuals</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-virtual-reality  ">
+            <a class="g-menu-item-container" href="virtual-reality.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Virtual Reality</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-using-urp-and-hdrp  ">
+            <a class="g-menu-item-container" href="using-urp-and-hdrp.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Using URP and HDRP</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-upgrade-to-version-2  ">
+            <a class="g-menu-item-container" href="upgrade-to-version-2.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Upgrade to version 2</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+            </ul>
+        </div>
+            </div>
+
+            </li>
+        </ul>
+            </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-latest  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/grassshader/latest">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Latest Version</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-legacy  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/grassshader/legacy">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Legacy Version</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+            </ul>
+        </div>
+            </div>
+
+            </li>
+        </ul>
+            </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-business-vr g-standard  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/business-vr">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Business VR</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-contact g-standard  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/contact">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Contact</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+    </ul>
+</nav>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section>
+                
+                                
+    
+    
+                <section id="g-container-main" class="g-wrapper">
+                            <div class="g-grid">                        
+
+        <div class="g-block size-25">
+             <main id="g-mainbar">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100">
+             <div id="tableofcontents-1989-particle" class="g-content g-particle">            <div class="page-toc">
+            <h4>Table of Contents</h4>
+    <ul>
+  <li class="first">
+    <a href="interaction-system.html#interaction-system-overview">Interaction System - Overview</a>
+  </li>
+  <li>
+    <a href="interaction-system.html#how-to-set-up-grass-interaction-rendering-in-your-scene">How-To: Set up grass interaction rendering in your scene</a>
+  </li>
+  <li>
+    <a href="interaction-system.html#how-to-create-an-interaction-object">How-To: Create an interaction object</a>
+    <ul class="menu_level_1">
+      <li class="first last">
+        <a href="interaction-system.html#create-an-interaction-material">Create an interaction material</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="interaction-system.html#interaction-shaders">Interaction Shaders</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="interaction-system.html#interaction-shader">Interaction Shader</a>
+        <ul class="menu_level_2">
+          <li class="first">
+            <a href="interaction-system.html#influence-strength">Influence Strength</a>
+          </li>
+          <li>
+            <a href="interaction-system.html#grass-interaction-direction">Grass Interaction Direction</a>
+          </li>
+          <li>
+            <a href="interaction-system.html#mask">Mask</a>
+          </li>
+          <li class="last">
+            <a href="interaction-system.html#burn-interaction">Burn Interaction</a>
+          </li>
+        </ul>
+      </li>
+      <li class="last">
+        <a href="interaction-system.html#wind">Wind</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="interaction-system.html#interaction-renderers">Interaction Renderers</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="interaction-system.html#interaction-object">Interaction Object</a>
+      </li>
+      <li class="last">
+        <a href="interaction-system.html#interaction-trail-renderer">Interaction Trail Renderer</a>
+        <ul class="menu_level_2">
+          <li class="first">
+            <a href="interaction-system.html#animation-curve-controls">Animation curve controls</a>
+          </li>
+          <li class="last">
+            <a href="interaction-system.html#jump-detection">Jump Detection</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="last">
+    <a href="interaction-system.html#performance">Performance</a>
+  </li>
+</ul>
+
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </main>
+        </div>
+                    
+
+        <div class="g-block size-75">
+             <aside id="g-sidebar">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 documentation-navigation">
+             <div id="parentpath-9686-particle" class="g-content g-particle">            <div class="parent-path">
+				
+		<span><a href="https://stixgames.com/">DirectX 11 Grass Shader</a></span>
+							&gt;
+			
+		<span><a href="../documentation.html">Documentation</a></span>
+							&gt;
+			
+		<span><a href="interaction-system.html">Interaction System</a></span>
+	</div>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-80 documentation">
+             <div class="g-content">
+                                                            <div class="grav-youtube">
+    <iframe src="https://www.youtube.com/embed/ECD5htgbB4k" frameborder="0" allowfullscreen></iframe>
+</div>
+<h1 id="interaction-system-overview">Interaction System - Overview</h1>
+<p>The interaction system is a flexible and customizable system that can be used to add a variety of effects to your project. While it doesn't contain any simulations, it uses a performance rendering system that enables you to have hundreds of interactors. With careful grouping, even thousands of interactor could be supported.</p>
+<h1 id="how-to-set-up-grass-interaction-rendering-in-your-scene">How-To: Set up grass interaction rendering in your scene</h1>
+<ol>
+<li>Create a new empty object in your scene.</li>
+<li>Add Component: <code>Stix Games &gt; Interaction &gt; Render Texture Interaction</code>, this will also create a camera component, which should be set up and disabled automatically.</li>
+<li>Change the Size field on the Camera component. The size will define the area where grass interaction will be rendered. Outside, no grass interaction will occur.</li>
+<li>Change the settings of the Render Texture Interaction component to fit your use case. Tooltips explain the settings in more detail.</li>
+<li>Optional: Add Component: <code>Stix Games &gt; Interaction &gt; Camera Follow</code> </li>
+<li>Add your main camera to the Camera Follow component. </li>
+</ol>
+<p>If your camera size is large enough, you should never be able to see the area outside of the interaction area, as long as the interaction renderer is kept close to your main camera.</p>
+<div class="notices blue">
+<p>Like with any other camera, the interaction renderer can't render anything outside its near and far plane, for example, objects above it. You should try to keep your interaction objects in reasonable heights, even though their height doesn't actually matter. You could also change the near and far clipping planes as necessary.</p>
+</div>
+<h1 id="how-to-create-an-interaction-object">How-To: Create an interaction object</h1>
+<h2 id="create-an-interaction-material">Create an interaction material</h2>
+<ol>
+<li>In the project window, navigate to the folder where you want to create your grass material.</li>
+<li>Right click &gt; Create &gt; Material</li>
+<li>Select the shader: <code>Stix Games / Grass Interaction / Interaction</code></li>
+<li>Add any normal, alpha, or burn maps you require. <a href="interaction-system.html#mesh-normal-renderer">More info later.</a></li>
+<li>Create a mesh for your displacement object, for example a quad object, and add the new material as usual.</li>
+<li>Add Component to the new object: <code>Stix Games &gt; Interaction &gt; Interaction Object</code></li>
+<li>Disable the mesh renderer, but don't delete it, it is used to store the material. You can enable the mesh renderer for debugging your interaction object.</li>
+</ol>
+<p>If your new interaction object is within the render area of your interaction renderer, all grass materials should react to it automatically.</p>
+<h1 id="interaction-shaders">Interaction Shaders</h1>
+<h2 id="interaction-shader">Interaction Shader</h2>
+<p>The Interaction shader can be used for a variety of interaction effects, for example, characters walking through the grass and leaving a trail, explosions burning away grass, new buildings dynamically removing grass, etc.</p>
+<h3 id="influence-strength">Influence Strength</h3>
+<p>This setting doesn't actually change the strength for your setting, but it will change how strongly it will override other interactors. If an interactor with influence 100 is overlapping a interactor with influence strength 1, it first one will basically override the second one. </p>
+<p>You can use this to create an interaction area around your character, that will be stronger than any other interactor effect, so even with trails on the ground or explosion shockwaves, the grass will still move away from the character.</p>
+<h3 id="grass-interaction-direction">Grass Interaction Direction</h3>
+<p>The Interaction shader has two ways of defining the direction of grass movement: </p>
+<ol>
+<li>Normal Map: Usually normal maps are used for additional lighting information. They tell the shader which direction the area at the position of each pixel is oriented in, e.g. which normal is at the surface's position.<br>
+It is the same for the Interaction shader, the grass will move approximately in the direction of your surface normal.</li>
+<li>The interaction mesh itself. The shader will take the normal / direction of your object and apply the normal map to it. For example, a pyramid without a normal map would push away the grass in 4 separate directions, a cone would push the grass away in a circle.</li>
+</ol>
+<h3 id="mask">Mask</h3>
+<p>You can use a mask texture to mask out certain areas of your normal and burn maps.</p>
+<h3 id="burn-interaction">Burn Interaction</h3>
+<p>The interaction system not only supports moving the grass in any direction but also dynamically removing and coloring grass.</p>
+<p>The RGB channels of your burn map and burn color define the color the grass will be burned in, usually, this would be a dark brown. The color is changed with a "Multiply" operation, in other words, the grass color can only be darkened and a white burn color will leave the grass untouched.</p>
+<p>The alpha channel of your burn map is used to define how much grass will be removed in the area.</p>
+<div class="notices blue">
+<p>You can use this feature for burning grass after explosions or fire, but you could also use it to dynamically remove grass in the area of player-built buildings, or other dynamic elements. Simply leave the burn map empty and the burn color white.</p>
+</div>
+<h2 id="wind">Wind</h2>
+<p>You can use the wind interaction shader to create wind areas with the same wind algorithm as the global wind in the grass shader. If you disable the global wind on your grass material, you could use interaction objects with this shader to create complex weather systems.</p>
+<h1 id="interaction-renderers">Interaction Renderers</h1>
+<h2 id="interaction-object">Interaction Object</h2>
+<p>Add this script to an object with a mesh renderer and it will automatically submit it to a render queue for all interaction objects. You don't have to manage the objects layer, simply add the component and the interaction system will be able to handle it.</p>
+<h2 id="interaction-trail-renderer">Interaction Trail Renderer</h2>
+<p>The interaction trail renderer, as the name suggests, renders a trail behind an object. It will automatically keep track of the object's position and create a trail dynamically.</p>
+<p>The trail renderers material must have a normal map to define the interaction.</p>
+<h3 id="animation-curve-controls">Animation curve controls</h3>
+<p>The trail renderer uses animation curves to give more customizability to some of its controls. This might seem strange at first, but it's quite easy to use. </p>
+<p>The animation curve is used to calculate the value depending on its lifetime, it starts at 0 and ends at 1 (the end of the trails lifetime). At each point, the base value of the parameter (like width) is multiplied with the corresponding animation curve.</p>
+<p>For example: If you have a width of 1 and an animation curve that linearly decreases from 1 to 0, your trial will have a width of 1 at the start and linearly get smaller with age, until it has a width of 0. You can use this to create complex patterns and have perfect control over your application.</p>
+<p><img alt="" src="../1/7/9/e/8/179e8ed4c390a783e6d75e410aa385484d456434-animationcurveexample.png"></p>
+<p>In this example, you can see an animation curve for the <code>Strength</code> variable. The strength starts at <code>Base Strength</code> (1), slowly starts to decrease and smoothly fades to 0, where the trail won't be visible at all.</p>
+<div class="notices green">
+<p>You should probably try to smooth the strength (and/or width) to 0 at the end of the trails lifetime (time value 1), so the trail doesn't end abruptly.</p>
+</div>
+<h3 id="jump-detection">Jump Detection</h3>
+<p>If enabled, the jump detection will check the current distance from the defined floor layers. While the object is further down than the Jump Detection Distance, the trail will not be rendered, leaving a gap between the start and the end of the trail.</p>
+<h1 id="performance">Performance</h1>
+<p>In order to support multiple interactors to stack on top of each other, without losing information, it was necessary to create a custom renderer. Each render-pass causes a fairly large overhead (compared to other render passes), so it is recommended to either keep the interactors as low as possible or combine multiple interactors into one. For example, if you have a large number of Units in an RTS game, where you are sure that they will never occupy the same grass area, you could create a custom mesh, where each unit has a textured quad centered at its position. If you are doing this correctly, it can be very fast. The interaction renderer will then use this procedural mesh to render a single pass, which reduces the overhead significantly.</p>
+<p>As long as you stay below several hundreds of interactors, this should not be a problem, however. I would recommend using the profiler to find your performance bottlenecks in general.</p>
+    
+            
+    </div>
+        </div>
+                    
+
+        <div class="g-block size-20 flexible-space">
+             <div class="spacer"></div>
+        </div>
+            </div>
+            
+    </aside>
+        </div>
+            </div>
+    
+    </section>
+    
+                    
+                <footer id="g-footer">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-33">
+             <div id="copyright-2721-particle" class="g-content g-particle">            <div class="g-copyright ">
+    &copy;
+            StixGames
+        2015 -     2019
+    </div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-48">
+             <div id="horizontalmenu-8381-particle" class="g-content g-particle">            <ul class="g-horizontalmenu ">
+
+                    <li>
+                <a target="_blank" href="https://stixgames.com/contact" title="Contact">Contact</a>
+            </li>
+        
+    </ul>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-19">
+             <div id="totop-3900-particle" class="g-content g-particle">            <div class="">
+    <div class="g-totop">
+        <a href="interaction-system.html#" id="g-totop" rel="nofollow">
+            Back to top            <i class="fa fa-chevron-up fa-fw"></i>                    </a>
+    </div>
+</div>
+            </div>
+        </div>
+            </div>
+            
+    </footer>
+            
+                        
+
+        </div>
+                    
+
+                <script src="../plugins/gantry5/assets/js/main.js" ></script>
+<script src="../plugins/simplesearch/js/simplesearch.js"></script>
+
+
+    
+
+        
+    </body>
+</html>

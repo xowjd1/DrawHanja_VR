@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+
+        
+                <meta charset="utf-8" />
+    <title>Using URP and HDRP | Stix Games</title>
+    <meta name="generator" content="GravCMS" />
+<meta name="description" content="StixGames is a developer of Unity Assets, like the DirectX 11 Grass Shader." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="using-urp-and-hdrp.html" />
+    
+        
+            <link href="../plugins/gantry5/assets/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../plugins/gantry5/engines/nucleus/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/helium_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/helium-grav_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../data/gantry5/themes/g5_helium/css-compiled/custom_grass_documentation.css" type="text/css" rel="stylesheet">
+<link href="../plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../plugins/form/assets/form-styles.css" type="text/css" rel="stylesheet">
+<link href="../plugins/mathjax/assets/css/mathjax.css" type="text/css" rel="stylesheet">
+<link href="../plugins/simplesearch/css/simplesearch.css" type="text/css" rel="stylesheet">
+<link href="../plugins/youtube/css/youtube.css" type="text/css" rel="stylesheet">
+<link href="../plugins/login/css/login.css" type="text/css" rel="stylesheet">
+
+        <script src="../assets/jquery/jquery-2.x.min.js"></script>
+<script src="../plugins/anchors/js/anchor.min.js"></script>
+<script src="../plugins/mathjax/assets/js/mathjax.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-62297327-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script>
+$(document).ready(function() {
+                                anchors.options = {
+                                    visible: 'hover',
+                                    placement: 'right',
+                                    
+                                    
+                                    truncate: 64
+                                };
+                                anchors.add('h1,h2,h3,h4');
+                             });
+</script>
+
+    
+
+    <!--[if (gte IE 8)&(lte IE 9)]>
+        <script type="text/javascript" src="/user/plugins/gantry5/assets/js/html5shiv-printshiv.min.js"></script>
+        <link rel="stylesheet" href="/user/plugins/gantry5/engines/nucleus/css/nucleus-ie9.css" type="text/css"/>
+        <script type="text/javascript" src="/user/plugins/gantry5/assets/js/matchmedia.polyfill.js"></script>
+        <![endif]-->
+                        
+</head>
+
+    <body class="gantry g-helium-style documentation-page site default dir-ltr outline-grass_documentation g-offcanvas-left g-default g-style-preset2">
+        
+                    
+
+        <div id="g-offcanvas"  data-g-offcanvas-swipe="1" data-g-offcanvas-css3="1">
+                        <div class="g-grid">                        
+
+        <div class="g-block size-100">
+             <div id="mobile-menu-8299-particle" class="g-content g-particle">            <div id="g-mobilemenu-container" data-g-menu-breakpoint="48rem"></div>
+            </div>
+        </div>
+            </div>
+    </div>
+        <div id="g-page-surround">
+            <div class="g-offcanvas-hide g-offcanvas-toggle" data-offcanvas-toggle aria-controls="g-offcanvas" aria-expanded="false"><i class="fa fa-fw fa-bars"></i></div>                        
+
+                                            
+                <section id="g-navigation">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-25">
+             <div id="logo-9608-particle" class="g-content g-particle">            <a href="https://stixgames.com/" target="_self" title="" aria-label="" rel="home" class="g-logo g-logo-helium">
+                        <svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.2 21.84"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Logo Test 2019</title><path class="cls-1" d="M41.2,10.8c0-3.86,2.33-6.22,5.5-6.22a4.65,4.65,0,0,1,3.45,1.48l-.83,1a3.42,3.42,0,0,0-2.58-1.13c-2.41,0-4,1.86-4,4.84s1.42,4.9,4,4.9a3.24,3.24,0,0,0,2.15-.7V11.84H46.38V10.57H50.3v5A5.11,5.11,0,0,1,46.61,17C43.45,17,41.2,14.69,41.2,10.8Z"/><path class="cls-1" d="M55.62,4.8h1.72l4,12H59.78l-2.09-6.69c-.43-1.34-.81-2.65-1.2-4h-.07c-.37,1.38-.76,2.69-1.19,4l-2.11,6.69H51.57ZM53.7,11.92h5.52v1.21H53.7Z"/><path class="cls-1" d="M63.08,4.8h1.84l2.29,6.4c.29.82.57,1.67.85,2.5h.08c.28-.83.54-1.68.82-2.5l2.27-6.4h1.84v12H71.65V10.19c0-1,.12-2.49.2-3.55h-.08l-1,2.74-2.25,6.19h-1L65.29,9.38l-1-2.74h-.07c.07,1.06.19,2.5.19,3.55v6.59H63.08Z"/><path class="cls-1" d="M76.35,4.8h6.9V6.09H77.87V9.85h4.54v1.29H77.87v4.35h5.56v1.29H76.35Z"/><path class="cls-1" d="M85.1,15.22l.91-1a4.69,4.69,0,0,0,3.3,1.48c1.57,0,2.51-.78,2.51-1.95s-.87-1.61-2-2.1l-1.72-.76a3.39,3.39,0,0,1-2.43-3.09c0-1.83,1.6-3.18,3.77-3.18A5,5,0,0,1,93,6.07l-.81,1a3.8,3.8,0,0,0-2.72-1.13c-1.34,0-2.23.68-2.23,1.75s1,1.59,2,2l1.71.74c1.39.6,2.47,1.42,2.47,3.21S91.8,17,89.29,17A5.73,5.73,0,0,1,85.1,15.22Z"/><path class="cls-1" d="M2,2V19.67H96.11V2ZM8.3,17a5.76,5.76,0,0,1-4.19-1.78l.91-1a4.69,4.69,0,0,0,3.3,1.48c1.58,0,2.51-.78,2.51-1.95s-.87-1.61-2-2.1l-1.72-.76A3.39,3.39,0,0,1,4.68,7.76c0-1.83,1.6-3.18,3.78-3.18A4.93,4.93,0,0,1,12,6.07l-.81,1A3.79,3.79,0,0,0,8.46,5.92c-1.35,0-2.24.68-2.24,1.75s1,1.59,2,2l1.7.74c1.39.6,2.47,1.42,2.47,3.21S10.82,17,8.3,17ZM22.36,6.09H18.74V16.78H17.21V6.09H13.59V4.8h8.77ZM26,16.78H24.5V4.8H26Zm9,0-1.76-3.22c-.31-.6-.64-1.2-1-1.93h-.07c-.35.73-.65,1.33-.95,1.93l-1.73,3.22H27.94l3.49-6.19L28.17,4.8h1.68l1.64,3.07c.3.55.55,1,.93,1.74h.07c.33-.7.56-1.19.85-1.74L34.93,4.8h1.6l-3.26,5.87,3.49,6.11Zm60,1.89H39.43V3H95.11Z"/></svg>
+            </a>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-75">
+             <div id="menu-6409-particle" class="g-content g-particle">            <nav class="g-main-nav" role="navigation" data-g-hover-expand="true">
+    <ul class="g-toplevel">
+                                                                                                    
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader g-parent active g-standard g-menu-item-link-parent ">
+            <a class="g-menu-item-container" href="https://stixgames.com/">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">DirectX 11 Grass Shader</span>
+            
+                    </span>
+                    <span class="g-menu-parent-indicator" data-g-menuparent=""></span>                            </a>
+                                                        <ul class="g-dropdown g-inactive g-fade g-dropdown-right">
+            <li class="g-dropdown-column">
+                        <div class="g-grid">
+                        <div class="g-block size-100">
+            <ul class="g-sublevel">
+                <li class="g-level-1 g-go-back">
+                    <a class="g-menu-item-container" href="using-urp-and-hdrp.html#" data-g-menuparent=""><span>Back</span></a>
+                </li>
+                                                                                                            
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation g-parent active g-menu-item-link-parent ">
+            <a class="g-menu-item-container" href="../documentation.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Documentation</span>
+            
+                    </span>
+                    <span class="g-menu-parent-indicator" data-g-menuparent=""></span>                            </a>
+                                                        <ul class="g-dropdown g-inactive g-fade g-dropdown-right">
+            <li class="g-dropdown-column">
+                        <div class="g-grid">
+                        <div class="g-block size-100">
+            <ul class="g-sublevel">
+                <li class="g-level-2 g-go-back">
+                    <a class="g-menu-item-container" href="using-urp-and-hdrp.html#" data-g-menuparent=""><span>Back</span></a>
+                </li>
+                                                                                                            
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-general  ">
+            <a class="g-menu-item-container" href="general.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">General Overview</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-grass-painter  ">
+            <a class="g-menu-item-container" href="grass-painter.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Grass Painter</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-interaction-system  ">
+            <a class="g-menu-item-container" href="interaction-system.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Interaction System</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-cpu-fallback  ">
+            <a class="g-menu-item-container" href="cpu-fallback.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">CPU Fallback</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-grass-texture-atlas-templates  ">
+            <a class="g-menu-item-container" href="grass-texture-atlas-templates.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Grass Texture Atlas Templates</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-performance-optimization  ">
+            <a class="g-menu-item-container" href="performance-optimization.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Performance Optimization</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-improve-visuals  ">
+            <a class="g-menu-item-container" href="improve-visuals.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Improve Visuals</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-virtual-reality  ">
+            <a class="g-menu-item-container" href="virtual-reality.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Virtual Reality</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-using-urp-and-hdrp active  ">
+            <a class="g-menu-item-container" href="using-urp-and-hdrp.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Using URP and HDRP</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-documentation-upgrade-to-version-2  ">
+            <a class="g-menu-item-container" href="upgrade-to-version-2.html">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Upgrade to version 2</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+            </ul>
+        </div>
+            </div>
+
+            </li>
+        </ul>
+            </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-latest  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/grassshader/latest">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Latest Version</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-grassshader-legacy  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/grassshader/legacy">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Legacy Version</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+            </ul>
+        </div>
+            </div>
+
+            </li>
+        </ul>
+            </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-business-vr g-standard  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/business-vr">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Business VR</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                        
+        <li class="g-menu-item g-menu-item-type-link g-menu-item-contact g-standard  ">
+            <a class="g-menu-item-container" href="https://stixgames.com/contact">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Contact</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+    
+    </ul>
+</nav>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section>
+                
+                                
+    
+    
+                <section id="g-container-main" class="g-wrapper">
+                            <div class="g-grid">                        
+
+        <div class="g-block size-25">
+             <main id="g-mainbar">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100">
+             <div id="tableofcontents-1989-particle" class="g-content g-particle">            <div class="page-toc">
+            <h4>Table of Contents</h4>
+    <ul>
+  <li class="first last">
+    <a href="using-urp-and-hdrp.html#using-urp-and-hdrp">Using URP and HDRP</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="using-urp-and-hdrp.html#known-problems-in-urp">Known problems in URP</a>
+      </li>
+      <li class="last">
+        <a href="using-urp-and-hdrp.html#known-problems-in-hdrp">Known problems in HDRP</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </main>
+        </div>
+                    
+
+        <div class="g-block size-75">
+             <aside id="g-sidebar">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 documentation-navigation">
+             <div id="parentpath-9686-particle" class="g-content g-particle">            <div class="parent-path">
+				
+		<span><a href="https://stixgames.com/">DirectX 11 Grass Shader</a></span>
+							&gt;
+			
+		<span><a href="../documentation.html">Documentation</a></span>
+							&gt;
+			
+		<span><a href="using-urp-and-hdrp.html">Using URP and HDRP</a></span>
+	</div>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-80 documentation">
+             <div class="g-content">
+                                                            <h1 id="using-urp-and-hdrp">Using URP and HDRP</h1>
+<p>Switching to URP and HDRP is very straight forward. Simply select your grass material and change the shader to <code>Stix Games / Grass URP</code> or <code>Stix Games / Grass HDRP</code>.</p>
+<h2 id="known-problems-in-urp">Known problems in URP</h2>
+<p>All features should work as expected in URP, except for the following:</p>
+<ul>
+<li>URP renders all lights in one pass, so in the Camera oriented render mode (when "Randomize grass orientation" is not selected) only the main light will render correctly, additional lights will look like they're rendered only on one side. You can fix this by enabling "Randomize grass orientation".</li>
+</ul>
+<p>If you encounter any other problems, please contact me through the contact form, the <a href="https://forum.unity.com/threads/released-directx-11-grass-shader.348258/">Unity forums thread</a> or directly with the support email on the asset store.</p>
+<h2 id="known-problems-in-hdrp">Known problems in HDRP</h2>
+<p>HDRP is not supported yet. There is already some code, but it doesn't do anything remotely correct at the moment.</p>
+    
+            
+    </div>
+        </div>
+                    
+
+        <div class="g-block size-20 flexible-space">
+             <div class="spacer"></div>
+        </div>
+            </div>
+            
+    </aside>
+        </div>
+            </div>
+    
+    </section>
+    
+                    
+                <footer id="g-footer">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-33">
+             <div id="copyright-2721-particle" class="g-content g-particle">            <div class="g-copyright ">
+    &copy;
+            StixGames
+        2015 -     2019
+    </div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-48">
+             <div id="horizontalmenu-8381-particle" class="g-content g-particle">            <ul class="g-horizontalmenu ">
+
+                    <li>
+                <a target="_blank" href="https://stixgames.com/contact" title="Contact">Contact</a>
+            </li>
+        
+    </ul>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-19">
+             <div id="totop-3900-particle" class="g-content g-particle">            <div class="">
+    <div class="g-totop">
+        <a href="using-urp-and-hdrp.html#" id="g-totop" rel="nofollow">
+            Back to top            <i class="fa fa-chevron-up fa-fw"></i>                    </a>
+    </div>
+</div>
+            </div>
+        </div>
+            </div>
+            
+    </footer>
+            
+                        
+
+        </div>
+                    
+
+                <script src="../plugins/gantry5/assets/js/main.js" ></script>
+<script src="../plugins/simplesearch/js/simplesearch.js"></script>
+
+
+    
+
+        
+    </body>
+</html>

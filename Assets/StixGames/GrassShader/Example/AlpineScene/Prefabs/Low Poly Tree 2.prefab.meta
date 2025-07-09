@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 40e616ec36d766c4abd13fed1aea7a11
+timeCreated: 1550765648
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/AlpineScene/Prefabs/Low Poly Tree
+    2.prefab
+  uploadId: 764478

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9acc3896c4b3161498075b464213bd2e
+labels:
+- Vegetation
+- Shader
+- Grass
+- DirectX11
+- GrassShader
+- StixGames
+timeCreated: 1440063051
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/Example/Textures/CGTextures.txt
+  uploadId: 764478

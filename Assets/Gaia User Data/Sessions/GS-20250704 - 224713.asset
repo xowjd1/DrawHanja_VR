@@ -279,91 +279,295 @@ MonoBehaviour:
     sessionPlaybackState: 1
     m_terrainsFoldedOut: 0
     m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uC804 10:48:55"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 10:48:57"
+    scriptableObjectAssetGUID: fdbfa6286deae6d479d891371a9a9d65
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:05:22"
+    scriptableObjectAssetGUID: 173e5a5a79d258f40a2e96d12c8f0f8c
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:06:24"
+    scriptableObjectAssetGUID: 2af0513382954284aa0d73bb67cefc03
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:08:11"
+    scriptableObjectAssetGUID: 0dffe8e1bf7579d49aeebe611809a8ac
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:08:54"
+    scriptableObjectAssetGUID: 43ca97650b8be2f488409490a709fb8b
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:08:56"
+    scriptableObjectAssetGUID: b575a0eea935f9a49900c7f5b68291d2
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:10:30"
+    scriptableObjectAssetGUID: 50d32e516fd69954da4312d0f1c7a189
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:10:32"
+    scriptableObjectAssetGUID: 4e9dbca3ea584af4d9a7ed62114b9186
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:11:31"
+    scriptableObjectAssetGUID: 0f869e3bdc6ed9f4dba63871305fb2af
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:11:33"
+    scriptableObjectAssetGUID: 177ef2ae1ec10014b9a77d186affa89b
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:14:36"
+    scriptableObjectAssetGUID: ae80e6ab32ad173429e0da44debc7edf
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (5)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:16:14"
+    scriptableObjectAssetGUID: 7870f7325bf72634fa3a0edf26595d36
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:16:44"
+    scriptableObjectAssetGUID: 749cb54f93ae8df438b286c98fd5a01d
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:16:57"
+    scriptableObjectAssetGUID: 68597e60599d2da4191edd38e3ed07db
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:17:18"
+    scriptableObjectAssetGUID: 8aae60dc59f2b7b40ab3129bf17e025d
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:17:34"
+    scriptableObjectAssetGUID: 112ec077bb9dd03448dab327e37fdb50
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uC804 11:17:37"
+    scriptableObjectAssetGUID: 19330d5f83d08f04b9b7611d520e7034
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Updating World To: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 14
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 12:30:56"
+    scriptableObjectAssetGUID: f862ca7eb80b3734f92c3bb59431f324
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Updating World To: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 14
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 12:48:01"
+    scriptableObjectAssetGUID: 8fd4a14a58eed4e4683b7e9f8b1b5929
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Updating World To: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 14
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 12:48:16"
+    scriptableObjectAssetGUID: 7558077a67a770b4d8680d0b9feb868f
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 104857
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 2:33:28"
+    scriptableObjectAssetGUID: a4123da4b81447b4788626aea5f7a955
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
   m_terrainMinMaxCache:
   - guid: Worldmap
     isWorldmap: 1
     recalculate: 0
     min: 0
-    max: 56.11161
-  - guid: 1ece20fcef1e64d478bc0cc0d9795741
+    max: 61.711998
+  - guid: d6e5563dd20d839439173764544d5d6d
     isWorldmap: 0
     recalculate: 0
     min: 0
-    max: 0
-  - guid: 8ad42e0c83f0ba843b983276b05486b9
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 2abf3a79043c19a4a88314d918d0bf3b
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 2ecef46c0bde3994d85e3b855aaf5b92
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: f6d1a9ac5ecf1324584898af38727a85
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 5e6e3be4c65327843be067969030e3e7
-    isWorldmap: 0
-    recalculate: 0
-    min: 30.562967
-    max: 108.532906
-  - guid: 852efe88b2d38cc49a117e80a95127ae
-    isWorldmap: 0
-    recalculate: 0
-    min: 1.1250172
-    max: 125.12691
-  - guid: 8a9cb14328fe5a046a2fe411f77cf6d5
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 8fdcc61c30a153147a00ff9a52e26a94
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 8cd7a37f69a59114bb87180caeb1a8b6
-    isWorldmap: 0
-    recalculate: 0
-    min: 43.34441
-    max: 111.59545
-  - guid: d8d29389b48042848ab22281597ba9d0
-    isWorldmap: 0
-    recalculate: 0
-    min: 64.282234
-    max: 130.5645
-  - guid: 6a416cb73e5dd5e479fe92a88349f1ec
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 4daf22abd12635c4f80be6e9ba88c290
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 7ab7b46ad92526143af3d61d0ba4e3c8
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: be223d8d41838e44b8d8a2f48e419465
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  - guid: 41f47ab2667b6db44a7e599874173088
-    isWorldmap: 0
-    recalculate: 0
-    min: 0
-    max: 0
-  m_bakedMaskCacheEntries: []
+    max: 152.00232
+  m_bakedMaskCacheEntries:
+  - fileName: Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_3
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 104857/Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_3
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 104857/Terrain_0_0-20250709
+      - 104857_LayerGameObject_1879048192_3
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_4
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 104857/Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_4
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 104857/Terrain_0_0-20250709
+      - 104857_LayerGameObject_1879048192_4
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 104857_LayerTree_1879048192_-3
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 104857/Terrain_0_0-20250709 - 104857_LayerTree_1879048192_-3
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 104857/Terrain_0_0-20250709
+      - 104857_LayerTree_1879048192_-3
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_5
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 104857/Terrain_0_0-20250709 - 104857_LayerGameObject_1879048192_5
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 104857/Terrain_0_0-20250709
+      - 104857_LayerGameObject_1879048192_5
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 104857_LayerTree_1879048192_0
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 104857/Terrain_0_0-20250709 - 104857_LayerTree_1879048192_0
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 104857/Terrain_0_0-20250709
+      - 104857_LayerTree_1879048192_0
+    texture: {fileID: 0}
   m_worldBiomeMaskSettings: {fileID: 0}

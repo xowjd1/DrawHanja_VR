@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e3dccc434de3e1046a6e79179db6c727
+timeCreated: 1538389563
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/GrassInteraction/InteractionFunctions.hlsl
+  uploadId: 764478

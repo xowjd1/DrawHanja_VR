@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2530ac2895e3ae24d961135df38c1e34
+timeCreated: 1550829290
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/AlpineScene/Materials/medium_house2.mat
+  uploadId: 764478

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: df35266b820a77d4c99fadc7a89747b4
+timeCreated: 1572265167
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/GrassIncludes.hlsl
+  uploadId: 764478

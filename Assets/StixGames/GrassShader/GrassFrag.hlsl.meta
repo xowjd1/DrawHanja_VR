@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 068d4afa4fc36e646a2c35f8db1b6e3f
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/GrassFrag.hlsl
+  uploadId: 764478

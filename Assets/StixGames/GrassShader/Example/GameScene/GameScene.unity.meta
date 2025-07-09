@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4cf3797106052204ab01020082cf95df
+timeCreated: 1558083947
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/GameScene/GameScene.unity
+  uploadId: 764478

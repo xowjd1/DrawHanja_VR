@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eca63f5432115bf49955c8431cc5852f
+timeCreated: 1481513782
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/NatureCore/Utility/UnityOctree/Unity Octree LICENCE
+  uploadId: 764478

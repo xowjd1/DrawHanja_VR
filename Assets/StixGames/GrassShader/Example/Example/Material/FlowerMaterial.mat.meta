@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d12e375eb628c324b989c26efd3494e7
+labels:
+- Vegetation
+- Shader
+- Grass
+- DirectX11
+- GrassShader
+- StixGames
+timeCreated: 1438192334
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36335
+  packageName: DirectX 11 Grass Shader
+  packageVersion: 2.9.3
+  assetPath: Assets/StixGames/GrassShader/Example/Example/Material/FlowerMaterial.mat
+  uploadId: 764478
