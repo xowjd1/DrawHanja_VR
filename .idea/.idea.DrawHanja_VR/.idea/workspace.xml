@@ -6,26 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/49eb6e4c55248c1c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/49eb6e4c55248c1c.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/83b15fccbd943a7b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/83b15fccbd943a7b.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/c1d19fdf6a840df0 1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/c1d19fdf6a840df0 1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/c1d19fdf6a840df0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/c1d19fdf6a840df0.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/ce35ef2fa2a5e9b3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/ce35ef2fa2a5e9b3.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Sea.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Sea/Sea.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Sea/Sea.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/reference.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/reference.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
