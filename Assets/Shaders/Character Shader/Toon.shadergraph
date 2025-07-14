@@ -224,9 +224,6 @@
             "m_Id": "5e8a797956074303b7c779e28db7b2c0"
         },
         {
-            "m_Id": "8da4494315c74d108bd3753bfd3495b7"
-        },
-        {
             "m_Id": "85e4c4e93b4442cfa5409997a3d2891a"
         },
         {
@@ -1042,9 +1039,6 @@
             },
             {
                 "m_Id": "a9fbe506cbe14867b6dcdc584673a39d"
-            },
-            {
-                "m_Id": "8da4494315c74d108bd3753bfd3495b7"
             }
         ]
     },
@@ -4437,8 +4431,8 @@
     "m_ObjectId": "794386e8448342ff82169caf330f0f78",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -4205.60009765625,
-        "y": -3310.39990234375
+        "x": -4205.0,
+        "y": -3309.0
     }
 }
 
@@ -4503,6 +4497,12 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 2,
+    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+    "m_ObjectId": "7cf91ce1c811448980d97e71aa98cf70"
 }
 
 {
@@ -4949,40 +4949,6 @@
 }
 
 {
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "8da4494315c74d108bd3753bfd3495b7",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Emission",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "f0b0eaa51b464f189d80e17c9abce225"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Emission"
-}
-
-{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
     "m_ObjectId": "8fa6cd8ef4d24f938921c47eaab6af78",
@@ -5052,7 +5018,7 @@
     "m_ObjectId": "90fcb255ecc14153915552328608e260",
     "m_Datas": [],
     "m_ActiveSubTarget": {
-        "m_Id": "dafd35a90b354f449216ba50c53721b6"
+        "m_Id": "7cf91ce1c811448980d97e71aa98cf70"
     },
     "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
@@ -5968,8 +5934,8 @@
     "m_ObjectId": "ad8c48d033534563a65b980a747d8378",
     "m_Title": "New Group",
     "m_Position": {
-        "x": 118.39990234375,
-        "y": -447.19970703125
+        "x": 119.0,
+        "y": -446.0
     }
 }
 
@@ -6517,8 +6483,8 @@
     "m_ObjectId": "c36f2e5798274f1a975257078a645925",
     "m_Title": "shadow",
     "m_Position": {
-        "x": -2400.800048828125,
-        "y": -1170.39990234375
+        "x": -2400.0,
+        "y": -1169.0
     }
 }
 
@@ -7114,16 +7080,6 @@
 }
 
 {
-    "m_SGVersion": 2,
-    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
-    "m_ObjectId": "dafd35a90b354f449216ba50c53721b6",
-    "m_WorkflowMode": 1,
-    "m_NormalDropOffSpace": 0,
-    "m_ClearCoat": false,
-    "m_BlendModePreserveSpecular": true
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "e0eb2c5987a649288f7aced39d543e3c",
@@ -7234,8 +7190,8 @@
     "m_ObjectId": "e66d733f3c05420fb28c21f8b381f233",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -2641.60009765625,
-        "y": -1817.5999755859375
+        "x": -2641.0,
+        "y": -1816.0
     }
 }
 
@@ -7393,36 +7349,6 @@
     "m_RangeValues": {
         "x": 0.0,
         "y": 1.0
-    }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
-    "m_ObjectId": "f0b0eaa51b464f189d80e17c9abce225",
-    "m_Id": 0,
-    "m_DisplayName": "Emission",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Emission",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": [],
-    "m_ColorMode": 1,
-    "m_DefaultColor": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
-        "a": 1.0
     }
 }
 
