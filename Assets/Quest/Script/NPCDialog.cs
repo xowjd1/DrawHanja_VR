@@ -30,6 +30,13 @@ public class NPCDialog : MonoBehaviour, IInteractable
     
     public void Interact()
     {
+        /*if (questIndex < 0)
+        {
+            StartDialog(dialogBeforeQuestComplete);
+            return;
+        }*/
+        Debug.Log(1);
+        
         if (QuestManager.Instance.quests[questIndex].isCompleted)
         {
             StartDialog(dialogAfterQuestComplete);
@@ -41,6 +48,8 @@ public class NPCDialog : MonoBehaviour, IInteractable
         }
         else
         {
+            Debug.Log(2);
+            
             StartDialog(dialogBeforeQuestComplete, () =>
             {
                 if (triggerNextQuest)

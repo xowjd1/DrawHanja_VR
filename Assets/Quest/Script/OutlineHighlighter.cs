@@ -9,12 +9,12 @@ public class OutlineHighlighter : MonoBehaviour
         outlineMaterial.SetFloat("_Scale", 0f);
     }
 
-    void OnMouseEnter()
+    public void OnMouseEnter()
     {
-        outlineMaterial.SetFloat("_Scale", 1.05f);
+        outlineMaterial.SetFloat("_Scale", 0.02f);
     }
 
-    void OnMouseExit()
+    public void OnMouseExit()
     {
         outlineMaterial.SetFloat("_Scale", 0f);
     }
