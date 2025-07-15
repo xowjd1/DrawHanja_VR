@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: cf16348932ab8784ab88164990152e14, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -134,7 +134,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7750479
 Transform:
@@ -14278,7 +14278,7 @@ MonoBehaviour:
   renderPriority: 1
   manualPositionAndScale: 0
   styledSpace0: 0
-  overrideMaterial: {fileID: 363907706}
+  overrideMaterial: {fileID: 1255708694}
   overrideCamToVolumeDistance: 1
   overrideVolumeDistanceFade: 0
   version: 0
@@ -14313,7 +14313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1247106101}
+  - {fileID: 852989859}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15456,76 +15456,6 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
---- !u!21 &363907706
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Override
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _AdvancedCat: 1
-    - _Banner: 1
-    - _DirectionalCat: 1
-    - _DirectionalFalloff: 2
-    - _DirectionalIntensity: 1
-    - _FarDistanceHeight: 0
-    - _FarDistanceOffset: 0
-    - _FogAxisMode: 1
-    - _FogCameraMode: 0
-    - _FogCat: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 100
-    - _FogDistanceFalloff: 2
-    - _FogDistanceStart: 0
-    - _FogHeightEnd: 100
-    - _FogHeightFalloff: 2
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _FogLayersMode: 0
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _JitterIntensity: 1
-    - _NoiseCat: 1
-    - _NoiseDistanceEnd: 50
-    - _NoiseIntensity: 1
-    - _NoiseMax: 1
-    - _NoiseMin: 0
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SkyboxCat: 1
-    - _SkyboxFogBottom: 0
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 1
-    - _SkyboxFogHeight: 1
-    - _SkyboxFogIntensity: 1
-    - _SkyboxFogOffset: 0
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
-    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
-    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!114 &401395681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35298,7 +35228,7 @@ MonoBehaviour:
   m_showTerrainHelper: 1
   m_spawnMode: 0
   imageMasks:
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -36284,7 +36214,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.24
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -36323,10 +36253,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 15
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -36421,6 +36351,30 @@ Transform:
   - {fileID: 1758993769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543017237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -58.31305, y: -63.105164, z: -515.0024}
+    scale: {x: 0.23825455, y: 1, z: 0.23825455}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":-701.372314453125,"y":-453.18548583984377,"z":-277.8619384765625,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5234560966491699,"frequency":1.0,"persistence":0.5,"lacunarity":1.1139814853668213,"warpIterations":1.8441171646118165,"warpStrength":0.47057628631591799,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &560731960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37369,7 +37323,7 @@ MonoBehaviour:
   m_showTerrainHelper: 1
   m_spawnMode: 0
   imageMasks:
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -37576,7 +37530,7 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -39372,7 +39326,7 @@ MonoBehaviour:
     m_resourceType: 0
     m_resourceIdx: 2
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -40197,7 +40151,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -43416,7 +43370,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -44107,6 +44061,82 @@ MonoBehaviour:
     m_warpOffset: {x: 0, y: 0, z: 0, w: 0}
   m_inputTerrain: {fileID: 0}
   m_advancedInputSettingsUnfolded: 0
+--- !u!1 &743190554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743190556}
+  - component: {fileID: 743190555}
+  m_Layer: 0
+  m_Name: Adaptive Probe Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &743190555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743190554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cded085d155cde949b60f67a11dbc3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  size: {x: 1027.01, y: 167.23877, z: 1027.01}
+  overrideRendererFilters: 0
+  minRendererVolumeSize: 0.1
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  lowestSubdivLevelOverride: 0
+  highestSubdivLevelOverride: 7
+  overridesSubdivLevels: 0
+  mightNeedRebaking: 1
+  cachedTransform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -114.11634
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  cachedHashCode: -541930948
+  fillEmptySpaces: 0
+  version: 2
+  globalVolume: 0
+--- !u!4 &743190556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743190554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 114.11634, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &809452136
 GameObject:
   m_ObjectHideFlags: 0
@@ -45425,6 +45455,59 @@ MonoBehaviour:
   m_minRefreshMS: 100
   m_maxRefreshMS: 5000
   m_followTransform: 1
+--- !u!21 &852989859
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Height Fog Global
+  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3001
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdvancedCat: 1
+    - _AlphaCutoff: 0.5
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _FogCameraMode: 0
+    - _FogCat: 1
+    - _HeightFogGlobal: 1
+    - _IsHeightFogShader: 1
+    - _NoiseCat: 1
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _SkyboxCat: 1
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &986330481
 GameObject:
   m_ObjectHideFlags: 0
@@ -49313,7 +49396,7 @@ MonoBehaviour:
   m_showTerrainHelper: 1
   m_spawnMode: 0
   imageMasks:
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -51690,15 +51773,15 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
---- !u!21 &1247106101
+--- !u!21 &1255708694
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Height Fog Global
-  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
+  m_Name: Override
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -51706,41 +51789,58 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3001
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
     - _AdvancedCat: 1
-    - _AlphaCutoff: 0.5
     - _Banner: 1
     - _DirectionalCat: 1
+    - _DirectionalFalloff: 2
+    - _DirectionalIntensity: 1
+    - _FarDistanceHeight: 0
+    - _FarDistanceOffset: 0
+    - _FogAxisMode: 1
     - _FogCameraMode: 0
     - _FogCat: 1
-    - _HeightFogGlobal: 1
+    - _FogColorDuo: 1
+    - _FogDistanceEnd: 100
+    - _FogDistanceFalloff: 2
+    - _FogDistanceStart: 0
+    - _FogHeightEnd: 100
+    - _FogHeightFalloff: 2
+    - _FogHeightStart: 0
+    - _FogIntensity: 1
+    - _FogLayersMode: 0
+    - _IsHeightFogPreset: 1
     - _IsHeightFogShader: 1
+    - _JitterIntensity: 1
     - _NoiseCat: 1
-    - _QueueControl: -1
-    - _QueueOffset: 0
+    - _NoiseDistanceEnd: 50
+    - _NoiseIntensity: 1
+    - _NoiseMax: 1
+    - _NoiseMin: 0
+    - _NoiseModeBlend: 1
+    - _NoiseScale: 30
     - _SkyboxCat: 1
+    - _SkyboxFogBottom: 0
+    - _SkyboxFogFalloff: 1
+    - _SkyboxFogFill: 1
+    - _SkyboxFogHeight: 1
+    - _SkyboxFogIntensity: 1
+    - _SkyboxFogOffset: 0
     m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
+    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
+    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
+    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1261959915
@@ -61452,7 +61552,7 @@ MonoBehaviour:
   m_showTerrainHelper: 1
   m_spawnMode: 0
   imageMasks:
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -61650,7 +61750,7 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -61848,7 +61948,7 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -80432,7 +80532,7 @@ MonoBehaviour:
   m_gaiaDetailDistance: 120
   m_gaiaDetailFadeoutDistance: 12
   m_unityDetailDistance: 150
-  m_unityDetailDensity: 0.5
+  m_unityDetailDensity: 0.018
   m_terrain: {fileID: 1776074809}
 --- !u!154 &1776074808
 TerrainCollider:
@@ -80469,7 +80569,7 @@ Terrain:
   m_TreeCrossFadeLength: 50
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 150
-  m_DetailObjectDensity: 0.5
+  m_DetailObjectDensity: 0.018
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1024
   m_HeightmapMinimumLODSimplification: 0
@@ -81228,8 +81328,8 @@ MonoBehaviour:
   m_spawnRuleStampsToggleAllState: 1
   m_drawPreview: 0
   m_previewRuleIds: 
-  m_maxWorldHeight: 99.67998
-  m_minWorldHeight: 47.97717
+  m_maxWorldHeight: 0
+  m_minWorldHeight: 0
   m_showSeaLevelinStampPreview: 1
   m_terrainGeneratorPanelUnfolded: 1
   m_worldDesignerPreviewSettingsUnfolded: 0
@@ -83523,7 +83623,7 @@ MonoBehaviour:
   m_showSeaLevelPlane: 1
   m_showRulers: 0
   m_syncHeightmaps: 1
-  m_stampDirty: 0
+  m_stampDirty: 1
   m_recordUndo: 0
   m_currentStamperUndoOperation: 0
   m_stamperUndoOperations: []
@@ -84325,7 +84425,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 0
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -84523,7 +84623,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -85159,7 +85259,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 1
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -85408,7 +85508,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 2
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -86044,7 +86144,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 3
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -86680,7 +86780,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 4
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -86878,7 +86978,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -87325,7 +87425,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 5
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -87523,7 +87623,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -87970,7 +88070,7 @@ MonoBehaviour:
     m_resourceType: 1
     m_resourceIdx: 6
     m_imageMasks:
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -88168,7 +88268,7 @@ MonoBehaviour:
       m_selectedWorldBiomeMaskGUID: 
       m_growAndShrinkValue: 0
       m_globalSpawnerMaskStackRT: {fileID: 0}
-    - m_active: 1
+    - m_active: 0
       m_invert: 0
       m_hasErrors: 0
       m_influence: 0
@@ -88808,7 +88908,7 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -89561,7 +89661,7 @@ MonoBehaviour:
   m_z: 0
   m_isFoldedOut: 0
   m_width: 100
-  m_height: 3
+  m_height: 5
   m_blendStrength: 0.5
   m_absoluteHeightValue: 0
   m_rotation: 0
@@ -89825,9 +89925,9 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 25
-    m_maxWorldHeight: 99.67998
-    m_minWorldHeight: 47.97717
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
+    m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
     m_xOffSetScalar: 0
@@ -89836,7 +89936,7 @@ MonoBehaviour:
     m_zScale: 1
     m_rotationDegrees: 0
     m_tiling: 0
-    m_imageMaskSpace: 1
+    m_imageMaskSpace: 0
     m_imageMaskTextureGUID: 
     m_imageMaskFilterMode: 0
     m_imageMaskColorSelectionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -89980,7 +90080,7 @@ MonoBehaviour:
       m_warpIterations: 1.8441172
       m_warpStrength: 0.4705763
       m_warpOffset: {x: -701.3723, y: -453.1855, z: -277.86194, w: 0}
-    m_noiseSettings: {fileID: 2137355885}
+    m_noiseSettings: {fileID: 543017237}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -90032,9 +90132,9 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 25
-    m_maxWorldHeight: 99.67998
-    m_minWorldHeight: 47.97717
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
+    m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
     m_xOffSetScalar: 0
@@ -93076,7 +93176,7 @@ MonoBehaviour:
   m_showTerrainHelper: 1
   m_spawnMode: 0
   imageMasks:
-  - m_active: 1
+  - m_active: 0
     m_invert: 0
     m_hasErrors: 0
     m_influence: 0
@@ -93736,30 +93836,56 @@ MonoBehaviour:
     m_warpOffset: {x: 0, y: 0, z: 0, w: 0}
   m_inputTerrain: {fileID: 0}
   m_advancedInputSettingsUnfolded: 0
---- !u!114 &2137355885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
+--- !u!1 &2119027008
+GameObject:
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119027010}
+  - component: {fileID: 2119027009}
+  m_Layer: 0
+  m_Name: ProbeVolumePerSceneData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2119027009
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Script: {fileID: 11500000, guid: a83d2f7ae04ab6f4f99b0d85377be998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -58.31305, y: -63.105164, z: -515.0024}
-    scale: {x: 0.23825455, y: 1, z: 0.23825455}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":-701.372314453125,"y":-453.18548583984377,"z":-277.8619384765625,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5234560966491699,"frequency":1.0,"persistence":0.5,"lacunarity":1.1139814853668213,"warpIterations":1.8441171646118165,"warpStrength":0.47057628631591799,"warpEnabled":true,"warpExpanded":true}'
+  serializedBakingSet: {fileID: 0}
+  sceneGUID: fbd845961df10d748952906e27d34ca3
+  obsoleteAsset: {fileID: 0}
+  obsoleteCellSharedDataAsset: {fileID: 0}
+  obsoleteCellSupportDataAsset: {fileID: 0}
+  obsoleteSerializedScenarios: []
+--- !u!4 &2119027010
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119027008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143741715
 GameObject:
   m_ObjectHideFlags: 0
@@ -94419,6 +94545,226 @@ MonoBehaviour:
   m_minRefreshMS: 100
   m_maxRefreshMS: 5000
   m_followTransform: 1
+--- !u!4 &543450653543301291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149353241105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -156.751, y: 61.771, z: 15.559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7782388022891028051}
+  - {fileID: 2931975437735203579}
+  - {fileID: 3583610836790249469}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919132149353241105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450653543301291}
+  m_Layer: 0
+  m_Name: grasspatches (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2931975437735203579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+  m_PrefabInstance: {fileID: 7339259007923975046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3365071777443185012
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 543450653543301291}
+    m_Modifications:
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.4266777
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4504286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301675002518966143, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+      propertyPath: m_Name
+      value: grasspatch3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+--- !u!4 &3583610836790249469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2444614544198798481, guid: c8eb318d38577194d86cdf7bdc7caad1, type: 3}
+  m_PrefabInstance: {fileID: 3365071777443185012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3877695509313856591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 543450653543301291}
+    m_Modifications:
+    - target: {fileID: 1131524600970506288, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_Name
+      value: grasspatch1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0019128248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027791414
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+--- !u!1001 &7339259007923975046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 543450653543301291}
+    m_Modifications:
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07397202
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.1142755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793252188058791533, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976409462124947931, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+      propertyPath: m_Name
+      value: grasspatch2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56d588cb92e82a842aea0f52d8f0ea8e, type: 3}
+--- !u!4 &7782388022891028051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1201730084158196898, guid: 87539b4e6c37e524385d878659cee47f, type: 3}
+  m_PrefabInstance: {fileID: 3877695509313856591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -94428,3 +94774,6 @@ SceneRoots:
   - {fileID: 2018778414}
   - {fileID: 532289356}
   - {fileID: 127066576}
+  - {fileID: 743190556}
+  - {fileID: 2119027010}
+  - {fileID: 543450653543301291}
