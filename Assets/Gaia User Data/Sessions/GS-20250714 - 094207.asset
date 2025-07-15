@@ -704,16 +704,16 @@ MonoBehaviour:
     recalculate: 0
     min: 42.4694
     max: 196.22174
-  - guid: Worldmap
-    isWorldmap: 1
-    recalculate: 0
-    min: 47.97717
-    max: 99.67998
   - guid: e8f23111b3bfb3443ae0752ef6762ab6
     isWorldmap: 0
     recalculate: 0
     min: 32.00049
     max: 196.22174
+  - guid: Worldmap
+    isWorldmap: 1
+    recalculate: 0
+    min: 0
+    max: 0
   m_bakedMaskCacheEntries:
   - fileName: Terrain_0_0-20250714 - 140404_LayerGameObject_1879048192_2
     assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714

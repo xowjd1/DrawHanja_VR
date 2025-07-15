@@ -10,6 +10,8 @@ TagManager:
   - Synty Medium Farm
   - Synty Tree
   - Synty Small Farm
+  - Ax
+  - Stick
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Interact
+  - Block
   - 
   - 
   - 
