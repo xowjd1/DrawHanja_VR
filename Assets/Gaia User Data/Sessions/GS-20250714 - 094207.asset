@@ -1,0 +1,739 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e251860fcd970734c9f14ebd98a146c3, type: 3}
+  m_Name: GS-20250714 - 094207
+  m_EditorClassIdentifier: 
+  m_name: Session 20250714-094207
+  m_description: 'Rocking out at Creativity Central!
+
+
+    If you like Gaia please
+    consider rating it :)'
+  m_previewImage: {fileID: 0}
+  m_dateCreated: "2025-07-14 \uC624\uC804 9:42:07"
+  m_terrainWidth: 1024
+  m_terrainDepth: 1024
+  m_terrainHeight: 1024
+  m_seaLevel: 25
+  m_spawnDensity: 0.46
+  m_isLocked: 0
+  m_previewImageBytes: 
+  m_previewImageWidth: 0
+  m_previewImageHeight: 0
+  m_operations:
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uC804 9:43:06"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 2048'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 094306
+    m_operationDateTime: "2025-07-14 \uC624\uC804 9:43:07"
+    scriptableObjectAssetGUID: 84608e7c4fa17a347a99b217afb9f9ee
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uC804 9:44:41"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 2048'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 094442
+    m_operationDateTime: "2025-07-14 \uC624\uC804 9:44:42"
+    scriptableObjectAssetGUID: 7ab360c3463cd2f408a6e205655e32f9
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uC804 10:08:14"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 100814
+    m_operationDateTime: "2025-07-14 \uC624\uC804 10:08:14"
+    scriptableObjectAssetGUID: e56e53f642c864541836712d80a5d1f6
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uC804 10:16:55"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 10:16:56"
+    scriptableObjectAssetGUID: d930780e9ddb871459ebbae16fdc3ade
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Textures(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 10:17:15"
+    scriptableObjectAssetGUID: 335191f86bd1dcd4a8100cf8ce4d5149
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:02:03"
+    scriptableObjectAssetGUID: ec49635092a2d1045a36ad876bf38623
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:02:05"
+    scriptableObjectAssetGUID: 340d4ef5112623b47bb499d053e53d2a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (11)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:02:39"
+    scriptableObjectAssetGUID: ff958c064414cd7439fa95b30043d909
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:02:54"
+    scriptableObjectAssetGUID: fff12577afb20504ea7a441b225a16a1
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:02:57"
+    scriptableObjectAssetGUID: ed58c2259ee7aa142a2e325644acf6f2
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Undo - 1 Terrains
+    m_operationType: 5
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:10"
+    scriptableObjectAssetGUID: a08c3e651f74e51449d2eb284906fd70
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:30"
+    scriptableObjectAssetGUID: 153af0f22af671d4ab85fca6501c5a63
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:32"
+    scriptableObjectAssetGUID: 8bed8b029b863ac44a351117a34c7108
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (11)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:33"
+    scriptableObjectAssetGUID: 259171daef24f3342bdd79afd3b5143e
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:46"
+    scriptableObjectAssetGUID: 104b59c4cf9078241a9cd878763405d1
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 101655
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:49"
+    scriptableObjectAssetGUID: 50f8104b8d37c6b45b9042721556840a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:58"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:03:59"
+    scriptableObjectAssetGUID: 7a919f7195eced34bab567e99a784b6d
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:04:08"
+    scriptableObjectAssetGUID: 615db7de9998f024f944297173af92ab
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:04:09"
+    scriptableObjectAssetGUID: f88eba44e4362744a96db0cea275d4a9
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Textures(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uC804 11:04:43"
+    scriptableObjectAssetGUID: a22bc9007e9430e4a9cce8997670ca78
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Trees(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:37:15"
+    scriptableObjectAssetGUID: 9829bdf48e3973643bc7d39d22a4a04d
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Trees(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:37:26"
+    scriptableObjectAssetGUID: ecf276ab40accf74ea983388bb465270
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:38:07"
+    scriptableObjectAssetGUID: c58e9637c51baa74bac6f99db16263c9
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (11)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:38:28"
+    scriptableObjectAssetGUID: b1a3757016a8c8e44b8d65b2b4da98c9
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:38:48"
+    scriptableObjectAssetGUID: 8c612a4cf5401704ba9f1181c414c26d
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:38:51"
+    scriptableObjectAssetGUID: 496655e69e6747f49be70ac227309d01
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:38:53"
+    scriptableObjectAssetGUID: 986670a130d0d76449e4b6d2e2692e33
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Textures(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:40:12"
+    scriptableObjectAssetGUID: 3a18fc9747b5ff543aed09d7f202ae2c
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Trees(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:40:26"
+    scriptableObjectAssetGUID: 8176027e12a16654e86a03070141bbe1
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:40:52"
+    scriptableObjectAssetGUID: 4290598feed90f04899d6688e4eb51ac
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Trees(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:41:28"
+    scriptableObjectAssetGUID: 2fadb138bb5b719489fb266effb868cb
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Trees(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 110359
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:41:59"
+    scriptableObjectAssetGUID: fbe19389afc9bcb4ab6b77feedc14a22
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:43:41"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:43:42"
+    scriptableObjectAssetGUID: 9bfa15c5e271d074aa90cea24e29da56
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:44:08"
+    scriptableObjectAssetGUID: 284855e96d9ebbb42ab131904ef53ce9
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 1:44:10"
+    scriptableObjectAssetGUID: 31a9a53f5ce250344beca9fa04e61585
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Alpine Meadow-Grass(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:01:14"
+    scriptableObjectAssetGUID: f8f26d7c94f153c42b6673aaa94d1b0b
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (11)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:01:34"
+    scriptableObjectAssetGUID: 1b0dbf8f1d4128347b10875efad4fd60
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (4)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:02:43"
+    scriptableObjectAssetGUID: 92e660984bf4e3f49bc6eff87a657792
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:02:55"
+    scriptableObjectAssetGUID: 41f8403ba3ab10e4ba3c538ab4053899
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:01"
+    scriptableObjectAssetGUID: 7a566f176f20e244f985c10c1b516cd2
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (4)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:05"
+    scriptableObjectAssetGUID: 137f18e716b674a4ca1939826d1ba299
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:21"
+    scriptableObjectAssetGUID: a6129e64352ec2746b5fb9af53551c04
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:25"
+    scriptableObjectAssetGUID: fffb4c352de11fe48b4706a302bd127f
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:27"
+    scriptableObjectAssetGUID: 0b2b38068cd29e9408531d33a55ee154
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:31"
+    scriptableObjectAssetGUID: 6f1164b9bfce55f4d99d398fcc5af63a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (4)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:35"
+    scriptableObjectAssetGUID: f6955d935d8367b478bc7ee2e78c2fef
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Unknown
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:48"
+    scriptableObjectAssetGUID: f6a81ecc5142c4948b1b1b2cdae9f2c6
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 134342
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:03:53"
+    scriptableObjectAssetGUID: efa73534ff143e34d81ee06c79145f92
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:04:03"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:04:04"
+    scriptableObjectAssetGUID: 6d70e70a59d2214458ae2073d2466751
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:04:31"
+    scriptableObjectAssetGUID: cc8189b728eacde4f9d25f1256828b41
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, CurrentTerrainOnly, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:04:50"
+    scriptableObjectAssetGUID: 5858acb7f3d1c974cad3875e6623f6b8
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees Details GOs SpawnExt Probes, CurrentTerrainOnly,
+      AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-14 \uC624\uD6C4 2:04:54"
+    scriptableObjectAssetGUID: 546cb2cc73fdc4348956905aeb3e147a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  m_terrainMinMaxCache:
+  - guid: 549f75adce19195499cc305c56cdf0a7
+    isWorldmap: 0
+    recalculate: 0
+    min: 0
+    max: 81.62624
+  - guid: 9f00d01e62b30ce4689ea6743489426d
+    isWorldmap: 0
+    recalculate: 0
+    min: 0
+    max: 79.87622
+  - guid: bb59e0a008b6e6d4782f78f2d71617ed
+    isWorldmap: 0
+    recalculate: 0
+    min: 22.437843
+    max: 219.94086
+  - guid: 2b09bd365747dcd40892a89ba30068cf
+    isWorldmap: 0
+    recalculate: 0
+    min: 32.00049
+    max: 196.22174
+  - guid: 96c01f00d78fc4846a48c4b793bc4a29
+    isWorldmap: 0
+    recalculate: 0
+    min: 42.4694
+    max: 196.22174
+  - guid: 93b9e282eb6d57f4799a72e7bf18189d
+    isWorldmap: 0
+    recalculate: 0
+    min: 42.4694
+    max: 196.22174
+  - guid: e8f23111b3bfb3443ae0752ef6762ab6
+    isWorldmap: 0
+    recalculate: 0
+    min: 32.00049
+    max: 196.22174
+  - guid: Worldmap
+    isWorldmap: 1
+    recalculate: 0
+    min: 0
+    max: 0
+  m_bakedMaskCacheEntries:
+  - fileName: Terrain_0_0-20250714 - 140404_LayerGameObject_1879048192_2
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
+      - 140404/Terrain_0_0-20250714 - 140404_LayerGameObject_1879048192_2
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
+      - 140404_LayerGameObject_1879048192_2
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250714 - 140404_LayerTree_1879048192_-0.2
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
+      - 140404/Terrain_0_0-20250714 - 140404_LayerTree_1879048192_-0.2
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
+      - 140404_LayerTree_1879048192_-0.2
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250714 - 140404_LayerTree_1879048192_1
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
+      - 140404/Terrain_0_0-20250714 - 140404_LayerTree_1879048192_1
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
+      - 140404_LayerTree_1879048192_1
+    texture: {fileID: 0}
+  m_worldBiomeMaskSettings: {fileID: 0}

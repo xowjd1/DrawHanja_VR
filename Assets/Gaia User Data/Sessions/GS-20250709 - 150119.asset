@@ -1,0 +1,348 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e251860fcd970734c9f14ebd98a146c3, type: 3}
+  m_Name: GS-20250709 - 150119
+  m_EditorClassIdentifier: 
+  m_name: Session 20250709-150119
+  m_description: 'Rocking out at Creativity Central!
+
+
+    If you like Gaia please
+    consider rating it :)'
+  m_previewImage: {fileID: 0}
+  m_dateCreated: "2025-07-09 \uC624\uD6C4 3:01:19"
+  m_terrainWidth: 1024
+  m_terrainDepth: 1024
+  m_terrainHeight: 1024
+  m_seaLevel: 25
+  m_spawnDensity: 1
+  m_isLocked: 0
+  m_previewImageBytes: 
+  m_previewImageWidth: 0
+  m_previewImageHeight: 0
+  m_operations:
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:02:58"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150259
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:02:59"
+    scriptableObjectAssetGUID: 41e3c55641593c643af1b5fc15812b0a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:04:15"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:04:16"
+    scriptableObjectAssetGUID: 5ab9bbac9725b0e4fb5394662220b64f
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (6)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:07:27"
+    scriptableObjectAssetGUID: 2aacd88881f1a1d46a58b9c3133947f0
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:02"
+    scriptableObjectAssetGUID: 391df15fe45258748a262e4857b09b39
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:08"
+    scriptableObjectAssetGUID: 87741dd163fa2464984ea00504e59566
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Bushes(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:10"
+    scriptableObjectAssetGUID: d20e8adeb79532143a3f16ef3257fd40
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:36"
+    scriptableObjectAssetGUID: c5befd51e724458439bc00bd50547b06
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Bushes(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:39"
+    scriptableObjectAssetGUID: 6ef3694ba211ce44ba1cd01c976eb008
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:45"
+    scriptableObjectAssetGUID: 16d1ed1820e11604dbf69e06c8e6ad86
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Bushes(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:08:47"
+    scriptableObjectAssetGUID: 8195e32a3cc0be948b3cecc723a4802e
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:02"
+    scriptableObjectAssetGUID: 4de458682c157924c8c04bd106160869
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Bushes(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:04"
+    scriptableObjectAssetGUID: d091ea35e34d4674aafe4dea2b09dcbc
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:25"
+    scriptableObjectAssetGUID: 971808eeac7e16d4f9682a9ebe21451b
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Bushes(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:27"
+    scriptableObjectAssetGUID: be602437bf3b06b4b8b4b479ffa64f50
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, AllTerrains, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:45"
+    scriptableObjectAssetGUID: 3ec83b8d96dde534393976a7b6a082a2
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Stump(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:09:52"
+    scriptableObjectAssetGUID: ec8225a981b29744dbbaf66470218e28
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, AllTerrains, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:10:09"
+    scriptableObjectAssetGUID: 4b54d504f22824e4e83c7f12d1a4df81
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Stump(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:10:11"
+    scriptableObjectAssetGUID: 31b35c4a882fd3944927aafe98eb3036
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing -, AllTerrains, AnySource
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:10:29"
+    scriptableObjectAssetGUID: 5a8cd6175dad5e147b08b2c5c4f14323
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Stump(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:10:31"
+    scriptableObjectAssetGUID: 552f1f3f7698f8d44bcddf260f1a39dc
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:18:44"
+    scriptableObjectAssetGUID: e3878905b65367443b5f97b5b85f6d6f
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clearing - Trees, AllTerrains, OnlyThisSpawner
+    m_operationType: 3
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:18:50"
+    scriptableObjectAssetGUID: 46344d1c798a17c4fb1b18737fca0130
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Tree Pine(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:18:53"
+    scriptableObjectAssetGUID: 20687558cf0ac5843897c56471558f5f
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Coniferous Forest-Tree Spruce(Clone)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250709 - 150415
+    m_operationDateTime: "2025-07-09 \uC624\uD6C4 3:18:56"
+    scriptableObjectAssetGUID: 77e488387340b574f8e6de0610479b08
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  m_terrainMinMaxCache:
+  - guid: 4f8ae9a6ab2f91342bfd7614aeb7aaa8
+    isWorldmap: 0
+    recalculate: 0
+    min: 0
+    max: 144.09595
+  - guid: 0808645fd918262459f166aa52c19382
+    isWorldmap: 0
+    recalculate: 0
+    min: 0
+    max: 144.65846
+  - guid: Worldmap
+    isWorldmap: 1
+    recalculate: 0
+    min: 0
+    max: 0
+  m_bakedMaskCacheEntries:
+  - fileName: Terrain_0_0-20250709 - 150415_LayerGameObject_1879048192_4
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 150415/Terrain_0_0-20250709 - 150415_LayerGameObject_1879048192_4
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 150415/Terrain_0_0-20250709
+      - 150415_LayerGameObject_1879048192_4
+    texture: {fileID: 0}
+  - fileName: Terrain_0_0-20250709 - 150415_LayerTree_1879048192_-3
+    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709
+      - 150415/Terrain_0_0-20250709 - 150415_LayerTree_1879048192_-3
+    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
+      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250709 - 150415/Terrain_0_0-20250709
+      - 150415_LayerTree_1879048192_-3
+    texture: {fileID: 0}
+  m_worldBiomeMaskSettings: {fileID: 0}

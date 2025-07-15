@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d44455b778e4c5b4d97147b8448b3105
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Prefabs/Interactors/Left Teleport
+    Interactor.prefab
+  uploadId: 749762

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 594e7f5269c55284382ae4e9076a865d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Prefabs/Interactors/XR Controller
+    Right.prefab
+  uploadId: 749762

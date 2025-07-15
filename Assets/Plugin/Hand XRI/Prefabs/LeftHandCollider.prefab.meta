@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48dda27f1844381469a2e64223e6b041
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.3
+  assetPath: Assets/Beyond Limits Studio/Shared/XRI/Prefabs/LeftHandCollider.prefab
+  uploadId: 749762
