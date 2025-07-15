@@ -6,34 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +33,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@f23ad2c521e1/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -143,6 +121,7 @@
       <workItem from="1751612342796" duration="3014000" />
       <workItem from="1751864752908" duration="9723000" />
       <workItem from="1752551656612" duration="3339000" />
+      <workItem from="1752561762018" duration="4332000" />
     </task>
     <servers />
   </component>
