@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7b871638a192d4fa19054574b97e18, type: 3}
+  m_Name: HanjaDatabase
+  m_EditorClassIdentifier: 
+  allowedHanja:
+  - {fileID: 11400000, guid: b1ff4e2077bd4d94f97cbc31fdc0364f, type: 2}
+  - {fileID: 11400000, guid: 789228b9f555f6f488ec8714f7617a94, type: 2}
+  - {fileID: 11400000, guid: 6b792cd65c9114349afd1eeaf51f76c3, type: 2}
+  - {fileID: 11400000, guid: d8147d8bf3d2b1e478c8971cf22dd08d, type: 2}
+  - {fileID: 11400000, guid: 1186ffcb20fe6bb41b8ba2dcd81bd078, type: 2}
+  - {fileID: 11400000, guid: 299524e14851d4c44b1b73f7fc8e42ec, type: 2}
+  - {fileID: 11400000, guid: 7ab7f0ba06ba7824db7830592b8d97e6, type: 2}
+  - {fileID: 11400000, guid: 4382bd2a0109c994b8545c5fc22f3c7b, type: 2}
+  - {fileID: 11400000, guid: 329b12cd3a63fdd43933e1adc072b038, type: 2}
+  - {fileID: 11400000, guid: ca5c45aa1bdcf15428b2547f2eef07dd, type: 2}
+  - {fileID: 11400000, guid: 919d96fa77a0e6b4c81cdc57f5634f1c, type: 2}
+  - {fileID: 11400000, guid: 2429b8449dc838145a3a95f8eda7358e, type: 2}
+  - {fileID: 11400000, guid: 5c8a4a64b1941da4c931d87622694225, type: 2}
+  - {fileID: 11400000, guid: decdd0232ba66814fb547bae395876b9, type: 2}
