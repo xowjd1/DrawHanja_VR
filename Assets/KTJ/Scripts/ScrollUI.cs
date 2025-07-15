@@ -3,46 +3,48 @@ using UnityEngine;
 
 public class ScrollUI : MonoBehaviour
 {
-    [Header("Mask Transform (Pivot X=1, Anchor X=1)")]
-    public RectTransform maskRect;   
+    public RectTransform scrollPage;  // scroll page 객체 연결
+    public float startX = 1505f;
+    public float endX = 0f;
+    public float duration = 1.5f;     // 이동 시간 (초)
 
-    [Header("언롤될 최대 너비")]
-    public float targetWidth = 1000f;    
+    public GameObject hanjaImage;
+    public GameObject drawPanel;
+    public GameObject finishBtn;
+    public GameObject clearBtn;
 
-    [Header("애니메이션 시간")]
-    public float duration = 1.5f;       
-
-    void Awake()
+    private void Start()
     {
-        // (선택) 코드로 Pivot/Anchor 설정하고 싶다면:
-        maskRect.pivot     = new Vector2(1f, 0.5f);
-        maskRect.anchorMin = new Vector2(1f, 0.5f);
-        maskRect.anchorMax = new Vector2(1f, 0.5f);
+        // 시작 전엔 UI 요소 숨기기
+        hanjaImage.SetActive(false);
+        drawPanel.SetActive(false);
+        finishBtn.SetActive(false);
+        clearBtn.SetActive(false);
+
+        scrollPage.anchoredPosition = new Vector2(startX, scrollPage.anchoredPosition.y);
+        StartCoroutine(MoveScrollPage());
     }
 
-    void Start()
-    {
-        // 시작 시 너비를 0으로 초기화 (높이는 그대로 유지)
-        var sz = maskRect.sizeDelta;
-        maskRect.sizeDelta = new Vector2(0f, sz.y);
-
-        StartCoroutine(Unroll());
-    }
-
-    IEnumerator Unroll()
+    private IEnumerator MoveScrollPage()
     {
         float elapsed = 0f;
-        Vector2 startSize = maskRect.sizeDelta;
-        Vector2 endSize   = new Vector2(targetWidth, startSize.y);
+        Vector2 startPos = scrollPage.anchoredPosition;
+        Vector2 targetPos = new Vector2(endX, startPos.y);
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration);
-            maskRect.sizeDelta = Vector2.Lerp(startSize, endSize, t);
+            float t = Mathf.Clamp01(elapsed / duration);
+            scrollPage.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
             yield return null;
         }
 
-        maskRect.sizeDelta = endSize;
+        scrollPage.anchoredPosition = targetPos;
+
+        // 다 펼쳐지고 나서 UI 요소들 보여주기
+        hanjaImage.SetActive(true);
+        drawPanel.SetActive(true);
+        finishBtn.SetActive(true);
+        clearBtn.SetActive(true);
     }
 }
