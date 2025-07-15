@@ -19,6 +19,8 @@ public class NPCDialog : MonoBehaviour, IInteractable
     private string[] lines;
     private int index = 0;
     private System.Action onDialogComplete;
+    
+    public GameObject wallBlocker;
 
 
     void Awake()
@@ -52,6 +54,11 @@ public class NPCDialog : MonoBehaviour, IInteractable
             
             StartDialog(dialogBeforeQuestComplete, () =>
             {
+                if (wallBlocker != null)
+                {
+                    wallBlocker.SetActive(false);
+                }
+                
                 if (triggerNextQuest)
                 {
                     QuestManager.Instance.StartNextQuest();

@@ -18,8 +18,6 @@ public class QuestManager : MonoBehaviour
     public GameObject questPanel;
     public TextMeshProUGUI questText;
     
-    public GameObject wallBlocker1;
-    
 
     private void Awake()
     {
@@ -58,11 +56,7 @@ public class QuestManager : MonoBehaviour
         if (currentQuestIndex < quests.Length)
         {
             quests[currentQuestIndex].isCompleted = true;
-
-            // 퀘스트별 후처리
-            if (currentQuestIndex == 0) wallBlocker1.SetActive(false);
-            // if (currentQuestIndex == 1) wallBlocker2.SetActive(false);
-
+            
             currentQuestIndex++;
             questPanel.SetActive(false);
         }
