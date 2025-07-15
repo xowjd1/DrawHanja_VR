@@ -21,7 +21,7 @@ public class OutlineHighlighter : MonoBehaviour
 
     void SetOutlineVisible(bool visible)
     {
-        float targetScale = visible ? 1.05f : 0f;
+        float targetScale = visible ? 0.02f : 0f;
         outlineMaterial.SetFloat("_Scale", targetScale);
     }
 }
