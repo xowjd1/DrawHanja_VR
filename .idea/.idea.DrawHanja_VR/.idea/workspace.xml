@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Procedural Worlds/Frameworks/Common5/Editor/PWCommonMenuAG.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Procedural Worlds/Frameworks/Common5/Editor/PWCommonMenuAG.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Outline3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/sticks.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Prefab/sticks.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/OutlineHighlighter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/OutlineHighlighter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LYS.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LYS.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
