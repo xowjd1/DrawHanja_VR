@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXRPackageSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,7 @@
       <workItem from="1751612342796" duration="3014000" />
       <workItem from="1751864752908" duration="9723000" />
       <workItem from="1752551656612" duration="3339000" />
-      <workItem from="1752561762018" duration="4332000" />
+      <workItem from="1752561762018" duration="6611000" />
     </task>
     <servers />
   </component>

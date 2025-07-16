@@ -16,7 +16,7 @@ public class OniStateMachine : MonoBehaviour
 
     private void Start()
     {
-        ChangeState(CreateOniThrowJarState());
+        ChangeState(CreateOniPunchState());
     }
 
     private void Update()

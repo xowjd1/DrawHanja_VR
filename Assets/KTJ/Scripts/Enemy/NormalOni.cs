@@ -109,6 +109,8 @@ public class OniThrowJarState : OniState
 public class OniPunchState : OniState
 {
     private GameObject _player;
+    private float _moveSpeed = 5f;
+    private float _stopDistance = 1f;
     public OniPunchState(OniStateMachine oniStateMachine, GameObject player) : base(oniStateMachine)
     {
         _player = player;
@@ -121,7 +123,22 @@ public class OniPunchState : OniState
 
     public override void Update()
     {
-        
+        if (_player == null) return;
+
+        Vector3 direction = (_player.transform.position - _oniStateMachine.transform.position);
+        float distance = direction.magnitude;
+
+        if (distance > _stopDistance)
+        {
+            // 방향 정규화 후 이동
+            Vector3 moveDir = direction.normalized;
+            _oniStateMachine.transform.forward = moveDir; // 오니가 플레이어 쪽 보도록
+            _oniStateMachine.transform.position += moveDir * _moveSpeed * Time.deltaTime;
+        }
+        else
+        {
+
+        }
     }
 
     public override void Exit()
