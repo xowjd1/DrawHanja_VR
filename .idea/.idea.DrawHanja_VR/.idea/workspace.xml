@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/49eb6e4c55248c1c.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/49eb6e4c55248c1c.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/83b15fccbd943a7b.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/83b15fccbd943a7b.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/c1d19fdf6a840df0 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/c1d19fdf6a840df0 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/c1d19fdf6a840df0.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/c1d19fdf6a840df0.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/ce35ef2fa2a5e9b3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Materials/ce35ef2fa2a5e9b3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Momo.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Momo.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +43,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@f23ad2c521e1/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -118,7 +133,7 @@
       <workItem from="1751612342796" duration="3014000" />
       <workItem from="1751864752908" duration="9723000" />
       <workItem from="1752551656612" duration="3339000" />
-      <workItem from="1752561762018" duration="6611000" />
+      <workItem from="1752561762018" duration="12304000" />
     </task>
     <servers />
   </component>

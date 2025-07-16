@@ -69,15 +69,12 @@ public class OniThrowJarState : OniState
     public override void Enter()
     {
         hasThrown = false;
+        _oniStateMachine.animator.SetTrigger("ThrowJar");
     }
 
     public override void Update()
     {
-        if (hasThrown)
-            return;
-
-        ThrowJar();
-        hasThrown = true;
+       
 
     }
 
@@ -99,6 +96,15 @@ public class OniThrowJarState : OniState
         rb.linearVelocity = dir * throwForce + Vector3.up * 2f;
     }
 
+    public void OnThrowJarEvent()
+    {
+        if (hasThrown) return;
+        ThrowJar();
+        hasThrown = true;
+        // (원하면 여기서 다음 상태로 전환도 같이)
+        _oniStateMachine.ChangeState(_oniStateMachine.CreateOniPunchState());
+    }
+    
     public override void Exit()
     {
         

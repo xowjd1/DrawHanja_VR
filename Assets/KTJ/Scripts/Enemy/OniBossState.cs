@@ -1,16 +1,13 @@
-using UnityEngine;
-
-public class OniBossState : MonoBehaviour
+public abstract class OniBossState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    protected OniBossStateMachine _oniBossStateMachine;
 
-    // Update is called once per frame
-    void Update()
+    public OniBossState(OniBossStateMachine oniBossStateMachine)
     {
-        
+        _oniBossStateMachine = oniBossStateMachine;
     }
+    
+    public virtual void Enter() {}
+    public virtual void Update() {}
+    public virtual void Exit() {}
 }

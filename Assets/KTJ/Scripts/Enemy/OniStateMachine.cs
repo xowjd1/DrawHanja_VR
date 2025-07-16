@@ -3,6 +3,9 @@ using UnityEngine;
 public class OniStateMachine : MonoBehaviour
 {
     private OniState currentState;
+    
+    public Animator animator;
+    
     [SerializeField] private GameObject player;
     [SerializeField] private Transform jarThrowPoint;
     [SerializeField] private GameObject jar;
@@ -16,7 +19,7 @@ public class OniStateMachine : MonoBehaviour
 
     private void Start()
     {
-        ChangeState(CreateOniPunchState());
+        ChangeState(CreateOniThrowJarState());
     }
 
     private void Update()
@@ -70,6 +73,12 @@ public class OniStateMachine : MonoBehaviour
         return new OniDieState(
             this
         );
+    }
+    
+    public void ThrowJarAnimationEvent()
+    {
+        if (currentState is OniThrowJarState throwState)
+            throwState.OnThrowJarEvent();
     }
     
 }
