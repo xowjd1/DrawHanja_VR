@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Island Baking Set
   m_EditorClassIdentifier: 
   singleSceneMode: 1
-  dialogNoProbeVolumeInSetShown: 0
+  dialogNoProbeVolumeInSetShown: 1
   settings:
     m_Version: 1
     dilationSettings:
@@ -124,7 +124,7 @@ MonoBehaviour:
     m_Keys:
     - fbd845961df10d748952906e27d34ca3
     m_Values:
-    - hasProbeVolume: 1
+    - hasProbeVolume: 0
       bakeScene: 1
       bounds:
         m_Center: {x: 0, y: 121.5, z: 0}
