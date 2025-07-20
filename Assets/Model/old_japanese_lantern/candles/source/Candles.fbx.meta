@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 5af71a922f5f19d458aef5fc0b12c3d6
+guid: 127e050498f0ae24f8af7082dd8d05f9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candle Material
+    second: {fileID: 2100000, guid: edff0fb92f3021044a657fdb7cf9ead8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate Material
+    second: {fileID: 2100000, guid: b6247e2217d7e0c49bc63114b3f1ec76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wick Material
+    second: {fileID: 2100000, guid: 71a321a5395f81f4e8d2361ec4ddd782, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,7 +84,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
