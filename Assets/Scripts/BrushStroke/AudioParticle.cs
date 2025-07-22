@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.VFX;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioParticle : MonoBehaviour
@@ -19,9 +19,12 @@ public class AudioParticle : MonoBehaviour
     [SerializeField] private AudioClip clip;
     private AudioSource source;
 
-    [Header("Particle Effects")]
-    [SerializeField] private VisualEffect Demo1;
-    [SerializeField] private VisualEffect Demo2;
+    [Header("Play Particle Effects")]
+    [SerializeField] private List<ParticleSystem> playParticleList = new List<ParticleSystem>();
+
+    [Header("Destroy Particle Effects")]
+    [SerializeField] private List<ParticleSystem> destoryParticleList = new List<ParticleSystem>();
+
 
 
     // 델리게이트
@@ -57,8 +60,27 @@ public class AudioParticle : MonoBehaviour
         }
     }
 
-    public void PlayWaveParticle()
+    public void PlayParticle()
     {
-        Demo1.Play();
+        Vector3 center = GetComponent<Renderer>().bounds.center;
+
+        foreach (var vfx in playParticleList)
+        {
+            if (vfx == null) continue;
+
+            ParticleSystem instance = Instantiate(vfx, center, Quaternion.identity);
+
+            instance.Play();
+        }
+    }
+
+    public void DestroyParticle()
+    {
+         foreach (var vfx in destoryParticleList)
+        {
+            if (vfx == null) continue;
+
+            Destroy(vfx.gameObject);
+        }
     }
 }
