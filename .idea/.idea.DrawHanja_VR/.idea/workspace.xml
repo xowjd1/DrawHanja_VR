@@ -7,15 +7,19 @@
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/AxColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/AxColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/Materials/bark07.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Texture/Materials/bark07.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/Materials/elm leaf_Translucency.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Texture/Materials/elm leaf_Translucency.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/ll_byr_boat_01.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Texture/ll_byr_boat_01.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/yueguo_building_chuan02_01.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Texture/yueguo_building_chuan02_01.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaCardSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaCardSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Iv_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Iv_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials/unlock_fire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials/unlock_fire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/card_fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/card_fire.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/lock.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/unlock_fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/unlock_fire.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +140,7 @@
       <workItem from="1752551656612" duration="3339000" />
       <workItem from="1752745437055" duration="40000" />
       <workItem from="1753073305994" duration="3896000" />
+      <workItem from="1753145713075" duration="5188000" />
     </task>
     <servers />
   </component>
