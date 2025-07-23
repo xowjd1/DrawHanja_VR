@@ -3350,6 +3350,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1037187946985255990}
     m_Modifications:
+    - target: {fileID: 2221809002779897339, guid: cb975e167eaaf1f45be83be13a875255, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221809002779897339, guid: cb975e167eaaf1f45be83be13a875255, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5484191939363326389, guid: cb975e167eaaf1f45be83be13a875255, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -98,11 +98,18 @@ public class StrokeSequence : MonoBehaviour
         }
     }
 
-    public void DeactivateChildren()
+  public void DeactivateChildren()
+{
+    foreach (var point in points)
     {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        if (point != null)
+            point.gameObject.SetActive(false);
     }
+
+    foreach (var path in paths)
+    {
+        if (path != null)
+            path.gameObject.SetActive(false);
+    }
+}
 }

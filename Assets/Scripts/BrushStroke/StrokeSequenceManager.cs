@@ -8,19 +8,20 @@ public class StrokeSequenceManager : MonoBehaviour
 
     private int currentIndex = 0;
 
-    void Start()
+ void Start()
+{
+    foreach (var seq in sequences)
     {
-        foreach (var seq in sequences)
-        {
-            seq.manager = this;
-            DeactivateChildren(seq.transform); // 모든 자식 비활성화
-        }
-
-        if (sequences.Count > 0)
-        {
-            ActivateSequence(0); // 첫 번째 시퀀스 초기화 및 활성화
-        }
+        seq.manager = this;
+        seq.DeactivateChildren(); // 리스트 기준으로만 비활성화
     }
+
+    if (sequences.Count > 0)
+    {
+        ActivateSequence(0);
+    }
+}
+
 
     public void ActivateNextSequence()
     {
