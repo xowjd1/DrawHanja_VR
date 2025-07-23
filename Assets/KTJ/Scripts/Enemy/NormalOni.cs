@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 //플레이어 조우 전 춤추는 상태
@@ -56,7 +57,11 @@ public class OniThrowJarState : OniState
     private Transform _jarThrowPoint;
     private GameObject _jar;
     private float throwForce = 10f;
+    private float rotSpeed  = 10f;
     private bool hasThrown = false;
+    
+    private float _trackTime  = 1f;
+    private Vector3 _lockedTarget;
     
     public OniThrowJarState(OniStateMachine oniStateMachine, GameObject player,
         Transform jarThrowPoint, GameObject jar) : base(oniStateMachine)
@@ -69,40 +74,73 @@ public class OniThrowJarState : OniState
     public override void Enter()
     {
         hasThrown = false;
-        _oniStateMachine.animator.SetTrigger("ThrowJar");
+        _oniStateMachine.StartCoroutine(TrackThenThrow());
+       //_oniStateMachine.animator.applyRootMotion = false;
     }
 
     public override void Update()
     {
-       
 
     }
 
-    private void ThrowJar()
+    IEnumerator TrackThenThrow()
     {
-        if(_jar == null || _jarThrowPoint == null)
-            return;
+        float t = 0f;
+        while (t < _trackTime)
+        {
+            t += Time.deltaTime;
+            // 부드럽게만 플레이어 바라보기
+            var dir = _oniStateMachine.player.transform.position
+                      - _oniStateMachine.transform.position;
+            dir.y = 0;
+            _oniStateMachine.transform.rotation = Quaternion.Slerp(
+                _oniStateMachine.transform.rotation,
+                Quaternion.LookRotation(dir.normalized),
+                8f * Time.deltaTime
+            );
+            yield return null;
+        }
 
-        _jar.transform.SetParent(null);
-        
-        Rigidbody rb = _jar.GetComponent<Rigidbody>();
-        if(rb == null)
-            rb = _jar.AddComponent<Rigidbody>();
-        
+        // 1초 뒤, 그 위치를 고정
+        _lockedTarget = _oniStateMachine.player.transform.position;
+        // 애니메이션 트리거
+        _oniStateMachine.animator.SetTrigger("ThrowJar");
+    }
+    
+    private void ThrowJar(Vector3 targetPos)
+    {
+        // 1) 던질 지점(손 위치)과 술병 참조
+        Vector3 spawnPos = _oniStateMachine.jarThrowPoint.position;
+        GameObject jar   = _oniStateMachine.jar;
+
+        // 2) 부모 해제
+        jar.transform.SetParent(null);
+        jar.transform.position = spawnPos;
+
+        // 3) Rigidbody 준비
+        Rigidbody rb = jar.GetComponent<Rigidbody>() 
+                       ?? jar.AddComponent<Rigidbody>();
         rb.isKinematic = false;
-        rb.useGravity = true;
+        rb.useGravity  = true;
 
-        Vector3 dir = (_player.transform.position - _jarThrowPoint.position).normalized;
-        rb.linearVelocity = dir * throwForce + Vector3.up * 2f;
+        // 4) 방향 및 초기 속도 계산
+        Vector3 toTarget   = (targetPos - spawnPos).normalized;
+        float   speed      = throwForce;
+        float   upStrength = speed * 0.5f;
+
+        // 5) 속도 적용 (포물선 궤적)
+        rb.linearVelocity = toTarget * speed
+                      + Vector3.up * upStrength;
     }
 
-    public void OnThrowJarEvent()
+    public void ThrowJarEvent()
     {
         if (hasThrown) return;
-        ThrowJar();
         hasThrown = true;
-        // (원하면 여기서 다음 상태로 전환도 같이)
-        _oniStateMachine.ChangeState(_oniStateMachine.CreateOniPunchState());
+
+        // 고정된 위치로만 던지기
+        ThrowJar(_lockedTarget);
+
     }
     
     public override void Exit()

@@ -4,11 +4,12 @@ public class OniStateMachine : MonoBehaviour
 {
     private OniState currentState;
     
+    public GameObject player;
+    public Transform jarThrowPoint;
+    public GameObject jar;
     public Animator animator;
-    
-    [SerializeField] private GameObject player;
-    [SerializeField] private Transform jarThrowPoint;
-    [SerializeField] private GameObject jar;
+
+    public float detectionRange = 5f;
     
 
     private void Awake()
@@ -75,10 +76,11 @@ public class OniStateMachine : MonoBehaviour
         );
     }
     
-    public void ThrowJarAnimationEvent()
+    public void OnThrowJarEvent()
     {
+        // 현재 state가 ThrowJarState라면 호출
         if (currentState is OniThrowJarState throwState)
-            throwState.OnThrowJarEvent();
+            throwState.ThrowJarEvent();
     }
     
 }
