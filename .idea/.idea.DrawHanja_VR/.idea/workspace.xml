@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaCardSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaCardSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Iv_Button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Iv_Button.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials/unlock_fire.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/Materials/unlock_fire.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/card_fire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/card_fire.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/lock.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/unlock_fire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Texture/UI/unlock_fire.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +127,7 @@
       <workItem from="1752745437055" duration="40000" />
       <workItem from="1753073305994" duration="3896000" />
       <workItem from="1753145713075" duration="5188000" />
+      <workItem from="1753258917975" duration="3805000" />
     </task>
     <servers />
   </component>
