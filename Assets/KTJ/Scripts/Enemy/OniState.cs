@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public abstract class OniState
 {
     protected OniStateMachine _oniStateMachine;
