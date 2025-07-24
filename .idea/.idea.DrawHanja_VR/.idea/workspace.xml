@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Oni2_rig_mix@Goalie Throw.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Oni2_rig_mix@Goalie Throw.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Oni_rig_mix.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Meshes/Oni_rig_mix.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
     </list>
@@ -128,6 +124,7 @@
       <workItem from="1752561762018" duration="13091000" />
       <workItem from="1752814587234" duration="645000" />
       <workItem from="1753076662567" duration="11188000" />
+      <workItem from="1753322128086" duration="1250000" />
     </task>
     <servers />
   </component>

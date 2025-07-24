@@ -10,13 +10,28 @@ public class OniDanceState : OniState
     }
     public override void Enter()
     {
-        
+        _oniStateMachine.animator.Play("Dance");
     }
 
     public override void Update()
     {
-        
+        // 플레이어와의 거리 계산
+        float dist = Vector3.Distance(
+            _oniStateMachine.transform.position,
+            _oniStateMachine.player.transform.position
+        );
+        Debug.Log($"[DanceState] Distance to player: {dist:F2}");
+
+        // 범위 안으로 들어오면 던지기 상태로 전환
+        if (dist <= _oniStateMachine.detectionRange)
+        {
+            Debug.Log("[DanceState] In range! Switching to ThrowJarState");
+            _oniStateMachine.ChangeState(
+                _oniStateMachine.CreateOniThrowJarState()
+            );
+        }
     }
+
 
     public override void Exit()
     {

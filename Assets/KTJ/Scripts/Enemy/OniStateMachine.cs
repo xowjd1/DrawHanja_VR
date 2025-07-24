@@ -9,7 +9,7 @@ public class OniStateMachine : MonoBehaviour
     public GameObject jar;
     public Animator animator;
 
-    public float detectionRange = 5f;
+    public float detectionRange = 30f;
     
 
     private void Awake()
@@ -20,7 +20,7 @@ public class OniStateMachine : MonoBehaviour
 
     private void Start()
     {
-        ChangeState(CreateOniThrowJarState());
+        ChangeState(CreateOniDanceState());
     }
 
     private void Update()
