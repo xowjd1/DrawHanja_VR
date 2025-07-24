@@ -10,10 +10,13 @@ public class StrokeSequence : MonoBehaviour
     [HideInInspector] public StrokeSequenceManager manager;
     [SerializeField] private AudioParticle audioParticle;
 
+    private Renderer renderer;
+
     void Awake()
     {
         points = GetComponentsInChildren<StrokePoint>(true).OrderBy(p => p.index).ToList();
         paths = GetComponentsInChildren<StrokePath>(true).ToList();
+        renderer = GetComponent<Renderer>();
 
         foreach (var p in points)
         {
@@ -66,12 +69,27 @@ public class StrokeSequence : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} 완료");
 
-        gameObject.SetActive(false);
-        audioParticle.Visual();
-        DeactivateChildren();              // 자식만 비활성화
-        manager?.ActivateNextSequence();   // 매니저에 다음 시퀀스 호출 요청
-        await UniTask.Delay(3000);
-        Destroy(gameObject);               // 현재 시퀀스 오브젝트 파괴
+        // gameObject.SetActive(false);
+        if (renderer != null)
+        {
+            renderer.enabled = false;
+        }
+        else
+        {
+            // 2. 없으면 자식들의 Renderer 모두 끄기
+            Renderer[] childRenderers = GetComponentsInChildren<Renderer>(includeInactive: true);
+            foreach (var r in childRenderers)
+            {
+                if (r != null)
+                    r.enabled = false;
+            }
+        }
+            audioParticle.Visual();
+            DeactivateChildren();
+            manager?.ActivateNextSequence();
+            await UniTask.Delay(3000);
+            Destroy(gameObject);
+        
     }
 
     public void OnPathMissed()
@@ -98,18 +116,18 @@ public class StrokeSequence : MonoBehaviour
         }
     }
 
-  public void DeactivateChildren()
-{
-    foreach (var point in points)
+    public void DeactivateChildren()
     {
-        if (point != null)
-            point.gameObject.SetActive(false);
-    }
+        foreach (var point in points)
+        {
+            if (point != null)
+                point.gameObject.SetActive(false);
+        }
 
-    foreach (var path in paths)
-    {
-        if (path != null)
-            path.gameObject.SetActive(false);
+        foreach (var path in paths)
+        {
+            if (path != null)
+                path.gameObject.SetActive(false);
+        }
     }
-}
 }

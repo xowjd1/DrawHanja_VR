@@ -25,7 +25,8 @@ public class AudioParticle : MonoBehaviour
     [Header("Destroy Particle Effects")]
     [SerializeField] private List<ParticleSystem> destoryParticleList = new List<ParticleSystem>();
 
-
+    [Header("Particle Settings")]
+    [SerializeField] private bool useRendererCenter = true;
 
     // 델리게이트
     public delegate void VisualFunction();
@@ -60,23 +61,40 @@ public class AudioParticle : MonoBehaviour
         }
     }
 
-    public void PlayParticle()
+ public void PlayParticle()
+{
+    Vector3 position;
+
+    if (useRendererCenter)
     {
-        Vector3 center = GetComponent<Renderer>().bounds.center;
-
-        foreach (var vfx in playParticleList)
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+            position = renderer.bounds.center;
+        else
         {
-            if (vfx == null) continue;
-
-            ParticleSystem instance = Instantiate(vfx, center, Quaternion.identity);
-
-            instance.Play();
+            Debug.LogWarning($"{gameObject.name}에 Renderer가 없어서 pivot 위치 사용");
+            position = transform.position;
         }
     }
+    else
+    {
+        position = transform.position;
+    }
+
+    foreach (var vfx in playParticleList)
+    {
+        if (vfx == null) continue;
+
+        // ✅ 자식으로 붙임
+        ParticleSystem instance = Instantiate(vfx, position, Quaternion.identity, transform);
+        instance.Play();
+    }
+}
+
 
     public void DestroyParticle()
     {
-         foreach (var vfx in destoryParticleList)
+        foreach (var vfx in destoryParticleList)
         {
             if (vfx == null) continue;
 
