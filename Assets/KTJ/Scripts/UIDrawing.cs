@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 [RequireComponent(typeof(GraphicRaycaster))]
 public class UIDrawing : MonoBehaviour
@@ -13,97 +14,127 @@ public class UIDrawing : MonoBehaviour
     public int      textureHeight = 512;
     public int      brushSize     = 4;
 
-    // 내부 상태
+    [Header("VR Input")]
+    public XRNode       inputSource       = XRNode.RightHand;
+    public Transform    controllerTransform;
+    public LayerMask    drawingLayerMask;
+
+    [Header("Smoothing")]
+    [Range(0.01f, 1f)]
+    public float uvSmoothing = 0.2f;
+
+    // --- 내부 상태 ---
     private Texture2D       drawTex;
     private bool            isDrawing;
     private Vector2         prevUV;
-    private GraphicRaycaster raycaster;
-    private EventSystem      eventSystem;
+    private Vector2         prevSmoothUV = new Vector2(-1f, -1f);
+    private InputDevice     device;
     private List<List<Vector2>> strokes = new();
 
     void Awake()
     {
-        raycaster   = GetComponent<GraphicRaycaster>();
-        eventSystem = EventSystem.current;
+        // 1) XR 디바이스 가져오기
+        device = InputDevices.GetDeviceAtXRNode(inputSource);
+
+        // 2) BoxCollider 셋업 (월드 스페이스 캔버스용)
+        var bc = GetComponent<BoxCollider>();
+        bc.isTrigger = false;
+        var rt = drawingImage.rectTransform;
+        bc.size   = new Vector3(rt.rect.width, rt.rect.height, 0.01f);
+        bc.center = Vector3.zero;
     }
 
     void Start()
     {
-        // 1) 투명 배경 텍스쳐 생성
+        // 투명 배경 텍스처 생성
         drawTex = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false);
-        Color[] cols = new Color[textureWidth * textureHeight];
-        for (int i = 0; i < cols.Length; i++)
-            cols[i] = Color.clear;
+        var cols = new Color[textureWidth * textureHeight];
+        for (int i = 0; i < cols.Length; i++) cols[i] = Color.clear;
         drawTex.SetPixels(cols);
         drawTex.Apply();
 
-        // 2) DrawingArea에 할당
         drawingImage.texture = drawTex;
         drawingImage.color   = Color.white;
 
-        // 3) 클리어 버튼에 리스너 추가
         if (clearButton != null)
             clearButton.onClick.AddListener(ClearAllStrokes);
     }
 
     void Update()
     {
-        // 마우스 누르면 드로잉 시작
-        if (Input.GetMouseButtonDown(0))
+        if (!device.isValid)
+            device = InputDevices.GetDeviceAtXRNode(inputSource);
+
+        device.TryGetFeatureValue(CommonUsages.triggerButton, out bool trigger);
+
+        if (trigger && !isDrawing)
         {
+            // 스트로크 시작 시 스무딩 초기화
+            prevSmoothUV = new Vector2(-1f, -1f);
+
             isDrawing = true;
             strokes.Add(new List<Vector2>());
             prevUV = Vector2.zero;
         }
 
-        // 누르고 있는 동안
-        if (isDrawing && Input.GetMouseButton(0))
-        {
-            var pd = new PointerEventData(eventSystem) { position = Input.mousePosition };
-            var results = new List<RaycastResult>();
-            raycaster.Raycast(pd, results);
+        if (isDrawing && trigger)
+            TryDrawWithRay();
 
-            foreach (var rr in results)
-            {
-                if (rr.gameObject == drawingImage.gameObject)
-                {
-                    DrawAt(rr.screenPosition);
-                    break;
-                }
-            }
-        }
-
-        // 버튼 떼면 드로잉 종료
-        if (isDrawing && Input.GetMouseButtonUp(0))
+        if (isDrawing && !trigger)
         {
             isDrawing = false;
+            prevUV = Vector2.zero;
         }
     }
 
-    void DrawAt(Vector2 screenPos)
+    void TryDrawWithRay()
     {
-        // 1) Screen → 로컬 → UV
-        RectTransform rt = drawingImage.rectTransform;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rt, screenPos, null, out Vector2 local);
-        float px = local.x + rt.rect.width  * .5f;
-        float py = local.y + rt.rect.height * .5f;
-        float u  = Mathf.Clamp01(px / rt.rect.width);
-        float v  = Mathf.Clamp01(py / rt.rect.height);
-        Vector2 uv = new Vector2(u, v);
+        Ray ray = new Ray(controllerTransform.position, controllerTransform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, drawingLayerMask))
+        {
+            if (hit.collider.gameObject == drawingImage.gameObject)
+                DrawAtWorldHit(hit.point);
+        }
+    }
+
+    void DrawAtWorldHit(Vector3 worldHitPoint)
+    {
+        // 1) raw UV 계산 (기존 방식)
+        var rt = drawingImage.rectTransform;
+        Vector3 local3D = rt.InverseTransformPoint(worldHitPoint);
+        float u = Mathf.Clamp01(local3D.x / rt.rect.width  + 0.5f);
+        float v = Mathf.Clamp01(local3D.y / rt.rect.height + 0.5f);
+        Vector2 rawUV = new Vector2(u, v);
+
+        // 2) 지수 이동 평균 스무딩 처리
+        Vector2 smoothUV;
+        if (prevSmoothUV.x < 0f)         // 초기 상태라면
+            smoothUV = rawUV;
+        else
+            smoothUV = Vector2.Lerp(prevSmoothUV, rawUV, uvSmoothing);
+        prevSmoothUV = smoothUV;
+
+        // 3) 기존 DrawAtUV 로직 그대로 호출
+        DrawAtUV(smoothUV);
+    }
+
+    void DrawAtUV(Vector2 uv)
+    {
         strokes[^1].Add(uv);
 
-        // 2) UV → 픽셀 좌표
-        int x = Mathf.RoundToInt(u * (textureWidth  - 1));
-        int y = Mathf.RoundToInt(v * (textureHeight - 1));
+        int x = Mathf.RoundToInt(uv.x * (textureWidth  - 1));
+        int y = Mathf.RoundToInt(uv.y * (textureHeight - 1));
 
-        // 3) 선 연결 또는 점 찍기
         if (prevUV != Vector2.zero)
         {
             int x0 = Mathf.RoundToInt(prevUV.x * (textureWidth  - 1));
             int y0 = Mathf.RoundToInt(prevUV.y * (textureHeight - 1));
             BresenhamLine(x0, y0, x, y);
         }
-        else DrawBrush(x, y);
+        else
+        {
+            DrawBrush(x, y);
+        }
 
         prevUV = uv;
         drawTex.Apply();
@@ -140,25 +171,16 @@ public class UIDrawing : MonoBehaviour
         drawTex.SetPixel(x, y, c);
     }
 
-    /// <summary>
-    /// 모든 획을 삭제하고 투명 캔버스로 초기화합니다.
-    /// </summary>
     public void ClearAllStrokes()
     {
-        // 텍스처 초기화
-        Color[] cols = new Color[textureWidth * textureHeight];
+        var cols = new Color[textureWidth * textureHeight];
         for (int i = 0; i < cols.Length; i++) cols[i] = Color.clear;
         drawTex.SetPixels(cols);
         drawTex.Apply();
-
-        // 벡터 데이터 초기화
         strokes.Clear();
         Debug.Log("All strokes cleared.");
     }
 
-    // 획 벡터 데이터
     public List<List<Vector2>> GetStrokes() => strokes;
-
-    // 나중 비교를 위해 투명 배경 + 획만 담긴 drawTex를 사용하세요
     public Texture2D GetStrokeTexture() => drawTex;
 }

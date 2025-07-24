@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -170,6 +174,22 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045266192326040482, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167925059111895691, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151625002606283187, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -290,6 +310,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &304541865 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1670256625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 23011844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &324378902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1044,7 @@ GameObject:
   - component: {fileID: 1143668465}
   - component: {fileID: 1143668464}
   - component: {fileID: 1143668466}
-  m_Layer: 5
+  m_Layer: 20
   m_Name: DrawingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,6 +1122,12 @@ MonoBehaviour:
   textureWidth: 512
   textureHeight: 512
   brushSize: 18
+  inputSource: 5
+  controllerTransform: {fileID: 304541865}
+  drawingLayerMask:
+    serializedVersion: 2
+    m_Bits: 1048576
+  uvSmoothing: 0.2
 --- !u!114 &1143668464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,7 +1187,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 510, y: 510, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1290127188
 GameObject:
@@ -1503,6 +1534,7 @@ GameObject:
   - component: {fileID: 1600386632}
   - component: {fileID: 1600386631}
   - component: {fileID: 1600386635}
+  - component: {fileID: 1600386636}
   m_Layer: 5
   m_Name: ScrollHanjaCanvas
   m_TagString: Untagged
@@ -1549,7 +1581,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1600386633
 Canvas:
   m_ObjectHideFlags: 0
@@ -1559,7 +1591,7 @@ Canvas:
   m_GameObject: {fileID: 1600386630}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 23011845}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1580,9 +1612,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600386630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1692430076}
@@ -1596,9 +1628,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.36144}
+  m_SizeDelta: {x: 10, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600386635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,6 +1651,25 @@ MonoBehaviour:
   drawPanel: {fileID: 1143668459}
   finishBtn: {fileID: 2123315072}
   clearBtn: {fileID: 1290127188}
+--- !u!114 &1600386636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600386630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1692430075
 GameObject:
   m_ObjectHideFlags: 0
