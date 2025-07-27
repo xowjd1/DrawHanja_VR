@@ -9,7 +9,7 @@ TerrainLayer:
   m_Name: Gaia_-20250716-123351_2
   m_DiffuseTexture: {fileID: 2800000, guid: c2b47e1077f71bf4f8604c13f8d472bd, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: bc8ae47baf225aa45afda81a66d27f8c, type: 3}
-  m_MaskMapTexture: {fileID: 0}
+  m_MaskMapTexture: {fileID: 2800000, guid: e23d2514c9234b7458a7bbc28ad37d79, type: 3}
   m_TileSize: {x: 8, y: 8}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
@@ -19,5 +19,5 @@ TerrainLayer:
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}
+  m_MaskMapRemapMax: {x: 0, y: 1, z: 1, w: 0.33695626}
   m_SmoothnessSource: 1
