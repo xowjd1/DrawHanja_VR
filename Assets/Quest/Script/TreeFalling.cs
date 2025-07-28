@@ -7,7 +7,7 @@ public class TreeFalling : MonoBehaviour
     public float tiltSpeed = 90f;
 
     private float rotated = 0f;
-    private bool isFalling = false;
+    [HideInInspector] public bool isFalling = false;
 
     void Start()
     {

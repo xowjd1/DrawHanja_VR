@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: "\u5200"
   m_EditorClassIdentifier: 
   character: "\u5200"
+  practiceImage: {fileID: 21300000, guid: ac5071032f78fb74a922433dda3fffc5, type: 3}
+  completeImage: {fileID: 21300000, guid: a1fd0cfe6d54b9848b92d54f787718cd, type: 3}
