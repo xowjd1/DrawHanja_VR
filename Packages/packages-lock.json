@@ -7,6 +7,15 @@
       "dependencies": {},
       "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
     },
+    "com.jimmycushnie.noisynodes": {
+      "version": "https://github.com/JimmyCushnie/Noisy-Nodes.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.shadergraph": "7.1.8"
+      },
+      "hash": "38d18b868ba4550aab2f76b2817882474300e75c"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.7",
       "depth": 0,
@@ -152,14 +161,14 @@
     },
     "com.unity.searcher": {
       "version": "4.9.3",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
       "version": "17.1.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.1.0",

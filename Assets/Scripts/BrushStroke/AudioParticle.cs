@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.VFX;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioParticle : MonoBehaviour
@@ -19,10 +19,14 @@ public class AudioParticle : MonoBehaviour
     [SerializeField] private AudioClip clip;
     private AudioSource source;
 
-    [Header("Particle Effects")]
-    [SerializeField] private VisualEffect Demo1;
-    [SerializeField] private VisualEffect Demo2;
+    [Header("Play Particle Effects")]
+    [SerializeField] private List<ParticleSystem> playParticleList = new List<ParticleSystem>();
 
+    [Header("Destroy Particle Effects")]
+    [SerializeField] private List<ParticleSystem> destoryParticleList = new List<ParticleSystem>();
+
+    [Header("Particle Settings")]
+    [SerializeField] private bool useRendererCenter = true;
 
     // 델리게이트
     public delegate void VisualFunction();
@@ -57,8 +61,44 @@ public class AudioParticle : MonoBehaviour
         }
     }
 
-    public void PlayWaveParticle()
+ public void PlayParticle()
+{
+    Vector3 position;
+
+    if (useRendererCenter)
     {
-        Demo1.Play();
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+            position = renderer.bounds.center;
+        else
+        {
+            Debug.LogWarning($"{gameObject.name}에 Renderer가 없어서 pivot 위치 사용");
+            position = transform.position;
+        }
+    }
+    else
+    {
+        position = transform.position;
+    }
+
+    foreach (var vfx in playParticleList)
+    {
+        if (vfx == null) continue;
+
+        // ✅ 자식으로 붙임
+        ParticleSystem instance = Instantiate(vfx, position, Quaternion.identity, transform);
+        instance.Play();
+    }
+}
+
+
+    public void DestroyParticle()
+    {
+        foreach (var vfx in destoryParticleList)
+        {
+            if (vfx == null) continue;
+
+            Destroy(vfx.gameObject);
+        }
     }
 }

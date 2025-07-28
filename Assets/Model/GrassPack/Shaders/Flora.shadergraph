@@ -5270,7 +5270,7 @@
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.TransformNode",
     "m_ObjectId": "701859a8ce0a4d4992a11e00fdd9a73c",
     "m_Group": {
@@ -6616,7 +6616,7 @@
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.TransformNode",
     "m_ObjectId": "91e4003895c446939ada42abfb197901",
     "m_Group": {
@@ -6627,10 +6627,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1261.9998779296875,
-            "y": 2541.999755859375,
+            "x": -1257.9998779296875,
+            "y": 2539.0,
             "width": 213.0,
-            "height": 155.000244140625
+            "height": 155.0
         }
     },
     "m_Slots": [
