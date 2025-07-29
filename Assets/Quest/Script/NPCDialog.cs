@@ -20,7 +20,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
     private int index = 0;
     private System.Action onDialogComplete;
     
-    public GameObject wallBlocker;
+    public GameObject fire;
 
 
     void Awake()
@@ -42,9 +42,9 @@ public class NPCDialog : MonoBehaviour, IInteractable
         {
             StartDialog(dialogAfterQuestComplete, () =>
             {
-                if (wallBlocker != null)
+                if (fire != null)
                 {
-                    wallBlocker.SetActive(false);
+                    fire.SetActive(true);
                 }
 
                 if (QuestManager.Instance.questPanel == true)
