@@ -1,53 +1,242 @@
+using System.Collections;
 using UnityEngine;
 
-// 보스 인트로
+// 1) Intro State
 public class BossIntroState : OniBossState
 {
-   public BossIntroState(OniBossStateMachine oniBossStateMachine) : base(oniBossStateMachine)
-   {
-      
-   }
-   
-   public override void Enter()
-   {
-        
-   }
+    private float timer;
+    private float delay;
 
-   public override void Update()
-   {
-        
-   }
+    public BossIntroState(OniBossStateMachine m) : base(m)
+    {
+        delay = m.delay;
+    }
 
-   public override void Exit()
-   {
-        
-   }
+    public override void Enter()
+    {
+        timer = 0f;
+        _oniBossStateMachine.animator.SetTrigger("Idle");
+        Debug.Log("Intro: Idle");
+    }
+
+    public override void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= delay)
+            _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateMoveState());
+    }
 }
 
-// 보스 근접공격
+// 2) Move State
+public class MoveToPlayerState : OniBossState
+{
+    private float startY;
+    bool skipCheck;    
+    public MoveToPlayerState(OniBossStateMachine m) : base(m) { }
 
-// 보스 땅찍기 공격
+    public override void Enter()
+    {
+        startY = _oniBossStateMachine.transform.position.y;
+        skipCheck = true;
+        _oniBossStateMachine.animator.SetBool("isWalking", true);
+        Debug.Log("Move: Walking");
+    }
 
-// 보스 죽었을 때
+    public override void Update()
+    {
+        if (skipCheck)
+        {
+            skipCheck = false;
+            return;
+        }
+        
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
+        
+        // Rotate toward player
+        Vector3 toPlayer = _oniBossStateMachine.PlayerTransform.position - _oniBossStateMachine.transform.position;
+        toPlayer.y = 0f;
+        if (toPlayer.sqrMagnitude > 0f)
+        {
+            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
+            _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
+        }
+
+        // Move forward
+        _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
+
+        // If in attack range, pick one of two attacks
+        if (toPlayer.magnitude <= _oniBossStateMachine.AttackRange)
+        {
+            _oniBossStateMachine.animator.SetBool("isWalking", false);
+            if (UnityEngine.Random.value < 0.5f)
+                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateAttack1State());
+            else
+                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateAttack2State());
+        }
+    }
+
+    public override void Exit()
+    {
+        _oniBossStateMachine.animator.SetBool("isWalking", false);
+    }
+}
+
+// 3) Attack1 State
+public class Boss1NorAttackState : OniBossState
+{
+    private float startY;
+    
+    public Boss1NorAttackState(OniBossStateMachine m) : base(m) { }
+
+    public override void Enter()
+    {
+        startY = _oniBossStateMachine.transform.position.y;
+        
+        _oniBossStateMachine.animator.SetTrigger("normalPunch");
+        _oniBossStateMachine.EnableLeftAttack();
+        _oniBossStateMachine.EnableRightAttack();
+        Debug.Log("Attack1: normalPunch");
+    }
+
+    public override void Update()
+    {
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
+    }
+}
+
+// 4) Attack2 State
+public class Boss1NorAttack2State : OniBossState
+{
+    private float startY;
+    public Boss1NorAttack2State(OniBossStateMachine m) : base(m) { }
+
+    public override void Enter()
+    {
+        startY = _oniBossStateMachine.transform.position.y;
+        
+        _oniBossStateMachine.animator.SetTrigger("bigPunch");
+        _oniBossStateMachine.EnableLeftAttack();
+        Debug.Log("Attack2: bigPunch");
+    }
+    public override void Update()
+    {
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
+    }
+}
+
+// 5) Die State (stub)
+
+// 2페이즈 시작
+public class Boss2PhaseStartState : OniBossState
+{
+    public Boss2PhaseStartState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+        _oniBossStateMachine.animator.SetTrigger("Phase2Start");
+        Debug.Log("Phase2: Start!");
+    }
+
+    public override void Update()
+    {
+        
+    }
+
+    public override void Exit()
+    {
+        
+    }
+}
+
+// 2페이즈 플레이어 추적
+public class MoveToPlayer2PhaseState : OniBossState
+{
+    public MoveToPlayer2PhaseState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+       
+    }
+
+    public override void Update()
+    {
+        
+    }
+
+    public override void Exit()
+    {
+        
+    }
+}
+
+// 2페 기본 공격1
+public class Boss2NorAttackState : OniBossState
+{
+    public Boss2NorAttackState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+       
+    }
+
+    public override void Update()
+    {
+        
+    }
+
+    public override void Exit()
+    {
+        
+    }
+}
+
+// 2페 기본 공격2
+public class Boss2ComboAttackState : OniBossState
+{
+    public Boss2ComboAttackState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+       
+    }
+
+    public override void Update()
+    {
+        
+    }
+
+    public override void Exit()
+    {
+        
+    }
+}
+
+public class Boss2SmashAttackState : OniBossState
+{
+    public Boss2SmashAttackState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+       
+    }
+
+    public override void Update()
+    {
+        
+    }
+
+    public override void Exit()
+    {
+        
+    }
+}
 public class BossDieState : OniBossState
 {
-   public BossDieState(OniBossStateMachine oniBossStateMachine) : base(oniBossStateMachine)
-   {
-      
-   }
-   
-   public override void Enter()
-   {
-        
-   }
-
-   public override void Update()
-   {
-        
-   }
-
-   public override void Exit()
-   {
-        
-   }
+    public BossDieState(OniBossStateMachine m) : base(m) { }
+    public override void Enter()
+    {
+        _oniBossStateMachine.animator.SetTrigger("Die");
+        Debug.Log("Boss Die");
+    }
 }

@@ -21,7 +21,7 @@ public class VisionCompareController : MonoBehaviour
     string apiKey;
 
     void Awake() {
-        apiKey = Resources.Load<TextAsset>("vision_api_key").text.Trim();
+        apiKey = Resources.Load<TextAsset>("google_api_key").text.Trim();
         Debug.Log($"[Vision] Loaded API Key (length={apiKey.Length})");
     }
 

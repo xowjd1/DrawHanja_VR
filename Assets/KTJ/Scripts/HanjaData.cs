@@ -9,4 +9,6 @@ public class HanjaData : ScriptableObject
     public Sprite practiceImage;
     public Sprite completeImage;
 
+    public string japaneseReading;
+
 }

@@ -15,3 +15,4 @@ MonoBehaviour:
   character: "\u529B"
   practiceImage: {fileID: 21300000, guid: 154ee45ce0817cf44bf3b195ed282807, type: 3}
   completeImage: {fileID: 21300000, guid: f644d65b7efa51241a0a461b497de01b, type: 3}
+  japaneseReading: "\u3061\u304B\u3089"
