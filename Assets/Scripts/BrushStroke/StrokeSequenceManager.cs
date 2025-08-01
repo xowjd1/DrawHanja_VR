@@ -4,13 +4,15 @@ using Cysharp.Threading.Tasks;
 
 public class StrokeSequenceManager : MonoBehaviour
 {
-    [Header("순서대로 등록 (1 -> 4)")]
     public List<StrokeSequence> sequences;
 
-    [Header("오브젝트 날아가는 속도")]
+    [Header("날아가는 오브젝트")]
     public float flySpeed = 5f;
-    public int flyDelay = 3;
+    public float flyDelay = 3f;
+    public float flyLifetime = 5f;
 
+    [Header("시퀀스 전부 파괴 후 본체 제거까지 대기 시간")]
+    public float selfDestructDelay = 3f;
     private int currentIndex = 0;
     private bool isFlying = false;
 
@@ -18,6 +20,12 @@ public class StrokeSequenceManager : MonoBehaviour
     public ParticleSystem targetParticle;
     public float fadeDuration = 2f;
     public bool useFadeOut = true;
+
+    [Header("공격 파티클")]
+    public float particleDistanceFromCamera = 2f;
+    public ParticleSystem attacknParticle;
+
+    public Vector3 addRotation = new Vector3(0, 0, 0);
 
 
     void Start()
@@ -67,7 +75,10 @@ public class StrokeSequenceManager : MonoBehaviour
     {
         Debug.Log("모든 StrokeSequence 완료!");
 
-         if (useFadeOut && targetParticle != null)
+        await UniTask.Delay(500);
+        PlaySpawnEffect();// 모든 시퀀스 완료시 공격 파티클 함수 실행
+
+        if (useFadeOut && targetParticle != null)
         {
             FadeOut().Forget();
             await UniTask.Delay(3000);
@@ -79,38 +90,41 @@ public class StrokeSequenceManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void DeactivateChildren(Transform parent)
-    {
-        foreach (Transform child in parent)
-        {
-            child.gameObject.SetActive(false);
-        }
-    }
+    // private void DeactivateChildren(Transform parent)
+    // {
+    //     foreach (Transform child in parent)
+    //     {
+    //         child.gameObject.SetActive(false);
+    //     }
+    // }
     private async UniTaskVoid FlyAllObjectsSequentially()
     {
         isFlying = true;
 
+        Vector3 flyDirection = transform.forward; // 매니저 기준 앞 방향
+
         foreach (var seq in sequences)
         {
             Rigidbody rb = seq.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (rb == null)
             {
-                rb.linearVelocity = seq.transform.forward * flySpeed;
-            }
-            else
-            {
-                // Rigidbody가 없으면 추가
                 rb = seq.gameObject.AddComponent<Rigidbody>();
                 rb.useGravity = false;
-                rb.linearVelocity = seq.transform.forward * flySpeed;
             }
 
-            await UniTask.Delay(flyDelay * 1000);
+            rb.linearVelocity = flyDirection * flySpeed;
+
+            // 오브젝트를 flyLifetime 초 후에 파괴
+            Destroy(seq.gameObject, flyLifetime);
+
+            await UniTask.Delay((int)(flyDelay * 1000f));
         }
 
         isFlying = false;
-    }
 
+        CheckAllSequencesDestroyedAndSelfDestruct().Forget();
+
+    }
 
     public async UniTaskVoid FadeOut()
     {
@@ -165,5 +179,49 @@ public class StrokeSequenceManager : MonoBehaviour
         Destroy(targetParticle.gameObject);
     }
 
+    private async UniTaskVoid CheckAllSequencesDestroyedAndSelfDestruct()
+    {
+        // 모든 시퀀스가 파괴될 때까지 대기
+        while (true)
+        {
+            bool anyAlive = false;
+            foreach (var seq in sequences)
+            {
+                if (seq != null) // 아직 살아있는 시퀀스가 있다면
+                {
+                    anyAlive = true;
+                    break;
+                }
+            }
+
+            if (!anyAlive)
+                break;
+
+            await UniTask.Yield();
+        }
+
+        // 설정된 시간만큼 대기 후 본체 삭제
+        await UniTask.Delay((int)(selfDestructDelay * 1000f));
+        Destroy(gameObject);
+    }
+
+    public void PlaySpawnEffect()
+    {
+        Camera cam = Camera.main;
+        if (cam == null || attacknParticle == null)
+        {
+            Debug.LogWarning("메인 카메라 또는 파티클 프리팹이 없습니다.");
+            return;
+        }
+
+        // 카메라 앞 위치 계산
+        Vector3 pos = cam.transform.position + cam.transform.forward * particleDistanceFromCamera;
+        Quaternion rot = cam.transform.rotation * Quaternion.Euler(addRotation);
+
+        ParticleSystem ps = Instantiate(attacknParticle, pos, rot);
+        ps.Play();
+
+        // Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
+    }
 
 }

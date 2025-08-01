@@ -76,7 +76,6 @@ public class StrokeSequence : MonoBehaviour
         }
         else
         {
-            // 2. 없으면 자식들의 Renderer 모두 끄기
             Renderer[] childRenderers = GetComponentsInChildren<Renderer>(includeInactive: true);
             foreach (var r in childRenderers)
             {
