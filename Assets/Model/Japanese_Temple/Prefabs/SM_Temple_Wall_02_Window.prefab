@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1031010952}
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1031010952}
   - component: {fileID: 1031010953}
   - component: {fileID: 1031010954}
+  - component: {fileID: 2927247394858349405}
   m_Layer: 0
   m_Name: SM_Temple_Wall_02_Window
   m_TagString: Untagged
@@ -120,3 +121,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031010951}
   m_Mesh: {fileID: 4300000, guid: abc00000000012053930328729918482, type: 3}
+--- !u!65 &2927247394858349405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031010951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.081815, y: 6.559967, z: 0.27}
+  m_Center: {x: -0.02814269, y: 3.2799835, z: -0.030000001}

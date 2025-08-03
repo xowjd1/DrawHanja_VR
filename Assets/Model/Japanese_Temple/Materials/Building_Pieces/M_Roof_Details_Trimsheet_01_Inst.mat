@@ -3,7 +3,7 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -91,7 +91,7 @@ Material:
     - _Moss_Intensity: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _R: 0.5
+    - _R: 0.3
     - _Rotation: 0
     - _SrcBlend: 1
     - _Tiling: 1

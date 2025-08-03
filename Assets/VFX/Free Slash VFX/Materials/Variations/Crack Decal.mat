@@ -154,7 +154,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 4.9245777, g: 4.9245777, b: 4.9245777, a: 1}
     - _DissolveScroll: {r: -1, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 4.9245777, g: 2.9547465, b: 3.9002655, a: 1}
     - _MaskSpeed: {r: 1, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tilling: {r: 1, g: 1, b: 0, a: 0}

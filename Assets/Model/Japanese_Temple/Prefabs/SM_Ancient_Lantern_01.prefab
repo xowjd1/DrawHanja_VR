@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1031017024}
   - component: {fileID: 1031017025}
   - component: {fileID: 1031017026}
+  - component: {fileID: 4797566108586899981}
   m_Layer: 0
   m_Name: SM_Ancient_Lantern_01
   m_TagString: Untagged
@@ -118,3 +119,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031017023}
   m_Mesh: {fileID: 4300000, guid: abc00000000013425546089323138454, type: 3}
+--- !u!136 &4797566108586899981
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031017023}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.514786
+  m_Height: 2.5316086
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2658043, z: 0}

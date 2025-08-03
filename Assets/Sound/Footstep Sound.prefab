@@ -46,12 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1966607492714061750}
-  woodClips: []
-  metalClips: []
-  grassClips: []
-  defaultClips: []
+  defaultClip: {fileID: 8300000, guid: 168f85d72a262204f90e7fe713fb8122, type: 3}
+  materialNames: []
+  footstepClips: []
   stepInterval: 0.5
-  movementThreshold: 0.05
+  movementThreshold: 0
   raycastDistance: 1.5
   debugRay: 1
 --- !u!82 &1966607492714061750

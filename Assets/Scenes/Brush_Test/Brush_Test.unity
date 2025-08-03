@@ -1590,7 +1590,7 @@ PrefabInstance:
     - target: {fileID: 7219919723336430839, guid: 1f17efa1dbd4d844484e7a67492a1c30, type: 3}
       propertyPath: attacknParticle
       value: 
-      objectReference: {fileID: 6882116249847192009, guid: c4b2ddd78a478394da66879a43e7af99, type: 3}
+      objectReference: {fileID: 6761787740402054117, guid: 779ebc352bea7374d8f97d7961c52711, type: 3}
     - target: {fileID: 7219919723336430839, guid: 1f17efa1dbd4d844484e7a67492a1c30, type: 3}
       propertyPath: particleDistanceFromCamera
       value: 2

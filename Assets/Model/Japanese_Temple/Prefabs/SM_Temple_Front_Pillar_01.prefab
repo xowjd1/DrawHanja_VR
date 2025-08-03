@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1031013992}
   - component: {fileID: 1031013993}
   - component: {fileID: 1031013994}
+  - component: {fileID: 8192928082595580545}
   m_Layer: 0
   m_Name: SM_Temple_Front_Pillar_01
   m_TagString: Untagged
@@ -120,3 +121,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031013991}
   m_Mesh: {fileID: 4300000, guid: abc00000000015341632772238071884, type: 3}
+--- !u!136 &8192928082595580545
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031013991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.45016724
+  m_Height: 4.470245
+  m_Direction: 1
+  m_Center: {x: 0.000004693866, y: 2.235122, z: -0.006944284}
