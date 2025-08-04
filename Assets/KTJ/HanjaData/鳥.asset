@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: "\u9CE5"
   m_EditorClassIdentifier: 
   character: "\u9CE5"
+  practiceImage: {fileID: 21300000, guid: c9c45ffb2fcb57240bca3d46c37a4635, type: 3}
+  completeImage: {fileID: 21300000, guid: 57663aa2adee4d444bda7987a08c586f, type: 3}

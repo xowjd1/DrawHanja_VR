@@ -12,7 +12,8 @@ public class ScrollUI : MonoBehaviour
     public GameObject drawPanel;
     public GameObject finishBtn;
     public GameObject clearBtn;
-
+    public GameObject pronBtn;
+    
     private void Start()
     {
         // 시작 전엔 UI 요소 숨기기
@@ -20,6 +21,7 @@ public class ScrollUI : MonoBehaviour
         drawPanel.SetActive(false);
         finishBtn.SetActive(false);
         clearBtn.SetActive(false);
+        pronBtn.SetActive(false);
 
         scrollPage.anchoredPosition = new Vector2(startX, scrollPage.anchoredPosition.y);
         StartCoroutine(MoveScrollPage());
@@ -46,5 +48,6 @@ public class ScrollUI : MonoBehaviour
         drawPanel.SetActive(true);
         finishBtn.SetActive(true);
         clearBtn.SetActive(true);
+        pronBtn.SetActive(true);
     }
 }

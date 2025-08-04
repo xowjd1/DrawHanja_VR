@@ -5,4 +5,8 @@ public class HanjaData : ScriptableObject
 {
     [Header("한자 문자")]
     public string character;
+
+    public Sprite practiceImage;
+    public Sprite completeImage;
+
 }

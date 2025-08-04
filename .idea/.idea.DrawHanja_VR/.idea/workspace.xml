@@ -6,34 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/光.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/光.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/石.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/石.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/船.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/船.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/ScrollUITestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/UIDrawTestScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/NPCInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/NPCInteractable.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VRDrawing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VRDrawing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest/Forest Baking Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest/Forest Baking Set.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +59,18 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@a7356ab905fd/Runtime/GPUDriven/InstanceCullingBatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Receiver/Rendering/ColorMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Rendering/MaterialPropertyBlockHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/State/Provider/XRInteractableAffordanceStateProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Filtering/Poke/XRPokeFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Interactables/XRSimpleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@f23ad2c521e1/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/UI/TrackedDeviceGraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -143,6 +156,13 @@
       <workItem from="1751612342796" duration="3014000" />
       <workItem from="1751864752908" duration="9723000" />
       <workItem from="1752551656612" duration="3339000" />
+      <workItem from="1752745437055" duration="40000" />
+      <workItem from="1753073305994" duration="3896000" />
+      <workItem from="1753145713075" duration="5188000" />
+      <workItem from="1753258917975" duration="3805000" />
+      <workItem from="1753318181070" duration="2684000" />
+      <workItem from="1753332505750" duration="3903000" />
+      <workItem from="1753666714153" duration="8441000" />
     </task>
     <servers />
   </component>

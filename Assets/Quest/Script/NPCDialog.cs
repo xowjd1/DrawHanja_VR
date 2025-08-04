@@ -37,28 +37,28 @@ public class NPCDialog : MonoBehaviour, IInteractable
             StartDialog(dialogBeforeQuestComplete);
             return;
         }*/
-        Debug.Log(1);
-        
+
         if (QuestManager.Instance.quests[questIndex].isCompleted)
         {
-            StartDialog(dialogAfterQuestComplete);
-
-            if (QuestManager.Instance.questPanel == true)
-            {
-                QuestManager.Instance.HideQuestMessage();
-            }
-        }
-        else
-        {
-            Debug.Log(2);
-            
-            StartDialog(dialogBeforeQuestComplete, () =>
+            StartDialog(dialogAfterQuestComplete, () =>
             {
                 if (wallBlocker != null)
                 {
                     wallBlocker.SetActive(false);
                 }
-                
+
+                if (QuestManager.Instance.questPanel == true)
+                {
+                    QuestManager.Instance.HideQuestMessage();
+                }
+
+            });
+        }
+        
+        else
+        {
+            StartDialog(dialogBeforeQuestComplete, () =>
+            {
                 if (triggerNextQuest)
                 {
                     QuestManager.Instance.StartNextQuest();
