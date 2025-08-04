@@ -6,19 +6,51 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook4.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook4.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Shader/SG_Outline.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Shader/SG_Outline.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/BookOpen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/BookOpen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/image 20.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/image 20.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/booktrail.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/booktrail.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story4.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +78,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@a7356ab905fd/Runtime/GPUDriven/InstanceCullingBatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.core-utils@5b282bc7378d/Runtime/XROrigin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Receiver/Rendering/ColorMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Rendering/MaterialPropertyBlockHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/State/Provider/XRInteractableAffordanceStateProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Inputs/InputActionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Filtering/Poke/XRPokeFilter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Interactables/XRSimpleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -148,7 +182,8 @@
       <workItem from="1753756241010" duration="1971000" />
       <workItem from="1753851893460" duration="746000" />
       <workItem from="1754034040374" duration="4549000" />
-      <workItem from="1754135750255" duration="3904000" />
+      <workItem from="1754135750255" duration="4500000" />
+      <workItem from="1754295993431" duration="3336000" />
     </task>
     <servers />
   </component>
