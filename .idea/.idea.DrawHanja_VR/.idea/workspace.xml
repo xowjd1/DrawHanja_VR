@@ -6,62 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Crouch Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Crouch Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Punch.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Punch.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Roaring.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Roaring.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Swiping.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Swiping.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Walking.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Mutant Walking.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Disarm Over Shoulder.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Disarm Over Shoulder.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Idle Looking Ver. 2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Idle Looking Ver. 2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Attack Horizontal.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Attack Horizontal.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Combo Attack Ver. 2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Combo Attack Ver. 2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Run Jump Attack.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Melee Run Jump Attack.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Taunt Battlecry.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Taunt Battlecry.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Walk Forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Standing Walk Forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Sword And Shield Death.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Sword And Shield Death.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Walking.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Oni_rig_mix@Walking.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Dango.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/Dango.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vision_api_key.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vision_api_key.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/SpeechToText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/SpeechToText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/TestDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,7 +67,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -191,7 +139,8 @@
       <workItem from="1753318181070" duration="2684000" />
       <workItem from="1753332505750" duration="3903000" />
       <workItem from="1753666714153" duration="8441000" />
-      <workItem from="1753752800104" duration="22038000" />
+      <workItem from="1753752800104" duration="46921000" />
+      <workItem from="1754268675857" duration="646000" />
     </task>
     <servers />
   </component>

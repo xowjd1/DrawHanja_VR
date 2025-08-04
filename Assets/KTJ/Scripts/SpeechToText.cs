@@ -17,8 +17,6 @@ public class SpeechToText : MonoBehaviour
     private string googleApiKey;
     private AudioClip recordedClip;
 
-    // -------------------- 🔴 마이크 녹음 --------------------
-
     void Awake()
     {
         LoadApiKeyFromResources();
@@ -46,44 +44,75 @@ public class SpeechToText : MonoBehaviour
             return;
         }
 
-        recordedClip = Microphone.Start(null, false, (int)recordDuration, 16000);
-        Debug.Log("녹음 시작...");
+        // (A) 디바이스가 지원하는 최소/최대 주파수 가져오기
+        int minFreq, maxFreq;
+        Microphone.GetDeviceCaps(null, out minFreq, out maxFreq);
+        // maxFreq가 0이면 제한 없음이므로 44100Hz로 가정
+        int recordHz = (maxFreq == 0) ? 44100 : maxFreq;
+
+        // (B) 지원 주파수로 녹음 시작
+        recordedClip = Microphone.Start(
+            null,
+            false,
+            Mathf.CeilToInt(recordDuration),
+            recordHz
+        );
+        Debug.Log($"녹음 시작 (주파수: {recordHz}Hz, duration: {recordDuration}s)");
         StartCoroutine(WaitAndSend(recordDuration));
     }
 
+
     private IEnumerator WaitAndSend(float duration)
     {
+        int startPos = Microphone.GetPosition(null);
+        yield return new WaitUntil(() => Microphone.GetPosition(null) > 0);
+        Debug.Log($"녹음 포지션 스타트: {startPos}, 현재: {Microphone.GetPosition(null)}");
+
+        
         yield return new WaitForSeconds(duration);
 
         Microphone.End(null);
         Debug.Log("녹음 종료");
+        
+        var src = gameObject.AddComponent<AudioSource>();
+        src.clip = recordedClip;
+        src.Play();
+        Debug.Log("▶ 녹음된 오디오 재생중… (볼륨 ↑)");
+
+        // 파일로도 잠깐 저장해 보기
+        string debugPath = Path.Combine(Application.persistentDataPath, "debug.wav");
+        File.WriteAllBytes(debugPath, ConvertToWavBytes(recordedClip));
+        Debug.Log($"▶ 디버그용 WAV 저장: {debugPath}");
 
         StartCoroutine(SendClipToGoogle(recordedClip));
     }
 
-    // -------------------- 🔴 WAV 변환 및 전송 --------------------
-
     private IEnumerator SendClipToGoogle(AudioClip clip)
     {
-        byte[] wavBytes = ConvertToWavBytes(clip);
+        byte[] wavBytes  = ConvertToWavBytes(clip);
         string base64Wav = Convert.ToBase64String(wavBytes);
 
-        var requestJson = new
-        {
-            config = new {
-                encoding = "LINEAR16",
-                sampleRateHertz = 16000,
-                languageCode = "ja-JP"
+        // ① 녹음된 clip의 실제 주파수를 사용
+        int sampleRate = clip.frequency;
+
+        var req = new RecognizeRequest {
+            config = new RecognitionConfig {
+                encoding        = "LINEAR16",
+                sampleRateHertz = sampleRate,
+                languageCode    = "ja-JP"
             },
-            audio = new {
-                content = base64Wav
-            }
+            audio = new RecognitionAudio { content = base64Wav }
         };
 
-        string json = JsonUtility.ToJson(requestJson);
-        var uwr = new UnityWebRequest($"https://speech.googleapis.com/v1/speech:recognize?key={googleApiKey}", "POST");
+        string json = JsonUtility.ToJson(req);
+        Debug.Log("STT 요청 JSON:\n" + json);
+
+        var uwr = new UnityWebRequest(
+            $"https://speech.googleapis.com/v1/speech:recognize?key={googleApiKey}",
+            "POST"
+        );
         byte[] body = Encoding.UTF8.GetBytes(json);
-        uwr.uploadHandler = new UploadHandlerRaw(body);
+        uwr.uploadHandler   = new UploadHandlerRaw(body);
         uwr.downloadHandler = new DownloadHandlerBuffer();
         uwr.SetRequestHeader("Content-Type", "application/json");
 
@@ -97,11 +126,11 @@ public class SpeechToText : MonoBehaviour
         }
         else
         {
-            Debug.LogError("STT 오류: " + uwr.error);
+            Debug.LogError($"STT 오류: HTTP/{uwr.responseCode}");
+            Debug.LogError("응답 본문: " + uwr.downloadHandler.text);
         }
     }
 
-    // -------------------- 🔴 결과 추출 --------------------
 
     private string ExtractTranscript(string json)
     {
@@ -114,6 +143,27 @@ public class SpeechToText : MonoBehaviour
         return "";
     }
 
+    [Serializable]
+    public class RecognizeRequest
+    {
+        public RecognitionConfig config;
+        public RecognitionAudio  audio;
+    }
+
+    [Serializable]
+    public class RecognitionConfig
+    {
+        public string encoding;
+        public int    sampleRateHertz;
+        public string languageCode;
+    }
+
+    [Serializable]
+    public class RecognitionAudio
+    {
+        public string content;
+    }
+    
     [Serializable]
     public class SpeechResponse
     {
@@ -131,8 +181,6 @@ public class SpeechToText : MonoBehaviour
     {
         public string transcript;
     }
-
-    // -------------------- 🔴 AudioClip → WAV --------------------
 
     private byte[] ConvertToWavBytes(AudioClip clip)
     {

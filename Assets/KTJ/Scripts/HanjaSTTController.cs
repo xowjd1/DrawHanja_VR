@@ -17,6 +17,7 @@ public class HanjaSTTController : MonoBehaviour
 
     void OnSpeechRecognized(string recognizedText)
     {
+        Debug.Log($"[Debug] RecognizedReading: '{recognizedText}'");
         hanjaRecognizer.TryMatchHanja(recognizedText);
     }
 }

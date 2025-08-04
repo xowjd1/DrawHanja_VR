@@ -4,18 +4,36 @@ public class HanjaRecognizer : MonoBehaviour
 {
     public HanjaDataBase hanjaDatabase;
 
-    public void TryMatchHanja(string recognizedText)
+    public void TryMatchHanja(string recognizedReading)
     {
+        recognizedReading = recognizedReading.Trim();
+        Debug.Log($"매칭용 텍스트: '{recognizedReading}'");
+
         foreach (var hanja in hanjaDatabase.allowedHanja)
         {
             if (hanja == null) continue;
-            if (hanja.japaneseReading == recognizedText)  // 예: "いぬ"
+
+            // 1) STT가 문자 그대로 한자를 내보냈을 때
+            if (hanja.character == recognizedReading)
             {
-                Debug.Log($"매칭된 한자: {hanja.character}");
-                // 한자 UI 표시 등
+                ShowHanja(hanja);
+                return;
+            }
+
+            // 2) STT가 일본어 읽기를 내보냈을 때
+            if (hanja.japaneseReading == recognizedReading)
+            {
+                ShowHanja(hanja);
                 return;
             }
         }
-        Debug.Log("매칭된 한자가 없음");
+
+        Debug.LogWarning($"매칭된 한자가 없습니다: \"{recognizedReading}\"");
     }
+
+    private void ShowHanja(HanjaData hanja)
+    {
+        Debug.Log($"매칭된 한자: {hanja.character} ({hanja.japaneseReading})");
+    }
+
 }
