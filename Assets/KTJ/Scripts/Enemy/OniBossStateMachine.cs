@@ -18,6 +18,7 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private SphereCollider leftHand;
     [SerializeField] private SphereCollider rightHand;
+    [SerializeField] private BoxCollider bossWeapon;
 
     [Header("Settings")]
     public float delay              = 3f;
@@ -35,6 +36,10 @@ public class OniBossStateMachine : MonoBehaviour
     
     // 2페이즈
     public OniBossState CreatePhase2Start()     => new Boss2PhaseStartState(this);
+    public OniBossState CreateMoveToPlayer2Phase()     => new MoveToPlayer2PhaseState(this);
+    public OniBossState CreateBoss2NorAttack()     => new Boss2NorAttackState(this);
+    public OniBossState CreateBoss2ComboAttack()     => new Boss2ComboAttackState(this);
+    public OniBossState CreateBoss2SmashAttack()     => new Boss2SmashAttackState(this);
     public OniBossState CreateDieState()        => new BossDieState(this);
 
     // Exposed properties
@@ -65,8 +70,12 @@ public class OniBossStateMachine : MonoBehaviour
         currentState = newState;
         currentState.Enter();
     }
-
-    // Animation Event: 호출 시점에만 한 번 실행
+    public void OnPhase2StartFinished()
+    {
+        // 2페 추적 스테이트로 넘어간다
+        ChangeState(CreateMoveToPlayer2Phase());
+    }
+    
     public void OnAttackFinished()
     {
         if (currentState is Boss1NorAttackState || currentState is Boss1NorAttack2State)
@@ -74,6 +83,14 @@ public class OniBossStateMachine : MonoBehaviour
             DisableLeftAttack();
             DisableRightAttack();
             ChangeState(CreateMoveState());
+        }
+    }
+    public void On2PhaseAttackFinished()
+    {
+        if (currentState is Boss2NorAttackState || currentState is Boss2ComboAttackState || currentState is Boss2SmashAttackState)
+        {
+
+            ChangeState(CreateMoveToPlayer2Phase());
         }
     }
     
@@ -99,18 +116,15 @@ public class OniBossStateMachine : MonoBehaviour
         weapon.transform.SetParent(handMount, false);
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.identity;
+        weapon.transform.localScale = Vector3.one;
     }
-
-    // (필요시) 다시 등에 거는 함수
-    public void StoreWeaponOnBack()
-    {
-        weapon.transform.SetParent(backMount, false);
-        weapon.transform.localPosition = Vector3.zero;
-        weapon.transform.localRotation = Quaternion.identity;
-    }
+    
 
     public void EnableLeftAttack()  => leftHand.enabled = true;
     public void EnableRightAttack() => rightHand.enabled = true;
     public void DisableLeftAttack() => leftHand.enabled = false;
-    public void DisableRightAttack()=> rightHand.enabled = false;
+    public void DisableRightAttack() => rightHand.enabled = false;
+    public void EnableWeaponAttack() => bossWeapon.enabled = true;
+    public void DisableWeaponAttack() => bossWeapon.enabled = false;
+
 }

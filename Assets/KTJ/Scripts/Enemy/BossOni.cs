@@ -156,79 +156,154 @@ public class Boss2PhaseStartState : OniBossState
 // 2페이즈 플레이어 추적
 public class MoveToPlayer2PhaseState : OniBossState
 {
+    private float startY;
+    bool skipCheck;    
+    float r = Random.value;
     public MoveToPlayer2PhaseState(OniBossStateMachine m) : base(m) { }
+
     public override void Enter()
     {
-       
+        startY = _oniBossStateMachine.transform.position.y;
+        skipCheck = true;
+        _oniBossStateMachine.animator.SetBool("isWalking2Phase", true);
+        Debug.Log("Move: Walking2");
     }
 
     public override void Update()
     {
+        if (skipCheck)
+        {
+            skipCheck = false;
+            return;
+        }
         
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
+        
+        // Rotate toward player
+        Vector3 toPlayer = _oniBossStateMachine.PlayerTransform.position - _oniBossStateMachine.transform.position;
+        toPlayer.y = 0f;
+        if (toPlayer.sqrMagnitude > 0f)
+        {
+            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
+            _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
+        }
+
+        // Move forward
+        _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
+
+        // If in attack range, pick one of two attacks
+        if (toPlayer.magnitude <= _oniBossStateMachine.AttackRange)
+        {
+            _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);
+            if (r < 0.5f)
+            {
+                // 50%
+                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2NorAttack());
+            }
+            else if (r < 0.8f)
+            {
+                // 30%
+                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2ComboAttack());
+            }
+            else
+            {
+                // 20%
+                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2SmashAttack());
+            }
+        }
     }
 
     public override void Exit()
     {
-        
+        _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);
     }
 }
 
 // 2페 기본 공격1
 public class Boss2NorAttackState : OniBossState
 {
+    private float startY;
+    
     public Boss2NorAttackState(OniBossStateMachine m) : base(m) { }
+
     public override void Enter()
     {
-       
+        startY = _oniBossStateMachine.transform.position.y;
+        
+        _oniBossStateMachine.animator.SetTrigger("2Attack");
+        _oniBossStateMachine.EnableWeaponAttack();
+        Debug.Log("2Phase Nor Attack");
     }
 
     public override void Update()
     {
-        
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
     }
 
     public override void Exit()
     {
-        
+        _oniBossStateMachine.DisableWeaponAttack();
     }
 }
 
 // 2페 기본 공격2
 public class Boss2ComboAttackState : OniBossState
 {
+    private float startY;
+    
     public Boss2ComboAttackState(OniBossStateMachine m) : base(m) { }
+
     public override void Enter()
     {
-       
+        startY = _oniBossStateMachine.transform.position.y;
+        
+        _oniBossStateMachine.animator.SetTrigger("Combo");
+        _oniBossStateMachine.EnableWeaponAttack();
+        Debug.Log("2Phase Combo Attack");
     }
 
     public override void Update()
     {
-        
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
     }
 
     public override void Exit()
     {
-        
+        _oniBossStateMachine.DisableWeaponAttack();
     }
 }
 
 public class Boss2SmashAttackState : OniBossState
 {
+    private float startY;
+    
     public Boss2SmashAttackState(OniBossStateMachine m) : base(m) { }
+
     public override void Enter()
     {
-       
+        startY = _oniBossStateMachine.transform.position.y;
+        
+        _oniBossStateMachine.animator.SetTrigger("Smash");
+        _oniBossStateMachine.EnableWeaponAttack();
+        Debug.Log("2Phase Smash Attack");
     }
 
     public override void Update()
     {
-        
+        var pos = _oniBossStateMachine.transform.position;
+        pos.y = startY;
+        _oniBossStateMachine.transform.position = pos;
     }
 
     public override void Exit()
     {
-        
+        _oniBossStateMachine.DisableWeaponAttack();
     }
 }
 public class BossDieState : OniBossState

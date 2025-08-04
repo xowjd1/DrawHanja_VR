@@ -10,5 +10,6 @@ public class HanjaData : ScriptableObject
     public Sprite completeImage;
 
     public string japaneseReading;
+    public GameObject prefabToSpawn;
 
 }

@@ -34,6 +34,20 @@ public class HanjaRecognizer : MonoBehaviour
     private void ShowHanja(HanjaData hanja)
     {
         Debug.Log($"매칭된 한자: {hanja.character} ({hanja.japaneseReading})");
+        
+        if (hanja.prefabToSpawn != null)
+        {
+            // 원하는 위치/부모 설정
+            Vector3 spawnPos = Vector3.zero;               
+            Quaternion spawnRot = Quaternion.identity;  
+            Transform parent    = null;            
+            Instantiate(hanja.prefabToSpawn, spawnPos, spawnRot, parent);
+        }
+        else
+        {
+            Debug.LogWarning($"소환할 Prefab 미지정: {hanja.character}");
+        }
+        
     }
 
 }
