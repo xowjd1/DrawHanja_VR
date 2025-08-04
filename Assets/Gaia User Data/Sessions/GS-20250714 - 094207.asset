@@ -673,6 +673,136 @@ MonoBehaviour:
     sessionPlaybackState: 1
     m_terrainsFoldedOut: 0
     m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:24:02"
+    scriptableObjectAssetGUID: 558e5fdf59020734bad955a54e4f8ee5
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250714 - 140404
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:24:03"
+    scriptableObjectAssetGUID: 22d3e3ef7ef193448a9c8010df12db35
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:03"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123303
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:03"
+    scriptableObjectAssetGUID: 5916bd50c4ae90d4e94e4ce332030766
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123303
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:17"
+    scriptableObjectAssetGUID: 3296c7285c7dc0048b4f5c496f311e96
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123303
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:19"
+    scriptableObjectAssetGUID: 3435e3fa37565f7498177a0aae696113
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123303
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:29"
+    scriptableObjectAssetGUID: b23dea3fbc26f7b43bd6df0755fc82c1
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123303
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:30"
+    scriptableObjectAssetGUID: d2e59eff170b4e9478dc0dd8d261a254
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Clear World
+    m_operationType: 10
+    m_isActive: 1
+    m_affectedTerrainNames: []
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:49"
+    scriptableObjectAssetGUID: 
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: 'Creating World: 1 x 1 tiles, tile size: 1024'
+    m_operationType: 0
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123350
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:33:50"
+    scriptableObjectAssetGUID: d434e4a9b515d5144ad2a905b45b2038
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: BlendHeight - 2k Plains 1
+    m_operationType: 4
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123350
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:34:06"
+    scriptableObjectAssetGUID: 28b0109eed80f4946b48c8322b7d442a
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
+  - m_description: Spawning - Multiple Spawners (2)
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20250716 - 123350
+    m_operationDateTime: "2025-07-16 \uC624\uD6C4 12:34:07"
+    scriptableObjectAssetGUID: 9087d10b2e206954891853b44d17ae51
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
   m_terrainMinMaxCache:
   - guid: 549f75adce19195499cc305c56cdf0a7
     isWorldmap: 0
@@ -707,33 +837,22 @@ MonoBehaviour:
   - guid: e8f23111b3bfb3443ae0752ef6762ab6
     isWorldmap: 0
     recalculate: 0
-    min: 32.00049
+    min: 37.96933
+    max: 196.22174
+  - guid: 8d39c5365f891414693dd8faabcc1733
+    isWorldmap: 0
+    recalculate: 0
+    min: 41.406883
     max: 196.22174
   - guid: Worldmap
     isWorldmap: 1
     recalculate: 0
-    min: 0
-    max: 0
-  m_bakedMaskCacheEntries:
-  - fileName: Terrain_0_0-20250714 - 140404_LayerGameObject_1879048192_2
-    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
-      - 140404/Terrain_0_0-20250714 - 140404_LayerGameObject_1879048192_2
-    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
-      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
-      - 140404_LayerGameObject_1879048192_2
-    texture: {fileID: 0}
-  - fileName: Terrain_0_0-20250714 - 140404_LayerTree_1879048192_-0.2
-    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
-      - 140404/Terrain_0_0-20250714 - 140404_LayerTree_1879048192_-0.2
-    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
-      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
-      - 140404_LayerTree_1879048192_-0.2
-    texture: {fileID: 0}
-  - fileName: Terrain_0_0-20250714 - 140404_LayerTree_1879048192_1
-    assetPath: Assets/Procedural Worlds/Packages - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714
-      - 140404/Terrain_0_0-20250714 - 140404_LayerTree_1879048192_1
-    fullPath: C:/Users/User/Documents/GitHub/DrawHanja_VR/Assets/Procedural Worlds/Packages
-      - Install/Gaia/TerrainCollisionData/Terrain_0_0-20250714 - 140404/Terrain_0_0-20250714
-      - 140404_LayerTree_1879048192_1
-    texture: {fileID: 0}
+    min: 47.97717
+    max: 99.67998
+  - guid: 163557b56c496bd44a1a1f4265a32e11
+    isWorldmap: 0
+    recalculate: 0
+    min: 37.96933
+    max: 196.22174
+  m_bakedMaskCacheEntries: []
   m_worldBiomeMaskSettings: {fileID: 0}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Island Baking Set
   m_EditorClassIdentifier: 
   singleSceneMode: 1
-  dialogNoProbeVolumeInSetShown: 0
+  dialogNoProbeVolumeInSetShown: 1
   settings:
     m_Version: 1
     dilationSettings:
@@ -70,11 +70,11 @@ MonoBehaviour:
       m_Values: []
     m_Asset: {fileID: 0}
   chunkSizeInBricks: 128
-  maxCellPosition: {x: 7, y: 3, z: 7}
-  minCellPosition: {x: -7, y: 0, z: -7}
+  maxCellPosition: {x: 1, y: 1, z: 0}
+  minCellPosition: {x: -1, y: 0, z: -2}
   globalBounds:
-    m_Center: {x: 0, y: 121.5, z: 0}
-    m_Extent: {x: 567, y: 121.5, z: 567}
+    m_Center: {x: 0, y: 40.5, z: -81}
+    m_Extent: {x: 81, y: 40.5, z: 81}
   bakedSimplificationLevels: 3
   bakedMinDistanceBetweenProbes: 1
   bakedProbeOcclusion: 1
@@ -87,7 +87,7 @@ MonoBehaviour:
     y: 0
     z: 0
     w: 0
-  maxSHChunkCount: 17
+  maxSHChunkCount: 8
   L0ChunkSize: 65536
   L1ChunkSize: 32768
   L2TextureChunkSize: 32768
@@ -127,5 +127,5 @@ MonoBehaviour:
     - hasProbeVolume: 1
       bakeScene: 1
       bounds:
-        m_Center: {x: 0, y: 121.5, z: 0}
-        m_Extent: {x: 567, y: 121.5, z: 567}
+        m_Center: {x: 0, y: 40.5, z: -81}
+        m_Extent: {x: 81, y: 40.5, z: 81}
