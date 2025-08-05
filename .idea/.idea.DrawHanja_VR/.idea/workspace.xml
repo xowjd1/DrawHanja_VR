@@ -6,51 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/BookOpen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/BookOpen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Book_inside.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_Pages.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/M_book_cover2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/bookcover.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/image 20.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/Materials/image 20.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/OpenBook2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/book.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/bookcover.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/booktrail.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/booktrail.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Prefab/Book/story4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250709 - 150119/Terrain Data/Terrain_0_0-20250709 - 150415.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250709 - 150119/Terrain Data/Terrain_0_0-20250709 - 150415.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/StorySequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/StorySequence.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +145,7 @@
       <workItem from="1754034040374" duration="4549000" />
       <workItem from="1754135750255" duration="4500000" />
       <workItem from="1754295993431" duration="3336000" />
+      <workItem from="1754356706728" duration="5668000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,7 @@ public class StorySequence : MonoBehaviour
 
     public GameObject storyCube;
     public Image fadePanel;
-    public float fadeDuration = 2f;
+    public float fadeDuration = 4f;
 
 
     void Start()
@@ -55,6 +55,9 @@ public class StorySequence : MonoBehaviour
     {
 
         Destroy(storyCube);
+        imageDisplay.gameObject.SetActive(false);
+        storyText.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(false);
 
         if (fadePanel != null)
         {
