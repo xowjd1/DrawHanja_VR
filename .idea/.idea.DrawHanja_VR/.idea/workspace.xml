@@ -6,37 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Fonts/DungGeunMo SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/HanjaDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/光.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/光.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/炎.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/石.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/石.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/船.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/船.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/風.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/NPCInteractable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/NPCInteractable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VRDrawing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VRDrawing.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest/Forest Baking Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest/Forest Baking Set.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +28,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
-    &quot;accountId&quot;: &quot;bd673f5a-ee5c-4a4a-a9a3-e05da15d7684&quot;
+    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -64,9 +37,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@a7356ab905fd/Runtime/GPUDriven/InstanceCullingBatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.core-utils@5b282bc7378d/Runtime/XROrigin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Receiver/Rendering/ColorMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Rendering/MaterialPropertyBlockHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/State/Provider/XRInteractableAffordanceStateProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Inputs/InputActionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Filtering/Poke/XRPokeFilter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Interactables/XRSimpleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,7 +60,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TJ&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LYS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -163,6 +138,14 @@
       <workItem from="1753318181070" duration="2684000" />
       <workItem from="1753332505750" duration="3903000" />
       <workItem from="1753666714153" duration="8441000" />
+      <workItem from="1753756241010" duration="1971000" />
+      <workItem from="1753851893460" duration="746000" />
+      <workItem from="1754034040374" duration="4549000" />
+      <workItem from="1754135750255" duration="4500000" />
+      <workItem from="1754295993431" duration="3336000" />
+      <workItem from="1754356706728" duration="5668000" />
+      <workItem from="1754447042201" duration="638000" />
+      <workItem from="1754460703919" duration="698000" />
     </task>
     <servers />
   </component>
