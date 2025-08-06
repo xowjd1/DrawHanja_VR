@@ -21,6 +21,9 @@ public class NPCDialog : MonoBehaviour, IInteractable
     private System.Action onDialogComplete;
     
     public GameObject fire;
+    
+    public AudioClip fireSound;
+    private AudioSource audioSource;
 
 
     void Awake()
@@ -28,6 +31,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
         dialogPanel.SetActive(false);
         nextButton.onClick.AddListener(NextLine);
         choiceButton.onClick.AddListener(NextLine);
+        audioSource = GetComponent<AudioSource>();
     }
     
     public void Interact()
@@ -45,6 +49,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
                 if (fire != null)
                 {
                     fire.SetActive(true);
+                    audioSource.PlayOneShot(fireSound);
                 }
 
                 if (QuestManager.Instance.questPanel == true)

@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250709 - 150119/Terrain Data/Terrain_0_0-20250709 - 150415.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250709 - 150119/Terrain Data/Terrain_0_0-20250709 - 150415.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/StorySequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/StorySequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +144,8 @@
       <workItem from="1754135750255" duration="4500000" />
       <workItem from="1754295993431" duration="3336000" />
       <workItem from="1754356706728" duration="5668000" />
+      <workItem from="1754447042201" duration="638000" />
+      <workItem from="1754460703919" duration="698000" />
     </task>
     <servers />
   </component>

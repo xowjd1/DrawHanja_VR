@@ -8,10 +8,15 @@ public class TreeFalling : MonoBehaviour
 
     private float rotated = 0f;
     [HideInInspector] public bool isFalling = false;
+    
+    public AudioClip hitSound;
+    public AudioClip fallSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         rb.isKinematic = true;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -28,6 +33,7 @@ public class TreeFalling : MonoBehaviour
         if (rotated >= tiltAngle && rb != null)
         {
             isFalling = false;
+            audioSource.PlayOneShot(fallSound);
             QuestManager.Instance.CompleteQuest();
         }
     }
@@ -37,6 +43,7 @@ public class TreeFalling : MonoBehaviour
         if (!isFalling && collision.gameObject.CompareTag("Ax"))
         {
             isFalling = true;
+            audioSource.PlayOneShot(hitSound);
         }
     }
 }
