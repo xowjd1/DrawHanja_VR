@@ -20,7 +20,10 @@ public class NPCDialog : MonoBehaviour, IInteractable
     private int index = 0;
     private System.Action onDialogComplete;
     
-    public GameObject wallBlocker;
+    public GameObject fire;
+    
+    public AudioClip fireSound;
+    private AudioSource audioSource;
 
 
     void Awake()
@@ -28,6 +31,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
         dialogPanel.SetActive(false);
         nextButton.onClick.AddListener(NextLine);
         choiceButton.onClick.AddListener(NextLine);
+        audioSource = GetComponent<AudioSource>();
     }
     
     public void Interact()
@@ -42,9 +46,10 @@ public class NPCDialog : MonoBehaviour, IInteractable
         {
             StartDialog(dialogAfterQuestComplete, () =>
             {
-                if (wallBlocker != null)
+                if (fire != null)
                 {
-                    wallBlocker.SetActive(false);
+                    fire.SetActive(true);
+                    audioSource.PlayOneShot(fireSound);
                 }
 
                 if (QuestManager.Instance.questPanel == true)
