@@ -15,4 +15,6 @@ MonoBehaviour:
   character: "\u6C34"
   practiceImage: {fileID: 21300000, guid: ed5896c657f738946a3a03c5b692b04e, type: 3}
   completeImage: {fileID: 21300000, guid: 00eabb10ea605f246921e7b45365ded8, type: 3}
+  pronunciationAudio: {fileID: 8300000, guid: 8a643532478e12141b849b94f8edf9a4, type: 3}
   japaneseReading: "\u307F\u305A"
+  prefabToSpawn: {fileID: 0}

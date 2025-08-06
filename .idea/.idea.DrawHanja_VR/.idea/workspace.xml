@@ -6,16 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase equip weapon.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase equip weapon.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Smash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Smash.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Walking.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/Walking.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +156,7 @@
       <workItem from="1753666714153" duration="8441000" />
       <workItem from="1753752800104" duration="46921000" />
       <workItem from="1754268675857" duration="646000" />
-      <workItem from="1754271333710" duration="9205000" />
+      <workItem from="1754271333710" duration="21614000" />
     </task>
     <servers />
   </component>

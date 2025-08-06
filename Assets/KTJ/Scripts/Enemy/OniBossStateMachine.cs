@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public class OniBossStateMachine : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private float attackRange       = 2f;
     [SerializeField] private float moveSpeed         = 6f;
     [SerializeField] private float rotationSpeed     = 5f;
+    
+    [SerializeField] private GameObject smashVFXPrefab;
+    [SerializeField] private SphereCollider smashCollider;
+    [SerializeField] private Transform smashVFXSpawnPoint;
 
     // 1페이즈
     public OniBossState CreateIntroState()      => new BossIntroState(this);
@@ -119,6 +124,34 @@ public class OniBossStateMachine : MonoBehaviour
         weapon.transform.localScale = Vector3.one;
     }
     
+    public void SmashVFX()
+    {
+        if (smashVFXPrefab != null && smashVFXSpawnPoint != null)
+        {
+            var vfxInstance = Instantiate(
+                smashVFXPrefab,
+                smashVFXSpawnPoint.position,
+                Quaternion.Euler(0f, -90f, 0f)
+            );
+
+            EnableWeaponAttack();
+            EnableSmashAttack();
+
+            StartCoroutine(DisableAfter(vfxInstance, 1f));
+        }
+    }
+
+    private IEnumerator DisableAfter(GameObject vfxInstance, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (vfxInstance != null)
+            Destroy(vfxInstance);
+
+        DisableWeaponAttack();
+        DisableSmashAttack();
+    }
+
 
     public void EnableLeftAttack()  => leftHand.enabled = true;
     public void EnableRightAttack() => rightHand.enabled = true;
@@ -126,5 +159,7 @@ public class OniBossStateMachine : MonoBehaviour
     public void DisableRightAttack() => rightHand.enabled = false;
     public void EnableWeaponAttack() => bossWeapon.enabled = true;
     public void DisableWeaponAttack() => bossWeapon.enabled = false;
+    public void EnableSmashAttack() => smashCollider.enabled = true;
+    public void DisableSmashAttack() => smashCollider.enabled = false;
 
 }

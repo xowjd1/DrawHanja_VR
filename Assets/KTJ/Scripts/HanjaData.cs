@@ -8,7 +8,7 @@ public class HanjaData : ScriptableObject
 
     public Sprite practiceImage;
     public Sprite completeImage;
-
+    public AudioClip pronunciationAudio;
     public string japaneseReading;
     public GameObject prefabToSpawn;
 

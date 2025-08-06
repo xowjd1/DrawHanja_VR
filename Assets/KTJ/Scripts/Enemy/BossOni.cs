@@ -163,7 +163,7 @@ public class MoveToPlayer2PhaseState : OniBossState
 
     public override void Enter()
     {
-        startY = _oniBossStateMachine.transform.position.y;
+        startY = -0.02f;
         skipCheck = true;
         _oniBossStateMachine.animator.SetBool("isWalking2Phase", true);
         Debug.Log("Move: Walking2");
@@ -197,12 +197,12 @@ public class MoveToPlayer2PhaseState : OniBossState
         if (toPlayer.magnitude <= _oniBossStateMachine.AttackRange)
         {
             _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);
-            if (r < 0.5f)
+            if (r < 0.33f)
             {
                 // 50%
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2NorAttack());
             }
-            else if (r < 0.8f)
+            else if (r < 0.67f)
             {
                 // 30%
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2ComboAttack());
