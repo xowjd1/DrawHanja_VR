@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScrollUI : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class ScrollUI : MonoBehaviour
     public float duration = 1.5f;     // 이동 시간 (초)
 
     public GameObject hanjaImage;
+    public HanjaDataBase hanjaDatabase;
+    public int currentHanjaIndex = 0;
     public GameObject drawPanel;
     public GameObject finishBtn;
     public GameObject clearBtn;
-    public GameObject pronBtn;
-    
+    public Button  pronBtn;
+    private AudioSource audioSource;
     private void Start()
     {
         // 시작 전엔 UI 요소 숨기기
@@ -21,10 +24,16 @@ public class ScrollUI : MonoBehaviour
         drawPanel.SetActive(false);
         finishBtn.SetActive(false);
         clearBtn.SetActive(false);
-        pronBtn.SetActive(false);
+        pronBtn.gameObject.SetActive(false);
 
         scrollPage.anchoredPosition = new Vector2(startX, scrollPage.anchoredPosition.y);
         StartCoroutine(MoveScrollPage());
+        
+        audioSource = gameObject.AddComponent<AudioSource>();
+
+        // ↓ 버튼 리스너 연결
+        pronBtn.onClick.AddListener(PlayPronunciation);
+        
     }
 
     private IEnumerator MoveScrollPage()
@@ -48,6 +57,22 @@ public class ScrollUI : MonoBehaviour
         drawPanel.SetActive(true);
         finishBtn.SetActive(true);
         clearBtn.SetActive(true);
-        pronBtn.SetActive(true);
+        pronBtn.gameObject.SetActive(true);
+    }
+    
+    private void PlayPronunciation()
+    {
+        if (hanjaDatabase == null) return;
+
+        var data = hanjaDatabase.allowedHanja[currentHanjaIndex];
+        var clip = data.pronunciationAudio;
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.LogWarning($"[{data.character}]에 할당된 발음 파일이 없습니다.");
+        }
     }
 }

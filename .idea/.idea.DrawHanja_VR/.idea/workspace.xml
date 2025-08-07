@@ -6,21 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Cross Punch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Cross Punch.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2_rig_mix@Goalie Throw.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2_rig_mix@Goalie Throw.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Running.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/chinese_wine_gourd.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/chinese_wine_gourd.glb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/shuten-doji_gourd.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/shuten-doji_gourd.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250714 - 093232/Gaia Lighting Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250714 - 093232/Gaia Lighting Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/BossOni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/BossOni.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island/Island Baking Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island/Island Baking Set.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +153,7 @@
       <workItem from="1754464568017" duration="1307000" />
       <workItem from="1754466201955" duration="973000" />
       <workItem from="1754469466674" duration="11334000" />
+      <workItem from="1754544228502" duration="1142000" />
     </task>
     <servers />
   </component>
