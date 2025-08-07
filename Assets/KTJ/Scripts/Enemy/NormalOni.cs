@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 //플레이어 조우 전 춤추는 상태
 public class OniDanceState : OniState
@@ -223,9 +224,13 @@ public class NOMoveToPlayerState : OniState
 {
     private float startY;
     bool skipCheck;
-
-    public NOMoveToPlayerState(OniStateMachine s) : base(s)
+    private readonly LayerMask _groundLayerMask;
+    
+    private const float RayHeightOffset = 1.0f;
+    private const float MaxRayDistance  = 5.0f;
+    public NOMoveToPlayerState(OniStateMachine s,LayerMask groundMask) : base(s)
     {
+        _groundLayerMask = groundMask;
     }
 
     public override void Enter()
@@ -258,6 +263,8 @@ public class NOMoveToPlayerState : OniState
                 _oniStateMachine.RotationSpeed * Time.deltaTime);
         }
 
+        AdjustToGround();
+        
         // Move forward
         _oniStateMachine.transform.position +=
             _oniStateMachine.transform.forward * _oniStateMachine.MoveSpeed * Time.deltaTime;
@@ -268,6 +275,27 @@ public class NOMoveToPlayerState : OniState
             _oniStateMachine.animator.SetBool("isWalking", false);
             _oniStateMachine.ChangeState(_oniStateMachine.CreateOniPunchState());
 
+        }
+        
+    }
+    private void AdjustToGround()
+    {
+        var origin = _oniStateMachine.transform.position 
+                     + Vector3.up * RayHeightOffset;
+
+        if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 
+                MaxRayDistance, _groundLayerMask))
+        {
+            var pos = _oniStateMachine.transform.position;
+            pos.y = hit.point.y;
+            _oniStateMachine.transform.position = pos;
+        }
+        else
+        {
+            // 레이캐스트 실패 시 최소 기존 높이 유지
+            var pos = _oniStateMachine.transform.position;
+            pos.y = startY;
+            _oniStateMachine.transform.position = pos;
         }
     }
 }

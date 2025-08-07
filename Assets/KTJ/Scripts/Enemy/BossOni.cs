@@ -32,6 +32,9 @@ public class MoveToPlayerState : OniBossState
 {
     private float startY;
     bool skipCheck;    
+    
+    private const float RayHeightOffset = 1.0f;
+    private const float MaxRayDistance  = 5.0f;
     public MoveToPlayerState(OniBossStateMachine m) : base(m) { }
 
     public override void Enter()
@@ -63,6 +66,7 @@ public class MoveToPlayerState : OniBossState
             _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
         }
 
+        AdjustToGround();
         // Move forward
         _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
 
@@ -76,7 +80,26 @@ public class MoveToPlayerState : OniBossState
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateAttack2State());
         }
     }
+    private void AdjustToGround()
+    {
+        var origin = _oniBossStateMachine.transform.position 
+                     + Vector3.up * RayHeightOffset;
 
+        if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 
+                MaxRayDistance, _oniBossStateMachine.groundLayerMask))
+        {
+            var pos = _oniBossStateMachine.transform.position;
+            pos.y = hit.point.y;
+            _oniBossStateMachine.transform.position = pos;
+        }
+        else
+        {
+            // 레이캐스트 실패 시 최소 기존 높이 유지
+            var pos = _oniBossStateMachine.transform.position;
+            pos.y = startY;
+            _oniBossStateMachine.transform.position = pos;
+        }
+    }
     public override void Exit()
     {
         _oniBossStateMachine.animator.SetBool("isWalking", false);
@@ -159,6 +182,10 @@ public class MoveToPlayer2PhaseState : OniBossState
     private float startY;
     bool skipCheck;    
     float r = Random.value;
+
+    
+    private const float RayHeightOffset = 1.0f;
+    private const float MaxRayDistance  = 5.0f;
     public MoveToPlayer2PhaseState(OniBossStateMachine m) : base(m) { }
 
     public override void Enter()
@@ -189,7 +216,7 @@ public class MoveToPlayer2PhaseState : OniBossState
             Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
             _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
         }
-
+        AdjustToGround();
         // Move forward
         _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
 
@@ -214,7 +241,26 @@ public class MoveToPlayer2PhaseState : OniBossState
             }
         }
     }
+    private void AdjustToGround()
+    {
+        var origin = _oniBossStateMachine.transform.position 
+                     + Vector3.up * RayHeightOffset;
 
+        if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 
+                MaxRayDistance, _oniBossStateMachine.groundLayerMask))
+        {
+            var pos = _oniBossStateMachine.transform.position;
+            pos.y = hit.point.y;
+            _oniBossStateMachine.transform.position = pos;
+        }
+        else
+        {
+            // 레이캐스트 실패 시 최소 기존 높이 유지
+            var pos = _oniBossStateMachine.transform.position;
+            pos.y = startY;
+            _oniBossStateMachine.transform.position = pos;
+        }
+    }
     public override void Exit()
     {
         _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);

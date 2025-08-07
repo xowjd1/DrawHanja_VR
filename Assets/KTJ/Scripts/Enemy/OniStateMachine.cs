@@ -10,7 +10,7 @@ public class OniStateMachine : MonoBehaviour
     public Animator animator;
 
     public float detectionRange = 30f;
-    
+    public LayerMask groundLayerMask;
     [SerializeField] private float maxHealth = 100f;
     public float currentHealth;
     [SerializeField] private SphereCollider rightHand;
@@ -38,7 +38,10 @@ public class OniStateMachine : MonoBehaviour
         currentState?.Update();
     }
 
-    public OniState CreateMoveToPlayer()     => new NOMoveToPlayerState(this);
+    public OniState CreateMoveToPlayer()
+    {
+    return new NOMoveToPlayerState(this, groundLayerMask);
+    }
     
     public void ChangeState(OniState newState)
     {
