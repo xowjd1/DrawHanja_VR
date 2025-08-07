@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/book.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
@@ -155,7 +151,7 @@
       <workItem from="1754356706728" duration="5668000" />
       <workItem from="1754447042201" duration="638000" />
       <workItem from="1754460703919" duration="698000" />
-      <workItem from="1754541629968" duration="3110000" />
+      <workItem from="1754541629968" duration="5377000" />
     </task>
     <servers />
   </component>
