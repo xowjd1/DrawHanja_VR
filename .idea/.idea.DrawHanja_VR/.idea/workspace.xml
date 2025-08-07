@@ -6,14 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250714 - 093232/Gaia Lighting Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gaia User Data/Sessions/GS-20250714 - 093232/Gaia Lighting Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/BossOni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/BossOni.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island/Island Baking Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island/Island Baking Set.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +35,13 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
-    &quot;accountId&quot;: &quot;bd673f5a-ee5c-4a4a-a9a3-e05da15d7684&quot;
+    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/GrabSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@a7356ab905fd/Runtime/GPUDriven/InstanceCullingBatcher.cs" root0="SKIP_HIGHLIGHTING" />
@@ -47,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/State/Provider/XRInteractableAffordanceStateProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Inputs/InputActionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Filtering/Poke/XRPokeFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/Interactables/XRSimpleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/UI/TrackedDeviceGraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,7 +69,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TJ&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LYS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -150,10 +155,7 @@
       <workItem from="1754356706728" duration="5668000" />
       <workItem from="1754447042201" duration="638000" />
       <workItem from="1754460703919" duration="698000" />
-      <workItem from="1754464568017" duration="1307000" />
-      <workItem from="1754466201955" duration="973000" />
-      <workItem from="1754469466674" duration="11334000" />
-      <workItem from="1754544228502" duration="1142000" />
+      <workItem from="1754541629968" duration="3110000" />
     </task>
     <servers />
   </component>

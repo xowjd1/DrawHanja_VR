@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_2/Forest.unity
     guid: ba0ab2d854c8fe346a6e5e3f05d89401
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level_1/School Library.unity
     guid: 947ccb2b749f150418a0970693f755d0
   - enabled: 0

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 
@@ -97,3 +98,4 @@ public class ParticleHueAdjusterEditor : EditorWindow
         return Color.HSVToRGB(h, s, v);
     }
 }
+#endif

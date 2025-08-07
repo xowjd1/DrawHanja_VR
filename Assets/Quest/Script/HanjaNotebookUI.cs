@@ -12,6 +12,7 @@ public class HanjaNotebookUI : MonoBehaviour
     {
         openNotebookButton.onClick.AddListener(OpenNotebook);
         xButton.onClick.AddListener(CloseNotebook);
+        notebookPanel.SetActive(false);
     }
 
     void OpenNotebook()
@@ -22,5 +23,10 @@ public class HanjaNotebookUI : MonoBehaviour
     void CloseNotebook()
     {
         notebookPanel.SetActive(false);
+    }
+    
+    public void EnableIfAllQuestsComplete()
+    {
+        openNotebookButton.gameObject.SetActive(true);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,11 +13,21 @@ public class Boat : MonoBehaviour
 
     private bool hasStarted = false;
 
+    private AudioSource audioSource;
+    public AudioClip audioClip;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void BoatUI()
     {
         if (hasStarted) return;
         hasStarted = true;
 
+        audioSource.PlayOneShot(audioClip);
+        
         image.gameObject.SetActive(true);
         panel.gameObject.SetActive(true);
 

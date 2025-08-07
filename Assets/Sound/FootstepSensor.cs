@@ -18,7 +18,7 @@ public class FootstepSensor : MonoBehaviour
     public bool debugRay = true;
 
     private Vector3 lastPosition;
-    private float stepTimer = 0f;
+    // private float stepTimer = 0f;
 
     void Start()
     {
