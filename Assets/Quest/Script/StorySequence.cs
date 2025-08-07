@@ -7,7 +7,6 @@ public class StorySequence : MonoBehaviour
 {
     public Image imageDisplay;
     public TMP_Text storyText;
-    public Button nextButton;
 
     public Sprite[] images;
     public string[] texts;
@@ -16,15 +15,13 @@ public class StorySequence : MonoBehaviour
 
 
     public GameObject storyCube;
-    public Image fadePanel;
-    public float fadeDuration = 4f;
+    public float pageDelay = 5f;
 
 
     void Start()
     {
         ShowPage(0);
-
-        nextButton.onClick.AddListener(NextPage);
+        StartCoroutine(AutoAdvance());
     }
 
     void ShowPage(int index)
@@ -36,45 +33,22 @@ public class StorySequence : MonoBehaviour
             storyText.text = texts[index];
     }
 
-    void NextPage()
+    IEnumerator AutoAdvance()
     {
-        currentIndex++;
-
-        if (currentIndex < images.Length || currentIndex < texts.Length)
+        while (currentIndex < images.Length || currentIndex < texts.Length)
         {
-            ShowPage(currentIndex);
-        }
-        else
-        {
-            nextButton.gameObject.SetActive(false);
-            StartCoroutine(FadeOutAndCleanup());
-        }
-    }
+            yield return new WaitForSeconds(pageDelay);
+            currentIndex++;
 
-    IEnumerator FadeOutAndCleanup()
-    {
-
-        Destroy(storyCube);
-        imageDisplay.gameObject.SetActive(false);
-        storyText.gameObject.SetActive(false);
-        nextButton.gameObject.SetActive(false);
-
-        if (fadePanel != null)
-        {
-            float time = 0f;
-            Color c = fadePanel.color;
-
-            while (time < fadeDuration)
+            if (currentIndex < images.Length || currentIndex < texts.Length)
             {
-                float t = time / fadeDuration;
-                fadePanel.color = new Color(c.r, c.g, c.b, Mathf.Lerp(1f, 0f, t));
-                time += Time.deltaTime;
-                yield return null;
+                ShowPage(currentIndex);
             }
-
-            fadePanel.color = new Color(c.r, c.g, c.b, 0f);
+            else
+            {
+                gameObject.SetActive(false);
+                Destroy(storyCube);
+            }
         }
-
-        gameObject.SetActive(false);
     }
 }
