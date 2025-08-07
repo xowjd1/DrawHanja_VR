@@ -18,6 +18,9 @@ public class HanjaUIController : MonoBehaviour
    private TreeFalling treeFalling;
    private QuestManager questManager;
 
+   public GameObject fireVFX;
+   private bool _prevFireActive;
+
    void Start()
    {
       ShowPracticeImage(currentHanjaIndex);
@@ -54,22 +57,27 @@ public class HanjaUIController : MonoBehaviour
 
    private void Update()
    {
-      // 斬 표시 2
+      // 斬 표시 
       if (treeFalling.isFalling)
       {
          ShowPracticeImage(2); 
       }
-      // 火 표시 5   
-      if (questManager.quests[0].isCompleted)
+      // 火 표시    
+      if (fireVFX != null)
       {
-         ShowPracticeImage(5); 
+         bool isFireActive = fireVFX.activeSelf;
+         if (isFireActive && !_prevFireActive)
+         {
+            ShowPracticeImage(5);
+         }
+         _prevFireActive = isFireActive;
       }
-      // 水 표시 4
+      // 猿 표시 8
       if (questManager.quests[1].isCompleted)
       {
          ShowPracticeImage(4); 
       }
-      // 風 표시 9
+      // 鳥 표시 
       if (questManager.quests[2].isCompleted)
       {
          ShowPracticeImage(9); 
@@ -81,7 +89,7 @@ public class HanjaUIController : MonoBehaviour
    // 木 표시 3
    // 炎 표시 6
    // 犬 표시 7
-   // 猿 표시 8
+   
    // 鳥 표시 10
 
 

@@ -1392,10 +1392,12 @@ MonoBehaviour:
   endX: -45
   duration: 1
   hanjaImage: {fileID: 355633781623196757}
+  hanjaDatabase: {fileID: 11400000, guid: 1f02af9c0addeae4c9a57c3ec49cfe69, type: 2}
+  currentHanjaIndex: 0
   drawPanel: {fileID: 5985375208845299152}
   finishBtn: {fileID: 90769170567477782}
   clearBtn: {fileID: 7342969337753472393}
-  pronBtn: {fileID: 9054371917153452918}
+  pronBtn: {fileID: 141534516366230253}
 --- !u!114 &4157500597295311346
 MonoBehaviour:
   m_ObjectHideFlags: 0

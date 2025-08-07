@@ -6,17 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Book/BookOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Material/M_Story.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/Boat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +26,12 @@
     &quot;assignee&quot;: &quot;xowjd1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
-    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/xowjd1/DrawHanja_VR.git",
+    "accountId": "bd673f5a-ee5c-4a4a-a9a3-e05da15d7684"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LYS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "TJ",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.1f1\Editor\Unity.exe" />
@@ -156,6 +150,7 @@
       <workItem from="1754447042201" duration="638000" />
       <workItem from="1754460703919" duration="698000" />
       <workItem from="1754541629968" duration="3110000" />
+      <workItem from="1754546445923" duration="2705000" />
     </task>
     <servers />
   </component>
