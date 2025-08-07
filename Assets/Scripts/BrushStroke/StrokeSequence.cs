@@ -10,13 +10,13 @@ public class StrokeSequence : MonoBehaviour
     [HideInInspector] public StrokeSequenceManager manager;
     [SerializeField] private AudioParticle audioParticle;
 
-    private Renderer renderer;
+    private Renderer rd;
 
     void Awake()
     {
         points = GetComponentsInChildren<StrokePoint>(true).OrderBy(p => p.index).ToList();
         paths = GetComponentsInChildren<StrokePath>(true).ToList();
-        renderer = GetComponent<Renderer>();
+        rd = GetComponent<Renderer>();
 
         foreach (var p in points)
         {
@@ -70,9 +70,9 @@ public class StrokeSequence : MonoBehaviour
         Debug.Log($"{gameObject.name} 완료");
 
         // gameObject.SetActive(false);
-        if (renderer != null)
+        if (rd != null)
         {
-            renderer.enabled = false;
+            rd.enabled = false;
         }
         else
         {
