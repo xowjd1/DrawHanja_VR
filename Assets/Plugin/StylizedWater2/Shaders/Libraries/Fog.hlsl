@@ -15,79 +15,76 @@ float _WaterFogDisabled;
 #endif
 
 #ifdef AtmosphericHeightFog
-//For versions older than 3.2.0, uncomment this
-//bool AHF_Enabled;
+    // Optional: default to disabled if not declared
+    #ifndef AHF_Enabled
+        #define AHF_Enabled 0
+    #endif
 #endif
 
 //Fragment stage. Note: Screen position passed here is not normalized (divided by w-component)
 void ApplyFog(inout float3 color, float fogFactor, float4 screenPos, float3 positionWS, float vFace) 
 {
-	float3 foggedColor = color;
+    float3 foggedColor = color;
 
-	float2 normalizedUV = screenPos.xy / screenPos.w;
-	
+    float2 normalizedUV = screenPos.xy / screenPos.w;
+
 #ifdef UnityFog
-	foggedColor = MixFog(color.rgb, fogFactor);
+    foggedColor = MixFog(color.rgb, fogFactor);
 #endif
 
 #ifdef Colorful
-	if(_DensityParams.x > 0) foggedColor.rgb = ApplyFog(color.rgb, fogFactor, positionWS, normalizedUV);
+    if(_DensityParams.x > 0) foggedColor.rgb = ApplyFog(color.rgb, fogFactor, positionWS, normalizedUV);
 #endif
-	
+
 #ifdef Enviro
-	//Distance/height fog enabled?
-	if (_EnviroParams.y > 0 || _EnviroParams.z > 0)
-	{
-		foggedColor.rgb = TransparentFog(float4(color.rgb, 1.0), positionWS, normalizedUV, fogFactor).rgb;
-	}
+    if (_EnviroParams.y > 0 || _EnviroParams.z > 0)
+    {
+        foggedColor.rgb = TransparentFog(float4(color.rgb, 1.0), positionWS, normalizedUV, fogFactor).rgb;
+    }
 #endif
 
 #ifdef Enviro3
-	if(any(_EnviroFogParameters) > 0) //Fog density 1
-	{
-		foggedColor.rgb = ApplyFogAndVolumetricLights(color.rgb, normalizedUV, positionWS, 0);
-		foggedColor.rgb = ApplyClouds(foggedColor.rgb, normalizedUV, positionWS);
-	}
+    if(any(_EnviroFogParameters) > 0)
+    {
+        foggedColor.rgb = ApplyFogAndVolumetricLights(color.rgb, normalizedUV, positionWS, 0);
+        foggedColor.rgb = ApplyClouds(foggedColor.rgb, normalizedUV, positionWS);
+    }
 #endif
-	
+
 #ifdef Azure
-	foggedColor.rgb = ApplyAzureFog(float4(color.rgb, 1.0), positionWS).rgb;
+    foggedColor.rgb = ApplyAzureFog(float4(color.rgb, 1.0), positionWS).rgb;
 #endif
 
 #ifdef AtmosphericHeightFog
-	if (AHF_Enabled)
-	{
-		float4 fogParams = GetAtmosphericHeightFog(positionWS.xyz);
-		foggedColor.rgb = lerp(color.rgb, fogParams.rgb, fogParams.a);
-	}
+    #if defined(AHF_Enabled) && AHF_Enabled
+        float4 fogParams = GetAtmosphericHeightFog(positionWS.xyz);
+        foggedColor.rgb = lerp(color.rgb, fogParams.rgb, fogParams.a);
+    #endif
 #endif
 
 #ifdef SCPostEffects
-	//Distance or height fog enabled
-	if(_DistanceParams.z == 1 || _DistanceParams.w == 1)
-	{
-		ApplyTransparencyFog(positionWS, normalizedUV, foggedColor.rgb);
-	}
+    if(_DistanceParams.z == 1 || _DistanceParams.w == 1)
+    {
+        ApplyTransparencyFog(positionWS, normalizedUV, foggedColor.rgb);
+    }
 #endif
 
 #ifdef COZY
-	foggedColor = BlendStylizedFog(positionWS, float4(color.rgb, 1.0)).rgb;
+    foggedColor = BlendStylizedFog(positionWS, float4(color.rgb, 1.0)).rgb;
 #endif
 
 #ifdef Buto
-	#if defined(BUTO_API_VERSION_2) //Buto 2022
-	float3 positionVS = TransformWorldToView(positionWS);
-	foggedColor = ButoFogBlend(normalizedUV, -positionVS.z, color.rgb);
-	#else //Buto 2021
-	foggedColor = ButoFogBlend(normalizedUV, color.rgb);
-	#endif
+    #if defined(BUTO_API_VERSION_2)
+        float3 positionVS = TransformWorldToView(positionWS);
+        foggedColor = ButoFogBlend(normalizedUV, -positionVS.z, color.rgb);
+    #else
+        foggedColor = ButoFogBlend(normalizedUV, color.rgb);
+    #endif
 #endif
 
-	#ifndef UnityFog
-	//Allow fog to be disabled for water globally by setting the value through script
-	foggedColor = lerp(foggedColor, color, _WaterFogDisabled);
-	#endif
-	
-	//Fog only applies to the front faces, otherwise affects underwater rendering
-	color.rgb = lerp(color.rgb, foggedColor.rgb, vFace);
+#ifndef UnityFog
+    foggedColor = lerp(foggedColor, color, _WaterFogDisabled);
+#endif
+
+    color.rgb = lerp(color.rgb, foggedColor.rgb, vFace);
 }

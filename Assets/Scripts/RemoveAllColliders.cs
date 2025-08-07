@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 
@@ -38,3 +39,4 @@ public class RemoveAllColliders : EditorWindow
         Debug.Log($"Removed {count} colliders from hierarchy of: {selected.name}");
     }
 }
+#endif
