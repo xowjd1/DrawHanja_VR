@@ -16,10 +16,15 @@ public class BookOpen : MonoBehaviour
     public float fadeDuration = 2f; 
     public string nextSceneName;
 
+    private AudioSource audioSource;
+    public AudioClip openClip;
+    public AudioClip ShiningClip;
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
         effectRoot.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
         
         var c = fadeImage.color;
         c.a = 0f;
@@ -32,10 +37,19 @@ public class BookOpen : MonoBehaviour
 
         if (isMoving && !hasStarted)
         {
-            Debug.Log(gameObject.name + " is moving");
             hasStarted = true;
             
+            audioSource.PlayOneShot(openClip);
+            
             particleRoutine = StartCoroutine(StartParticlesAfterDelay());
+        }
+    }
+    
+    public void OpenBook()
+    {
+        if (!hasStarted)
+        {
+            animator.SetBool("isMove", true);
         }
     }
     
@@ -43,6 +57,7 @@ public class BookOpen : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         effectRoot.SetActive(true);
+        audioSource.PlayOneShot(ShiningClip);
         
         yield return new WaitForSeconds(2f);
         

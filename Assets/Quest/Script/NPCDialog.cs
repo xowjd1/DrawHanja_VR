@@ -23,6 +23,8 @@ public class NPCDialog : MonoBehaviour, IInteractable
     public GameObject fire;
     
     public AudioClip fireSound;
+    public AudioClip queststartSound;
+    public AudioClip questclearSound;
     private AudioSource audioSource;
 
 
@@ -46,6 +48,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
         {
             StartDialog(dialogAfterQuestComplete, () =>
             {
+                audioSource.PlayOneShot(questclearSound);
                 if (fire != null)
                 {
                     fire.SetActive(true);
@@ -67,6 +70,7 @@ public class NPCDialog : MonoBehaviour, IInteractable
                 if (triggerNextQuest)
                 {
                     QuestManager.Instance.StartNextQuest();
+                    audioSource.PlayOneShot(queststartSound);
                 }
             });
         }
