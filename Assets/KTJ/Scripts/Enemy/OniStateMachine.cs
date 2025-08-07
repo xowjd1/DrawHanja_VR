@@ -11,7 +11,17 @@ public class OniStateMachine : MonoBehaviour
 
     public float detectionRange = 30f;
     
-
+    [SerializeField] private float maxHealth = 100f;
+    public float currentHealth;
+    [SerializeField] private SphereCollider rightHand;
+    [SerializeField] private float attackRange       = 2f;
+    [SerializeField] private float moveSpeed         = 4f;
+    [SerializeField] private float rotationSpeed     = 5f;
+    
+    public Transform PlayerTransform => player.transform;
+    public float     AttackRange     => attackRange;
+    public float     MoveSpeed       => moveSpeed;
+    public float     RotationSpeed   => rotationSpeed;
     private void Awake()
     {
         
@@ -28,6 +38,8 @@ public class OniStateMachine : MonoBehaviour
         currentState?.Update();
     }
 
+    public OniState CreateMoveToPlayer()     => new NOMoveToPlayerState(this);
+    
     public void ChangeState(OniState newState)
     {
         currentState?.Exit();
@@ -61,13 +73,7 @@ public class OniStateMachine : MonoBehaviour
         );
     }
 
-    public OniState CreateOniPunchState()
-    {
-        return new OniPunchState(
-            this,
-            player
-        );
-    }
+    public OniState CreateOniPunchState() => new OniPunchState(this);
 
     public OniState CreateOniDieState()
     {
@@ -78,9 +84,29 @@ public class OniStateMachine : MonoBehaviour
     
     public void OnThrowJarEvent()
     {
-        // 현재 state가 ThrowJarState라면 호출
         if (currentState is OniThrowJarState throwState)
             throwState.ThrowJarEvent();
     }
+    public void OnThrowingFinished()
+    {
+        ChangeState(CreateMoveToPlayer());
+    }
+
+    public void OnAttackFinished()
+    {
+        ChangeState(CreateMoveToPlayer());
+    }
+
+    public void ApplyDamage(float dmg)
+    {
+        if (currentHealth <= 0) return;
+        currentHealth = Mathf.Max(0, currentHealth - dmg);
+
+        if (currentHealth == 0)
+            ChangeState(CreateOniDieState());
+    }
+    
+    public void EnableRightAttack() => rightHand.enabled = true;
+    public void DisableRightAttack() => rightHand.enabled = false;
     
 }

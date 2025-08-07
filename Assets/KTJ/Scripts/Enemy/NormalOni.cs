@@ -167,42 +167,30 @@ public class OniThrowJarState : OniState
 // 플레이어한테 뛰어가서 주먹공격 패턴
 public class OniPunchState : OniState
 {
-    private GameObject _player;
-    private float _moveSpeed = 5f;
-    private float _stopDistance = 1f;
-    public OniPunchState(OniStateMachine oniStateMachine, GameObject player) : base(oniStateMachine)
-    {
-        _player = player;
-    }
+    private float startY;
+    
+    public OniPunchState(OniStateMachine m) : base(m) { }
 
     public override void Enter()
     {
+        startY = _oniStateMachine.transform.position.y;
         
+        _oniStateMachine.animator.SetTrigger("Punch");
+        _oniStateMachine.EnableRightAttack();
+        Debug.Log("Attack1: normalPunch");
     }
 
     public override void Update()
     {
-        if (_player == null) return;
-
-        Vector3 direction = (_player.transform.position - _oniStateMachine.transform.position);
-        float distance = direction.magnitude;
-
-        if (distance > _stopDistance)
-        {
-            // 방향 정규화 후 이동
-            Vector3 moveDir = direction.normalized;
-            _oniStateMachine.transform.forward = moveDir; // 오니가 플레이어 쪽 보도록
-            _oniStateMachine.transform.position += moveDir * _moveSpeed * Time.deltaTime;
-        }
-        else
-        {
-
-        }
+        var pos = _oniStateMachine.transform.position;
+        pos.y = startY;
+        _oniStateMachine.transform.position = pos;
     }
+    
 
     public override void Exit()
     {
-        
+        _oniStateMachine.DisableRightAttack();
     }
 }
 
@@ -216,7 +204,8 @@ public class OniDieState : OniState
 
     public override void Enter()
     {
-        
+        _oniStateMachine.animator.SetTrigger("Die");
+        Debug.Log("oni Die");
     }
 
     public override void Update()
@@ -227,5 +216,58 @@ public class OniDieState : OniState
     public override void Exit()
     {
         
+    }
+}
+
+public class NOMoveToPlayerState : OniState
+{
+    private float startY;
+    bool skipCheck;
+
+    public NOMoveToPlayerState(OniStateMachine s) : base(s)
+    {
+    }
+
+    public override void Enter()
+    {
+        startY = _oniStateMachine.transform.position.y;
+        skipCheck = true;
+        _oniStateMachine.animator.SetBool("isWalking", true);
+        Debug.Log("Move: Walking");
+    }
+
+    public override void Update()
+    {
+        if (skipCheck)
+        {
+            skipCheck = false;
+            return;
+        }
+
+        var pos = _oniStateMachine.transform.position;
+        pos.y = startY;
+        _oniStateMachine.transform.position = pos;
+
+        // Rotate toward player
+        Vector3 toPlayer = _oniStateMachine.PlayerTransform.position - _oniStateMachine.transform.position;
+        toPlayer.y = 0f;
+        if (toPlayer.sqrMagnitude > 0f)
+        {
+            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
+            _oniStateMachine.transform.rotation = Quaternion.Slerp(_oniStateMachine.transform.rotation, target,
+                _oniStateMachine.RotationSpeed * Time.deltaTime);
+        }
+
+        // Move forward
+        _oniStateMachine.transform.position +=
+            _oniStateMachine.transform.forward * _oniStateMachine.MoveSpeed * Time.deltaTime;
+
+        // If in attack range, pick one of two attacks
+        if (toPlayer.magnitude <= _oniStateMachine.AttackRange)
+        {
+            _oniStateMachine.animator.SetBool("isWalking", false);
+            _oniStateMachine.ChangeState(_oniStateMachine.CreateOniPunchState());
+
+        }
     }
 }

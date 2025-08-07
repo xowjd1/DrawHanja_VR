@@ -6,10 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Story.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/NPCDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/TreeFalling.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Cross Punch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Cross Punch.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2_rig_mix@Goalie Throw.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2_rig_mix@Goalie Throw.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/OniBossAnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Running.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Shopping Cart Dance.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/chinese_wine_gourd.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/chinese_wine_gourd.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/shuten-doji_gourd.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Meshes/shuten-doji_gourd.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
-    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
+    &quot;accountId&quot;: &quot;bd673f5a-ee5c-4a4a-a9a3-e05da15d7684&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -60,7 +71,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LYS&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TJ&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -146,6 +157,9 @@
       <workItem from="1754356706728" duration="5668000" />
       <workItem from="1754447042201" duration="638000" />
       <workItem from="1754460703919" duration="698000" />
+      <workItem from="1754464568017" duration="1307000" />
+      <workItem from="1754466201955" duration="973000" />
+      <workItem from="1754469466674" duration="11334000" />
     </task>
     <servers />
   </component>
