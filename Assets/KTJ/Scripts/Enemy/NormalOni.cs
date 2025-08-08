@@ -12,27 +12,19 @@ public class OniDanceState : OniState
     public override void Enter()
     {
         _oniStateMachine.animator.Play("Dance");
+        _oniStateMachine.playerHitFightLine = false;
     }
 
     public override void Update()
     {
-        // 플레이어와의 거리 계산
-        float dist = Vector3.Distance(
-            _oniStateMachine.transform.position,
-            _oniStateMachine.player.transform.position
-        );
-        Debug.Log($"[DanceState] Distance to player: {dist:F2}");
-
-        // 범위 안으로 들어오면 던지기 상태로 전환
-        if (dist <= _oniStateMachine.detectionRange)
+        if (_oniStateMachine.playerHitFightLine)
         {
-            Debug.Log("[DanceState] In range! Switching to ThrowJarState");
+            Debug.Log("[DanceState] FightLine hit! Switching to ThrowJarState");
             _oniStateMachine.ChangeState(
                 _oniStateMachine.CreateOniThrowJarState()
             );
         }
     }
-
 
     public override void Exit()
     {
@@ -222,80 +214,62 @@ public class OniDieState : OniState
 
 public class NOMoveToPlayerState : OniState
 {
-    private float startY;
-    bool skipCheck;
-    private readonly LayerMask _groundLayerMask;
-    
-    private const float RayHeightOffset = 1.0f;
-    private const float MaxRayDistance  = 5.0f;
-    public NOMoveToPlayerState(OniStateMachine s,LayerMask groundMask) : base(s)
+    private NavMeshAgent _agent;
+    private bool          _skipFirstCheck;
+
+    public NOMoveToPlayerState(OniStateMachine s) : base(s)
     {
-        _groundLayerMask = groundMask;
+        _agent = s.GetComponent<NavMeshAgent>();
     }
 
     public override void Enter()
     {
-        startY = _oniStateMachine.transform.position.y;
-        skipCheck = true;
+        _skipFirstCheck = true;
+        _agent.isStopped        = false;
+        _agent.speed            = _oniStateMachine.MoveSpeed;
+        _agent.angularSpeed     = _oniStateMachine.RotationSpeed;
+        _agent.stoppingDistance = _oniStateMachine.AttackRange;
         _oniStateMachine.animator.SetBool("isWalking", true);
-        Debug.Log("Move: Walking");
+
+        // 바로 한번 목적지 설정
+        _agent.SetDestination(_oniStateMachine.PlayerTransform.position);
     }
 
     public override void Update()
     {
-        if (skipCheck)
+        if (_skipFirstCheck)
         {
-            skipCheck = false;
+            _skipFirstCheck = false;
             return;
         }
 
-        var pos = _oniStateMachine.transform.position;
-        pos.y = startY;
-        _oniStateMachine.transform.position = pos;
+        _agent.SetDestination(_oniStateMachine.PlayerTransform.position);
 
-        // Rotate toward player
-        Vector3 toPlayer = _oniStateMachine.PlayerTransform.position - _oniStateMachine.transform.position;
-        toPlayer.y = 0f;
-        if (toPlayer.sqrMagnitude > 0f)
+        if (!_agent.pathPending &&
+            _agent.hasPath &&
+            _agent.remainingDistance > _agent.stoppingDistance)
         {
-            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
-            _oniStateMachine.transform.rotation = Quaternion.Slerp(_oniStateMachine.transform.rotation, target,
-                _oniStateMachine.RotationSpeed * Time.deltaTime);
+            // 아직 이동 중
+            return;
         }
 
-        AdjustToGround();
-        
-        // Move forward
-        _oniStateMachine.transform.position +=
-            _oniStateMachine.transform.forward * _oniStateMachine.MoveSpeed * Time.deltaTime;
-
-        // If in attack range, pick one of two attacks
-        if (toPlayer.magnitude <= _oniStateMachine.AttackRange)
+        if (!_agent.pathPending &&
+            _agent.hasPath &&
+            _agent.remainingDistance <= _agent.stoppingDistance)
         {
+            _agent.isStopped = true;
+
             _oniStateMachine.animator.SetBool("isWalking", false);
             _oniStateMachine.ChangeState(_oniStateMachine.CreateOniPunchState());
-
         }
-        
     }
-    private void AdjustToGround()
+
+    public override void Exit()
     {
-        var origin = _oniStateMachine.transform.position 
-                     + Vector3.up * RayHeightOffset;
 
-        if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 
-                MaxRayDistance, _groundLayerMask))
-        {
-            var pos = _oniStateMachine.transform.position;
-            pos.y = hit.point.y;
-            _oniStateMachine.transform.position = pos;
-        }
-        else
-        {
-            // 레이캐스트 실패 시 최소 기존 높이 유지
-            var pos = _oniStateMachine.transform.position;
-            pos.y = startY;
-            _oniStateMachine.transform.position = pos;
-        }
+        _agent.isStopped = true;
+        _oniStateMachine.animator.SetBool("isWalking", false);
+        Debug.Log("NavMesh Move: Stop Walking");
     }
+    
 }

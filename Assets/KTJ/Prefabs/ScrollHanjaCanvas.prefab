@@ -1398,6 +1398,7 @@ MonoBehaviour:
   finishBtn: {fileID: 90769170567477782}
   clearBtn: {fileID: 7342969337753472393}
   pronBtn: {fileID: 141534516366230253}
+  exitBtn: {fileID: 0}
 --- !u!114 &4157500597295311346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,9 +1449,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hanjaDataBase: {fileID: 11400000, guid: 1f02af9c0addeae4c9a57c3ec49cfe69, type: 2}
   hanjaImageUI: {fileID: 6151405848519403979}
+  ScrollUI: {fileID: 0}
   currentHanjaIndex: 0
   katana: {fileID: 0}
   dango: {fileID: 0}
+  fireVFX: {fileID: 0}
 --- !u!1 &9054371917153452918
 GameObject:
   m_ObjectHideFlags: 0

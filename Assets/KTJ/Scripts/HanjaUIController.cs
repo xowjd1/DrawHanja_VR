@@ -7,6 +7,7 @@ public class HanjaUIController : MonoBehaviour
 {
    public HanjaDataBase hanjaDataBase;
    public Image hanjaImageUI;
+   public GameObject ScrollUI;
 
    [Header("한자 인덱스")]
    public int currentHanjaIndex = 0;
@@ -24,6 +25,7 @@ public class HanjaUIController : MonoBehaviour
    void Start()
    {
       ShowPracticeImage(currentHanjaIndex);
+      ScrollUI.SetActive(false);
    }
 
    public void ShowPracticeImage(int index)
@@ -46,17 +48,20 @@ public class HanjaUIController : MonoBehaviour
       if (other.gameObject == katana)
       {
          ShowPracticeImage(0); 
+         ScrollUI.SetActive(true);
       }
 
       // 力 표시 1
       if (other.gameObject == dango)
       {
-         ShowPracticeImage(1); 
+         ShowPracticeImage(1);
+         ScrollUI.SetActive(true);
       }
    }
 
    private void Update()
    {
+      
       // 斬 표시 
       if (treeFalling.isFalling)
       {
@@ -69,13 +74,15 @@ public class HanjaUIController : MonoBehaviour
          if (isFireActive && !_prevFireActive)
          {
             ShowPracticeImage(5);
+            ScrollUI.SetActive(true);
          }
          _prevFireActive = isFireActive;
       }
       // 猿 표시 8
       if (questManager.quests[1].isCompleted)
       {
-         ShowPracticeImage(4); 
+         ShowPracticeImage(4);
+         
       }
       // 鳥 표시 
       if (questManager.quests[2].isCompleted)

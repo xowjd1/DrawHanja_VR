@@ -8,7 +8,6 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     public float currentHealth;
     private bool  phase2Triggered = false;
-    public LayerMask groundLayerMask;
     [Header("Weapon Mounts")]
     [SerializeField] private Transform backMount; 
     [SerializeField] private Transform handMount;

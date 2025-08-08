@@ -506,18 +506,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_loadingBoundsRegular:
     m_Center:
-      x: -0.3524700105190277
-      y: 57.82143783569336
-      z: -17.969999313354492
+      x: 208.86000061035156
+      y: 121.34144592285156
+      z: 12.680000305175781
     m_Extents:
       x: 32
       y: 32
       z: 32
   m_loadingBoundsImpostor:
     m_Center:
-      x: -0.3524700105190277
-      y: 57.82143783569336
-      z: -17.969999313354492
+      x: 208.86000061035156
+      y: 121.34144592285156
+      z: 12.680000305175781
     m_Extents:
       x: 96
       y: 96
