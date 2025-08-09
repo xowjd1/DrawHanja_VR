@@ -6,59 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/刀.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/力.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/木.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/水.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/火.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/犬.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/猿.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/鳥.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/bird_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/cut_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/dog_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/fire_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/flame_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/knife_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/monkey_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/power_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/tree_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/water_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Images/hanja/wind_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/NormalOni.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/Hand XRI/Prefabs/BLS XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest t.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest t.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,14 +23,13 @@
     &quot;assignee&quot;: &quot;xowjd1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
-    &quot;accountId&quot;: &quot;bd673f5a-ee5c-4a4a-a9a3-e05da15d7684&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/xowjd1/DrawHanja_VR.git",
+    "accountId": "039f266a-0b39-4b41-9f26-ac7f8e5c1874"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/FightLineTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/GrabSound.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,7 +60,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TJ&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LYS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -200,8 +148,7 @@
       <workItem from="1754460703919" duration="698000" />
       <workItem from="1754541629968" duration="3110000" />
       <workItem from="1754546445923" duration="2705000" />
-      <workItem from="1754579810552" duration="11926000" />
-      <workItem from="1754611012325" duration="1930000" />
+      <workItem from="1754615725571" duration="494000" />
     </task>
     <servers />
   </component>
