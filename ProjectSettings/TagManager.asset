@@ -32,12 +32,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - EnemyAttack
+  - Enemy
   - drawingLayerMask
   - Player
   - Ground
-  - 
+  - Sake
   - 
   - 
   - 

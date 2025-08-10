@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class AttackCollider : MonoBehaviour
+public class BossSkillCollider : MonoBehaviour
 {
-    public int damage = 10;
+    public int damage = 30;
 
     private void OnTriggerEnter(Collider other)
     {
