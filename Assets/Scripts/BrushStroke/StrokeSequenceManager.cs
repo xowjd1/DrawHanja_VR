@@ -136,7 +136,8 @@ public class StrokeSequenceManager : MonoBehaviour
 
         foreach (var ps in particles)
         {
-            ps.loop = false;
+            var main = ps.main;
+            main.loop = false;
 
             var renderer = ps.GetComponent<ParticleSystemRenderer>();
             if (renderer != null)
@@ -145,6 +146,7 @@ public class StrokeSequenceManager : MonoBehaviour
                 materials.Add((mat, mat.color));
             }
         }
+
 
         float t = 0f;
         while (t < 1f)
