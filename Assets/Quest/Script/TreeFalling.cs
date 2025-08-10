@@ -28,12 +28,12 @@ public class TreeFalling : MonoBehaviour
         float actualStep = Mathf.Min(step, remaining);
 
         transform.Rotate(Vector3.right, actualStep);
-        rotated += actualStep;
+        rotated += actualStep; 
 
         if (rotated >= tiltAngle && rb != null)
         {
             isFalling = false;
-            audioSource.PlayOneShot(fallSound);
+            
             QuestManager.Instance.CompleteQuest();
         }
     }
@@ -44,6 +44,7 @@ public class TreeFalling : MonoBehaviour
         {
             isFalling = true;
             audioSource.PlayOneShot(hitSound);
+            audioSource.PlayOneShot(fallSound);
         }
     }
 }
