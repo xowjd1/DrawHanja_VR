@@ -40,7 +40,7 @@ public class SkillAttack : MonoBehaviour
         Quaternion rot = spawnPoint ? spawnPoint.rotation : transform.rotation;
 
         var go = Instantiate(prefab, pos, rot);
-        go.transform.localScale *= 2f;
+        go.transform.localScale *= 1.6f;
         // 스킬 활성 카운트 ↑ & 적들 일시정지
         PauseController.IncrementAndPause(extraEnemyRoots);
 
