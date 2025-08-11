@@ -420,7 +420,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -62.89999, y: 61.23, z: 135.24127}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9041178715885964670}
@@ -446,9 +446,9 @@ MonoBehaviour:
   - {fileID: 3039722357569294405}
   - {fileID: 5260274187398073146}
   - {fileID: 2766468214748547904}
-  flySpeed: 2
-  flyDelay: 0.3
-  flyLifetime: 10
+  flySpeed: 1
+  flyDelay: 1
+  flyLifetime: 30
   selfDestructDelay: 3
   targetParticle: {fileID: 0}
   fadeDuration: 2
@@ -1126,7 +1126,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1222,15 +1222,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 8300000, guid: cbeb4c1d456570245bba2fa550750f1a, type: 3}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 1336531800471381323, guid: d2d68ef51e17d164096ff92e64bf0396, type: 3}
   - {fileID: 1625881847255917413, guid: 098b836f3d9958f4685d2ee911be8fef, type: 3}
@@ -1754,7 +1752,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1850,15 +1848,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 8300000, guid: cbeb4c1d456570245bba2fa550750f1a, type: 3}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 1336531800471381323, guid: d2d68ef51e17d164096ff92e64bf0396, type: 3}
   - {fileID: 1625881847255917413, guid: 098b836f3d9958f4685d2ee911be8fef, type: 3}
@@ -2114,7 +2110,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2210,15 +2206,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 8300000, guid: cbeb4c1d456570245bba2fa550750f1a, type: 3}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 1336531800471381323, guid: d2d68ef51e17d164096ff92e64bf0396, type: 3}
   - {fileID: 1625881847255917413, guid: 098b836f3d9958f4685d2ee911be8fef, type: 3}
@@ -2544,7 +2538,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2640,15 +2634,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 8300000, guid: cbeb4c1d456570245bba2fa550750f1a, type: 3}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 1336531800471381323, guid: d2d68ef51e17d164096ff92e64bf0396, type: 3}
   - {fileID: 1625881847255917413, guid: 098b836f3d9958f4685d2ee911be8fef, type: 3}

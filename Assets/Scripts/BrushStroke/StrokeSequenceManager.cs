@@ -40,14 +40,16 @@ public class StrokeSequenceManager : MonoBehaviour
         {
             ActivateSequence(0);
         }
+        
+        FlyAllObjectsSequentially().Forget();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isFlying)
-        {
-            FlyAllObjectsSequentially().Forget();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space) && !isFlying)
+        // {
+        //     FlyAllObjectsSequentially().Forget();
+        // }
 
     }
 

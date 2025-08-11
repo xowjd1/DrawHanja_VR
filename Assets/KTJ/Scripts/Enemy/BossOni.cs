@@ -1,98 +1,112 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 // 1) Intro State
 public class BossIntroState : OniBossState
 {
-    private float timer;
-    private float delay;
 
     public BossIntroState(OniBossStateMachine m) : base(m)
     {
-        delay = m.delay;
+
     }
 
     public override void Enter()
     {
-        timer = 0f;
+
         _oniBossStateMachine.animator.SetTrigger("Idle");
         Debug.Log("Intro: Idle");
     }
 
     public override void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= delay)
-            _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateMoveState());
+        var normals = Object.FindObjectsOfType<OniStateMachine>();
+        if (normals.Length == 0)
+        {
+            Debug.Log("Intro: All Normal Onis defeated! Switching to MoveState");
+            _oniBossStateMachine.ChangeState(
+                _oniBossStateMachine.CreateMoveState()
+            );
+        }
     }
 }
 
 // 2) Move State
 public class MoveToPlayerState : OniBossState
 {
-    private float startY;
-    bool skipCheck;    
-    public MoveToPlayerState(OniBossStateMachine m) : base(m) { }
+    private NavMeshAgent _agent;
+    private bool          _skipFirstCheck;
+
+    public MoveToPlayerState(OniBossStateMachine m) : base(m)
+    {
+        _agent = m.GetComponent<NavMeshAgent>();
+    }
 
     public override void Enter()
     {
-        startY = _oniBossStateMachine.transform.position.y;
-        skipCheck = true;
+        _skipFirstCheck = true;
+        _agent.isStopped        = false;
+        _agent.speed            = _oniBossStateMachine.MoveSpeed;
+        _agent.angularSpeed     = _oniBossStateMachine.RotationSpeed;
+        _agent.stoppingDistance = _oniBossStateMachine.AttackRange;
         _oniBossStateMachine.animator.SetBool("isWalking", true);
-        Debug.Log("Move: Walking");
+
+        // 바로 한번 목적지 설정
+        _agent.SetDestination(_oniBossStateMachine.PlayerTransform.position);
     }
 
     public override void Update()
     {
-        if (skipCheck)
+        if (_skipFirstCheck)
         {
-            skipCheck = false;
+            _skipFirstCheck = false;
             return;
         }
-        
-        var pos = _oniBossStateMachine.transform.position;
-        pos.y = startY;
-        _oniBossStateMachine.transform.position = pos;
-        
-        // Rotate toward player
-        Vector3 toPlayer = _oniBossStateMachine.PlayerTransform.position - _oniBossStateMachine.transform.position;
-        toPlayer.y = 0f;
-        if (toPlayer.sqrMagnitude > 0f)
+
+        _agent.SetDestination(_oniBossStateMachine.PlayerTransform.position);
+
+        if (!_agent.pathPending &&
+            _agent.hasPath &&
+            _agent.remainingDistance > _agent.stoppingDistance)
         {
-            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
-            _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
+            // 아직 이동 중
+            return;
         }
-
-        // Move forward
-        _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
-
-        // If in attack range, pick one of two attacks
-        if (toPlayer.magnitude <= _oniBossStateMachine.AttackRange)
+        if (!_agent.pathPending &&
+            _agent.hasPath &&
+            _agent.remainingDistance <= _agent.stoppingDistance)
         {
+            _agent.isStopped = true;
             _oniBossStateMachine.animator.SetBool("isWalking", false);
-            if (UnityEngine.Random.value < 0.5f)
-                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateAttack1State());
+          
+            // 두 가지 공격 중 랜덤 선택
+            if (Random.value < 0.5f)
+                _oniBossStateMachine.ChangeState(
+                    _oniBossStateMachine.CreateAttack1State()
+                );
             else
-                _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateAttack2State());
+                _oniBossStateMachine.ChangeState(
+                    _oniBossStateMachine.CreateAttack2State()
+                );
         }
     }
-
     public override void Exit()
     {
+
+            _agent.isStopped = true;
         _oniBossStateMachine.animator.SetBool("isWalking", false);
+        Debug.Log("NavMesh Move: Stop Walking");
     }
 }
 
 // 3) Attack1 State
 public class Boss1NorAttackState : OniBossState
 {
-    private float startY;
     
     public Boss1NorAttackState(OniBossStateMachine m) : base(m) { }
 
     public override void Enter()
     {
-        startY = _oniBossStateMachine.transform.position.y;
         
         _oniBossStateMachine.animator.SetTrigger("normalPunch");
         _oniBossStateMachine.EnableLeftAttack();
@@ -103,7 +117,6 @@ public class Boss1NorAttackState : OniBossState
     public override void Update()
     {
         var pos = _oniBossStateMachine.transform.position;
-        pos.y = startY;
         _oniBossStateMachine.transform.position = pos;
     }
 }
@@ -111,13 +124,10 @@ public class Boss1NorAttackState : OniBossState
 // 4) Attack2 State
 public class Boss1NorAttack2State : OniBossState
 {
-    private float startY;
     public Boss1NorAttack2State(OniBossStateMachine m) : base(m) { }
 
     public override void Enter()
     {
-        startY = _oniBossStateMachine.transform.position.y;
-        
         _oniBossStateMachine.animator.SetTrigger("bigPunch");
         _oniBossStateMachine.EnableLeftAttack();
         Debug.Log("Attack2: bigPunch");
@@ -125,12 +135,10 @@ public class Boss1NorAttack2State : OniBossState
     public override void Update()
     {
         var pos = _oniBossStateMachine.transform.position;
-        pos.y = startY;
         _oniBossStateMachine.transform.position = pos;
     }
 }
 
-// 5) Die State (stub)
 
 // 2페이즈 시작
 public class Boss2PhaseStartState : OniBossState
@@ -156,68 +164,70 @@ public class Boss2PhaseStartState : OniBossState
 // 2페이즈 플레이어 추적
 public class MoveToPlayer2PhaseState : OniBossState
 {
-    private float startY;
-    bool skipCheck;    
-    float r = Random.value;
-    public MoveToPlayer2PhaseState(OniBossStateMachine m) : base(m) { }
+    private NavMeshAgent _agent;
+    private bool  _skipFirstCheck;
+
+    public MoveToPlayer2PhaseState(OniBossStateMachine m) : base(m)
+    {
+        _agent = m.GetComponent<NavMeshAgent>();
+    }
 
     public override void Enter()
     {
-        startY = -0.02f;
-        skipCheck = true;
+        _skipFirstCheck = true;
+        _agent.isStopped        = false;
+        _agent.speed            = _oniBossStateMachine.MoveSpeed;
+        _agent.angularSpeed     = _oniBossStateMachine.RotationSpeed;
+        _agent.stoppingDistance = _oniBossStateMachine.AttackRange;
         _oniBossStateMachine.animator.SetBool("isWalking2Phase", true);
-        Debug.Log("Move: Walking2");
+
+        // 바로 한번 목적지 설정
+        _agent.SetDestination(_oniBossStateMachine.PlayerTransform.position);
     }
 
     public override void Update()
     {
-        if (skipCheck)
+        if (_skipFirstCheck)
         {
-            skipCheck = false;
+            _skipFirstCheck = false;
+            // 그 다음부터 매 프레임 목적지 갱신
             return;
         }
+        // 플레이어 위치를 목적지로 설정
+        _agent.SetDestination(_oniBossStateMachine.PlayerTransform.position);
         
-        var pos = _oniBossStateMachine.transform.position;
-        pos.y = startY;
-        _oniBossStateMachine.transform.position = pos;
-        
-        // Rotate toward player
-        Vector3 toPlayer = _oniBossStateMachine.PlayerTransform.position - _oniBossStateMachine.transform.position;
-        toPlayer.y = 0f;
-        if (toPlayer.sqrMagnitude > 0f)
+        if (!_agent.pathPending &&
+            _agent.hasPath &&
+            _agent.remainingDistance > _agent.stoppingDistance)
         {
-            Quaternion target = Quaternion.LookRotation(toPlayer.normalized);
-            _oniBossStateMachine.transform.rotation = Quaternion.Slerp(_oniBossStateMachine.transform.rotation, target, _oniBossStateMachine.RotationSpeed * Time.deltaTime);
+
+            return;
         }
 
-        // Move forward
-        _oniBossStateMachine.transform.position += _oniBossStateMachine.transform.forward * _oniBossStateMachine.MoveSpeed * Time.deltaTime;
-
-        // If in attack range, pick one of two attacks
-        if (toPlayer.magnitude <= _oniBossStateMachine.AttackRange)
+        if (!_agent.pathPending && 
+            _agent.remainingDistance <= _oniBossStateMachine.AttackRange)
         {
+            _agent.isStopped = true;
             _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);
-            if (r < 0.33f)
+            if (Random.value < 0.33f)
             {
-                // 50%
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2NorAttack());
             }
-            else if (r < 0.67f)
+            else if (Random.value < 0.67f)
             {
-                // 30%
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2ComboAttack());
             }
             else
             {
-                // 20%
                 _oniBossStateMachine.ChangeState(_oniBossStateMachine.CreateBoss2SmashAttack());
             }
         }
     }
-
     public override void Exit()
     {
-        _oniBossStateMachine.animator.SetBool("isWalking2Phase", false);
+        _agent.isStopped = true;
+        _oniBossStateMachine.animator.SetBool("isWalking", false);
+        Debug.Log("NavMesh Move: Stop Walking");
     }
 }
 

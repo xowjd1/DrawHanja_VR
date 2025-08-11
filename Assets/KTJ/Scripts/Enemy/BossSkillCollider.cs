@@ -1,0 +1,20 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Collider))]
+public class BossSkillCollider : MonoBehaviour
+{
+    public int damage = 30;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Player의 체력 스크립트 참조
+            var hp = other.GetComponent<PlayerHealth>();
+            if (hp != null)
+                hp.TakeDamage(damage);
+            Debug.Log("HIT");
+        }
+    }
+}

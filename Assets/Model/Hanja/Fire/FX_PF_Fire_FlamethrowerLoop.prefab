@@ -9688,6 +9688,7 @@ GameObject:
   - component: {fileID: 2903015699252131149}
   - component: {fileID: 8592432927119727088}
   - component: {fileID: 6868675648157955739}
+  - component: {fileID: 2075603149738245695}
   m_Layer: 0
   m_Name: FX_PF_Fire_FlamethrowerLoop
   m_TagString: Untagged
@@ -14640,6 +14641,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2075603149738245695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552334202561338365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d3556730f275c4b8597bfa31ce3ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  destroyOnHit: 1
 --- !u!1 &2973710144592466700
 GameObject:
   m_ObjectHideFlags: 0

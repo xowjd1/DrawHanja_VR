@@ -8,9 +8,10 @@ public class OniStateMachine : MonoBehaviour
     public Transform jarThrowPoint;
     public GameObject jar;
     public Animator animator;
-
-    public float detectionRange = 30f;
+    [HideInInspector] public bool playerHitFightLine;
+    public string fightLineTag = "FightLine";
     
+    public float detectionRange = 30f;
     [SerializeField] private float maxHealth = 100f;
     public float currentHealth;
     [SerializeField] private SphereCollider rightHand;
@@ -22,15 +23,15 @@ public class OniStateMachine : MonoBehaviour
     public float     AttackRange     => attackRange;
     public float     MoveSpeed       => moveSpeed;
     public float     RotationSpeed   => rotationSpeed;
-    private void Awake()
+    
+    void Awake()
     {
-        
-        
+        currentHealth = maxHealth;
     }
-
     private void Start()
     {
         ChangeState(CreateOniDanceState());
+        currentState.Enter();
     }
 
     private void Update()
@@ -38,7 +39,10 @@ public class OniStateMachine : MonoBehaviour
         currentState?.Update();
     }
 
-    public OniState CreateMoveToPlayer()     => new NOMoveToPlayerState(this);
+    public OniState CreateMoveToPlayer()
+    {
+    return new NOMoveToPlayerState(this);
+    }
     
     public void ChangeState(OniState newState)
     {
@@ -105,6 +109,8 @@ public class OniStateMachine : MonoBehaviour
         if (currentHealth == 0)
             ChangeState(CreateOniDieState());
     }
+    
+    
     
     public void EnableRightAttack() => rightHand.enabled = true;
     public void DisableRightAttack() => rightHand.enabled = false;

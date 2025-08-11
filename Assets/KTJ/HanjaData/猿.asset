@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: "\u733F"
   practiceImage: {fileID: 21300000, guid: a9368ead538979442a70240a66d7a425, type: 3}
-  completeImage: {fileID: 21300000, guid: 78fa92d2022931244a539264ba84bae0, type: 3}
+  completeImage: {fileID: 21300000, guid: 37248bd69b805bc429d1a00cd263242e, type: 3}
   pronunciationAudio: {fileID: 8300000, guid: 08120985a460ec64e9a7e3e4d0ee47d4, type: 3}
   japaneseReading: "\u3055\u308B"
   prefabToSpawn: {fileID: 0}

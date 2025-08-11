@@ -12,6 +12,7 @@ TagManager:
   - Synty Small Farm
   - Ax
   - Stick
+  - FightLine
   layers:
   - Default
   - TransparentFX
@@ -30,13 +31,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Interactable
+  - EnemyAttack
+  - Enemy
   - drawingLayerMask
   - Player
-  - 
-  - 
+  - Ground
+  - Sake
   - 
   - 
   - 

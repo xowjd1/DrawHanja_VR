@@ -23,8 +23,8 @@ public class StrokeSequence : MonoBehaviour
             p.sequence = this;
         }
 
-        audioParticle.Visual += audioParticle.PlayLeftVibration;
-        audioParticle.Visual += audioParticle.PlayRightVibration;
+        // audioParticle.Visual += audioParticle.PlayLeftVibration;
+        // audioParticle.Visual += audioParticle.PlayRightVibration;
         audioParticle.Visual += audioParticle.PlayAudio;
         audioParticle.Visual += audioParticle.PlayParticle;
         audioParticle.Visual += audioParticle.DestroyParticle;

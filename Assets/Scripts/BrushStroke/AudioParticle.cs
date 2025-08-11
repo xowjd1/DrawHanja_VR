@@ -6,8 +6,8 @@ using System.Collections.Generic;
 public class AudioParticle : MonoBehaviour
 {
     [Header("Vibration Settings")]
-    [SerializeField] private HapticImpulsePlayer rightControll;
-    [SerializeField] private HapticImpulsePlayer leftControll;
+    // [SerializeField] private HapticImpulsePlayer rightControll;
+    // [SerializeField] private HapticImpulsePlayer leftControll;
     [Range(0, 1)][SerializeField] private float intensity = 0.5f;
     [Range(0, 1)][SerializeField] private float duration = 0.2f;
 
@@ -37,15 +37,15 @@ public class AudioParticle : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    public void PlayLeftVibration()
-    {
-        leftControll.SendHapticImpulse(intensity, duration);
-    }
-
-    public void PlayRightVibration()
-    {
-        rightControll.SendHapticImpulse(intensity, duration);
-    }
+    // public void PlayLeftVibration()
+    // {
+    //     leftControll.SendHapticImpulse(intensity, duration);
+    // }
+    //
+    // public void PlayRightVibration()
+    // {
+    //     rightControll.SendHapticImpulse(intensity, duration);
+    // }
 
     public void PlayAudio()
     {

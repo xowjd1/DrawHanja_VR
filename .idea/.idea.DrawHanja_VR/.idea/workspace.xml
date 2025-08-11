@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
-    </list>
+    <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,12 +19,12 @@
     &quot;assignee&quot;: &quot;xowjd1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/xowjd1/DrawHanja_VR.git",
-    "accountId": "039f266a-0b39-4b41-9f26-ac7f8e5c1874"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
+    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,6 +145,7 @@
       <workItem from="1754541629968" duration="3110000" />
       <workItem from="1754546445923" duration="2705000" />
       <workItem from="1754615725571" duration="494000" />
+      <workItem from="1754808365515" duration="2685000" />
     </task>
     <servers />
   </component>

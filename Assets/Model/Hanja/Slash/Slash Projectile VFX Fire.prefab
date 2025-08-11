@@ -24315,6 +24315,7 @@ GameObject:
   - component: {fileID: 5635197648470848031}
   - component: {fileID: 3685343651415759611}
   - component: {fileID: 2210316546681335965}
+  - component: {fileID: -5074428292470607645}
   m_Layer: 0
   m_Name: Slash Projectile VFX Fire
   m_TagString: Untagged
@@ -29336,6 +29337,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5074428292470607645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895314584313987337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d3556730f275c4b8597bfa31ce3ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  destroyOnHit: 1
 --- !u!1 &7229534016932241542
 GameObject:
   m_ObjectHideFlags: 0

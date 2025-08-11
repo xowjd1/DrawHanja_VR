@@ -14,10 +14,13 @@ public class VisionCompareController : MonoBehaviour
     [Header("한자 데이터베이스")]
     public HanjaDataBase   database;
     
+    
     [Header("UI 컴포넌트")]
+    public GameObject hanjaPracticeGO;
     public Button completeButton;
     public TMP_Text   resultText;
-
+    public RectTransform resultRoot;  
+    private GameObject currentResult;
     string apiKey;
 
     void Awake() {
@@ -27,6 +30,13 @@ public class VisionCompareController : MonoBehaviour
 
     void Start() {
         completeButton.onClick.AddListener(OnCompleteClicked);
+    }
+    
+    public void ResetResultUI()
+    {
+        if (currentResult) { Destroy(currentResult); currentResult = null; }
+        if (resultText) { resultText.gameObject.SetActive(false); resultText.text = ""; }
+        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(true);   // 연습 이미지는 보이게
     }
 
     async void OnCompleteClicked()
@@ -104,16 +114,46 @@ public class VisionCompareController : MonoBehaviour
     // 8) 판정
     if (string.IsNullOrEmpty(detected))
     {
+        if (currentResult) { Destroy(currentResult); currentResult = null; }
+        resultText.gameObject.SetActive(true);
         resultText.text = "글자를 인식하지 못했어요.";
     }
     else if (allowed.Contains(detected))
     {
-        resultText.text = $"정답! (인식된: {detected})";
+        var data = database.allowedHanja.FirstOrDefault(k => k.character == detected);
+        if (data != null && data.completeImage != null)
+        {
+            ShowCompleteImage(data);
+            
+            resultText.gameObject.SetActive(true);
+            resultText.text = $"정답!";
+            if (drawing != null) drawing.ClearAllStrokes();
+        }
     }
     else
     {
-        resultText.text = $"틀렸어요 (허용되지 않은 문자: {detected})";
+        if (currentResult) { Destroy(currentResult); currentResult = null; }
+        resultText.gameObject.SetActive(true);
+        resultText.text = $"틀렸어요";
     }
+    
+    void ShowCompleteImage(HanjaData data)
+    {
+        // 기존 결과가 있으면 정리
+        if (currentResult) Destroy(currentResult);
+
+        // 새 Image GO 생성해서 부모에 붙임
+        var go = new GameObject("CompleteImage", typeof(Image));
+        go.transform.SetParent(resultRoot, false);
+
+        var img = go.GetComponent<Image>();
+        img.sprite = data.completeImage;
+        img.SetNativeSize(); // 필요 없으면 제거
+
+        currentResult = go;
+        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(false);
+    }
+    
 }
 
 
