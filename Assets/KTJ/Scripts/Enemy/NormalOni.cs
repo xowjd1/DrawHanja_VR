@@ -190,25 +190,33 @@ public class OniPunchState : OniState
 // 죽음 상태
 public class OniDieState : OniState
 {
-    public OniDieState(OniStateMachine oniStateMachine) : base(oniStateMachine)
-    {
-        
-    }
+    public OniDieState(OniStateMachine oniStateMachine) : base(oniStateMachine) { }
 
     public override void Enter()
     {
         _oniStateMachine.animator.SetTrigger("Die");
+        _oniStateMachine.DisableRightAttack();
+
+        // NavMesh 멈춤
+        var agent = _oniStateMachine.GetComponent<NavMeshAgent>();
+        if (agent)
+        {
+            agent.isStopped = true;
+            agent.ResetPath();
+        }
+
+        // 더 이상 맞지 않도록 콜라이더 비활성(필요시 선택적으로)
+        foreach (var col in _oniStateMachine.GetComponentsInChildren<Collider>())
+            col.enabled = false;
+        
+        _oniStateMachine.StartCoroutine(DespawnAfter(3f)); 
         Debug.Log("oni Die");
     }
 
-    public override void Update()
+    IEnumerator DespawnAfter(float sec)
     {
-        
-    }
-
-    public override void Exit()
-    {
-        
+        yield return new WaitForSeconds(sec);
+        GameObject.Destroy(_oniStateMachine.gameObject);
     }
 }
 

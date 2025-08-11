@@ -16,11 +16,12 @@ public class HanjaUIController : MonoBehaviour
    public GameObject katana;
    public GameObject dango;
 
-   private TreeFalling treeFalling;
-   private QuestManager questManager;
+   [SerializeField] private TreeFalling treeFalling;
+   [SerializeField] private QuestManager questManager;
 
    public GameObject fireVFX;
-   private bool _prevFireActive;
+   public GameObject crossTheRiver;
+   public GameObject tree;
 
    void Start()
    {
@@ -50,6 +51,7 @@ public class HanjaUIController : MonoBehaviour
          ShowPracticeImage(0); 
          ScrollUI.SetActive(true);
       }
+      
 
       // 力 표시 1
       if (other.gameObject == dango)
@@ -57,47 +59,73 @@ public class HanjaUIController : MonoBehaviour
          ShowPracticeImage(1);
          ScrollUI.SetActive(true);
       }
+
+      // 불화 6
+      if (other.gameObject == fireVFX)
+      {
+         ShowPracticeImage(6);
+         ScrollUI.SetActive(true);
+      }
+      // 물수 5 > 강을 건너고 나서
+      if (other.gameObject == crossTheRiver)
+      {
+         ShowPracticeImage(5);
+         ScrollUI.SetActive(true);
+      }
+      // 나무목 4 > 벨 나무랑 상호작용
+      if (other.gameObject == tree)
+      {
+         ShowPracticeImage(4);
+         ScrollUI.SetActive(true);
+      }
    }
 
    private void Update()
    {
       
-      // 斬 표시 
+      /*// 벨참 3 > 나무가 쓰러지면 띄우기
       if (treeFalling.isFalling)
       {
-         ShowPracticeImage(2); 
-      }
-      // 火 표시    
-      if (fireVFX != null)
+         ShowPracticeImage(3);
+         ScrollUI.SetActive(true);
+      }*/
+      
+      // 개견 7
+      if (questManager.quests[0].isCompleted)
       {
-         bool isFireActive = fireVFX.activeSelf;
-         if (isFireActive && !_prevFireActive)
-         {
-            ShowPracticeImage(5);
-            ScrollUI.SetActive(true);
-         }
-         _prevFireActive = isFireActive;
+         ShowPracticeImage(7);
+         ScrollUI.SetActive(true);
       }
-      // 猿 표시 8
+      
+      // 원숭이원 8
       if (questManager.quests[1].isCompleted)
       {
-         ShowPracticeImage(4);
-         
+         ShowPracticeImage(8);
+         ScrollUI.SetActive(true);
       }
-      // 鳥 표시 
+      
+      // 새조 9
       if (questManager.quests[2].isCompleted)
       {
-         ShowPracticeImage(9); 
+         ShowPracticeImage(9);
+         ScrollUI.SetActive(true);
+      }
+      
+      
+      
+   }
+   
+   public void OpenPanelWithIndex(int index)
+   {
+      ShowPracticeImage(index); // 스프라이트 교체
+      var sc = ScrollUI ? ScrollUI.GetComponent<ScrollUI>() : null;
+
+      if (sc != null) sc.Open(index);
+      else {
+         // 혹시 잘못 연결돼 있으면 에러 확인용
+         Debug.LogError("[HanjaUI] ScrollUI 참조에 ScrollUI 컴포넌트가 없습니다.");
+         if (ScrollUI && !ScrollUI.activeSelf) ScrollUI.SetActive(true);
       }
    }
-
-
-
-   // 木 표시 3
-   // 炎 표시 6
-   // 犬 표시 7
-   
-   // 鳥 표시 10
-
 
 }

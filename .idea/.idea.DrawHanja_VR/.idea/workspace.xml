@@ -6,11 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/MouseDraw.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/HanjaData/斬.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/STTManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/STTManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scene/BossTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/NormalOni.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaRecognizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaSTTController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/SpeechToText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/SpeechToText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Brush/GrabBrush.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Brush/GrabBrush.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/FX_PF_Fire_FlamethrowerLoop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/FX_PF_Fire_FlamethrowerLoop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/Fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/Slash Projectile VFX Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/Slash Projectile VFX Fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/slash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/slash.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/DemoScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Brush_Test/Brush_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Brush_Test/Brush_Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/AudioParticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/AudioParticle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/StrokeSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/StrokeSequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/StrokeSequenceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrushStroke/StrokeSequenceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +56,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/DamageDealer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossDamageReceiver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniDamageReceiver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaClickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/GrabSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaCard Explain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@86b6e6a2e286/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@a7356ab905fd/Runtime/GPUDriven/InstanceCullingBatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.core-utils@5b282bc7378d/Runtime/XROrigin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b/Runtime/AffordanceSystem/Receiver/Rendering/ColorMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
@@ -154,7 +182,8 @@
       <workItem from="1754615725571" duration="494000" />
       <workItem from="1754808365515" duration="2685000" />
       <workItem from="1754841272095" duration="762000" />
-      <workItem from="1754850350397" duration="1733000" />
+      <workItem from="1754850350397" duration="3834000" />
+      <workItem from="1754893577144" duration="17534000" />
     </task>
     <servers />
   </component>

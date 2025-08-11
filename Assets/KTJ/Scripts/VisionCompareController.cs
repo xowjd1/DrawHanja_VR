@@ -16,6 +16,7 @@ public class VisionCompareController : MonoBehaviour
     
     
     [Header("UI 컴포넌트")]
+    public GameObject hanjaPracticeGO;
     public Button completeButton;
     public TMP_Text   resultText;
     public RectTransform resultRoot;  
@@ -29,6 +30,13 @@ public class VisionCompareController : MonoBehaviour
 
     void Start() {
         completeButton.onClick.AddListener(OnCompleteClicked);
+    }
+    
+    public void ResetResultUI()
+    {
+        if (currentResult) { Destroy(currentResult); currentResult = null; }
+        if (resultText) { resultText.gameObject.SetActive(false); resultText.text = ""; }
+        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(true);   // 연습 이미지는 보이게
     }
 
     async void OnCompleteClicked()
@@ -119,6 +127,7 @@ public class VisionCompareController : MonoBehaviour
             
             resultText.gameObject.SetActive(true);
             resultText.text = $"정답!";
+            if (drawing != null) drawing.ClearAllStrokes();
         }
     }
     else
@@ -127,6 +136,7 @@ public class VisionCompareController : MonoBehaviour
         resultText.gameObject.SetActive(true);
         resultText.text = $"틀렸어요";
     }
+    
     void ShowCompleteImage(HanjaData data)
     {
         // 기존 결과가 있으면 정리
@@ -141,7 +151,9 @@ public class VisionCompareController : MonoBehaviour
         img.SetNativeSize(); // 필요 없으면 제거
 
         currentResult = go;
+        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(false);
     }
+    
 }
 
 

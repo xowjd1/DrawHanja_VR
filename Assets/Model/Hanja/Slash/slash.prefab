@@ -169,8 +169,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201524975943861013}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.553, y: 0.006, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0.39199162, y: 0.006000042, z: 0.0149850845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -180,7 +180,7 @@ Transform:
   - {fileID: 7058247295302726264}
   - {fileID: 4447700951514464284}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!82 &7800797212239871581
 AudioSource:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -290,15 +290,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -3107,6 +3105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5767130616563182464}
   - component: {fileID: 7219919723336430839}
+  - component: {fileID: 2663527974998550737}
   m_Layer: 0
   m_Name: slash
   m_TagString: Untagged
@@ -3124,8 +3123,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.76, y: 2.47, z: 8.628}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7271598983264756610}
   - {fileID: 2771981148373752218}
@@ -3162,11 +3161,113 @@ MonoBehaviour:
   - {fileID: 4238920939720939062}
   - {fileID: 5953903008574923914}
   - {fileID: 5327674163886813593}
-  flySpeed: 5
-  flyDelay: 3
+  flySpeed: 1
+  flyDelay: 1
+  flyLifetime: 30
+  selfDestructDelay: 3
   targetParticle: {fileID: 1154379492756301782}
   fadeDuration: 0.2
   useFadeOut: 1
+  particleDistanceFromCamera: 2
+  attacknParticle: {fileID: 6761787740402054117, guid: 779ebc352bea7374d8f97d7961c52711, type: 3}
+  addRotation: {x: 0, y: 0, z: 90}
+--- !u!82 &2663527974998550737
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5303576570297216416}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 16fd2bce1fb9b304ca5b05dbbe6505db, type: 3}
+  m_Resource: {fileID: 8300000, guid: 16fd2bce1fb9b304ca5b05dbbe6505db, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 0.2
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 2
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5394678002873418555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,8 +3741,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5699935146808952447}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.576, y: 0.567, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0.41499043, y: 0.5669999, z: 0.0149850845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3651,7 +3752,7 @@ Transform:
   - {fileID: 2232164269512402822}
   - {fileID: 5349065426747160281}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!82 &4159866705610112967
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3665,7 +3766,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3761,15 +3862,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -4067,8 +4166,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6143995893608956817}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.649, y: -0.409, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.81000996, y: -0.40899992, z: 0.014984131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4078,7 +4177,7 @@ Transform:
   - {fileID: 1921206323119481136}
   - {fileID: 5743930701649574125}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!82 &8504548055180413851
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4092,7 +4191,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4188,15 +4287,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -4244,8 +4341,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6330376763767540407}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.203, y: -0.042, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.3640089, y: -0.042000055, z: 0.014986038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4259,7 +4356,7 @@ Transform:
   - {fileID: 3673076847956708905}
   - {fileID: 4661443313044731684}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!82 &6856420464677375817
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4273,7 +4370,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4369,15 +4466,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -4498,8 +4593,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6853591178136925550}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.16100883, y: 0, z: 0.014986992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4507,7 +4602,7 @@ Transform:
   - {fileID: 4087375780587946606}
   - {fileID: 18753170857245639}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &8247288159105985159
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4574,7 +4669,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4670,15 +4765,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -5010,8 +5103,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7111915147212985893}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.16100883, y: 0, z: 0.014986992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5019,7 +5112,7 @@ Transform:
   - {fileID: 7088933390103474256}
   - {fileID: 4450242674040182602}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &3107270524358458860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5086,7 +5179,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5182,15 +5275,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -5240,16 +5331,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7476283317155530297}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.9}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.16100883, y: 0, z: 0.014986992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1080779240739310680}
   - {fileID: 6525507060435575737}
   - {fileID: 600951531719355404}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &5744688752946307579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5316,7 +5407,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5412,15 +5503,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -5470,8 +5559,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7477276727486188696}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.16100883, y: 0, z: 0.014986992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5480,7 +5569,7 @@ Transform:
   - {fileID: 7184188584952374078}
   - {fileID: 1577260572859717870}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &4384654907789856679
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5547,7 +5636,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5643,15 +5732,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -5897,8 +5984,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7737656487339799923}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0.16100883, y: 0, z: 0.014986992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5906,7 +5993,7 @@ Transform:
   - {fileID: 8300868177760795686}
   - {fileID: 8888949447294663827}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &2201844739198939536
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5973,7 +6060,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6069,15 +6156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []
@@ -6704,8 +6789,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8862251668815351673}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.192, y: 0.324, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0.030991554, y: 0.32400012, z: 0.014986038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6718,7 +6803,7 @@ Transform:
   - {fileID: 8771161546002461540}
   - {fileID: 735111335079664758}
   m_Father: {fileID: 5767130616563182464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!82 &3808526243057334973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6732,7 +6817,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6828,15 +6913,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba3badd2c0ee34188c26069557c70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightControll: {fileID: 0}
-  leftControll: {fileID: 0}
   intensity: 0.5
   duration: 0.2
   randomizePitch: 1
   minPitch: 0.8
   maxPitch: 1.2
   volum: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 69c01945e30dcc94aa72f020dcd433c9, type: 3}
   playParticleList:
   - {fileID: 8803876587555374837, guid: 0e57d9cde064eb24c9d0729fce25dff7, type: 3}
   destoryParticleList: []

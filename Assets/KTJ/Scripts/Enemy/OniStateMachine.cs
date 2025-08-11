@@ -23,7 +23,11 @@ public class OniStateMachine : MonoBehaviour
     public float     AttackRange     => attackRange;
     public float     MoveSpeed       => moveSpeed;
     public float     RotationSpeed   => rotationSpeed;
-
+    
+    void Awake()
+    {
+        currentHealth = maxHealth;
+    }
     private void Start()
     {
         ChangeState(CreateOniDanceState());
