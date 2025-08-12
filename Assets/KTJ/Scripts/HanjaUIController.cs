@@ -110,9 +110,6 @@ public class HanjaUIController : MonoBehaviour
          ShowPracticeImage(9);
          ScrollUI.SetActive(true);
       }
-      
-      
-      
    }
    
    public void OpenPanelWithIndex(int index)
