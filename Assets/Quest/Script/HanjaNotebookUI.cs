@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HanjaNotebookUI : MonoBehaviour
 {
@@ -7,12 +8,18 @@ public class HanjaNotebookUI : MonoBehaviour
     public GameObject notebookPanel;
     public Button xButton;
     
+    public string allowedSceneName = "Forest";
     
     void Awake()
     {
+        if (SceneManager.GetActiveScene().name != allowedSceneName)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+        
         openNotebookButton.onClick.AddListener(OpenNotebook);
         xButton.onClick.AddListener(CloseNotebook);
-        notebookPanel.SetActive(false);
     }
 
     void OpenNotebook()
@@ -24,9 +31,5 @@ public class HanjaNotebookUI : MonoBehaviour
     {
         notebookPanel.SetActive(false);
     }
-    
-    public void EnableIfAllQuestsComplete()
-    {
-        openNotebookButton.gameObject.SetActive(true);
-    }
+
 }
