@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/HanjaNotebookUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Script/QuestManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +23,12 @@
     &quot;assignee&quot;: &quot;xowjd1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/xowjd1/DrawHanja_VR.git",
-    "accountId": "039f266a-0b39-4b41-9f26-ac7f8e5c1874"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/xowjd1/DrawHanja_VR.git&quot;,
+    &quot;accountId&quot;: &quot;039f266a-0b39-4b41-9f26-ac7f8e5c1874&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,7 +62,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "LYS",
+    "git-widget-placeholder": "TJ",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

@@ -9754,7 +9754,7 @@ MonoBehaviour:
       m_warpIterations: 4.0248156
       m_warpStrength: 0.05294768
       m_warpOffset: {x: 169.94107, y: -246.80238, z: -703.9893, w: 0}
-    m_noiseSettings: {fileID: 2042856466}
+    m_noiseSettings: {fileID: 1303944442}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -40337,7 +40337,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -40535,7 +40535,7 @@ MonoBehaviour:
     m_globalSpawnerMaskStackRT: {fileID: 0}
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 3
@@ -42246,6 +42246,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8279411460275796674, guid: cf861a1b19d9e314fbf18c5b9a575378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582589626392246690, guid: cf861a1b19d9e314fbf18c5b9a575378, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582589626392246690, guid: cf861a1b19d9e314fbf18c5b9a575378, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582589626392246690, guid: cf861a1b19d9e314fbf18c5b9a575378, type: 3}
+      propertyPath: m_fontColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8692675215966600506, guid: cf861a1b19d9e314fbf18c5b9a575378, type: 3}
@@ -46294,7 +46306,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -52265,7 +52277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1264486538
 Transform:
   m_ObjectHideFlags: 0
@@ -53296,7 +53308,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -54496,6 +54508,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7782479980285445493, guid: 3212fc94a2d38204d94c8406d3582fbf, type: 3}
   m_PrefabInstance: {fileID: 1302337286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1303944442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: 307.6535, y: 1190.4558, z: -108.11755}
+    scale: {x: 1.4390049, y: 1, z: 1.4390049}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":169.94107055664063,"y":-246.80238342285157,"z":-703.9893188476563,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.4861370623111725,"frequency":1.0,"persistence":0.5,"lacunarity":1.021370768547058,"warpIterations":4.024815559387207,"warpStrength":0.05294768139719963,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &1307695857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59282,7 +59318,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -60065,7 +60101,7 @@ MonoBehaviour:
       m_globalSpawnerMaskStackRT: {fileID: 0}
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 4
@@ -60305,7 +60341,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -60752,7 +60788,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -61853,7 +61889,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -80890,7 +80926,7 @@ MonoBehaviour:
       m_globalSpawnerMaskStackRT: {fileID: 0}
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 3
@@ -81373,7 +81409,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -85699,7 +85735,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -85897,7 +85933,7 @@ MonoBehaviour:
     m_globalSpawnerMaskStackRT: {fileID: 0}
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 1
@@ -93353,6 +93389,135 @@ MonoBehaviour:
   - 150
   - 0
   m_additionalCullingDistance: 0
+--- !u!1 &1795227792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795227794}
+  - component: {fileID: 1795227793}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1795227793
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795227792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 81bd2d1d3df500749ba72dbb331b89a5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 81bd2d1d3df500749ba72dbb331b89a5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1795227794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795227792}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -163.6086, y: 36.4399, z: 346.6574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796245070
 GameObject:
   m_ObjectHideFlags: 0
@@ -103216,7 +103381,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -103456,7 +103621,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -103696,7 +103861,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -103936,7 +104101,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -104176,7 +104341,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -104623,7 +104788,7 @@ MonoBehaviour:
     m_imageMasks:
     - m_active: 0
       m_invert: 0
-      m_hasErrors: 0
+      m_hasErrors: 1
       m_influence: 0
       m_operation: 9
       m_blendMode: 0
@@ -107367,7 +107532,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -107565,7 +107730,7 @@ MonoBehaviour:
     m_globalSpawnerMaskStackRT: {fileID: 0}
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 3
@@ -109500,30 +109665,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7782479980285445493, guid: 3212fc94a2d38204d94c8406d3582fbf, type: 3}
   m_PrefabInstance: {fileID: 2040433659}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2042856466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: 307.6535, y: 1190.4558, z: -108.11755}
-    scale: {x: 1.4390049, y: 1, z: 1.4390049}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":169.94107055664063,"y":-246.80238342285157,"z":-703.9893188476563,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.4861370623111725,"frequency":1.0,"persistence":0.5,"lacunarity":1.021370768547058,"warpIterations":4.024815559387207,"warpStrength":0.05294768139719963,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &2051676424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112489,7 +112630,7 @@ MonoBehaviour:
   imageMasks:
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 0
@@ -112678,7 +112819,7 @@ MonoBehaviour:
     m_globalSpawnerMaskStackRT: {fileID: 0}
   - m_active: 0
     m_invert: 0
-    m_hasErrors: 0
+    m_hasErrors: 1
     m_influence: 0
     m_operation: 9
     m_blendMode: 1
@@ -117648,3 +117789,4 @@ SceneRoots:
   - {fileID: 403068722}
   - {fileID: 1041975705}
   - {fileID: 889973399}
+  - {fileID: 1795227794}
