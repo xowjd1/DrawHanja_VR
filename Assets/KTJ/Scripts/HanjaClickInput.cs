@@ -7,7 +7,8 @@ public class HanjaClickInput : MonoBehaviour
 {
     [Header("Ray Source")]
     public Transform rayOrigin;                 // Right Controller 트랜스폼
-    public XRRayInteractor xrRay;               // 있으면 이걸 우선 사용
+    public XRRayInteractor xrRay;  
+    private InputAction _action;
 
     [Header("Input")]
     public InputActionReference triggerAction;
@@ -24,10 +25,16 @@ public class HanjaClickInput : MonoBehaviour
 
     void OnEnable()
     {
-        if (triggerAction) triggerAction.action.Enable();
+        if (triggerAction)
+        {
+            _action = triggerAction.action;
+            _action?.Enable();
+        }
         Debug.Log($"[HanjaClick] OnEnable on '{name}' (GO.active={gameObject.activeInHierarchy})");
     }
-    void OnDisable() { if (triggerAction) triggerAction.action.Disable(); }
+
+// OnDisable
+    void OnDisable() { _action?.Disable(); }
     void Start()
     {
         if (ui == null)
@@ -51,9 +58,11 @@ public class HanjaClickInput : MonoBehaviour
     }
     void Update()
 {
-    // 하트비트: 정말 Update가 안 도는지 확인
-    if (Time.frameCount % 30 == 0)
-        Debug.Log("[HanjaClick] Update heartbeat");
+    if (_action == null)
+    {
+        Debug.LogWarning("[HanjaClick] _action null");
+        return;
+    }
 
     if (ui == null)
     {
@@ -72,23 +81,14 @@ public class HanjaClickInput : MonoBehaviour
         Debug.LogWarning("[HanjaClick] Update: triggerAction.action == null (InputAction asset 연결 확인).");
         return;
     }
-    if (!action.enabled)
+    if (!_action.enabled)
     {
-        Debug.LogWarning("[HanjaClick] Update: action.enabled == false → OnEnable에서 Enable됐는지, 플레이 중 에러로 비활성인지 확인.");
-        // 계속 진행은 하되 값 읽기 시도
+        _action.Enable();
+        Debug.LogWarning("[HanjaClick] action was disabled → re-enabled");
     }
 
     float val = 0f;
-    try
-    {
-        val = action.ReadValue<float>();
-    }
-    catch (System.Exception e)
-    {
-        Debug.LogWarning($"[HanjaClick] ReadValue 예외: {e.Message}");
-        // 여기서 바로 리턴하지 말고 최소 디버그만 남기고 탈출
-        return;
-    }
+    try { val = _action.ReadValue<float>(); } catch { return; }
 
     bool pressed = val > pressThreshold;
     // 상태 로그 (스팸 방지: 눌림 엣지에만 출력)

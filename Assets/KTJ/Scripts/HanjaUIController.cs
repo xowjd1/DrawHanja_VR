@@ -1,128 +1,87 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HanjaUIController : MonoBehaviour
 {
-   public HanjaDataBase hanjaDataBase;
-   public Image hanjaImageUI;
-   public GameObject ScrollUI;
+    public HanjaDataBase hanjaDataBase;
+    public Image hanjaImageUI;
+    public ScrollUI scrollUI;
 
-   [Header("한자 인덱스")]
-   public int currentHanjaIndex = 0;
+    // DB 인덱스
+    const int IDX_KATANA = 0;   // 刀
+    const int IDX_DANGO  = 1;   // 力
+    const int IDX_KIRU   = 2;
+    const int IDX_MOK    = 3;   // 木
+    const int IDX_SUI    = 4;   // 水
+    const int IDX_HI     = 5;   // 火
+    const int IDX_INU    = 6;   // 犬
+    const int IDX_SARU   = 7;   // 猿
+    const int IDX_TORI   = 8;   // 鳥
 
+    public int currentHanjaIndex = 0;
 
-   public GameObject katana;
-   public GameObject dango;
+    public GameObject katana, dango, fireVFX, crossTheRiver, tree;
+    [SerializeField] private TreeFalling treeFalling;
+    [SerializeField] private QuestManager questManager;
 
-   [SerializeField] private TreeFalling treeFalling;
-   [SerializeField] private QuestManager questManager;
+    bool openedDog, openedMonkey, openedBird;
 
-   public GameObject fireVFX;
-   public GameObject crossTheRiver;
-   public GameObject tree;
+    void Start()
+    {
+        ShowPracticeImage(currentHanjaIndex);
+        if (scrollUI) scrollUI.gameObject.SetActive(false);
+    }
 
-   void Start()
-   {
-      ShowPracticeImage(currentHanjaIndex);
-      ScrollUI.SetActive(false);
-   }
+    public void ShowPracticeImage(int index)
+    {
+        if (!hanjaDataBase || !hanjaImageUI) return;
+        if (index < 0 || index >= hanjaDataBase.allowedHanja.Length) return;
+        var hanjaData = hanjaDataBase.allowedHanja[index];
+        if (hanjaData && hanjaData.practiceImage) hanjaImageUI.sprite = hanjaData.practiceImage;
+    }
 
-   public void ShowPracticeImage(int index)
-   {
-      if (hanjaDataBase == null || hanjaImageUI == null) return;
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == katana)               OpenPanelWithIndex(IDX_KATANA);
+        else if (other.gameObject == dango)           OpenPanelWithIndex(IDX_DANGO);
+        else if (other.gameObject == fireVFX)         OpenPanelWithIndex(IDX_HI);
+        else if (other.gameObject == crossTheRiver)   OpenPanelWithIndex(IDX_SUI);
+        else if (other.gameObject == tree)            OpenPanelWithIndex(IDX_MOK);
+    }
 
-      if (index >= 0 && index < hanjaDataBase.allowedHanja.Length)
-      {
-         var hanjaData = hanjaDataBase.allowedHanja[index];
-         if (hanjaData != null && hanjaData.practiceImage != null)
-         {
-            hanjaImageUI.sprite = hanjaData.practiceImage;
-         }
-      }
-   }
+    void Update()
+    {
+        if (!questManager) return;
 
-   private void OnTriggerEnter(Collider other)
-   {
-      // 刀 표시 0
-      if (other.gameObject == katana)
-      {
-         ShowPracticeImage(0); 
-         ScrollUI.SetActive(true);
-      }
-      
+        // ✅ 퀘스트 완료 시 1회만, 1.5초 뒤 오픈
+        if (!openedDog && questManager.quests[0].isCompleted)
+        {
+            openedDog = true;
+            StartCoroutine(OpenAfterDelay(IDX_INU, 1.5f));
+        }
+        if (!openedMonkey && questManager.quests[1].isCompleted)
+        {
+            openedMonkey = true;
+            StartCoroutine(OpenAfterDelay(IDX_SARU, 1.5f));
+        }
+        if (!openedBird && questManager.quests[2].isCompleted)
+        {
+            openedBird = true;
+            StartCoroutine(OpenAfterDelay(IDX_TORI, 1.5f));
+        }
+    }
 
-      // 力 표시 1
-      if (other.gameObject == dango)
-      {
-         ShowPracticeImage(1);
-         ScrollUI.SetActive(true);
-      }
+    IEnumerator OpenAfterDelay(int index, float delaySeconds)
+    {
+        yield return new WaitForSecondsRealtime(delaySeconds); // timeScale 0이어도 대기
+        OpenPanelWithIndex(index);
+    }
 
-      // 불화 6
-      if (other.gameObject == fireVFX)
-      {
-         ShowPracticeImage(6);
-         ScrollUI.SetActive(true);
-      }
-      // 물수 5 > 강을 건너고 나서
-      if (other.gameObject == crossTheRiver)
-      {
-         ShowPracticeImage(5);
-         ScrollUI.SetActive(true);
-      }
-      // 나무목 4 > 벨 나무랑 상호작용
-      if (other.gameObject == tree)
-      {
-         ShowPracticeImage(4);
-         ScrollUI.SetActive(true);
-      }
-   }
-
-   private void Update()
-   {
-      
-      /*// 벨참 3 > 나무가 쓰러지면 띄우기
-      if (treeFalling.isFalling)
-      {
-         ShowPracticeImage(3);
-         ScrollUI.SetActive(true);
-      }*/
-      
-      // 개견 7
-      if (questManager.quests[0].isCompleted)
-      {
-         ShowPracticeImage(7);
-         ScrollUI.SetActive(true);
-      }
-      
-      // 원숭이원 8
-      if (questManager.quests[1].isCompleted)
-      {
-         ShowPracticeImage(8);
-         ScrollUI.SetActive(true);
-      }
-      
-      // 새조 9
-      if (questManager.quests[2].isCompleted)
-      {
-         ShowPracticeImage(9);
-         ScrollUI.SetActive(true);
-      }
-   }
-   
-   public void OpenPanelWithIndex(int index)
-   {
-      ShowPracticeImage(index); // 스프라이트 교체
-      var sc = ScrollUI ? ScrollUI.GetComponent<ScrollUI>() : null;
-
-      if (sc != null) sc.Open(index);
-      else {
-         // 혹시 잘못 연결돼 있으면 에러 확인용
-         Debug.LogError("[HanjaUI] ScrollUI 참조에 ScrollUI 컴포넌트가 없습니다.");
-         if (ScrollUI && !ScrollUI.activeSelf) ScrollUI.SetActive(true);
-      }
-   }
-
+    public void OpenPanelWithIndex(int index)
+    {
+        ShowPracticeImage(index);
+        if (scrollUI != null) scrollUI.Open(index);
+        else Debug.LogError("[HanjaUI] scrollUI 미할당");
+    }
 }

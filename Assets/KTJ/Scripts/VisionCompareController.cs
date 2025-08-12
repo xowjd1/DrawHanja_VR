@@ -20,20 +20,41 @@ public class VisionCompareController : MonoBehaviour
     public TMP_Text resultText;
 
     string apiKey;
+    
+    Vector2 _defaultSizeDelta;
+    Vector3 _defaultScale;
+    bool    _defaultPreserveAspect;
 
     void Awake() {
         apiKey = Resources.Load<TextAsset>("google_api_key").text.Trim();
         Debug.Log($"[Vision] Loaded API Key (length={apiKey.Length})");
+        if (practiceImageUI != null) {
+            var rt = practiceImageUI.rectTransform;
+            _defaultSizeDelta     = rt.sizeDelta;
+            _defaultScale         = rt.localScale;
+            _defaultPreserveAspect= practiceImageUI.preserveAspect;
+        }
     }
 
     void Start() {
         completeButton.onClick.AddListener(OnCompleteClicked);
     }
 
-    public void ResetResultUI()
+    public void ResetResultUI(Sprite practiceSprite = null)
     {
         // 결과 텍스트 숨김
         if (resultText) { resultText.gameObject.SetActive(false); resultText.text = ""; }
+        if (practiceImageUI)
+        {
+            // ✅ 크기/스케일/옵션 원상복구
+            var rt = practiceImageUI.rectTransform;
+            rt.sizeDelta = _defaultSizeDelta;
+            rt.localScale = _defaultScale;
+            practiceImageUI.preserveAspect = _defaultPreserveAspect;
+            
+            if (practiceSprite) practiceImageUI.sprite = practiceSprite;
+
+        }
 
     }
 
@@ -113,8 +134,8 @@ public class VisionCompareController : MonoBehaviour
                 if (practiceImageUI != null)
                 {
                     practiceImageUI.sprite = data.completeImage;
-                    // 필요하면 크기 맞춤
-                    // practiceImageUI.SetNativeSize();
+                    practiceImageUI.preserveAspect = true;
+                    practiceImageUI.SetNativeSize();
                 }
 
                 if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "정답!"; }
