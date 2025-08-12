@@ -60,15 +60,6 @@ public class QuestManager : MonoBehaviour
             currentQuestIndex++;
             questPanel.SetActive(false);
         }
-        
-        if (AllQuestsCompleted())
-        {
-            var notebookUI = FindObjectOfType<HanjaNotebookUI>();
-            if (notebookUI != null)
-            {
-                notebookUI.EnableIfAllQuestsComplete();
-            }
-        }
     }
     
     private bool AllQuestsCompleted()
