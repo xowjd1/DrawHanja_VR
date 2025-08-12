@@ -7,17 +7,20 @@ using UnityEngine.InputSystem;
 public class UIDrawing : MonoBehaviour
 {
     [Header("UI")]
-    public RawImage drawingImage;    // 그릴 대상 RawImage
+    public RawImage drawingImage;    
     public int textureWidth = 512;
     public int textureHeight = 512;
     public int brushSize = 4;
 
     [Header("VR Input (BLS XR Origin)")]
-    public InputActionReference triggerAction;  // BLS Input Action Asset의 Trigger
-    public Transform controllerTransform;       // Right Controller (Ray Origin)
+    public InputActionReference triggerAction;  
+    public Transform controllerTransform; 
     public LayerMask drawingLayerMask = ~0;
     [Range(0.01f, 1f)] public float uvSmoothing = 0.2f;
 
+    public RectTransform cursorUI;
+    public float cursorUISize = 12f;
+    
     // 내부 상태
     Texture2D drawTex;
     bool isDrawing;
@@ -42,20 +45,38 @@ public class UIDrawing : MonoBehaviour
     void OnDisable()
     {
         if (triggerAction) triggerAction.action.Disable();
+        HideCursorUI();
     }
 
     void Start()
     {
         EnsureTexture();
+        HideCursorUI();
     }
 
     void Update()
     {
-        if (triggerAction == null || controllerTransform == null) return;
+        if (triggerAction == null || controllerTransform == null)
+        {
+            HideCursorUI();
+            return;
+        }
+
         float val = 0f;
-        try { val = triggerAction.action.ReadValue<float>(); } catch { }
+        try { val = triggerAction.action.ReadValue<float>(); } catch { HideCursorUI(); return; }
 
         bool pressed = val > 0.5f;
+
+        if (!pressed)
+        {
+            // ✨ 안 그릴 때: 커서만 표시
+            if (isDrawing) isDrawing = false; // 드로잉 종료 처리
+            UpdateHoverCursor();
+            return;
+        }
+
+        // 🎨 그리는 중: 커서는 숨기고, 기존 드로잉 로직 수행
+        HideCursorUI();
 
         if (pressed && !isDrawing)
         {
@@ -65,9 +86,9 @@ public class UIDrawing : MonoBehaviour
             strokes.Add(new List<Vector2>());
         }
 
-        if (isDrawing && pressed) TryDrawWithRay();
-        if (isDrawing && !pressed) isDrawing = false;
+        if (isDrawing) TryDrawWithRay(); // 기존 함수: 실제로 선을 그리는 부분
     }
+
 
     void TryDrawWithRay()
     {
@@ -78,10 +99,18 @@ public class UIDrawing : MonoBehaviour
 
         if (Physics.Raycast(pos, dir, out var hit, Mathf.Infinity, drawingLayerMask))
         {
+            // 커서 갱신: 드로잉 대상에 맞았을 때만 표시
+            UpdateCursorUIAtHit(hit.point, hit.collider == targetCollider);
+
             if (hit.collider == targetCollider)
                 DrawAtWorldHit(hit.point);
         }
+        else
+        {
+            UpdateCursorUIAtHit(Vector3.zero, false); // 못 맞추면 숨김
+        }
     }
+
 
     void DrawAtWorldHit(Vector3 worldPoint)
     {
@@ -229,4 +258,59 @@ public class UIDrawing : MonoBehaviour
         return !(float.IsNaN(v.x) || float.IsNaN(v.y) || float.IsNaN(v.z) ||
                  float.IsInfinity(v.x) || float.IsInfinity(v.y) || float.IsInfinity(v.z));
     }
+    void UpdateCursorUIAtHit(Vector3 worldPoint, bool visible)
+    {
+        if (!cursorUI || !drawingImage) return;
+
+        if (!visible)
+        {
+            if (cursorUI.gameObject.activeSelf) cursorUI.gameObject.SetActive(false);
+            return;
+        }
+
+        var rt = drawingImage.rectTransform;
+        Vector3 local = rt.InverseTransformPoint(worldPoint);
+
+        float w = rt.rect.width;
+        float h = rt.rect.height;
+
+        float u = Mathf.Clamp01((local.x + rt.pivot.x * w) / w);
+        float v = Mathf.Clamp01((local.y + rt.pivot.y * h) / h);
+
+        Vector2 anchored = new(
+            (u - rt.pivot.x) * w,
+            (v - rt.pivot.y) * h
+        );
+
+        cursorUI.anchoredPosition = anchored;
+        cursorUI.sizeDelta = Vector2.one * cursorUISize;
+
+        if (!cursorUI.gameObject.activeSelf) cursorUI.gameObject.SetActive(true);
+    }
+
+    void HideCursorUI()
+    {
+        if (cursorUI && cursorUI.gameObject.activeSelf) cursorUI.gameObject.SetActive(false);
+    }
+    
+    void UpdateHoverCursor()
+    {
+        if (!controllerTransform) { HideCursorUI(); return; }
+
+        var pos = controllerTransform.position;
+        var dir = controllerTransform.forward;
+        if (!IsValid(pos) || !IsValid(dir)) { HideCursorUI(); return; }
+
+        if (Physics.Raycast(pos, dir, out var hit, Mathf.Infinity, drawingLayerMask))
+        {
+            // 드로잉 대상(우리 RawImage 콜라이더)을 맞춘 경우에만 표시
+            UpdateCursorUIAtHit(hit.point, hit.collider == targetCollider);
+        }
+        else
+        {
+            HideCursorUI();
+        }
+    }
+
+
 }
