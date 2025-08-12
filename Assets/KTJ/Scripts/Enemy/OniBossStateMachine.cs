@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OniBossStateMachine : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     public float currentHealth;
     private bool  phase2Triggered = false;
+
     [Header("Weapon Mounts")]
     [SerializeField] private Transform backMount; 
     [SerializeField] private Transform handMount;
@@ -22,45 +24,49 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private SphereCollider rightHand;
     [SerializeField] private BoxCollider bossWeapon;
 
-    [Header("Settings")]
-    public float delay              = 3f;
-    [SerializeField] private float detectionRange    = 10f;
-    [SerializeField] private float attackRange       = 2f;
-    [SerializeField] private float moveSpeed         = 6f;
-    [SerializeField] private float rotationSpeed     = 5f;
-    
     [SerializeField] private GameObject smashVFXPrefab;
     [SerializeField] private SphereCollider smashCollider;
     [SerializeField] private Transform smashVFXSpawnPoint;
-    
-    [Header("Audio")]
-    public AudioSource audioSource;      // 보스 루트에 붙은 AudioSource 할당
-    public AudioClip sfxIntro;           // 인트로 SFX
-    public AudioClip sfxPhase2Start;     // 2페이즈 시작 SFX
-    public AudioClip sfxSmash;           // 스매시 SFX (애니 이벤트로 호출)
 
-    
+    [Header("Settings")]
+    [SerializeField] private float detectionRange = 10f;
+    [SerializeField] private float attackRange    = 2f;
+    [SerializeField] private float moveSpeed      = 6f;
+    [SerializeField] private float rotationSpeed  = 5f;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sfxIntro;        // 인트로
+    public AudioClip sfxPhase2Start;  // 2페 시작
+    public AudioClip sfxSmash;        // 스매시(애니 이벤트로 호출)
+
     [Header("Scene Transition on Death")]
-    public string nextSceneName = "NextScene"; // ← 인스펙터에서 지정
-    public float dieExtraDelay = 0.6f;         // 애니 끝난 뒤 추가로 잠깐 멈춤
-    public CanvasGroup fadeCanvas;             // 전체화면 검은 이미지(+CanvasGroup)
-    public float fadeDuration = 0.8f;  
-    
-    
+    public string nextSceneName = "NextScene";
+    public float dieExtraDelay  = 0.6f;   // 애니 끝난 직후 잠깐 대기
+    public CanvasGroup fadeCanvas;        // 검은 화면 CanvasGroup (alpha=0 시작)
+    public float fadeDuration   = 0.8f;
+
+    [Header("Interstitial UI (optional)")]
+    public CanvasGroup interstitialGroup; // 중간에 보여줄 패널 (alpha=0 / 비활성 시작)
+    public Image interstitialImage;
+    public Sprite interstitialSprite;
+    public float interstitialDelayBefore = 0.1f;
+    public float interstitialFadeIn      = 0.35f;
+    public float interstitialHoldTime    = 1.2f;
+    public bool  interstitialWaitForInput = false;
+
     // 1페이즈
-    public OniBossState CreateIntroState()      => new BossIntroState(this);
-    public OniBossState CreateMoveState()       => new MoveToPlayerState(this);
-    public OniBossState CreateAttack1State()    => new Boss1NorAttackState(this);
-    public OniBossState CreateAttack2State()    => new Boss1NorAttack2State(this);
-    
-    
+    public OniBossState CreateIntroState()         => new BossIntroState(this);
+    public OniBossState CreateMoveState()          => new MoveToPlayerState(this);
+    public OniBossState CreateAttack1State()       => new Boss1NorAttackState(this);
+    public OniBossState CreateAttack2State()       => new Boss1NorAttack2State(this);
     // 2페이즈
-    public OniBossState CreatePhase2Start()     => new Boss2PhaseStartState(this);
-    public OniBossState CreateMoveToPlayer2Phase()     => new MoveToPlayer2PhaseState(this);
+    public OniBossState CreatePhase2Start()        => new Boss2PhaseStartState(this);
+    public OniBossState CreateMoveToPlayer2Phase() => new MoveToPlayer2PhaseState(this);
     public OniBossState CreateBoss2NorAttack()     => new Boss2NorAttackState(this);
-    public OniBossState CreateBoss2ComboAttack()     => new Boss2ComboAttackState(this);
-    public OniBossState CreateBoss2SmashAttack()     => new Boss2SmashAttackState(this);
-    public OniBossState CreateDieState()        => new BossDieState(this);
+    public OniBossState CreateBoss2ComboAttack()   => new Boss2ComboAttackState(this);
+    public OniBossState CreateBoss2SmashAttack()   => new Boss2SmashAttackState(this);
+    public OniBossState CreateDieState()           => new BossDieState(this);
 
     // Exposed properties
     public Transform PlayerTransform => player.transform;
@@ -90,9 +96,9 @@ public class OniBossStateMachine : MonoBehaviour
         currentState = newState;
         currentState.Enter();
     }
+
     public void OnPhase2StartFinished()
     {
-        // 2페 추적 스테이트로 넘어간다
         ChangeState(CreateMoveToPlayer2Phase());
     }
     
@@ -105,11 +111,11 @@ public class OniBossStateMachine : MonoBehaviour
             ChangeState(CreateMoveState());
         }
     }
+
     public void On2PhaseAttackFinished()
     {
         if (currentState is Boss2NorAttackState || currentState is Boss2ComboAttackState || currentState is Boss2SmashAttackState)
         {
-
             ChangeState(CreateMoveToPlayer2Phase());
         }
     }
@@ -119,7 +125,7 @@ public class OniBossStateMachine : MonoBehaviour
         if (currentHealth <= 0) return;
         currentHealth = Mathf.Max(0, currentHealth - dmg);
 
-        // 체력 50% 이하 & 아직 2페 진입 안 했으면
+        // 2페 돌입
         if (!phase2Triggered && currentHealth <= maxHealth * 0.5f)
         {
             phase2Triggered = true;
@@ -132,11 +138,11 @@ public class OniBossStateMachine : MonoBehaviour
     
     public void EquipWeaponToHand()
     {
-        // 무기를 등에서 손으로 옮기기
+        if (!weapon || !handMount) return;
         weapon.transform.SetParent(handMount, false);
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.identity;
-        weapon.transform.localScale = Vector3.one;
+        weapon.transform.localScale    = Vector3.one;
     }
     
     public void SmashVFX()
@@ -173,40 +179,38 @@ public class OniBossStateMachine : MonoBehaviour
         var src = audioSource;
         if (!src)
         {
-            // 안전장치: 없으면 자동 부착
             src = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
-            src.playOnAwake = false;
-            src.spatialBlend = 1f;   // 3D 사운드
+            src.playOnAwake  = false;
+            src.spatialBlend = 1f;   // 3D
         }
         src.PlayOneShot(clip, volume);
     }
 
-    // 애니메이션 이벤트에서 호출할 함수
-    // (Smash 애니 타이밍 프레임에 이 함수명을 이벤트로 넣어주면 됨)
+    // 애니메이션 이벤트(스매시 임팩트 프레임)에서 호출
     public void Anim_PlaySmashSfx()
     {
         PlaySfx(sfxSmash);
     }
 
-
+    // 죽음 애니 끝 → 페이드아웃 → 인터스티셜(옵션) → 다음 씬
     public void StartLoadNextSceneAfterDeath(string dieStateName = "Die", int layer = 0)
     {
         StartCoroutine(Co_LoadNextScene(dieStateName, layer));
     }
 
-    System.Collections.IEnumerator Co_LoadNextScene(string dieStateName, int layer)
+    private IEnumerator Co_LoadNextScene(string dieStateName, int layer)
     {
-        // 1) 현재 레이어가 Die로 진입할 때까지 대기
         var anim = animator;
         float t = 0f, timeout = 10f;
         yield return null; // 트리거 적용 프레임 넘기기
 
+        // 1) 죽음 상태 진입 대기
         while (!anim.GetCurrentAnimatorStateInfo(layer).IsName(dieStateName) && t < timeout)
         {
             t += Time.unscaledDeltaTime;
             yield return null;
         }
-        // 2) Die normalizedTime 거의 끝날 때까지 대기
+        // 2) 죽음 애니 끝날 때까지 대기
         while (anim.GetCurrentAnimatorStateInfo(layer).normalizedTime < 0.98f && t < timeout)
         {
             t += Time.unscaledDeltaTime;
@@ -217,42 +221,73 @@ public class OniBossStateMachine : MonoBehaviour
         if (dieExtraDelay > 0f)
             yield return new WaitForSecondsRealtime(dieExtraDelay);
 
-        // 4) 페이드아웃
+        // 4) 페이드아웃(검은 화면)
         if (fadeCanvas)
         {
             fadeCanvas.gameObject.SetActive(true);
             fadeCanvas.blocksRaycasts = true;
-            float a = 0f;
-            while (a < 1f)
-            {
-                a += Time.unscaledDeltaTime / Mathf.Max(0.01f, fadeDuration);
-                fadeCanvas.alpha = Mathf.Clamp01(a);
-                yield return null;
-            }
+            yield return FadeCanvasGroup(fadeCanvas, 1f, fadeDuration);
         }
 
-        // 5) 씬 로드
+        // 5) 인터스티셜(있으면)
+        if (interstitialGroup && interstitialImage)
+        {
+            if (interstitialDelayBefore > 0f)
+                yield return new WaitForSecondsRealtime(interstitialDelayBefore);
+
+            if (interstitialSprite) interstitialImage.sprite = interstitialSprite;
+
+            interstitialGroup.gameObject.SetActive(true);
+            interstitialGroup.alpha = 0f;
+            interstitialGroup.blocksRaycasts = true;
+
+            // 페이드 인
+            yield return FadeCanvasGroup(interstitialGroup, 1f, interstitialFadeIn);
+
+            // 입력 대기 or 고정 시간 유지
+            if (interstitialWaitForInput)
+            {
+                while (!Input.anyKeyDown) yield return null;
+            }
+            else
+            {
+                yield return new WaitForSecondsRealtime(Mathf.Max(0f, interstitialHoldTime));
+            }
+
+            // (선택) 인터스티셜 페이드아웃 하고 싶다면 주석 해제
+            // yield return FadeCanvasGroup(interstitialGroup, 0f, 0.25f);
+        }
+
+        // 6) 다음 씬 로드
         if (!string.IsNullOrEmpty(nextSceneName))
             SceneManager.LoadSceneAsync(nextSceneName);
         else
             Debug.LogWarning("[Boss] nextSceneName이 비어있습니다.");
     }
 
-    // 애니메이션 이벤트로도 부를 수 있게(선택)
-    public void Anim_OnBossDeathFinished()
+    private IEnumerator FadeCanvasGroup(CanvasGroup cg, float target, float duration)
     {
-        StartLoadNextSceneAfterDeath();
+        if (!cg) yield break;
+        float start = cg.alpha;
+        if (duration <= 0f) { cg.alpha = target; yield break; }
+
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+            cg.alpha = Mathf.Lerp(start, target, t / duration);
+            yield return null;
+        }
+        cg.alpha = target;
     }
-    
-    
-    
-    public void EnableLeftAttack()  => leftHand.enabled = true;
-    public void EnableRightAttack() => rightHand.enabled = true;
-    public void DisableLeftAttack() => leftHand.enabled = false;
+
+    // 공격 판정 토글
+    public void EnableLeftAttack()   => leftHand.enabled = true;
+    public void EnableRightAttack()  => rightHand.enabled = true;
+    public void DisableLeftAttack()  => leftHand.enabled = false;
     public void DisableRightAttack() => rightHand.enabled = false;
     public void EnableWeaponAttack() => bossWeapon.enabled = true;
-    public void DisableWeaponAttack() => bossWeapon.enabled = false;
-    public void EnableSmashAttack() => smashCollider.enabled = true;
+    public void DisableWeaponAttack()=> bossWeapon.enabled = false;
+    public void EnableSmashAttack()  => smashCollider.enabled = true;
     public void DisableSmashAttack() => smashCollider.enabled = false;
-
 }
