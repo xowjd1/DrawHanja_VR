@@ -10768,6 +10768,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c2ffcf1d5b5638b408a13b98b3fcad4b, type: 3}
   m_PrefabInstance: {fileID: 1765971826}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &383435809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383435810}
+  m_Layer: 0
+  m_Name: book
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &383435810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383435809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61615, y: 0.808, z: 0.3445}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8843420782263337731}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &383717131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b04b41be3a53fc49a856987d09d03c5, type: 3}
@@ -74527,7 +74559,7 @@ Transform:
   m_GameObject: {fileID: 8210612925768751545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70207, z: -0, w: 0.71210796}
-  m_LocalPosition: {x: -0.658, y: 0.68, z: 0.288}
+  m_LocalPosition: {x: 0, y: -0.102, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -74536,7 +74568,7 @@ Transform:
   - {fileID: 7937577965730077965}
   - {fileID: 7291885493906524598}
   - {fileID: 1328521921}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 383435810}
   m_LocalEulerAnglesHint: {x: 0, y: 89.187, z: 0}
 --- !u!114 &8843420782263337732
 MonoBehaviour:
@@ -74934,9 +74966,9 @@ SceneRoots:
   - {fileID: 747463554}
   - {fileID: 1572956882}
   - {fileID: 1876067730}
-  - {fileID: 8843420782263337731}
   - {fileID: 712361502}
   - {fileID: 1121591764}
   - {fileID: 1817367901}
   - {fileID: 929910023}
   - {fileID: 893392015}
+  - {fileID: 383435810}

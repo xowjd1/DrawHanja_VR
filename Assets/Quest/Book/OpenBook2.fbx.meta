@@ -84,7 +84,7 @@ ModelImporter:
       takeName: Armature.005|Armature.006Action
       internalID: -8369055542723339240
       firstFrame: 0
-      lastFrame: 120
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -113,7 +113,7 @@ ModelImporter:
       takeName: Armature.006|Armature.005Action
       internalID: -8294754076916121062
       firstFrame: 0
-      lastFrame: 120
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
