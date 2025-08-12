@@ -1,26 +1,24 @@
-using System;
-using System.Linq;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System;
+using System.Linq;
+using System.Text;
 
 public class VisionCompareController : MonoBehaviour
 {
     [Header("드로잉 스크립트")]
-    public UIDrawing drawing; // 획만 담긴 투명 텍스처
+    public UIDrawing drawing;
 
     [Header("한자 데이터베이스")]
-    public HanjaDataBase   database;
-    
-    
+    public HanjaDataBase database;
+
     [Header("UI 컴포넌트")]
-    public GameObject hanjaPracticeGO;
+    public Image practiceImageUI;         // ✅ 연습 이미지를 보여주는 Image (기존 hanjaPracticeGO 대신)
     public Button completeButton;
-    public TMP_Text   resultText;
-    public RectTransform resultRoot;  
-    private GameObject currentResult;
+    public TMP_Text resultText;
+
     string apiKey;
 
     void Awake() {
@@ -31,161 +29,114 @@ public class VisionCompareController : MonoBehaviour
     void Start() {
         completeButton.onClick.AddListener(OnCompleteClicked);
     }
-    
+
     public void ResetResultUI()
     {
-        if (currentResult) { Destroy(currentResult); currentResult = null; }
+        // 결과 텍스트 숨김
         if (resultText) { resultText.gameObject.SetActive(false); resultText.text = ""; }
-        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(true);   // 연습 이미지는 보이게
+
     }
 
     async void OnCompleteClicked()
-{
-    Debug.Log("[Vision] 비교 시작");
-
-    // 1) 획만 있는 투명 텍스처 가져오기
-    Texture2D strokeTex = drawing.GetStrokeTexture();
-    int w = strokeTex.width, h = strokeTex.height;
-
-    // 2) 흰 배경 + 검정 획 composite 생성
-    Texture2D ocrTex = new Texture2D(w, h, TextureFormat.RGBA32, false);
-    Color[] strokePx = strokeTex.GetPixels();
-    Color[] ocrPx    = new Color[strokePx.Length];
-    for (int i = 0; i < strokePx.Length; i++)
     {
-        // α가 충분히 있으면 검정, 아니면 흰색
-        ocrPx[i] = strokePx[i].a > 0.1f 
-                    ? Color.black 
-                    : Color.white;
-    }
-    ocrTex.SetPixels(ocrPx);
-    ocrTex.Apply();
-    Debug.Log($"[Vision] OCR용 이미지 생성 완료 ({w}×{h})");
-    
-    // 3) PNG → Base64
-    byte[] pngBytes = ocrTex.EncodeToPNG();
-    Debug.Log($"[Vision] OCR PNG 크기: {pngBytes.Length}");
+        Debug.Log("[Vision] 비교 시작");
 
-    string base64Image = Convert.ToBase64String(pngBytes);
-    Debug.Log($"[Vision] Base64 길이: {base64Image.Length}");
+        // 1) 획 텍스처 → OCR용 흑백 합성
+        Texture2D strokeTex = drawing.GetStrokeTexture();
+        int w = strokeTex.width, h = strokeTex.height;
 
-    // 4) 요청 JSON 생성
-    var vr = new VisionRequest {
-        requests = new[] {
-            new ImageRequest {
-                image = new ImageContent { content = base64Image },
-                features = new[]{ new Feature { type = "TEXT_DETECTION", maxResults = 1 } }
+        Texture2D ocrTex = new Texture2D(w, h, TextureFormat.RGBA32, false);
+        Color[] strokePx = strokeTex.GetPixels();
+        for (int i = 0; i < strokePx.Length; i++)
+            strokePx[i] = (strokePx[i].a > 0.1f) ? Color.black : Color.white;
+        ocrTex.SetPixels(strokePx);
+        ocrTex.Apply();
+
+        // 2) PNG → Base64
+        byte[] pngBytes = ocrTex.EncodeToPNG();
+        string base64Image = Convert.ToBase64String(pngBytes);
+
+        // 3) 요청 JSON
+        var vr = new VisionRequest {
+            requests = new[] {
+                new ImageRequest {
+                    image = new ImageContent { content = base64Image },
+                    features = new[]{ new Feature { type = "TEXT_DETECTION", maxResults = 1 } }
+                }
+            }
+        };
+        string requestJson = JsonUtility.ToJson(vr);
+
+        // 4) HTTP POST
+        string url = $"https://vision.googleapis.com/v1/images:annotate?key={apiKey}";
+        using var uwr = new UnityWebRequest(url, "POST");
+        uwr.uploadHandler   = new UploadHandlerRaw(Encoding.UTF8.GetBytes(requestJson));
+        uwr.downloadHandler = new DownloadHandlerBuffer();
+        uwr.SetRequestHeader("Content-Type", "application/json");
+        await uwr.SendWebRequest();
+
+        if (uwr.result != UnityWebRequest.Result.Success) {
+            Debug.LogError($"[Vision] 호출 실패: {uwr.error}");
+            Debug.LogError($"[Vision] 응답: {uwr.downloadHandler.text}");
+            if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "API 호출 실패"; }
+            return;
+        }
+
+        var response = JsonUtility.FromJson<VisionResponse>(uwr.downloadHandler.text);
+        string detected = "";
+        try {
+            detected = response.responses[0].textAnnotations[0].description;
+        } catch {}
+
+        // ✅ OCR 결과 정리: 개행/스페이스 제거하고 첫 글자만 사용
+        if (!string.IsNullOrEmpty(detected))
+        {
+            detected = detected.Trim();
+            detected = detected.Replace("\n","").Replace("\r","");
+            if (detected.Length > 1) detected = detected.Substring(0, 1);
+        }
+
+        string[] allowed = database.allowedHanja.Select(k => k.character).ToArray();
+
+        if (string.IsNullOrEmpty(detected))
+        {
+            if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "글자를 인식하지 못했어요."; }
+            return;
+        }
+
+        if (allowed.Contains(detected))
+        {
+            var data = database.allowedHanja.FirstOrDefault(k => k.character == detected);
+            if (data != null && data.completeImage != null)
+            {
+                // ✅ 핵심: 같은 슬롯에 그대로 완성 스프라이트로 교체
+                if (practiceImageUI != null)
+                {
+                    practiceImageUI.sprite = data.completeImage;
+                    // 필요하면 크기 맞춤
+                    // practiceImageUI.SetNativeSize();
+                }
+
+                if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "정답!"; }
+                if (drawing != null) drawing.ClearAllStrokes();
+            }
+            else
+            {
+                if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "완성 이미지를 찾을 수 없어요."; }
             }
         }
-    };
-    string requestJson = JsonUtility.ToJson(vr);
-    Debug.Log($"[Vision] Request JSON 부분: {requestJson.Substring(0,200)}...");
-
-    // 5) HTTP POST
-    string url = $"https://vision.googleapis.com/v1/images:annotate?key={apiKey}";
-    using var uwr = new UnityWebRequest(url, "POST");
-    uwr.uploadHandler   = new UploadHandlerRaw(Encoding.UTF8.GetBytes(requestJson));
-    uwr.downloadHandler = new DownloadHandlerBuffer();
-    uwr.SetRequestHeader("Content-Type", "application/json");
-    Debug.Log("[Vision] 요청 전송...");
-    await uwr.SendWebRequest();
-
-    if (uwr.result != UnityWebRequest.Result.Success) {
-        Debug.LogError($"[Vision] 호출 실패: {uwr.error}");
-        Debug.LogError($"[Vision] 응답: {uwr.downloadHandler.text}");
-        resultText.text = "API 호출 실패";
-        return;
-    }
-
-    Debug.Log($"[Vision] 응답 본문:\n{uwr.downloadHandler.text}");
-
-    // 6) 응답 파싱
-    var response = JsonUtility.FromJson<VisionResponse>(uwr.downloadHandler.text);
-    string detected = "";
-    try {
-        detected = response.responses[0].textAnnotations[0].description.Trim();
-    } catch {}
-    
-    // 7) Database에서 허용 한자 문자열 배열로 변환
-    string[] allowed = database.allowedHanja
-        .Select(k => k.character)
-        .ToArray();
-
-    // 8) 판정
-    if (string.IsNullOrEmpty(detected))
-    {
-        if (currentResult) { Destroy(currentResult); currentResult = null; }
-        resultText.gameObject.SetActive(true);
-        resultText.text = "글자를 인식하지 못했어요.";
-    }
-    else if (allowed.Contains(detected))
-    {
-        var data = database.allowedHanja.FirstOrDefault(k => k.character == detected);
-        if (data != null && data.completeImage != null)
+        else
         {
-            ShowCompleteImage(data);
-            
-            resultText.gameObject.SetActive(true);
-            resultText.text = $"정답!";
-            if (drawing != null) drawing.ClearAllStrokes();
+            if (resultText) { resultText.gameObject.SetActive(true); resultText.text = "틀렸어요"; }
         }
     }
-    else
-    {
-        if (currentResult) { Destroy(currentResult); currentResult = null; }
-        resultText.gameObject.SetActive(true);
-        resultText.text = $"틀렸어요";
-    }
-    
-    void ShowCompleteImage(HanjaData data)
-    {
-        // 기존 결과가 있으면 정리
-        if (currentResult) Destroy(currentResult);
 
-        // 새 Image GO 생성해서 부모에 붙임
-        var go = new GameObject("CompleteImage", typeof(Image));
-        go.transform.SetParent(resultRoot, false);
-
-        var img = go.GetComponent<Image>();
-        img.sprite = data.completeImage;
-        img.SetNativeSize(); // 필요 없으면 제거
-
-        currentResult = go;
-        if (hanjaPracticeGO) hanjaPracticeGO.SetActive(false);
-    }
-    
-}
-
-
-    [Serializable]
-    class VisionRequest {
-        public ImageRequest[] requests;
-    }
-    [Serializable]
-    class ImageRequest {
-        public ImageContent image;
-        public Feature[]    features;
-    }
-    [Serializable]
-    class ImageContent {
-        public string content;
-    }
-    [Serializable]
-    class Feature {
-        public string type;
-        public int    maxResults;
-    }
-
-    [Serializable]
-    class VisionResponse {
-        public Response[] responses;
-    }
-    [Serializable]
-    class Response {
-        public TextAnnotation[] textAnnotations;
-    }
-    [Serializable]
-    class TextAnnotation {
-        public string description;
-    }
+    // ===== DTO =====
+    [Serializable] class VisionRequest { public ImageRequest[] requests; }
+    [Serializable] class ImageRequest { public ImageContent image; public Feature[] features; }
+    [Serializable] class ImageContent { public string content; }
+    [Serializable] class Feature { public string type; public int maxResults; }
+    [Serializable] class VisionResponse { public Response[] responses; }
+    [Serializable] class Response { public TextAnnotation[] textAnnotations; }
+    [Serializable] class TextAnnotation { public string description; }
 }
