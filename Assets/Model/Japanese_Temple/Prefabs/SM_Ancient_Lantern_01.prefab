@@ -168,8 +168,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3375927445308577331, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375927445308577331, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
       propertyPath: m_BounceIntensity
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389351295074062609, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4598978539619233246, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
       propertyPath: m_RootOrder
@@ -394,6 +402,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1749856685935070678, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
+    - {fileID: 3389351295074062609, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c83ed7f449fffab4db221ad7feae6b59, type: 3}

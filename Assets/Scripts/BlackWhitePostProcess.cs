@@ -23,14 +23,14 @@ public class BlackWhitePostProcess : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isBlackAndWhite = !isBlackAndWhite;
-            SetBlackAndWhite(isBlackAndWhite);
-        }
-    }
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Space))
+    //     {
+    //         isBlackAndWhite = !isBlackAndWhite;
+    //         SetBlackAndWhite(isBlackAndWhite);
+    //     }
+    // }
 
     private void SetBlackAndWhite(bool enable)
     {
@@ -46,5 +46,11 @@ public class BlackWhitePostProcess : MonoBehaviour
             colorAdjustments.saturation.overrideState = false;
             colorAdjustments.saturation.value = 0f;
         }
+    }
+
+    public void BlackWhite()
+    {
+        isBlackAndWhite = !isBlackAndWhite;
+        SetBlackAndWhite(isBlackAndWhite);
     }
 }
