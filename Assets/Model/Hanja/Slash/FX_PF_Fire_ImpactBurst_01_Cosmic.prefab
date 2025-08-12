@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8299247085792397303}
   - component: {fileID: 3622031971741126310}
   - component: {fileID: 4994486662179957193}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Distort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 1752109128113983758}
   - component: {fileID: 2155268445138067768}
   - component: {fileID: 5310563371263917414}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkImpact (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9793,7 +9793,7 @@ GameObject:
   - component: {fileID: 8355864712926912618}
   - component: {fileID: 3996019587659229974}
   - component: {fileID: 8733316967583809406}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14684,7 +14684,7 @@ GameObject:
   - component: {fileID: 4278063860728328106}
   - component: {fileID: 4917478064799990352}
   - component: {fileID: 3881694632821685533}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkFlames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19526,7 +19526,7 @@ GameObject:
   - component: {fileID: 6375879817750360526}
   - component: {fileID: 4767566640672503649}
   - component: {fileID: 1824130360593045440}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Sparks_MainBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24426,7 +24426,7 @@ GameObject:
   - component: {fileID: 8832784812293564961}
   - component: {fileID: 3202031633715406652}
   - component: {fileID: 2247400215827650419}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29317,7 +29317,7 @@ GameObject:
   - component: {fileID: 9081483775791065628}
   - component: {fileID: 2682501890521750018}
   - component: {fileID: 311143305697575596}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SparksBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34217,7 +34217,7 @@ GameObject:
   - component: {fileID: 6996994383188361347}
   - component: {fileID: 7580568049403179032}
   - component: {fileID: 574630181986155519}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39108,7 +39108,7 @@ GameObject:
   - component: {fileID: 5936189828843766882}
   - component: {fileID: 6285238479786820311}
   - component: {fileID: 1898715197311559252}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: ImpactAround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43999,7 +43999,7 @@ GameObject:
   - component: {fileID: 3465569165274818368}
   - component: {fileID: 4885615217127468051}
   - component: {fileID: 6282295430461027690}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: LightFlames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48899,7 +48899,7 @@ GameObject:
   - component: {fileID: 9132567116872611271}
   - component: {fileID: 8803876587555374837}
   - component: {fileID: 1341621115246976530}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FX_PF_Fire_ImpactBurst_01_Cosmic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53744,7 +53744,7 @@ GameObject:
   - component: {fileID: 3152927746360732410}
   - component: {fileID: 7917002450560284538}
   - component: {fileID: 9219842933162924402}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SpikesDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58653,7 +58653,7 @@ GameObject:
   - component: {fileID: 3560539787527802024}
   - component: {fileID: 4005222198832849197}
   - component: {fileID: 8846262388828825401}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

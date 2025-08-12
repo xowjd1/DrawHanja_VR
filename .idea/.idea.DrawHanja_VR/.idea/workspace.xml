@@ -6,15 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="8aba64f2-7fa0-4959-94dc-940d74defdb2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawHanja_VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Prefabs/ScrollHanjaCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaClickInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaClickInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/ScrollUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/UIDrawing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/VisionCompareController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_basic.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quest/Font/Eulyoo_stroke.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Dying.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Dying.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni2AnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Die.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Die.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Smash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Animations/Oni_ani/2Phase Smash.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/BossOni.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossDamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniBossStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/OniDamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KTJ/Scripts/SkillAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KTJ/Scripts/SkillAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/FX_PF_Fire_FlamethrowerLoop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Fire/FX_PF_Fire_FlamethrowerLoop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/FX_PF_Fire_ImpactBurst_01_Cosmic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/FX_PF_Fire_ImpactBurst_01_Cosmic.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/Slash Projectile VFX Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Hanja/Slash/Slash Projectile VFX Fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/School Library/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Hovl Studio/Sword slash VFX/Prefabs/Spikes attack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/SrRubfish_VFX_03/Prefabs/FX_PF_Fire_Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/SrRubfish_VFX_03/Prefabs/FX_PF_Fire_Explosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/SrRubfish_VFX_03/Prefabs/FX_PF_Fire_ImpactBurst_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/SrRubfish_VFX_03/Prefabs/FX_PF_Fire_ImpactBurst_01.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +46,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/Enemy/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KTJ/Scripts/HanjaUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/DialogUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quest/Script/GrabSound.cs" root0="FORCE_HIGHLIGHTING" />
@@ -159,7 +169,7 @@
       <workItem from="1754615725571" duration="494000" />
       <workItem from="1754808365515" duration="2685000" />
       <workItem from="1754921844422" duration="2021000" />
-      <workItem from="1754975938572" duration="5705000" />
+      <workItem from="1754975938572" duration="11454000" />
     </task>
     <servers />
   </component>

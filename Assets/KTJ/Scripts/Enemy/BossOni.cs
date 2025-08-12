@@ -15,6 +15,7 @@ public class BossIntroState : OniBossState
     {
 
         _oniBossStateMachine.animator.SetTrigger("Idle");
+        _oniBossStateMachine.PlaySfx(_oniBossStateMachine.sfxIntro);
         Debug.Log("Intro: Idle");
     }
 
@@ -147,6 +148,7 @@ public class Boss2PhaseStartState : OniBossState
     public override void Enter()
     {
         _oniBossStateMachine.animator.SetTrigger("Phase2Start");
+        _oniBossStateMachine.PlaySfx(_oniBossStateMachine.sfxPhase2Start); 
         Debug.Log("Phase2: Start!");
     }
 

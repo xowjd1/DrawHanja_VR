@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class OniBossStateMachine : MonoBehaviour
 {
     private OniBossState currentState;
@@ -30,7 +32,21 @@ public class OniBossStateMachine : MonoBehaviour
     [SerializeField] private GameObject smashVFXPrefab;
     [SerializeField] private SphereCollider smashCollider;
     [SerializeField] private Transform smashVFXSpawnPoint;
+    
+    [Header("Audio")]
+    public AudioSource audioSource;      // 보스 루트에 붙은 AudioSource 할당
+    public AudioClip sfxIntro;           // 인트로 SFX
+    public AudioClip sfxPhase2Start;     // 2페이즈 시작 SFX
+    public AudioClip sfxSmash;           // 스매시 SFX (애니 이벤트로 호출)
 
+    
+    [Header("Scene Transition on Death")]
+    public string nextSceneName = "NextScene"; // ← 인스펙터에서 지정
+    public float dieExtraDelay = 0.6f;         // 애니 끝난 뒤 추가로 잠깐 멈춤
+    public CanvasGroup fadeCanvas;             // 전체화면 검은 이미지(+CanvasGroup)
+    public float fadeDuration = 0.8f;  
+    
+    
     // 1페이즈
     public OniBossState CreateIntroState()      => new BossIntroState(this);
     public OniBossState CreateMoveState()       => new MoveToPlayerState(this);
@@ -150,8 +166,86 @@ public class OniBossStateMachine : MonoBehaviour
         DisableWeaponAttack();
         DisableSmashAttack();
     }
+    
+    public void PlaySfx(AudioClip clip, float volume = 1f)
+    {
+        if (!clip) return;
+        var src = audioSource;
+        if (!src)
+        {
+            // 안전장치: 없으면 자동 부착
+            src = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
+            src.playOnAwake = false;
+            src.spatialBlend = 1f;   // 3D 사운드
+        }
+        src.PlayOneShot(clip, volume);
+    }
+
+    // 애니메이션 이벤트에서 호출할 함수
+    // (Smash 애니 타이밍 프레임에 이 함수명을 이벤트로 넣어주면 됨)
+    public void Anim_PlaySmashSfx()
+    {
+        PlaySfx(sfxSmash);
+    }
 
 
+    public void StartLoadNextSceneAfterDeath(string dieStateName = "Die", int layer = 0)
+    {
+        StartCoroutine(Co_LoadNextScene(dieStateName, layer));
+    }
+
+    System.Collections.IEnumerator Co_LoadNextScene(string dieStateName, int layer)
+    {
+        // 1) 현재 레이어가 Die로 진입할 때까지 대기
+        var anim = animator;
+        float t = 0f, timeout = 10f;
+        yield return null; // 트리거 적용 프레임 넘기기
+
+        while (!anim.GetCurrentAnimatorStateInfo(layer).IsName(dieStateName) && t < timeout)
+        {
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        // 2) Die normalizedTime 거의 끝날 때까지 대기
+        while (anim.GetCurrentAnimatorStateInfo(layer).normalizedTime < 0.98f && t < timeout)
+        {
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        // 3) 추가 지연
+        if (dieExtraDelay > 0f)
+            yield return new WaitForSecondsRealtime(dieExtraDelay);
+
+        // 4) 페이드아웃
+        if (fadeCanvas)
+        {
+            fadeCanvas.gameObject.SetActive(true);
+            fadeCanvas.blocksRaycasts = true;
+            float a = 0f;
+            while (a < 1f)
+            {
+                a += Time.unscaledDeltaTime / Mathf.Max(0.01f, fadeDuration);
+                fadeCanvas.alpha = Mathf.Clamp01(a);
+                yield return null;
+            }
+        }
+
+        // 5) 씬 로드
+        if (!string.IsNullOrEmpty(nextSceneName))
+            SceneManager.LoadSceneAsync(nextSceneName);
+        else
+            Debug.LogWarning("[Boss] nextSceneName이 비어있습니다.");
+    }
+
+    // 애니메이션 이벤트로도 부를 수 있게(선택)
+    public void Anim_OnBossDeathFinished()
+    {
+        StartLoadNextSceneAfterDeath();
+    }
+    
+    
+    
     public void EnableLeftAttack()  => leftHand.enabled = true;
     public void EnableRightAttack() => rightHand.enabled = true;
     public void DisableLeftAttack() => leftHand.enabled = false;

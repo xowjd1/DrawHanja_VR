@@ -14,122 +14,115 @@ public class SkillAttack : MonoBehaviour
     [SerializeField] private float forwardOffset = 1.0f;
 
     [Header("Pause Target")]
-    [Tooltip("Enemy 태그를 쓰지 못할 때 수동으로 지정할 루트들(Animator/NavMeshAgent 등을 하위에서 찾아서 정지).")]
     [SerializeField] private List<GameObject> extraEnemyRoots = new();
+
+    public BlackWhitePostProcess bwp;
 
     void Update()
     {
-        // Z = Fire
-        if (Input.GetKeyDown(KeyCode.Z))
-            SpawnSkill(firePrefab);
-
-        // X = Slash
-        if (Input.GetKeyDown(KeyCode.X))
-            SpawnSkill(slashPrefab);
+        if (Input.GetKeyDown(KeyCode.Z)) SpawnSkill(firePrefab);
+        if (Input.GetKeyDown(KeyCode.X)) SpawnSkill(slashPrefab);
     }
 
     void SpawnSkill(GameObject prefab)
     {
-        if (!prefab)
-        {
-            Debug.LogWarning("[SkillAttack] Prefab not assigned.");
-            return;
-        }
+        if (!prefab) { Debug.LogWarning("[SkillAttack] Prefab not assigned."); return; }
 
         Vector3 pos = spawnPoint ? spawnPoint.position : transform.position + transform.forward * forwardOffset;
         Quaternion rot = spawnPoint ? spawnPoint.rotation : transform.rotation;
 
         var go = Instantiate(prefab, pos, rot);
-        go.transform.localScale *= 1.6f;
-        // 스킬 활성 카운트 ↑ & 적들 일시정지
-        PauseController.IncrementAndPause(extraEnemyRoots);
 
-        // 프리팹이 파괴될 때 재개하도록 리스너 부착
+        // ⬇️ 정지/해제 전환 지점에서만 BW 토글되도록 콜백 전달
+        PauseController.IncrementAndPause(
+            extraEnemyRoots,
+            onPaused:  () => { if (bwp) bwp.BlackWhite(); },
+            onResumed: () => { if (bwp) bwp.BlackWhite(); }
+        );
+
         var listener = go.AddComponent<SkillLifetimeListener>();
         listener.onDestroyed = () => PauseController.DecrementAndResumeIfNone();
     }
 
-    /// <summary>스폰된 프리팹에 붙여, 파괴될 때 Pause 해제 카운트다운.</summary>
     private class SkillLifetimeListener : MonoBehaviour
     {
         public Action onDestroyed;
         void OnDestroy() { onDestroyed?.Invoke(); }
     }
 
-    /// <summary>적들(Animator/NavMeshAgent)을 정지/재개하는 임시 컨트롤러.</summary>
     private static class PauseController
     {
         static int _activeSkills = 0;
 
-        // 캐시
+        // Cache
         static readonly Dictionary<Animator, float> _animSpeeds = new();
         static readonly HashSet<NavMeshAgent> _stoppedAgents = new();
 
-        public static void IncrementAndPause(List<GameObject> extraRoots)
+        // 이번 "정지 세션"에서만 사용할 콜백(중첩 스킬 시 1회만 호출)
+        static Action _onPaused, _onResumed;
+
+        public static void IncrementAndPause(
+            List<GameObject> extraRoots,
+            Action onPaused = null,
+            Action onResumed = null)
         {
             _activeSkills++;
             if (_activeSkills == 1)
+            {
+                _onPaused  = onPaused;
+                _onResumed = onResumed;
                 ApplyPause(extraRoots);
+                _onPaused?.Invoke(); // 🔊 BW 토글(정지 시작)
+            }
         }
 
         public static void DecrementAndResumeIfNone()
         {
             if (_activeSkills > 0) _activeSkills--;
             if (_activeSkills == 0)
+            {
                 RemovePause();
+                _onResumed?.Invoke(); // 🔊 BW 토글(정지 해제)
+                _onPaused  = null;
+                _onResumed = null;
+            }
         }
 
         static void ApplyPause(List<GameObject> extraRoots)
         {
-            // 1) Enemy 태그 우선 탐색
             var enemyRoots = FindGameObjectsWithTagSafe("Enemy");
-
-            // 2) 태그가 없다면 이름에 "Oni" 포함한 객체(임시) + 수동 루트 포함
             if (enemyRoots.Count == 0)
             {
                 foreach (var a in GameObject.FindObjectsOfType<Animator>(true))
-                {
                     if (a && a.gameObject.name.IndexOf("Oni", StringComparison.OrdinalIgnoreCase) >= 0)
                         enemyRoots.Add(a.gameObject);
-                }
             }
+            if (extraRoots != null) enemyRoots.AddRange(extraRoots);
 
-            if (extraRoots != null)
-                enemyRoots.AddRange(extraRoots);
-
-            // 3) 하위의 Animator/NavMeshAgent 멈춤
             foreach (var root in enemyRoots)
             {
                 if (!root) continue;
 
                 foreach (var anim in root.GetComponentsInChildren<Animator>(true))
                 {
-                    if (!_animSpeeds.ContainsKey(anim))
-                        _animSpeeds[anim] = anim.speed;
+                    if (!_animSpeeds.ContainsKey(anim)) _animSpeeds[anim] = anim.speed;
                     anim.speed = 0f;
                 }
-
                 foreach (var agent in root.GetComponentsInChildren<NavMeshAgent>(true))
                 {
-                    if (!_stoppedAgents.Contains(agent))
-                    {
+                    if (_stoppedAgents.Add(agent))
                         agent.isStopped = true;
-                        _stoppedAgents.Add(agent);
-                    }
                 }
             }
-
             Debug.Log($"[SkillAttack] Enemy PAUSED (targets={enemyRoots.Count})");
         }
 
         static void RemovePause()
         {
-            // Animator speed 복구
             foreach (var kv in _animSpeeds)
                 if (kv.Key) kv.Key.speed = kv.Value;
             _animSpeeds.Clear();
 
-            // NavMeshAgent 재개
             foreach (var agent in _stoppedAgents)
                 if (agent) agent.isStopped = false;
             _stoppedAgents.Clear();
@@ -140,14 +133,8 @@ public class SkillAttack : MonoBehaviour
         static List<GameObject> FindGameObjectsWithTagSafe(string tag)
         {
             var list = new List<GameObject>();
-            try
-            {
-                list.AddRange(GameObject.FindGameObjectsWithTag(tag));
-            }
-            catch (UnityException)
-            {
-                // 태그가 프로젝트에 없을 때 예외 → 무시하고 빈 목록 반환
-            }
+            try { list.AddRange(GameObject.FindGameObjectsWithTag(tag)); }
+            catch (UnityException) { }
             return list;
         }
     }

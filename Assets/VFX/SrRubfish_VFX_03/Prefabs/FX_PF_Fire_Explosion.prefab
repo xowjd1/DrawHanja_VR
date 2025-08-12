@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8553878118746689289}
   - component: {fileID: 2668865383911931051}
   - component: {fileID: 2758311034476152860}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SphereDissolve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 4558820649516605106}
   - component: {fileID: 9095333713310147002}
   - component: {fileID: 8885118680303298519}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: GroundScorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9802,7 +9802,7 @@ GameObject:
   - component: {fileID: 703735226381766042}
   - component: {fileID: 2202736868619949720}
   - component: {fileID: 1232133435550125935}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkGlowground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14702,7 +14702,7 @@ GameObject:
   - component: {fileID: 9044734133148700944}
   - component: {fileID: 5095719367154953045}
   - component: {fileID: 2834075226048181267}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19602,7 +19602,7 @@ GameObject:
   - component: {fileID: 3806066192760713848}
   - component: {fileID: 4921578011088903131}
   - component: {fileID: 8449185149201918685}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SphereGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24493,7 +24493,7 @@ GameObject:
   - component: {fileID: 4656707728701895900}
   - component: {fileID: 4656707728701895901}
   - component: {fileID: 4656707728701895890}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: GroundFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29393,7 +29393,7 @@ GameObject:
   - component: {fileID: 2265774273380842663}
   - component: {fileID: 5308043570467872615}
   - component: {fileID: 5681021466696600330}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SparksBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34293,7 +34293,7 @@ GameObject:
   - component: {fileID: 8497611991532293468}
   - component: {fileID: 7398637180602251841}
   - component: {fileID: 2307781298035272819}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DissolveSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39193,7 +39193,7 @@ GameObject:
   - component: {fileID: 317301604753136948}
   - component: {fileID: 7468099141811186338}
   - component: {fileID: 7135875436267090960}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DissolveSmoke 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44093,7 +44093,7 @@ GameObject:
   - component: {fileID: 2389209836044709916}
   - component: {fileID: 4578769387316951592}
   - component: {fileID: 2684503756188318986}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48984,7 +48984,7 @@ GameObject:
   - component: {fileID: 873008518400330276}
   - component: {fileID: 8680292188232001958}
   - component: {fileID: 3076993223678600976}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53884,7 +53884,7 @@ GameObject:
   - component: {fileID: 3262533021906706250}
   - component: {fileID: 3012521472805481536}
   - component: {fileID: 1427667498696119417}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Groundback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58784,7 +58784,7 @@ GameObject:
   - component: {fileID: 3292951871247454655}
   - component: {fileID: 2289147913491298347}
   - component: {fileID: 8480969470662265715}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: 'Spikes '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63675,7 +63675,7 @@ GameObject:
   - component: {fileID: 3738437052280235331}
   - component: {fileID: 7440031770680862421}
   - component: {fileID: 1479274800876035049}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DebrisSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68584,7 +68584,7 @@ GameObject:
   - component: {fileID: 8628957526881410841}
   - component: {fileID: 5309939954498583830}
   - component: {fileID: 8796723191853863537}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73428,7 +73428,7 @@ GameObject:
   - component: {fileID: 8723848861977180098}
   - component: {fileID: 3772680476935555449}
   - component: {fileID: 2236634122374930553}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78328,7 +78328,7 @@ GameObject:
   - component: {fileID: 1721997715811637653}
   - component: {fileID: 5487740234477531610}
   - component: {fileID: 5072379473437568809}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83228,7 +83228,7 @@ GameObject:
   - component: {fileID: 8838460617667093305}
   - component: {fileID: 8838460617667093307}
   - component: {fileID: 8838460617667093306}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: MainGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88128,7 +88128,7 @@ GameObject:
   - component: {fileID: 8838460617727112098}
   - component: {fileID: 8838460617727112092}
   - component: {fileID: 8838460617727112099}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DustSpikes2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93046,7 +93046,7 @@ GameObject:
   - component: {fileID: 8838460617729019283}
   - component: {fileID: 8838460617729019277}
   - component: {fileID: 8838460617729019276}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: BurstGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97937,7 +97937,7 @@ GameObject:
   - component: {fileID: 8838460617880883537}
   - component: {fileID: 8838460617880883539}
   - component: {fileID: 8838460617880883538}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SpikesDust2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102828,7 +102828,7 @@ GameObject:
   - component: {fileID: 8838460618089107881}
   - component: {fileID: 8838460618089107883}
   - component: {fileID: 8838460618089107882}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107728,7 +107728,7 @@ GameObject:
   - component: {fileID: 8838460618267914286}
   - component: {fileID: 8838460618267914280}
   - component: {fileID: 8838460618267914287}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SpikesDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112619,7 +112619,7 @@ GameObject:
   - component: {fileID: 8838460618606737035}
   - component: {fileID: 8838460618606737029}
   - component: {fileID: 8838460618606737028}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: BurstSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117528,7 +117528,7 @@ GameObject:
   - component: {fileID: 8838460618647942145}
   - component: {fileID: 8838460618647942147}
   - component: {fileID: 8838460618647942146}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Distort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122419,7 +122419,7 @@ GameObject:
   - component: {fileID: 2866233608105118789}
   - component: {fileID: 1336531800471381323}
   - component: {fileID: 2024798846928067247}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FX_PF_Fire_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

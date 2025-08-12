@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5241132220546314044}
   - component: {fileID: 378442614109615243}
   - component: {fileID: 4910391517112786214}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: SparksMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 4014145748100297583}
   - component: {fileID: 6505184907217997329}
   - component: {fileID: 1674798142907842378}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9689,7 +9689,7 @@ GameObject:
   - component: {fileID: 8592432927119727088}
   - component: {fileID: 6868675648157955739}
   - component: {fileID: 2075603149738245695}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FX_PF_Fire_FlamethrowerLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14666,7 +14666,7 @@ GameObject:
   - component: {fileID: 3265170543073799597}
   - component: {fileID: 2476774909643588188}
   - component: {fileID: 5273341199678960044}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FireSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19499,7 +19499,7 @@ GameObject:
   - component: {fileID: 4382249333158701606}
   - component: {fileID: 6868306657747041299}
   - component: {fileID: 6095962883581983134}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FlameSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24341,7 +24341,7 @@ GameObject:
   - component: {fileID: 5822382340950971826}
   - component: {fileID: 2220543833239906197}
   - component: {fileID: 5659435520066865336}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29174,7 +29174,7 @@ GameObject:
   - component: {fileID: 6156401825831205589}
   - component: {fileID: 5741927472239931429}
   - component: {fileID: 493630389565375141}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FlamesSoft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34016,7 +34016,7 @@ GameObject:
   - component: {fileID: 8895558209672054620}
   - component: {fileID: 8094567285856237178}
   - component: {fileID: 2494943808176475076}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: FlameThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38849,7 +38849,7 @@ GameObject:
   - component: {fileID: 1108109439183051752}
   - component: {fileID: 5488699130701902446}
   - component: {fileID: 7300266600924433041}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: MainCoreDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43691,7 +43691,7 @@ GameObject:
   - component: {fileID: 1768568766009286125}
   - component: {fileID: 3343823620068626427}
   - component: {fileID: 8661894849034845030}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: MainCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48533,7 +48533,7 @@ GameObject:
   - component: {fileID: 2817600035027448011}
   - component: {fileID: 2420300146710073300}
   - component: {fileID: 618259916231532527}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: DarkFlames
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1864176277147195014}
   - component: {fileID: 1276304112336642461}
   - component: {fileID: 1698281176361767017}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 1709634355078903745}
   - component: {fileID: 1803976997276241981}
   - component: {fileID: 3493544977512943444}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Slash Distortion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9736,7 +9736,7 @@ GameObject:
   - component: {fileID: 3939463766912521694}
   - component: {fileID: 8690301632705394873}
   - component: {fileID: 6408243423134441622}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14588,7 +14588,7 @@ GameObject:
   - component: {fileID: 3872080219962142583}
   - component: {fileID: 5239783256561153866}
   - component: {fileID: 7896080893635463726}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Trails (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19479,7 +19479,7 @@ GameObject:
   - component: {fileID: 6487193724187527914}
   - component: {fileID: 8772068888371992539}
   - component: {fileID: 1688155692123848885}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24316,7 +24316,7 @@ GameObject:
   - component: {fileID: 3685343651415759611}
   - component: {fileID: 2210316546681335965}
   - component: {fileID: -5074428292470607645}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Slash Projectile VFX Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29362,7 +29362,7 @@ GameObject:
   - component: {fileID: 6202703247123728303}
   - component: {fileID: 3196517060359276297}
   - component: {fileID: 7510922908715470720}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Flying (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34195,7 +34195,7 @@ GameObject:
   - component: {fileID: 7574690614559358563}
   - component: {fileID: 1828592112272974327}
   - component: {fileID: 7474140311528696113}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39028,7 +39028,7 @@ GameObject:
   - component: {fileID: 2982492320006946887}
   - component: {fileID: 4546743700980345959}
   - component: {fileID: 6592994306924489780}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Trails Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43858,9 +43858,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2326988584073090196}
     m_Modifications:
+    - target: {fileID: 637968014551906757, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1035977224672214417, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
       propertyPath: m_Name
       value: Impact (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035977224672214417, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1418760837371908204, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
       propertyPath: stopAction
@@ -44031,6 +44039,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3200377639586277203, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200377639586277203, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -44077,6 +44089,10 @@ PrefabInstance:
     - target: {fileID: 4054212429024354123, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837239117075306285, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5885339532838503758, guid: 057aa477789506a44bd206e9c5acad19, type: 3}
       propertyPath: looping
